@@ -22,6 +22,9 @@
 #define	TIMERS
 #include	"Timers.h"
 #endif
+extern	misDatos_t	*	DATOS;
+uint8_t					TIM0_ticks = 0;
+extern	actualizador_t	*	ACTUALIZADOR;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@function		__configuraSysTick__()															//
@@ -63,7 +66,27 @@ void __configuraTimer0__()
 void TIMER0_IRQHandler(	void	)
 {
 	LPC_TIM0->IR	=	LPC_TIM0->IR;
-	LPC_TIM1->CCR	=	CCR_MASCARA_EN;
+	if( 	!(TIM0_ticks % (uint8_t)CsAnemometro)	)
+	{
+		LPC_TIM1->CCR	=	CCR_MASCARA_EN;
+		if ( !ACTUALIZADOR->AnemometroRev )
+		{
+			DATOS->VelViento = 0;
+			ACTUALIZADOR->Anemometro = 1;
+		}
+		ACTUALIZADOR->AnemometroRev = 0;
+	}
+	
+	if(	!(TIM0_ticks % (uint8_t)CsLDR)	)
+	{
+		
+	}
+	
+	if(	!(TIM0_ticks % (uint8_t)CsUVA)	)
+	{
+		
+	}
+	TIM0_ticks++;
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//

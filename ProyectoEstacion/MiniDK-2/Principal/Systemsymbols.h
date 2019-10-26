@@ -79,8 +79,11 @@
 #define		Prescaler			0							//	Valor del prescaler, 0 after-reset.
 #define		Fclk				(float)Fcpu/(float)APBvalue		//	Valor del reloj prescalado por APB.
 #define		Ftick			Fclk/(float)(Prescaler+1)		//	Valor del reloj asociado a los contadores.
-#define		Ts0				5							//	Tiempo de muestreo en segundos. (Muestras)
-#define		Fs0				(float)1/(float)Ts				//	Frecuencia de muestreo en Hz. (Muestras)
+#define		Ts0				0.5							//	Tiempo de muestreo en segundos sin prescaler. (Muestras)
+#define		Fs0				(float)1/(float)Ts0				//	Frecuencia de muestreo en Hz. (Muestras)
+#define		CsAnemometro		5*Fs0						//	Frecuencia de muestreo del anemómetro.
+#define		CsLDR			Fs0							//	Frecuencia de muestreo del LDR.
+#define		CsUVA			5*Fs0						//	Frecuencia de muestreo del UVA.
 //	Constantes universales.
 #define		PI				3.141592
 /**---------------------------------------------------------------------------------------------------------------------//
@@ -125,6 +128,13 @@ typedef struct {
 	__IO	float	VelViento;	//	En 	m/s.
 	__IO float	Brillo;		//	En 	LUX.
 }misDatos_t;
+
+typedef struct {
+	__IO uint8_t	Anemometro:1;
+	__IO uint8_t	AnemometroRev:1;
+	__IO uint8_t	LDR:1;
+	__IO	uint8_t	UVA:1;
+}actualizador_t;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

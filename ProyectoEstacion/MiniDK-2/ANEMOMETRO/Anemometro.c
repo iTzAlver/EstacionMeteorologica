@@ -26,6 +26,7 @@ uint8_t	CAPcont		=	2*PULSOS_VUELTA;
 uint8_t	SLAYERcont	=	0;
 uint32_t	CLKbuff[]		=	{0 , 0};
 extern	misDatos_t	*	DATOS;
+extern	actualizador_t	*	ACTUALIZADOR;
 float	aux_viento	=	0;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
@@ -80,6 +81,8 @@ void TIMER1_IRQHandler()
 			LPC_TIM1->CCR	=	CCR_MASCARA_DIS;	//	Slay capture. OJO: QUE HAY QUE REVIVIRLO.
 			SLAYERcont = 0;
 			DATOS->VelViento = aux_viento;
+			ACTUALIZADOR->AnemometroRev = 1;
+			ACTUALIZADOR->Anemometro = 1;
 		}
 		else
 		{

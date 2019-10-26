@@ -30,6 +30,7 @@
 extern uint8_t 		Clock[23];
 extern State_t		*	ESTADO;
 extern misDatos_t	*	DATOS;
+extern actualizador_t	*	ACTUALIZADOR;
 uint8_t	pressedTouchPanel;
 uint8_t	__brilloAuto = 0;
 uint8_t	Aux8;
@@ -94,7 +95,7 @@ void	__mainLoop__(	void	)
 {
 	alimentaWDT();
 	checkTouchPanel();
-	if ( __brilloAuto && (SysTick->CTRL & 0x10000))	//	Vada 100 ms si el brillo auto está activado.
+	if ( __brilloAuto && (SysTick->CTRL & 0x10000))	//	Cada 100 ms si el brillo auto está activado.
 	{
 		goto_LUT( DATOS->Brillo, BRILLO_LCR , none , &Aux8 , none , none);
 		modificaPulso(	PWM6	,	MODO_CICLO	,	Aux8	,	none	,	none	,	none	);	/**	@TODO: Cambiar por brillo automático. */
@@ -336,8 +337,13 @@ void	__pintaMedidas2__(	void	)
 	squareButton(	&zona_3	,	"<-"				,	Yellow	,	Green	);
 	squareButton(	&zona_32	,	"Vel. del viento:"	,	Yellow	,	Green	);
 	sprintf((char*)buffer, "%.02f metros/seg." ,	DATOS->VelViento);
-	squareButton(	&zona_33	,	CLEAR_BUFFER		,	Yellow	,	Green	);
-	squareButton(	&zona_33	,	(char *)buffer		,	Yellow	,	Green	);
+	if (	ACTUALIZADOR->Anemometro	)
+	{
+		sprintf((char*)buffer, "%.02f metros/seg." ,	DATOS->VelViento);
+		squareButton(	&zona_33	,	CLEAR_BUFFER		,	Yellow	,	Green	);
+		ACTUALIZADOR->Anemometro = 0;
+		squareButton(	&zona_33	,	(char *)buffer		,	Yellow	,	Green	);
+	}
 	squareButton(	&zona_34	,	"Claridad:"		,	Yellow	,	Green	);
 	sprintf((char*)buffer,"%.02f LUX",	DATOS->Brillo);
 	squareButton(	&zona_35	,	CLEAR_BUFFER		,	Yellow	,	Green	);

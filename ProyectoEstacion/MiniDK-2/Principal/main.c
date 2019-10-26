@@ -33,6 +33,8 @@ State_t 			objESTADO;				//	Objeto.
 State_t		*	ESTADO = &objESTADO;		//	Declarar como extern. (Hey, compilador, creeme que hay una variable por ahí que se llama ESTADO)
 Counters_t 		objCOUNTERS;				//	Objeto.
 Counters_t	*	COUNTERS = &objCOUNTERS;		//	Declarar como extern. (Hey, compilador, creeme que hay una variable por ahí que se llama COUNTERS)
+actualizador_t		objACTUALIZADOR;			//	Objeto.
+actualizador_t	*	ACTUALIZADOR = &objACTUALIZADOR; //	Declarar como extern. (Hey, compilador, creeme que hay una variable por ahí que se llama ACTUALIZADOR)
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@main		Programa principal, inicio after-reset.												//
