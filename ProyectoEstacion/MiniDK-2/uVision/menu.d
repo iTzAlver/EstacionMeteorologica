@@ -1,0 +1,15 @@
+.\menu.o: ..\Menu\menu.c
+.\menu.o: ..\Menu\GLCD\GLCD.h
+.\menu.o: ..\Startup\LPC17xx.H
+.\menu.o: ..\Startup\core_cm3.h
+.\menu.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\menu.o: ..\Startup\core_cmInstr.h
+.\menu.o: ..\Startup\core_cmFunc.h
+.\menu.o: ..\Startup\system_LPC17xx.h
+.\menu.o: ..\Menu\TouchPanel\TouchPanel.h
+.\menu.o: ..\Menu\Firmware\header\lpc17xx_ssp.h
+.\menu.o: ..\Menu\Firmware\header\lpc_types.h
+.\menu.o: ..\Menu\Firmware\header\lpc17xx_gpio.h
+.\menu.o: ..\Menu\Firmware\header\lpc17xx_pinsel.h
+.\menu.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\menu.o: ..\Menu\Leds\leds.h

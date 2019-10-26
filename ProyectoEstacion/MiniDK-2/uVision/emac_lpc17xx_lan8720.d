@@ -1,0 +1,10 @@
+.\emac_lpc17xx_lan8720.o: ..\TCPIP\config\EMAC_LPC17xx_LAN8720.c
+.\emac_lpc17xx_lan8720.o: ..\TCPIP\lib\Net_Config.h
+.\emac_lpc17xx_lan8720.o: C:\Keil\ARM\RV31\INC\RTL.h
+.\emac_lpc17xx_lan8720.o: ..\TCPIP\lib\EMAC_LPC17xx_LAN8720.h
+.\emac_lpc17xx_lan8720.o: ..\Startup\LPC17xx.h
+.\emac_lpc17xx_lan8720.o: ..\Startup\core_cm3.h
+.\emac_lpc17xx_lan8720.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\emac_lpc17xx_lan8720.o: ..\Startup\core_cmInstr.h
+.\emac_lpc17xx_lan8720.o: ..\Startup\core_cmFunc.h
+.\emac_lpc17xx_lan8720.o: ..\Startup\system_LPC17xx.h

@@ -1,0 +1,11 @@
+.\timers.o: ..\Timers\Timers.c
+.\timers.o: ..\Timers\Timers.h
+.\timers.o: C:\Keil\ARM\RV31\INC\RTL.h
+.\timers.o: ..\Startup\LPC17XX.H
+.\timers.o: ..\Startup\core_cm3.h
+.\timers.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\timers.o: ..\Startup\core_cmInstr.h
+.\timers.o: ..\Startup\core_cmFunc.h
+.\timers.o: ..\Startup\system_LPC17xx.h
+.\timers.o: ..\Principal\Systemsymbols.h
+.\timers.o: ..\Anemometro\Anemometro.h

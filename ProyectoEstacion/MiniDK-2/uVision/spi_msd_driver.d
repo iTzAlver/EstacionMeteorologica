@@ -1,0 +1,13 @@
+.\spi_msd_driver.o: ..\FAT32\FW\source\SPI_MSD_Driver.c
+.\spi_msd_driver.o: ..\FAT32\FW\include\SPI_MSD_Driver.h
+.\spi_msd_driver.o: ..\Startup\LPC17xx.h
+.\spi_msd_driver.o: ..\Startup\core_cm3.h
+.\spi_msd_driver.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\spi_msd_driver.o: ..\Startup\core_cmInstr.h
+.\spi_msd_driver.o: ..\Startup\core_cmFunc.h
+.\spi_msd_driver.o: ..\Startup\system_LPC17xx.h
+.\spi_msd_driver.o: ..\Menu\Firmware\header\lpc17xx_ssp.h
+.\spi_msd_driver.o: ..\Menu\Firmware\header\lpc_types.h
+.\spi_msd_driver.o: ..\Menu\Firmware\header\lpc17xx_gpio.h
+.\spi_msd_driver.o: ..\Menu\Firmware\header\lpc17xx_pinsel.h
+.\spi_msd_driver.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h

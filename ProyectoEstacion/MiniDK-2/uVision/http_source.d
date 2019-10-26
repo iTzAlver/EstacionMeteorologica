@@ -1,0 +1,11 @@
+.\http_source.o: ..\TCPIP\HTTP_SOURCE.c
+.\http_source.o: ..\TCPIP\lib\HTTP_SOURCE.h
+.\http_source.o: ..\TCPIP\lib\Net_Config.h
+.\http_source.o: C:\Keil\ARM\RV31\INC\RTL.h
+.\http_source.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\http_source.o: ..\Startup\LPC17XX.H
+.\http_source.o: ..\Startup\core_cm3.h
+.\http_source.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\http_source.o: ..\Startup\core_cmInstr.h
+.\http_source.o: ..\Startup\core_cmFunc.h
+.\http_source.o: ..\Startup\system_LPC17xx.h

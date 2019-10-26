@@ -1,0 +1,10 @@
+.\glcd.o: ..\Menu\GLCD\GLCD.c
+.\glcd.o: ..\Startup\LPC17xx.H
+.\glcd.o: ..\Startup\core_cm3.h
+.\glcd.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\glcd.o: ..\Startup\core_cmInstr.h
+.\glcd.o: ..\Startup\core_cmFunc.h
+.\glcd.o: ..\Startup\system_LPC17xx.h
+.\glcd.o: ..\Menu\GLCD\GLCD.h
+.\glcd.o: ..\Menu\GLCD\AsciiLib.h
+.\glcd.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h

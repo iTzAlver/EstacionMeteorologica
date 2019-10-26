@@ -1,0 +1,11 @@
+.\anemometro.o: ..\ANEMOMETRO\Anemometro.c
+.\anemometro.o: ..\ANEMOMETRO\Anemometro.h
+.\anemometro.o: ..\Startup\LPC17XX.H
+.\anemometro.o: ..\Startup\core_cm3.h
+.\anemometro.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\anemometro.o: ..\Startup\core_cmInstr.h
+.\anemometro.o: ..\Startup\core_cmFunc.h
+.\anemometro.o: ..\Startup\system_LPC17xx.h
+.\anemometro.o: ..\Principal\Systemsymbols.h
+.\anemometro.o: ..\Timers\Timers.h
+.\anemometro.o: C:\Keil\ARM\RV31\INC\RTL.h
