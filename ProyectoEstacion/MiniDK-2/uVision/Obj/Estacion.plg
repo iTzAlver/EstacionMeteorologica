@@ -12,20 +12,314 @@ custom translating WEB.inp...
 Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
 FCARM FILE CONVERTER V2.41
 Completed 1 File(s), Ratio 48%
+compiling Timers.c...
+compiling WEB.C...
+compiling Statechart.c...
+..\Menu\Statechart.c(105): error:  #20: identifier "MINIMO_SERVO" is undefined
+..\Menu\Statechart.c(105): error:  #20: identifier "MAXIMO_SERVO" is undefined
+..\Menu\Statechart.c(109): error:  #20: identifier "MINIMO_SERVO" is undefined
+..\Menu\Statechart.c(109): error:  #20: identifier "MAXIMO_SERVO" is undefined
+compiling GLCD.c...
+".\Obj\Estacion.axf" - 4 Errors, 0 Warning(s).
+Target not created
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
 compiling configura.c...
 compiling main.c...
 compiling PWM.c...
-compiling RTC.c...
-compiling Timers.c...
-..\Timers\Timers.c(67): error:  #20: identifier "Ts" is undefined
-compiling WDT.c...
-compiling HTTP_CGI.c...
 compiling Statechart.c...
-compiling TouchPanel.c...
-compiling Anemometro.c...
-compiling Ldr.c...
-..\ADC\Ldr.c(38): warning:  #1-D: last line of file ends without a newline
-compiling LUT.c...
+linking...
+Program Size: Code=102900 RO-data=4640 RW-data=684 ZI-data=24984  
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
+* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.261V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling EMAC_LPC17xx_LAN8720.c...
+compiling WEB.C...
+linking...
+Program Size: Code=102896 RO-data=4640 RW-data=684 ZI-data=24984  
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
+* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.267V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+***JLink Error: Can not read register 0 (R0) while CPU is running
+***JLink Error: Can not read register 1 (R1) while CPU is running
+***JLink Error: Can not read register 2 (R2) while CPU is running
+***JLink Error: Can not read register 3 (R3) while CPU is running
+***JLink Error: Can not read register 4 (R4) while CPU is running
+***JLink Error: Can not read register 5 (R5) while CPU is running
+***JLink Error: Can not read register 6 (R6) while CPU is running
+***JLink Error: Can not read register 7 (R7) while CPU is running
+***JLink Error: Can not read register 8 (R8) while CPU is running
+***JLink Error: Can not read register 9 (R9) while CPU is running
+***JLink Error: Can not read register 10 (R10) while CPU is running
+***JLink Error: Can not read register 11 (R11) while CPU is running
+***JLink Error: Can not read register 12 (R12) while CPU is running
+***JLink Error: Can not read register 13 (R13) while CPU is running
+***JLink Error: Can not read register 14 (R14) while CPU is running
+***JLink Error: Can not read register 15 (R15) while CPU is running
+***JLink Error: Can not read register 16 (XPSR) while CPU is running
+***JLink Error: Can not read register 17 (MSP) while CPU is running
+***JLink Error: Can not read register 18 (PSP) while CPU is running
+***JLink Error: Can not read register 20 (CFBP) while CPU is running
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling EMAC_LPC17xx_LAN8720.c...
+linking...
+Program Size: Code=102900 RO-data=4640 RW-data=684 ZI-data=24984  
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
+* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.267V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling EMAC_LPC17xx_LAN8720.c...
+compiling WEB.C...
+compiling Statechart.c...
+linking...
+Program Size: Code=102900 RO-data=4640 RW-data=684 ZI-data=24984  
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
+* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.267V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling Statechart.c...
+linking...
+Program Size: Code=102912 RO-data=4640 RW-data=684 ZI-data=24984  
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
+* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.261V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling configura.c...
+..\Menu\GLCD\GLCD.h(85): error:  #130: expected a "{"
+..\Menu\Firmware\header\lpc_types.h(50): warning:  #12-D: parsing restarts here after previous syntax error
+..\Menu\Firmware\header\lpc_types.h(50): error:  #20: identifier "FALSE" is undefined
+..\Menu\Firmware\header\lpc_types.h(50): error:  #20: identifier "TRUE" is undefined
+..\Menu\Firmware\header\lpc_types.h(50): error:  #65: expected a ";"
+..\Menu\Firmware\header\lpc_types.h(50): error:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Firmware\header\lpc_types.h(183): error:  #757: variable "Bool" is not a type name
+..\Menu\Firmware\header\lpc_types.h(186): error:  #757: variable "Bool" is not a type name
+..\Menu\Firmware\header\lpc_types.h(189): error:  #757: variable "Bool" is not a type name
+compiling main.c...
+..\Menu\GLCD\GLCD.h(85): error:  #130: expected a "{"
+..\Menu\Firmware\header\lpc_types.h(50): warning:  #12-D: parsing restarts here after previous syntax error
+..\Menu\Firmware\header\lpc_types.h(50): error:  #20: identifier "FALSE" is undefined
+..\Menu\Firmware\header\lpc_types.h(50): error:  #20: identifier "TRUE" is undefined
+..\Menu\Firmware\header\lpc_types.h(50): error:  #65: expected a ";"
+..\Menu\Firmware\header\lpc_types.h(50): error:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Firmware\header\lpc_types.h(183): error:  #757: variable "Bool" is not a type name
+..\Menu\Firmware\header\lpc_types.h(186): error:  #757: variable "Bool" is not a type name
+..\Menu\Firmware\header\lpc_types.h(189): error:  #757: variable "Bool" is not a type name
+compiling PWM.c...
+..\PWM\PWM.c(35): error:  #130: expected a "{"
+..\PWM\PWM.c(53): warning:  #12-D: parsing restarts here after previous syntax error
+..\PWM\PWM.c(55): error:  #20: identifier "FrecuenciaPWM" is undefined
+..\PWM\PWM.c(62): error:  #20: identifier "COUNTERS" is undefined
+..\PWM\PWM.c(64): error:  #20: identifier "CualesPWM" is undefined
+..\PWM\PWM.c(72): error:  #20: identifier "CualesPWM" is undefined
+..\PWM\PWM.c(134): error:  #20: identifier "GradosAnteriores" is undefined
+..\PWM\PWM.c(136): warning:  #223-D: function "softMod" declared implicitly
+..\PWM\PWM.c(152): error:  #159: declaration is incompatible with previous "softMod" (declared at line 136)
+compiling WEB.C...
+compiling Statechart.c...
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(41): error:  #130: expected a "{"
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(509): error:  #20: identifier "__va_list" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(510): error:  #20: identifier "__va_list" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(511): error:  #20: identifier "__va_list" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(513): error:  #20: identifier "__va_list" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(514): error:  #20: identifier "__va_list" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(515): error:  #20: identifier "__va_list" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(517): error:  #20: identifier "__va_list" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(525): error:  #20: identifier "__va_list" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(532): error:  #20: identifier "__va_list" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(542): error:  #20: identifier "__va_list" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(553): error:  #20: identifier "__va_list" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(565): error:  #20: identifier "__va_list" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(572): error:  #20: identifier "__va_list" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(579): error:  #20: identifier "__va_list" is undefined
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(758): error:  #757: variable "fpos_t" is not a type name
+C:\Keil\ARM\ARMCC\bin\..\include\stdio.h(786): error:  #757: variable "fpos_t" is not a type name
+".\Obj\Estacion.axf" - 40 Errors, 4 Warning(s).
+Target not created
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling configura.c...
+compiling main.c...
+compiling PWM.c...
+..\PWM\PWM.c(136): warning:  #223-D: function "softMod" declared implicitly
+..\PWM\PWM.c(152): error:  #159: declaration is incompatible with previous "softMod" (declared at line 136)
+compiling Statechart.c...
 ".\Obj\Estacion.axf" - 1 Errors, 1 Warning(s).
 Target not created
 Build target 'MiniDK-2'
@@ -36,31 +330,319 @@ Completed 1 File(s), Ratio 48%
 compiling configura.c...
 compiling main.c...
 compiling PWM.c...
-compiling RTC.c...
-compiling Timers.c...
-compiling WDT.c...
-compiling HTTP_CGI.c...
 compiling WEB.C...
 compiling Statechart.c...
-compiling TouchPanel.c...
-compiling Anemometro.c...
-compiling Ldr.c...
-compiling LUT.c...
 linking...
-Program Size: Code=102668 RO-data=4640 RW-data=676 ZI-data=24984  
+Program Size: Code=103196 RO-data=4640 RW-data=684 ZI-data=24984  
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
+* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.261V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling PWM.c...
+linking...
+Program Size: Code=103196 RO-data=4640 RW-data=684 ZI-data=24984  
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
+* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.261V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling PWM.c...
+compiling WEB.C...
+linking...
+Program Size: Code=103200 RO-data=4640 RW-data=684 ZI-data=24984  
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
+* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.261V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling PWM.c...
+linking...
+Program Size: Code=103200 RO-data=4640 RW-data=684 ZI-data=24984  
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
+* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.261V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling PWM.c...
+..\PWM\PWM.c(173): error:  #20: identifier "Grados" is undefined
+compiling WEB.C...
+".\Obj\Estacion.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling PWM.c...
+linking...
+Program Size: Code=103280 RO-data=4640 RW-data=684 ZI-data=24984  
 ".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
 Build target 'MiniDK-2'
 custom translating WEB.inp...
 Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
 FCARM FILE CONVERTER V2.41
 Completed 1 File(s), Ratio 48%
-compiling configura.c...
-compiling main.c...
-compiling Timers.c...
-compiling Statechart.c...
-compiling Anemometro.c...
+compiling PWM.c...
+compiling WEB.C...
 linking...
-Program Size: Code=102708 RO-data=4640 RW-data=676 ZI-data=24984  
+Program Size: Code=103224 RO-data=4640 RW-data=684 ZI-data=24984  
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
+* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.261V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling PWM.c...
+linking...
+Program Size: Code=103224 RO-data=4640 RW-data=684 ZI-data=24984  
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
+* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.261V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling PWM.c...
+compiling WEB.C...
+linking...
+Program Size: Code=103204 RO-data=4640 RW-data=684 ZI-data=24984  
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
+* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.261V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling PWM.c...
+linking...
+Program Size: Code=103212 RO-data=4640 RW-data=684 ZI-data=24984  
 ".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
 Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
 Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
@@ -99,124 +681,51 @@ custom translating WEB.inp...
 Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
 FCARM FILE CONVERTER V2.41
 Completed 1 File(s), Ratio 48%
-compiling Timers.c...
-compiling WEB.C...
-compiling Statechart.c...
-compiling Anemometro.c...
-linking...
-Program Size: Code=102728 RO-data=4640 RW-data=676 ZI-data=24984  
-".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
-* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
- 
-JLink info:
-------------
-DLL: V4.68a, compiled Apr 12 2013 13:26:50
-Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-Hardware: V8.00
-Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.261V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 4000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'MiniDK-2'
-custom translating WEB.inp...
-Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
-FCARM FILE CONVERTER V2.41
-Completed 1 File(s), Ratio 48%
-compiling Statechart.c...
-linking...
-Program Size: Code=102736 RO-data=4640 RW-data=676 ZI-data=24984  
-".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
-* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
- 
-JLink info:
-------------
-DLL: V4.68a, compiled Apr 12 2013 13:26:50
-Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-Hardware: V8.00
-Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.261V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 4000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'MiniDK-2'
-custom translating WEB.inp...
-Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
-FCARM FILE CONVERTER V2.41
-Completed 1 File(s), Ratio 48%
-compiling configura.c...
-compiling main.c...
 compiling PWM.c...
-compiling RTC.c...
-compiling Timers.c...
-compiling WDT.c...
-compiling HTTP_CGI.c...
 compiling WEB.C...
-compiling Statechart.c...
-compiling TouchPanel.c...
-compiling Anemometro.c...
-compiling LUT.c...
 linking...
-Program Size: Code=102804 RO-data=4640 RW-data=684 ZI-data=24984  
+Program Size: Code=103212 RO-data=4640 RW-data=684 ZI-data=24984  
 ".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
+* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.261V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
 Build target 'MiniDK-2'
 custom translating WEB.inp...
 Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
 FCARM FILE CONVERTER V2.41
 Completed 1 File(s), Ratio 48%
-compiling configura.c...
-compiling main.c...
 compiling PWM.c...
-compiling RTC.c...
-compiling Timers.c...
-compiling WDT.c...
-compiling HTTP_CGI.c...
-compiling Statechart.c...
-compiling TouchPanel.c...
-compiling Anemometro.c...
-compiling LUT.c...
 linking...
-Program Size: Code=102812 RO-data=4640 RW-data=684 ZI-data=24984  
+Program Size: Code=103212 RO-data=4640 RW-data=684 ZI-data=24984  
 ".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
 Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
 Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
@@ -255,52 +764,18 @@ custom translating WEB.inp...
 Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
 FCARM FILE CONVERTER V2.41
 Completed 1 File(s), Ratio 48%
-compiling Timers.c...
+compiling PWM.c...
 compiling WEB.C...
-compiling Anemometro.c...
 linking...
-Program Size: Code=102828 RO-data=4640 RW-data=684 ZI-data=24984  
+Program Size: Code=102912 RO-data=4640 RW-data=684 ZI-data=24984  
 ".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
-* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
- 
-JLink info:
-------------
-DLL: V4.68a, compiled Apr 12 2013 13:26:50
-Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-Hardware: V8.00
-Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.261V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 4000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
 Build target 'MiniDK-2'
 custom translating WEB.inp...
 Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
 FCARM FILE CONVERTER V2.41
 Completed 1 File(s), Ratio 48%
-compiling Timers.c...
 linking...
-Program Size: Code=102832 RO-data=4640 RW-data=684 ZI-data=24984  
+Program Size: Code=102912 RO-data=4640 RW-data=684 ZI-data=24984  
 ".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
 Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
 Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
@@ -324,6 +799,131 @@ Target info:
 ------------
 Device: LPC1768
 VTarget = 3.267V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling Statechart.c...
+linking...
+Program Size: Code=102880 RO-data=4640 RW-data=684 ZI-data=24984  
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
+* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.261V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling Statechart.c...
+linking...
+Program Size: Code=102880 RO-data=4640 RW-data=684 ZI-data=24984  
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
+* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.267V
+State of Pins: 
+TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling Statechart.c...
+linking...
+Program Size: Code=102876 RO-data=4640 RW-data=684 ZI-data=24984  
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Set JLink Project File to "C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
+* JLink Info: Device "LPC1768" selected (512 KB flash, 32 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.68a, compiled Apr 12 2013 13:26:50
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: Found SWD-DP with ID 0x2BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r2p0, Little endian.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: LPC1768
+VTarget = 3.261V
 State of Pins: 
 TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
 Hardware-Breakpoints: 6

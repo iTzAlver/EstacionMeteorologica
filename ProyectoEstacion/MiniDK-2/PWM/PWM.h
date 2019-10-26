@@ -54,6 +54,8 @@
 #define		PWM4			4
 #define		PWM5			5
 #define		PWM6			6
+#define	MINIMO_SERVO		0.001
+#define 	MAXIMO_SERVO		0.002
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcdef		Estas son las funciones correspondientes al módulo PWM.								//
@@ -61,6 +63,7 @@
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__configuraPWM__	(	float	FrecuenciaPWM		,	uint16_t	CualesPWM	);	//	Default = 0x3F3F -> Todo activado.
 void	modificaPulso		(	uint32_t	PWMn				,	uint8_t	Modo		,	uint8_t	Ciclo		,	uint8_t Grados	,	float Minimo	,	float Maximo	);
+void softMod			(	uint8_t	GradosObjetivo		,	uint8_t	GradosActuales,	float Minimo	,	float	Maximo	,	uint32_t	PWMn);
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

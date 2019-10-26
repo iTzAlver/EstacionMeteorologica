@@ -129,7 +129,8 @@ void	modificaPulso(	uint32_t	PWMn	,	uint8_t Modo	,	uint8_t Ciclo	,	uint8_t	Grado
 			*(__IO uint32_t *)((uint32_t)&(LPC_PWM1->MR0) + (uint32_t)(0x4*PWMn)) = (uint32_t)((float)(LPC_PWM1->MR0)*((float)Ciclo/(float)100));
 			break;
 		case MODO_SERVO:	// Escribo en LPC_PWM1->MRn el valor correspondiente al tiempo Ton en función del grado.
-			*(__IO uint32_t *)((uint32_t)&(LPC_PWM1->MR0) + (uint32_t)(0x4*PWMn)) = (uint32_t)(Ftick*(Minimo + (Maximo - Minimo)*(float)(Grados/(float)(180)))- (float)1);
+			/**	@WARNING:	Hay que cambiar de 10 en 10 los grados! */
+			*(__IO uint32_t *)((uint32_t)&(LPC_PWM1->MR0) + (uint32_t)(0x4*PWMn)) = (uint32_t)(Ftick*(Minimo + (Maximo - Minimo)*(float)(Grados/(float)(180)))- (float)1);			
 			break;
 		default:
 			break;
@@ -140,6 +141,26 @@ void	modificaPulso(	uint32_t	PWMn	,	uint8_t Modo	,	uint8_t Ciclo	,	uint8_t	Grado
 	}
 	LPC_PWM1->LER |= 0x1 << PWMn | 0x1;		// Activo el load de los MR0 y MRn.
 }
+//void softMod(	uint8_t	GradosObjetivo	,	uint8_t	GradosActuales	,	float Minimo	,	float Maximo	,	uint32_t PWMn )
+//{
+//	int i;
+//	for(i = 0; i < 3000000; i++) 
+//	{
+//	}
+//	if( GradosActuales + 10 < GradosObjetivo && GradosActuales < GradosObjetivo)
+//	{
+//		*(__IO uint32_t *)((uint32_t)&(LPC_PWM1->MR0) + (uint32_t)(0x4*PWMn)) = (uint32_t)(Ftick*(Minimo + (Maximo - Minimo)*(float)((GradosActuales+10)/(float)(180)))- (float)1);
+//		softMod(	GradosObjetivo	,	GradosActuales	+	10	,	Minimo	,	Maximo	,	PWMn);
+//		return;
+//	}
+//	if( GradosActuales - 10 < GradosObjetivo && GradosActuales > GradosObjetivo)
+//	{
+//		*(__IO uint32_t *)((uint32_t)&(LPC_PWM1->MR0) + (uint32_t)(0x4*PWMn)) = (uint32_t)(Ftick*(Minimo + (Maximo - Minimo)*(float)((GradosActuales-10)/(float)(180)))- (float)1);
+//		softMod(	GradosObjetivo	,	GradosActuales	-	10	,	Minimo	,	Maximo	,	PWMn);
+//		return;
+//	}
+//	
+//}
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//
