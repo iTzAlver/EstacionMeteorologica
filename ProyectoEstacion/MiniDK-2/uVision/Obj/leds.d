@@ -1,0 +1,11 @@
+.\obj\leds.o: ..\Menu\Leds\leds.c
+.\obj\leds.o: ..\Startup\LPC17xx.h
+.\obj\leds.o: ..\Startup\core_cm3.h
+.\obj\leds.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\obj\leds.o: ..\Startup\core_cmInstr.h
+.\obj\leds.o: ..\Startup\core_cmFunc.h
+.\obj\leds.o: ..\Startup\system_LPC17xx.h
+.\obj\leds.o: ..\Menu\Leds\leds.h
+.\obj\leds.o: ..\Menu\Firmware\header\lpc17xx_pinsel.h
+.\obj\leds.o: ..\Menu\Firmware\header\lpc_types.h
+.\obj\leds.o: ..\Menu\Firmware\header\lpc17xx_gpio.h

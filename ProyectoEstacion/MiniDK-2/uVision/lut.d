@@ -1,9 +1,0 @@
-.\lut.o: ..\BaseDeDatos\LUT.c
-.\lut.o: ..\BaseDeDatos\LUT.h
-.\lut.o: ..\Principal\Systemsymbols.h
-.\lut.o: ..\Startup\LPC17XX.H
-.\lut.o: ..\Startup\core_cm3.h
-.\lut.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
-.\lut.o: ..\Startup\core_cmInstr.h
-.\lut.o: ..\Startup\core_cmFunc.h
-.\lut.o: ..\Startup\system_LPC17xx.h

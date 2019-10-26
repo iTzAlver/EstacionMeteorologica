@@ -1,9 +1,0 @@
-.\pwm.o: ..\PWM\PWM.c
-.\pwm.o: ..\PWM\PWM.h
-.\pwm.o: ..\Startup\LPC17XX.H
-.\pwm.o: ..\Startup\core_cm3.h
-.\pwm.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
-.\pwm.o: ..\Startup\core_cmInstr.h
-.\pwm.o: ..\Startup\core_cmFunc.h
-.\pwm.o: ..\Startup\system_LPC17xx.h
-.\pwm.o: ..\Principal\Systemsymbols.h

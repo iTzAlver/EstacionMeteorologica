@@ -1,9 +1,0 @@
-.\wdt.o: ..\WDT\WDT.c
-.\wdt.o: ..\WDT\WDT.h
-.\wdt.o: ..\Principal\Systemsymbols.h
-.\wdt.o: ..\Startup\LPC17XX.H
-.\wdt.o: ..\Startup\core_cm3.h
-.\wdt.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
-.\wdt.o: ..\Startup\core_cmInstr.h
-.\wdt.o: ..\Startup\core_cmFunc.h
-.\wdt.o: ..\Startup\system_LPC17xx.h

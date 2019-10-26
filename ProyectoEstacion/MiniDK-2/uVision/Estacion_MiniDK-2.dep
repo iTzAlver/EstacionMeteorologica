@@ -1,359 +1,0 @@
-Dependencies for Project 'Estacion', Target 'MiniDK-2': (DO NOT MODIFY !)
-F (..\README.md)(0x5DAEE414)()
-F (.\startup_LPC17xx.s)(0x5DB1EBC3)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\startup_lpc17xx.lst --xref -o .\startup_lpc17xx.o --depend .\startup_lpc17xx.d)
-F (..\Startup\core_cm3.c)(0x5DAEE41C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\core_cm3.o --omf_browse .\core_cm3.crf --depend .\core_cm3.d)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-F (..\Startup\system_LPC17xx.c)(0x5DAEE41E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\system_lpc17xx.o --omf_browse .\system_lpc17xx.crf --depend .\system_lpc17xx.d)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-F (..\Setup\configura.c)(0x5DB2BF5E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\configura.o --omf_browse .\configura.crf --depend .\configura.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Setup\configura.h)(0x5DB01A88)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DB2C78C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\GLCD\GLCD.h)(0x5DAEE442)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\TouchPanel\TouchPanel.h)(0x5DAEE444)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DAEE44E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAEE450)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DAEE44A)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DAEE44C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\menu.h)(0x5DAEE41A)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Leds\leds.h)(0x5DAEE442)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Statechart.h)(0x5DB2C634)
-I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\WDT\WDT.h)(0x5DB039D8)
-I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\miGlobal.h)(0x5DB1FDAF)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DB1E970)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C81D76)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Anemometro\Anemometro.h)(0x5DB2C1A4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\HTTP_SOURCE.h)(0x5DB2135F)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DAEE448)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DB2AEE2)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\RTC\RTC.h)(0x5DAEE41C)
-F (..\Principal\main.c)(0x5DB1F0B6)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\main.o --omf_browse .\main.crf --depend .\main.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Principal\header.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DB2C78C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Setup\configura.h)(0x5DB01A88)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\GLCD\GLCD.h)(0x5DAEE442)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\TouchPanel\TouchPanel.h)(0x5DAEE444)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DAEE44E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAEE450)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DAEE44A)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DAEE44C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\menu.h)(0x5DAEE41A)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Leds\leds.h)(0x5DAEE442)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Statechart.h)(0x5DB2C634)
-I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\WDT\WDT.h)(0x5DB039D8)
-I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\miGlobal.h)(0x5DB1FDAF)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DB1E970)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C81D76)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Anemometro\Anemometro.h)(0x5DB2C1A4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\HTTP_SOURCE.h)(0x5DB2135F)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DAEE448)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DB2AEE2)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\RTC\RTC.h)(0x5DAEE41C)
-F (..\PWM\PWM.c)(0x5DAEE41C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\pwm.o --omf_browse .\pwm.crf --depend .\pwm.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DB2C78C)
-F (..\RTC\RTC.c)(0x5DAEE41C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\rtc.o --omf_browse .\rtc.crf --depend .\rtc.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\RTC\RTC.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DB2C78C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C819B4)
-I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C819B4)
-F (..\Timers\Timers.c)(0x5DB2C082)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\timers.o --omf_browse .\timers.crf --depend .\timers.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DB1E970)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C81D76)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DB2C78C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Anemometro\Anemometro.h)(0x5DB2C1A4)
-F (..\WDT\WDT.c)(0x5DAEE442)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\wdt.o --omf_browse .\wdt.crf --depend .\wdt.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\WDT\WDT.h)(0x5DB039D8)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DB2C78C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-F (..\TCPIP\HTTP_SOURCE.c)(0x5DB2A3A4)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\http_source.o --omf_browse .\http_source.crf --depend .\http_source.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\HTTP_SOURCE.h)(0x5DB2135F)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DAEE448)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C81D76)
-I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-F (..\TCPIP\config\Net_Config.c)(0x5DB2B196)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\net_config.o --omf_browse .\net_config.crf --depend .\net_config.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DAEE448)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C81D76)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\miGlobal.h)(0x5DB1FDAF)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_lib.c)(0x5DAEE448)
-F (..\TCPIP\lib\TCP_CM3.lib)(0x5DAEE448)()
-F (..\TCPIP\HTTP_CGI.c)(0x5DB2147D)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\http_cgi.o --omf_browse .\http_cgi.crf --depend .\http_cgi.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\HTTP_CGI.h)(0x5DB2145B)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DAEE448)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C81D76)
-I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C819B4)
-I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C819B4)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DB2C78C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-F (..\TCPIP\index.cgi)(0x5DB21562)()
-F (..\TCPIP\WEB.inp)(0x5DB03B98)()
-F (..\TCPIP\config\EMAC_LPC17xx_LAN8720.c)(0x5DB1F2C0)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\emac_lpc17xx_lan8720.o --omf_browse .\emac_lpc17xx_lan8720.crf --depend .\emac_lpc17xx_lan8720.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DAEE448)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C81D76)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\EMAC_LPC17xx_LAN8720.h)(0x5DAEE446)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-F (..\TCPIP\WEB.C)(0x5DB2C87C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\web.o --omf_browse .\web.crf --depend .\web.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DAEE448)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C81D76)
-F (..\Menu\Statechart.c)(0x5DB2C7BC)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\statechart.o --omf_browse .\statechart.crf --depend .\statechart.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Statechart.h)(0x5DB2C634)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\GLCD\GLCD.h)(0x5DAEE442)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.H)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\TouchPanel\TouchPanel.h)(0x5DAEE444)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DAEE44E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAEE450)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DAEE44A)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DAEE44C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\menu.h)(0x5DAEE41A)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Leds\leds.h)(0x5DAEE442)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DB2C78C)
-I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\WDT\WDT.h)(0x5DB039D8)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\miGlobal.h)(0x5DB1FDAF)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DB1E970)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C81D76)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Anemometro\Anemometro.h)(0x5DB2C1A4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\HTTP_SOURCE.h)(0x5DB2135F)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DAEE448)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DB2AEE2)
-F (..\Menu\menu.c)(0x5DAEE418)()
-F (..\Menu\TouchPanel\TouchPanel.c)(0x5DB03528)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\touchpanel.o --omf_browse .\touchpanel.crf --depend .\touchpanel.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\GLCD\GLCD.h)(0x5DAEE442)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.H)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\TouchPanel\TouchPanel.h)(0x5DAEE444)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DAEE44E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAEE450)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DAEE44A)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DAEE44C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\WDT\WDT.h)(0x5DB039D8)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DB2C78C)
-F (..\Menu\Leds\leds.c)(0x5DAEE444)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\leds.o --omf_browse .\leds.crf --depend .\leds.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Leds\leds.h)(0x5DAEE442)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DAEE44C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAEE450)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DAEE44A)
-F (..\ANEMOMETRO\Anemometro.c)(0x5DB2C83A)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\anemometro.o --omf_browse .\anemometro.crf --depend .\anemometro.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\ANEMOMETRO\Anemometro.h)(0x5DB2C1A4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DB2C78C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DB1E970)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C81D76)
-F (..\ADC\Ldr.c)(0x5DAEE416)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\ldr.o --omf_browse .\ldr.crf --depend .\ldr.d)
-F (..\ADC\uFono.c)(0x5DAEE416)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\ufono.o --omf_browse .\ufono.crf --depend .\ufono.d)
-F (..\ADC\UVA30A.c)(0x5DAEE416)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\uva30a.o --omf_browse .\uva30a.crf --depend .\uva30a.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\ADC\UVA30A.h)(0x5DAEE418)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-F (..\DAC\DAC.c)(0x5DAEE41A)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\dac.o --omf_browse .\dac.crf --depend .\dac.d)
-F (..\Menu\GLCD\AsciiLib.c)(0x5DAEE442)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\asciilib.o --omf_browse .\asciilib.crf --depend .\asciilib.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\GLCD\AsciiLib.h)(0x5DAEE442)
-I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C819B4)
-F (..\Menu\GLCD\GLCD.c)(0x5DAEE442)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\glcd.o --omf_browse .\glcd.crf --depend .\glcd.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.H)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\GLCD\GLCD.h)(0x5DAEE442)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\GLCD\AsciiLib.h)(0x5DAEE442)
-I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C819B4)
-F (..\Menu\Firmware\source\lpc17xx_ssp.c)(0x5DAEE456)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\lpc17xx_ssp.o --omf_browse .\lpc17xx_ssp.crf --depend .\lpc17xx_ssp.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DAEE44E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAEE450)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_clkpwr.h)(0x5DAEE44A)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_libcfg_default.h)(0x5DAEE44C)
-F (..\Menu\Firmware\source\lpc17xx_pinsel.c)(0x5DAEE452)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\lpc17xx_pinsel.o --omf_browse .\lpc17xx_pinsel.crf --depend .\lpc17xx_pinsel.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DAEE44C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\lpc17xx.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAEE450)
-F (..\Menu\Firmware\source\lpc17xx_gpio.c)(0x5DAEE452)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\lpc17xx_gpio.o --omf_browse .\lpc17xx_gpio.crf --depend .\lpc17xx_gpio.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DAEE44A)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAEE450)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_libcfg_default.h)(0x5DAEE44C)
-F (..\Menu\Firmware\source\lpc17xx_clkpwr.c)(0x5DAEE450)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\lpc17xx_clkpwr.o --omf_browse .\lpc17xx_clkpwr.crf --depend .\lpc17xx_clkpwr.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_clkpwr.h)(0x5DAEE44A)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\lpc17xx.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAEE450)
-F (..\Menu\Firmware\source\lpc17xx_libcfg_default.c)(0x5DAEE454)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\lpc17xx_libcfg_default.o --omf_browse .\lpc17xx_libcfg_default.crf --depend .\lpc17xx_libcfg_default.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_libcfg_default.h)(0x5DAEE44C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAEE450)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-F (..\PWM\PWM.h)(0x5DAEE41C)()
-F (..\Menu\Statechart.h)(0x5DB2C634)()
-F (..\Menu\menu.h)(0x5DAEE41A)()
-F (..\Menu\TouchPanel\TouchPanel.h)(0x5DAEE444)()
-F (..\Menu\Leds\leds.h)(0x5DAEE442)()
-F (..\Menu\GLCD\GLCD.h)(0x5DAEE442)()
-F (..\Menu\GLCD\AsciiLib.h)(0x5DAEE442)()
-F (..\Principal\header.h)(0x5DAEE41C)()
-F (..\Principal\Systemsymbols.h)(0x5DB2C78C)()
-F (..\RTC\RTC.h)(0x5DAEE41C)()
-F (..\Setup\configura.h)(0x5DB01A88)()
-F (..\WDT\WDT.h)(0x5DB039D8)()
-F (..\TCPIP\lib\HTTP_SOURCE.h)(0x5DB2135F)()
-F (..\TCPIP\lib\HTTP_CGI.h)(0x5DB2145B)()
-F (..\ANEMOMETRO\Anemometro.h)(0x5DB2C1A4)()
-F (..\Timers\Timers.h)(0x5DB1E970)()
-F (..\ADC\Ldr.h)(0x5DAEE416)()
-F (..\ADC\uFono.h)(0x5DAEE416)()
-F (..\ADC\UVA30A.h)(0x5DAEE418)()
-F (..\DAC\DAC.h)(0x5DAEE41A)()
-F (..\TCPIP\lib\miGlobal.h)(0x5DB1FDAF)()
-F (..\FAT32\FW\source\diskio.c)(0x5DAEE44A)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\diskio.o --omf_browse .\diskio.crf --depend .\diskio.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\FAT32\FW\include\diskio.h)(0x5DAEE444)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\FAT32\FW\include\integer.h)(0x5DAEE446)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\FAT32\FW\include\SPI_MSD_Driver.h)(0x5DAEE446)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DAEE44E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAEE450)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DAEE44A)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DAEE44C)
-F (..\FAT32\FW\source\ff.c)(0x5DAEE448)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\ff.o --omf_browse .\ff.crf --depend .\ff.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\FAT32\FW\include\ff.h)(0x5DAEE444)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\FAT32\FW\include\integer.h)(0x5DAEE446)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\FAT32\FW\include\ffconf.h)(0x5DAEE446)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\lpc17xx.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\FAT32\FW\include\diskio.h)(0x5DAEE444)
-F (..\FAT32\FW\source\SPI_MSD_Driver.c)(0x5DAEE448)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\spi_msd_driver.o --omf_browse .\spi_msd_driver.crf --depend .\spi_msd_driver.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\FAT32\FW\include\SPI_MSD_Driver.h)(0x5DAEE446)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DAEE44E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAEE450)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DAEE44A)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DAEE44C)
-I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C819B4)
-F (..\BaseDeDatos\LUT.c)(0x5DB2B05F)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\lut.o --omf_browse .\lut.crf --depend .\lut.d)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DB2AEE2)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DB2C78C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAEE41C)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAEE41E)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAEE41C)
-I (C:\Users\alver\Desktop\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAEE420)
