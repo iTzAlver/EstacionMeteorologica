@@ -79,7 +79,10 @@ void TIMER0_IRQHandler(	void	)
 	
 	if(	!(TIM0_ticks % (uint8_t)CsLDR)	)
 	{
-		
+		if(	ACTUALIZADOR->LDRrev	)
+		{
+			LPC_SC->PCONP	|=	PCONP_ADC_ON;
+		}
 	}
 	
 	if(	!(TIM0_ticks % (uint8_t)CsUVA)	)

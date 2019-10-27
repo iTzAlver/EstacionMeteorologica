@@ -133,7 +133,9 @@ typedef struct {
 	__IO uint8_t	Anemometro:1;
 	__IO uint8_t	AnemometroRev:1;
 	__IO uint8_t	LDR:1;
+	__IO	uint8_t	LDRrev:1;
 	__IO	uint8_t	UVA:1;
+	__IO	uint8_t	UVArev:1;
 }actualizador_t;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//

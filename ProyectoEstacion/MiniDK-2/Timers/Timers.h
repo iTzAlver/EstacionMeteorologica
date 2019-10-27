@@ -33,6 +33,10 @@
 #define	ANEMOMETRO
 #include	"Anemometro.h"
 #endif
+#ifndef	LDR
+#define	LDR
+#include	"LDR.h"
+#endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes a los timers.									//

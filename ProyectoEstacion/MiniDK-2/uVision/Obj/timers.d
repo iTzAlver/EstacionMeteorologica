@@ -9,3 +9,4 @@
 .\obj\timers.o: ..\Startup\system_LPC17xx.h
 .\obj\timers.o: ..\Principal\Systemsymbols.h
 .\obj\timers.o: ..\Anemometro\Anemometro.h
+.\obj\timers.o: ..\ADC\LDR.h

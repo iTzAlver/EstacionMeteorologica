@@ -26,6 +26,7 @@
 .\obj\configura.o: ..\Timers\Timers.h
 .\obj\configura.o: C:\Keil\ARM\RV31\INC\RTL.h
 .\obj\configura.o: ..\Anemometro\Anemometro.h
+.\obj\configura.o: ..\ADC\LDR.h
 .\obj\configura.o: ..\TCPIP\lib\HTTP_SOURCE.h
 .\obj\configura.o: ..\TCPIP\lib\Net_Config.h
 .\obj\configura.o: ..\BaseDeDatos\LUT.h

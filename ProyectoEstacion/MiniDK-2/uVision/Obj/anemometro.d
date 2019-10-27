@@ -9,3 +9,4 @@
 .\obj\anemometro.o: ..\Principal\Systemsymbols.h
 .\obj\anemometro.o: ..\Timers\Timers.h
 .\obj\anemometro.o: C:\Keil\ARM\RV31\INC\RTL.h
+.\obj\anemometro.o: ..\ADC\LDR.h
