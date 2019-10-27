@@ -42,20 +42,34 @@
 //---------------------------------------------------------------------------------------------------------------------**/
 #define		Fpwm			50				// Velocidad de 20Hz.
 #define		Tpwm			0.02				// Periodo de 20ms.
+
 #define		TCR_MASK		0x9				// Activo el contador y el PWM.
 #define		MCR_MASK		0x4				// Para el set del PWM.
 #define		MCR_MASK_RESET	0x5				// Para resetear el MCR.
 #define		PCONP_MASK	0x1 << 6			// Para encender el PWM.
+
 #define		MODO_CICLO	1				// Para la función modificaPulso().
 #define		MODO_SERVO	0				// Para la función modificaPulso().
+
 #define		PWM1			1
 #define		PWM2			2
 #define		PWM3			3
 #define		PWM4			4
 #define		PWM5			5
 #define		PWM6			6
+
+#define		OPEN_DRAIN	0x2
+#define		PULL_UP		0x0
+#define		PULL_DOWN		0x3
+#define		UNUSED		0x1
+
+#define	KMX				1.3				//	Constante de corrección máxima.
+#define	KMN				0.6				//	Constante de corrección mínima.
 #define	MINIMO_SERVO		0.001
 #define 	MAXIMO_SERVO		0.002
+
+#define	TEMP_MAX			32				//	Visionado de temperatura.
+#define	TEMP_MIN			17				//	Visionado de temperatura.
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcdef		Estas son las funciones correspondientes al módulo PWM.								//

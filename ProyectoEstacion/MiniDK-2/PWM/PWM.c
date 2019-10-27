@@ -62,10 +62,12 @@ void __configuraPWM__(	float	FrecuenciaPWM	,	uint16_t	CualesPWM	)
 	{
 		if (	(CualesPWM >> COUNTERS->i) & ~0xFFFE)						// Miro si está seleccionado el iésimo.
 		{
-			LPC_PINCON->PINSEL4 |= (FUNC1 << (2*COUNTERS->i));			// Pongo la función 1 en los pines PWM.
+			LPC_PINCON->PINSEL4 	|= (FUNC1 	<< (2*COUNTERS->i));	// Pongo la función 1 en los pines PWM.
+//			LPC_PINCON->PINMODE4 	|= (OPEN_DRAIN << (2*COUNTERS->i));
 			LPC_PWM1->PCR |= (0x1 << (COUNTERS->i + 0x9));				// Pongo la función de enable output en el PWM.
 		}
 	}
+	/**	@REMARK:	Esto se configuraría como open drain sobre todo por no perder potencia, pero prefiero aseugrar con pull.*/
 	for (COUNTERS->i = 6; COUNTERS->i < 12; (COUNTERS->i)++)				// Para el otro puerto: seleccionados.
 	{
 		if (	(CualesPWM >> (COUNTERS->i + 2)) & ~0xFFFE)						// Miro si está seleccionado el iésimo.
@@ -74,22 +76,28 @@ void __configuraPWM__(	float	FrecuenciaPWM	,	uint16_t	CualesPWM	)
 			switch (COUNTERS->i)									// Pongo la función 2 en los pines PWM.
 			{
 				case 6:
-					LPC_PINCON->PINSEL3 |=	FUNC2 <<	2*2;
+					LPC_PINCON->PINSEL3 	|=	FUNC2 <<	2*2;
+//					LPC_PINCON->PINMODE3 	|=	OPEN_DRAIN <<	2*2;
 					break;
 				case 7:
-					LPC_PINCON->PINSEL3 |=	FUNC2 <<	2*4;
+					LPC_PINCON->PINSEL3 	|=	FUNC2 <<	2*4;
+//					LPC_PINCON->PINMODE3 	|=	OPEN_DRAIN <<	2*4;
 					break;
 				case 8:
-					LPC_PINCON->PINSEL3 |=	FUNC2 <<	2*5;
+					LPC_PINCON->PINSEL3 	|=	FUNC2 <<	2*5;
+//					LPC_PINCON->PINMODE3 	|=	OPEN_DRAIN <<	2*5;
 					break;
 				case 9:
-					LPC_PINCON->PINSEL3 |=	FUNC2 <<	2*7;
+					LPC_PINCON->PINSEL3 	|=	FUNC2 <<	2*7;
+//					LPC_PINCON->PINMODE3 	|=	OPEN_DRAIN <<	2*7;
 					break;
 				case 10:
-					LPC_PINCON->PINSEL3 |=	FUNC2 <<	2*8;
+					LPC_PINCON->PINSEL3 	|=	FUNC2 <<	2*8;
+//					LPC_PINCON->PINMODE3 	|=	OPEN_DRAIN <<	2*8;
 					break;
 				case 11:
-					LPC_PINCON->PINSEL3 |=	FUNC2 <<	2*10;
+					LPC_PINCON->PINSEL3 	|=	FUNC2 <<	2*10;
+//					LPC_PINCON->PINMODE3 	|=	OPEN_DRAIN <<	2*8;
 					break;
 				default:
 					break;
@@ -123,14 +131,21 @@ void	modificaPulso(	uint32_t	PWMn	,	uint8_t Modo	,	uint8_t Ciclo	,	uint8_t	Grado
 	{
 		PWMn += 6;	//	Debido a la asimétrica distribución de los registros.
 	}
+	
+	Minimo *= KMN;			//	Definitivamente había algo mal.
+	Maximo *= KMX;			//	Estos servos utilizan la potencia del pulso y no precisamente su duración.
+	
+	/**	@REMARK:	La potencia entregada no es la debida. En la datasheet especifica pulsos del rango de 5V, se ofrece uno
+				de 3.3V, se ha podido usar un transistor, pero deduzco que estos servos utilizan la potencia de la señal
+				PWM para obtener el ángulo y modificando los tiempos podemos entregar más potencia de señal.*/
+	
 	switch(	Modo	)
 	{
 		case MODO_CICLO:	// Escribo en LPC_PWM1->MRn el valor correspondiente al porcentaje de MR0; < 1.
 			*(__IO uint32_t *)((uint32_t)&(LPC_PWM1->MR0) + (uint32_t)(0x4*PWMn)) = (uint32_t)((float)(LPC_PWM1->MR0)*((float)Ciclo/(float)100));
 			break;
 		case MODO_SERVO:	// Escribo en LPC_PWM1->MRn el valor correspondiente al tiempo Ton en función del grado.
-			/**	@WARNING:	Hay que cambiar de 10 en 10 los grados! */
-			*(__IO uint32_t *)((uint32_t)&(LPC_PWM1->MR0) + (uint32_t)(0x4*PWMn)) = (uint32_t)(Ftick*(Minimo + (Maximo - Minimo)*(float)(Grados/(float)(180)))- (float)1);			
+			*(__IO uint32_t *)((uint32_t)&(LPC_PWM1->MR0) + (uint32_t)(0x4*PWMn)) = (uint32_t)((Ftick*(Minimo + (Maximo - Minimo)*(float)(Grados/(float)(180)))- (float)1));			
 			break;
 		default:
 			break;
@@ -141,6 +156,8 @@ void	modificaPulso(	uint32_t	PWMn	,	uint8_t Modo	,	uint8_t Ciclo	,	uint8_t	Grado
 	}
 	LPC_PWM1->LER |= 0x1 << PWMn | 0x1;		// Activo el load de los MR0 y MRn.
 }
+/**	@GRAVEYARD:	Función de movimiento suave, entre comentarios porque podría volverse útil para algunas cosas.
+
 //void softMod(	uint8_t	GradosObjetivo	,	uint8_t	GradosActuales	,	float Minimo	,	float Maximo	,	uint32_t PWMn )
 //{
 //	int i;
@@ -161,6 +178,7 @@ void	modificaPulso(	uint32_t	PWMn	,	uint8_t Modo	,	uint8_t Ciclo	,	uint8_t	Grado
 //	}
 //	
 //}
+*/
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

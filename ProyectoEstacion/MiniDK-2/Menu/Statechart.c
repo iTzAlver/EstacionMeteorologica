@@ -34,8 +34,6 @@ extern actualizador_t	*	ACTUALIZADOR;
 uint8_t	pressedTouchPanel;
 uint8_t	__brilloAuto = 0;
 uint8_t	Aux8;
-
-uint8_t	DEBUG=180;
 //	ZONA DE PANTALLA DE INICIO.
 screenZone_t 	zona_0	=	{	0			,		0		,	MAXIMOX		,	MAXIMOY*0.2	,	0	};	//	Marco del reloj y botones de alante y atrás.
 screenZone_t 	zona_1	=	{	MAXIMOX*0.15	,  		0		, 	MAXIMOX*0.7	, 	MAXIMOY*0.2	,	0	};	//	Reloj.
@@ -97,6 +95,7 @@ void	__mainLoop__(	void	)
 {
 	alimentaWDT();
 	checkTouchPanel();
+	modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Temperatura - TEMP_MIN)/(TEMP_MAX - TEMP_MIN))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
 	if ( __brilloAuto && (SysTick->CTRL & 0x10000))	//	Cada 100 ms si el brillo auto está activado.
 	{
 		goto_LUT( DATOS->Brillo, BRILLO_LCR , none , &Aux8 , none , none);
@@ -118,15 +117,6 @@ void	__mainLoop__(	void	)
 			}
 			if (zoneNewPressed(	&zona_5))
 			{
-				modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	DEBUG	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
-				if (DEBUG == 0)
-				{
-					DEBUG += 5;
-				}
-				else
-				{
-					DEBUG -= 5;
-				}
 				ESTADO->CHART = PANTALLA_AJUSTES;
 				LCD_Clear(Black);
 			}
