@@ -25,7 +25,6 @@
 #include	"GLCD.h"
 #include	"TouchPanel.h"
 #include	"menu.h"
-#include	"leds.h"
 #endif
 #ifndef	SYSTEMSYMBOLS
 #define	SYSTEMSYMBOLS
@@ -66,6 +65,10 @@
 #ifndef	LUT
 #define	LUT
 #include "LUT.h"
+#endif
+#ifndef	DAC
+#define	DAC
+#include	"DAC.h"
 #endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//

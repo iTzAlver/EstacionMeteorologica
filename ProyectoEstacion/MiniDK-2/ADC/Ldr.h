@@ -1,6 +1,6 @@
 /**---------------------------------------------------------------------------------------------------------------------//
 //		@filename		LDR.h																		//
-//		@version		0.00																			//
+//		@version																					//
 //		@author		Alberto Palomo Alonso															//
 //																								//
 //		@brief		Cabecera para el código de LDR.c													//
@@ -42,7 +42,7 @@
 #define	ADC_POWER		(1 << 21)
 
 #define	RESISTENCIA_PULL	1.5
-#define	LDRRESISTENCIA_MAX	10
+#define	LDRRESISTENCIA_MAX	100
 #define	LDRRESISTENCIA_MIN	1
 #define	BRILLO_MAX		100
 #define	BRILLO_MIN		1

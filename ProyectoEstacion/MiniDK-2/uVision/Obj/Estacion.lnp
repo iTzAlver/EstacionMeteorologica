@@ -16,7 +16,6 @@
 ".\obj\web.o"
 ".\obj\statechart.o"
 ".\obj\touchpanel.o"
-".\obj\leds.o"
 ".\obj\anemometro.o"
 ".\obj\ldr.o"
 ".\obj\ufono.o"

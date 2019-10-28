@@ -28,7 +28,6 @@
 #include	"GLCD.h"
 #include	"TouchPanel.h"
 #include	"menu.h"
-#include	"leds.h"
 #endif
 #ifndef	STATECHART
 #define	STATECHART
@@ -56,7 +55,11 @@
 #endif
 #ifndef	ANEMOMETRO
 #define	ANEMOMETRO
-#include "Anemometro.h"
+#include 	"Anemometro.h"
+#endif
+#ifndef	DAC
+#define	DAC
+#include 	"DAC.h"
 #endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//

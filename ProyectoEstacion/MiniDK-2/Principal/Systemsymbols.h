@@ -84,6 +84,9 @@
 #define		CsAnemometro		5*Fs0						//	Frecuencia de muestreo del anemómetro.
 #define		CsLDR			Fs0							//	Frecuencia de muestreo del LDR.
 #define		CsUVA			5*Fs0						//	Frecuencia de muestreo del UVA.
+#define		FsAudio			40000						//	10kHz de audio, Nyquist *= 2,	Yo *= 4.
+#define		TsAudio			(float)1/(float)FsAudio			//	Periodo de muestreo del audio.
+#define		MUESTRAS_AUDIO		100000						//	2 segundos de audio.
 //	Constantes universales.
 #define		PI				3.141592
 /**---------------------------------------------------------------------------------------------------------------------//
@@ -105,7 +108,7 @@ typedef 	struct {			//	Contadores de 8, 16 y 32 bits.
 	__IO	uint8_t	i;
 	__IO	uint8_t	j;
 	__IO	uint16_t	k;
-	__IO	uint32_t	v;
+	__IO	uint32_t	Audio;
 	__IO uint32_t  Segundos;
 }Counters_t;
 
@@ -136,6 +139,8 @@ typedef struct {
 	__IO	uint8_t	LDRrev:1;
 	__IO	uint8_t	UVA:1;
 	__IO	uint8_t	UVArev:1;
+	__IO	uint8_t	Audio:1;
+	__IO	uint8_t	Audiorev:1;
 }actualizador_t;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//

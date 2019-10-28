@@ -13,7 +13,6 @@
 .\obj\statechart.o: ..\Menu\Firmware\header\lpc17xx_gpio.h
 .\obj\statechart.o: ..\Menu\Firmware\header\lpc17xx_pinsel.h
 .\obj\statechart.o: ..\Menu\menu.h
-.\obj\statechart.o: ..\Menu\Leds\leds.h
 .\obj\statechart.o: ..\Principal\Systemsymbols.h
 .\obj\statechart.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
 .\obj\statechart.o: ..\WDT\WDT.h
@@ -25,5 +24,6 @@
 .\obj\statechart.o: ..\Anemometro\Anemometro.h
 .\obj\statechart.o: ..\ADC\LDR.h
 .\obj\statechart.o: ..\BaseDeDatos\LUT.h
+.\obj\statechart.o: ..\DAC\DAC.h
 .\obj\statechart.o: ..\TCPIP\lib\HTTP_SOURCE.h
 .\obj\statechart.o: ..\TCPIP\lib\Net_Config.h

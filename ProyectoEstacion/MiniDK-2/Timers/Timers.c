@@ -21,9 +21,11 @@
 #define	TIMERS
 #include	"Timers.h"
 #endif
-extern	misDatos_t	*	DATOS;
 uint8_t					TIM0_ticks = 0;
+extern	Counters_t	*	COUNTERS;
+extern	misDatos_t	*	DATOS;
 extern	actualizador_t	*	ACTUALIZADOR;
+extern	uint16_t		*	AUDIO;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@function		__configuraSysTick__()															//
@@ -55,6 +57,13 @@ void __configuraTimer0__()
 	NVIC_SetPriority(	TIMER0_IRQn	,	0	);
 	NVIC_EnableIRQ(	TIMER0_IRQn	);
 }
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@function		__configuraTimer2__()															//
+//																								//
+//		@GOTO		¡DEFINIDO EN EL DAC! (DAC.c)														//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@HANDLER		TIMER0_IRQHandler()																//
@@ -100,6 +109,24 @@ void TIMER0_IRQHandler(	void	)
 void SysTick_Handler()
 {
 	timer_tick();
+}
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@HANDLER		TIMER2_IRQHandler()																//
+//																								//
+//		@brief		Manejador de la interrupción del DAC. Hecha para generar el audio.						//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
+void TIMER2_IRQHandler()
+{
+	LPC_TIM2->IR	|=	LPC_TIM2->IR;							//	Borro flag de interrupción.
+	escribirEnDac(AUDIO[COUNTERS->Audio]	,	2	);			//	Escribo el valor del audio en el DAC.
+	if ( COUNTERS->Audio++ == MUESTRAS_AUDIO - 1	)				//	Reset y fin al audio.
+	{
+		COUNTERS->Audio = 0;								//	Reset al contador.
+		NVIC_DisableIRQ(	TIMER2_IRQn	);					//	Desactivo el timer del DAC cuando finaliza el audio.
+		ACTUALIZADOR->Audiorev	=	1;						//	Le digo al sistema que ya ha acabado el DAC.
+	}
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//

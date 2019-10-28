@@ -19,3 +19,12 @@
 *	El archivo TouchPanel.c de la sección Menu es código porporcionado por la asignatura S.E.D.A de la uah como ejemplo y ha sufrido modificaciones. 
 *	Las modificaciones en TouchPanel.c son: incluir la libreria WDT y la llamada a la función alimentaWDT() para el Watchdog.
 *	En el archivo statechart.c y statechart.h se han modificado ligeramente funciones y se han implementado.
+
+##	Proyecto
+
+*	Github:	[EstacionMeterologica](https://github.com/iTzAlver/EstacionMeteorologica.git)
+*	Gmail:	ialver.p@gmail.com
+
+>	uah.es
+>	arm.com
+>	Alberto Palomo

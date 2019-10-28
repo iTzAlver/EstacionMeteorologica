@@ -656,11 +656,6 @@
               <FileType>1</FileType>
               <FilePath>..\Menu\TouchPanel\TouchPanel.c</FilePath>
             </File>
-            <File>
-              <FileName>leds.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Menu\Leds\leds.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>

@@ -16,10 +16,8 @@
 .\obj\main.o: ..\Menu\Firmware\header\lpc17xx_gpio.h
 .\obj\main.o: ..\Menu\Firmware\header\lpc17xx_pinsel.h
 .\obj\main.o: ..\Menu\menu.h
-.\obj\main.o: ..\Menu\Leds\leds.h
 .\obj\main.o: ..\Menu\Statechart.h
 .\obj\main.o: ..\Menu\menu.h
-.\obj\main.o: ..\Menu\Leds\leds.h
 .\obj\main.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
 .\obj\main.o: ..\WDT\WDT.h
 .\obj\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
@@ -29,6 +27,7 @@
 .\obj\main.o: ..\Anemometro\Anemometro.h
 .\obj\main.o: ..\ADC\LDR.h
 .\obj\main.o: ..\BaseDeDatos\LUT.h
+.\obj\main.o: ..\DAC\DAC.h
 .\obj\main.o: ..\TCPIP\lib\HTTP_SOURCE.h
 .\obj\main.o: ..\TCPIP\lib\Net_Config.h
 .\obj\main.o: ..\RTC\RTC.h

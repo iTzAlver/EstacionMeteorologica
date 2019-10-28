@@ -144,6 +144,14 @@ void	__mainLoop__(	void	)
 			{
 				__brilloAuto = 1;
 			}
+			if (zoneNewPressed(	&zona_16))
+			{
+				if	(	ACTUALIZADOR->Audiorev	)
+				{
+					ACTUALIZADOR->Audiorev = 0;
+					activarDac();
+				}
+			}
 			break;
 			
 		case	PANTALLA_MEDIDAS1:
@@ -237,7 +245,6 @@ void	__configuraLCD__(	void	)
 {
 	TP_Init();
 	LCD_Initializtion();
-	configLEDs();
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//

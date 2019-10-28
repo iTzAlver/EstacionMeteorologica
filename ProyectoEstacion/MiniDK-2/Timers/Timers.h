@@ -37,6 +37,10 @@
 #define	LDR
 #include	"LDR.h"
 #endif
+#ifndef	DAC
+#define	DAC
+#include	"DAC.h"
+#endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes a los timers.									//
