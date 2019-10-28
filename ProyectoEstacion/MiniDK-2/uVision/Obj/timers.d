@@ -10,3 +10,4 @@
 .\obj\timers.o: ..\Principal\Systemsymbols.h
 .\obj\timers.o: ..\Anemometro\Anemometro.h
 .\obj\timers.o: ..\ADC\LDR.h
+.\obj\timers.o: ..\BaseDeDatos\LUT.h

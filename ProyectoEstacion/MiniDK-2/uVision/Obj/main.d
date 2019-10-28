@@ -28,8 +28,8 @@
 .\obj\main.o: C:\Keil\ARM\RV31\INC\RTL.h
 .\obj\main.o: ..\Anemometro\Anemometro.h
 .\obj\main.o: ..\ADC\LDR.h
+.\obj\main.o: ..\BaseDeDatos\LUT.h
 .\obj\main.o: ..\TCPIP\lib\HTTP_SOURCE.h
 .\obj\main.o: ..\TCPIP\lib\Net_Config.h
-.\obj\main.o: ..\BaseDeDatos\LUT.h
 .\obj\main.o: ..\RTC\RTC.h
 .\obj\main.o: ..\TCPIP\lib\HTTP_SOURCE.h

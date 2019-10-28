@@ -7,3 +7,4 @@
 .\obj\lut.o: ..\Startup\core_cmInstr.h
 .\obj\lut.o: ..\Startup\core_cmFunc.h
 .\obj\lut.o: ..\Startup\system_LPC17xx.h
+.\obj\lut.o: ..\ADC\LDR.h

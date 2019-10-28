@@ -24,6 +24,6 @@
 .\obj\statechart.o: C:\Keil\ARM\RV31\INC\RTL.h
 .\obj\statechart.o: ..\Anemometro\Anemometro.h
 .\obj\statechart.o: ..\ADC\LDR.h
+.\obj\statechart.o: ..\BaseDeDatos\LUT.h
 .\obj\statechart.o: ..\TCPIP\lib\HTTP_SOURCE.h
 .\obj\statechart.o: ..\TCPIP\lib\Net_Config.h
-.\obj\statechart.o: ..\BaseDeDatos\LUT.h

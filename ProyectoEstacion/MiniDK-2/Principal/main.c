@@ -35,6 +35,7 @@ Counters_t 		objCOUNTERS;				//	Objeto.
 Counters_t	*	COUNTERS = &objCOUNTERS;		//	Declarar como extern. (Hey, compilador, creeme que hay una variable por ahí que se llama COUNTERS)
 actualizador_t		objACTUALIZADOR;			//	Objeto.
 actualizador_t	*	ACTUALIZADOR = &objACTUALIZADOR; //	Declarar como extern. (Hey, compilador, creeme que hay una variable por ahí que se llama ACTUALIZADOR)
+uint16_t			AUDIO[200];				//   Audio.
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@main		Programa principal, inicio after-reset.												//
