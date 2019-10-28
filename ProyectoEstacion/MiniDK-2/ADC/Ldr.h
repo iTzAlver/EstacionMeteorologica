@@ -40,6 +40,7 @@
 #define	BRUST_PIN		(1 << 16)
 #define	SEL_CANAL1	(1 << 1)
 #define	ADC_POWER		(1 << 21)
+#define	ADC_START		(1 << 24)
 
 #define	RESISTENCIA_PULL	1.5
 #define	LDRRESISTENCIA_MAX	100

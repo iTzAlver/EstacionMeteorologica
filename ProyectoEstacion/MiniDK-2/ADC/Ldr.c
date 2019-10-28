@@ -41,15 +41,16 @@ void	__configuraLDR__()
 						|	SEL_CANAL1		//	AD0.1 activado.
 						|	ADC_POWER;		//	Empiezo apagando el ADC.
 	LPC_ADC->ADINTEN		|=	SEL_CANAL1;		//	Genera interrupción el canal 1.	(Debería ser el penúltimo)
+	ACTUALIZADOR->LDRrev	=	1;				//	Inicia para activar.
 	NVIC_EnableIRQ(	ADC_IRQn	);
 }
 void	ADC_IRQHandler()
 {
-	LPC_SC->PCONP			&=	~PCONP_ADC_ON;													//	Mato el ADC.
-	BUFFER_BRILLO			=	(float)((LPC_ADC->ADDR1 >> 4)&(0xFFF));								//	Empieza a partir del bit 4.
-	BUFFER_BRILLO			= 	(float)RESISTENCIA_PULL*(BUFFER_BRILLO)/(float)(0xFFF - BUFFER_BRILLO);	//	Leo el ADC. (Ressitencia del LDR en kOhms)
-	goto_LUT(	BUFFER_BRILLO	,	BRILLO2CICLO_LDR	,	(float *)&DATOS->Brillo	,	none	,	none	,	none	);	//	Traduzco resistencias a LUX.
-	ACTUALIZADOR->LDRrev	=	0;															//	Digo que el LDR ha sido leido.
+	LPC_ADC->ADCR			&=	~BRUST_PIN;													//	Mato el BURST.
+	BUFFER_BRILLO			=	(float)((LPC_ADC->ADDR1&(0xFFF0)) >> 4);							//	Empieza a partir del bit 4.
+	BUFFER_BRILLO			= 	(float)RESISTENCIA_PULL*(BUFFER_BRILLO)/(float)((float)0xFFF - BUFFER_BRILLO);	//	Leo el ADC. (Ressitencia del LDR en kOhms)
+	goto_LUT(	BUFFER_BRILLO	,	BRILLO_LDR	,	(float *)&DATOS->Brillo	,	none	,	none	,	none	);	//	Traduzco resistencias a LUX.
+	ACTUALIZADOR->LDRrev	=	1;															//	Digo que el LDR ha sido leido.
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//

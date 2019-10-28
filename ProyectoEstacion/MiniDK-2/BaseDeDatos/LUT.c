@@ -54,7 +54,7 @@ void goto_LUT( float variable , uint8_t LUTn , float * ret_flotante , uint8_t * 
 	switch( LUTn )
 	{
 		case BRILLO_LDR:
-			*ret_int8 = Brillo_LDR[		(uint8_t)(((variable - LDRRESISTENCIA_MIN)	/(LDRRESISTENCIA_MAX - LDRRESISTENCIA_MIN))	*Brillo_LDR[0]) + 1];
+			*ret_flotante = Brillo_LDR[		(uint8_t)(((variable - LDRRESISTENCIA_MIN)	/(LDRRESISTENCIA_MAX - LDRRESISTENCIA_MIN))	*Brillo_LDR[0]) + 1];
 			break;
 		case	BRILLO2CICLO_LDR:
 			*ret_int8	= Brillo2ciclo_LDR[	(uint8_t)(((variable - BRILLO_MIN)			/(BRILLO_MAX - BRILLO_MIN))				*Brillo2ciclo_LDR[0]) + 1];

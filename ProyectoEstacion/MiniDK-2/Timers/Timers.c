@@ -25,7 +25,7 @@ uint8_t					TIM0_ticks = 0;
 extern	Counters_t	*	COUNTERS;
 extern	misDatos_t	*	DATOS;
 extern	actualizador_t	*	ACTUALIZADOR;
-extern	uint16_t		*	AUDIO;
+extern	uint8_t		*	AUDIO;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@function		__configuraSysTick__()															//
@@ -90,6 +90,9 @@ void TIMER0_IRQHandler(	void	)
 		if(	ACTUALIZADOR->LDRrev	)
 		{
 			LPC_SC->PCONP	|=	PCONP_ADC_ON;
+			ACTUALIZADOR->LDRrev = 0;
+			LPC_ADC->ADCR	&=	~ADC_START;	//	Ojito que es modo ráfaga, no hay start.
+			LPC_ADC->ADCR	|=	BRUST_PIN;	//	Ráfaga.
 		}
 	}
 	
@@ -98,6 +101,7 @@ void TIMER0_IRQHandler(	void	)
 		
 	}
 	TIM0_ticks++;
+	modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Temperatura - TEMP_MIN)/(TEMP_MAX - TEMP_MIN))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//

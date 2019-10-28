@@ -138,7 +138,7 @@
         <sDllPa></sDllPa>
         <sDlgDll></sDlgDll>
         <sDlgPa></sDlgPa>
-        <sIfile>..\Initialization\anemometro.ini</sIfile>
+        <sIfile>..\Initialization\LDR.ini</sIfile>
         <tDll></tDll>
         <tDllPa></tDllPa>
         <tDlgDll></tDlgDll>
@@ -165,7 +165,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGDARM</Key>
-          <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=886,275,1252,501,0)(1009=-1,-1,-1,-1,0)(1012=-1,-1,-1,-1,0)(350=-1,-1,-1,-1,0)(250=-1,-1,-1,-1,0)(270=-1,-1,-1,-1,0)(313=-1,-1,-1,-1,0)(291=-1,-1,-1,-1,0)(302=-1,-1,-1,-1,0)(110=-1,-1,-1,-1,0)(113=-1,-1,-1,-1,0)(320=-1,-1,-1,-1,0)(210=-1,-1,-1,-1,0)(330=720,151,1091,768,0)(332=-1,-1,-1,-1,0)(333=120,486,708,681,1)(334=-1,-1,-1,-1,0)(335=-1,-1,-1,-1,0)(336=-1,-1,-1,-1,0)(345=-1,-1,-1,-1,0)(346=-1,-1,-1,-1,0)(381=-1,-1,-1,-1,0)(382=-1,-1,-1,-1,0)(383=-1,-1,-1,-1,0)(384=-1,-1,-1,-1,0)(197=-1,-1,-1,-1,0)(198=-1,-1,-1,-1,0)(191=-1,-1,-1,-1,0)(192=-1,-1,-1,-1,0)(199=-1,-1,-1,-1,0)(180=-1,-1,-1,-1,0)(261=-1,-1,-1,-1,0)(262=-1,-1,-1,-1,0)(231=-1,-1,-1,-1,0)(232=-1,-1,-1,-1,0)(233=-1,-1,-1,-1,0)(121=268,185,784,679,0)(122=789,274,1305,768,1)(123=-1,-1,-1,-1,0)(124=-1,-1,-1,-1,0)(170=-1,-1,-1,-1,0)(142=850,169,1366,768,0)(150=-1,-1,-1,-1,0)(400=-1,-1,-1,-1,0)(370=859,303,1366,768,0)(160=-1,-1,-1,-1,0)(280=-1,-1,-1,-1,0)(240=-1,-1,-1,-1,0)</Name>
+          <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=886,275,1252,501,0)(1009=-1,-1,-1,-1,0)(1012=-1,-1,-1,-1,0)(350=-1,-1,-1,-1,0)(250=-1,-1,-1,-1,0)(270=-1,-1,-1,-1,0)(313=-1,-1,-1,-1,0)(291=-1,-1,-1,-1,0)(302=-1,-1,-1,-1,0)(110=-1,-1,-1,-1,0)(113=-1,-1,-1,-1,0)(320=-1,-1,-1,-1,0)(210=-1,-1,-1,-1,0)(330=720,151,1091,768,0)(332=-1,-1,-1,-1,0)(333=120,486,708,681,0)(334=-1,-1,-1,-1,0)(335=-1,-1,-1,-1,0)(336=-1,-1,-1,-1,0)(345=-1,-1,-1,-1,0)(346=-1,-1,-1,-1,0)(381=-1,-1,-1,-1,0)(382=-1,-1,-1,-1,0)(383=-1,-1,-1,-1,0)(384=-1,-1,-1,-1,0)(197=-1,-1,-1,-1,0)(198=-1,-1,-1,-1,0)(191=-1,-1,-1,-1,0)(192=-1,-1,-1,-1,0)(199=-1,-1,-1,-1,0)(180=-1,-1,-1,-1,0)(261=-1,-1,-1,-1,0)(262=-1,-1,-1,-1,0)(231=-1,-1,-1,-1,0)(232=-1,-1,-1,-1,0)(233=-1,-1,-1,-1,0)(121=268,185,784,679,0)(122=709,211,1225,705,0)(123=-1,-1,-1,-1,0)(124=-1,-1,-1,-1,0)(170=-1,-1,-1,-1,0)(142=850,169,1366,768,0)(150=-1,-1,-1,-1,0)(400=-1,-1,-1,-1,0)(370=859,303,1366,768,0)(160=-1,-1,-1,-1,0)(280=848,66,1280,631,1)(240=-1,-1,-1,-1,0)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -212,6 +212,11 @@
           <WinNumber>2</WinNumber>
           <ItemText>((LPC_TIM_TypeDef *) ((0x40000000UL) + 0x08000) )-&gt;CR0</ItemText>
         </Ww>
+        <Ww>
+          <count>1</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>BUFFER_BRILLO</ItemText>
+        </Ww>
       </WatchWindow2>
       <MemoryWindow1>
         <Mm>
@@ -220,6 +225,48 @@
           <ItemText>0x40018038</ItemText>
         </Mm>
       </MemoryWindow1>
+      <ToolboxButtons>
+        <Wi>
+          <IntNumber>0</IntNumber>
+          <FirstString>Canal 0 1000 Hz</FirstString>
+          <SecondString>triangular_canal0(1000)</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>1</IntNumber>
+          <FirstString>Canal 1 2000 Hz</FirstString>
+          <SecondString>triangular_canal1(2000)</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>2</IntNumber>
+          <FirstString>Canal 2 2000 Hz</FirstString>
+          <SecondString>triangular_canal2(2000)</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>3</IntNumber>
+          <FirstString>Canal 4 4000 Hz</FirstString>
+          <SecondString>triangular_canal4(4000)</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>4</IntNumber>
+          <FirstString>Kill triangular0</FirstString>
+          <SecondString>SIGNAL KILL triangular_canal0</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>5</IntNumber>
+          <FirstString>Kill triangular1</FirstString>
+          <SecondString>SIGNAL KILL triangular_canal1</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>6</IntNumber>
+          <FirstString>Kill triangular2</FirstString>
+          <SecondString>SIGNAL KILL triangular_canal2</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>7</IntNumber>
+          <FirstString>Kill triangular4</FirstString>
+          <SecondString>SIGNAL KILL triangular_canal4</SecondString>
+        </Wi>
+      </ToolboxButtons>
       <Tracepoint>
         <THDelay>0</THDelay>
       </Tracepoint>
@@ -234,7 +281,7 @@
         <viewmode>1</viewmode>
         <vrSel>0</vrSel>
         <aSym>0</aSym>
-        <aTbox>0</aTbox>
+        <aTbox>1</aTbox>
         <AscS1>0</AscS1>
         <AscS2>0</AscS2>
         <AscS3>0</AscS3>
@@ -251,6 +298,13 @@
       </DebugFlag>
       <LintExecutable></LintExecutable>
       <LintConfigFile></LintConfigFile>
+      <LogicAnalyzers>
+        <Wi>
+          <IntNumber>0</IntNumber>
+          <FirstString>`AIN1</FirstString>
+          <SecondString>FF000000000000000000000000000000000014400000000000000000000000000000000041494E31000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000000000000000F03F1300000000000000000000000000000000000000BC350100</SecondString>
+        </Wi>
+      </LogicAnalyzers>
     </TargetOption>
   </Target>
 
@@ -292,8 +346,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>121</TopLine>
+      <CurrentLine>129</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\startup_LPC17xx.s</PathWithFileName>
       <FilenameWithoutPath>startup_LPC17xx.s</FilenameWithoutPath>
@@ -336,7 +390,7 @@
 
   <Group>
     <GroupName>Setup</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -346,10 +400,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>37</ColumnNumber>
+      <ColumnNumber>24</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>21</TopLine>
-      <CurrentLine>41</CurrentLine>
+      <TopLine>25</TopLine>
+      <CurrentLine>50</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Setup\configura.c</PathWithFileName>
       <FilenameWithoutPath>configura.c</FilenameWithoutPath>
@@ -370,10 +424,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>25</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>17</TopLine>
-      <CurrentLine>52</CurrentLine>
+      <TopLine>25</TopLine>
+      <CurrentLine>49</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Principal\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -396,8 +450,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>118</TopLine>
+      <CurrentLine>130</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\PWM\PWM.c</PathWithFileName>
       <FilenameWithoutPath>PWM.c</FilenameWithoutPath>
@@ -432,7 +486,7 @@
 
   <Group>
     <GroupName>Timers</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -440,12 +494,12 @@
       <GroupNumber>7</GroupNumber>
       <FileNumber>9</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>40</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>25</TopLine>
-      <CurrentLine>53</CurrentLine>
+      <TopLine>75</TopLine>
+      <CurrentLine>90</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Timers\Timers.c</PathWithFileName>
       <FilenameWithoutPath>Timers.c</FilenameWithoutPath>
@@ -506,10 +560,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>32</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>229</TopLine>
-      <CurrentLine>1</CurrentLine>
+      <TopLine>34</TopLine>
+      <CurrentLine>24</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\TCPIP\config\Net_Config.c</PathWithFileName>
       <FilenameWithoutPath>Net_Config.c</FilenameWithoutPath>
@@ -588,8 +642,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>184</TopLine>
+      <CurrentLine>201</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\TCPIP\config\EMAC_LPC17xx_LAN8720.c</PathWithFileName>
       <FilenameWithoutPath>EMAC_LPC17xx_LAN8720.c</FilenameWithoutPath>
@@ -626,10 +680,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>25</ColumnNumber>
+      <ColumnNumber>23</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>202</TopLine>
-      <CurrentLine>247</CurrentLine>
+      <TopLine>88</TopLine>
+      <CurrentLine>97</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Menu\Statechart.c</PathWithFileName>
       <FilenameWithoutPath>Statechart.c</FilenameWithoutPath>
@@ -660,8 +714,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>1</CurrentLine>
+      <TopLine>112</TopLine>
+      <CurrentLine>126</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Menu\TouchPanel\TouchPanel.c</PathWithFileName>
       <FilenameWithoutPath>TouchPanel.c</FilenameWithoutPath>
@@ -696,7 +750,7 @@
 
   <Group>
     <GroupName>ADC</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -706,10 +760,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>45</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>15</TopLine>
-      <CurrentLine>40</CurrentLine>
+      <TopLine>32</TopLine>
+      <CurrentLine>49</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\ADC\Ldr.c</PathWithFileName>
       <FilenameWithoutPath>Ldr.c</FilenameWithoutPath>
@@ -762,10 +816,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>1</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>45</TopLine>
-      <CurrentLine>44</CurrentLine>
+      <TopLine>61</TopLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\DAC\DAC.c</PathWithFileName>
       <FilenameWithoutPath>DAC.c</FilenameWithoutPath>
@@ -804,8 +858,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>85</TopLine>
+      <CurrentLine>86</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Menu\GLCD\GLCD.c</PathWithFileName>
       <FilenameWithoutPath>GLCD.c</FilenameWithoutPath>
@@ -828,8 +882,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>524</TopLine>
+      <CurrentLine>531</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Menu\Firmware\source\lpc17xx_ssp.c</PathWithFileName>
       <FilenameWithoutPath>lpc17xx_ssp.c</FilenameWithoutPath>
@@ -1304,7 +1358,7 @@
 
   <Group>
     <GroupName>DATABASE</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1314,10 +1368,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>1</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>46</TopLine>
-      <CurrentLine>53</CurrentLine>
+      <TopLine>34</TopLine>
+      <CurrentLine>65</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\BaseDeDatos\LUT.c</PathWithFileName>
       <FilenameWithoutPath>LUT.c</FilenameWithoutPath>

@@ -41,6 +41,10 @@
 #define	DAC
 #include	"DAC.h"
 #endif
+#ifndef	PWM
+#define	PWM
+#include	"PWM.h"
+#endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes a los timers.									//

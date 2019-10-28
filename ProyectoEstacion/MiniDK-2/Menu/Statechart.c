@@ -95,7 +95,6 @@ void	__mainLoop__(	void	)
 {
 	alimentaWDT();
 	checkTouchPanel();
-	modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Temperatura - TEMP_MIN)/(TEMP_MAX - TEMP_MIN))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
 	if ( __brilloAuto && (SysTick->CTRL & 0x10000))	//	Cada 100 ms si el brillo auto está activado.
 	{
 		goto_LUT( DATOS->Brillo, BRILLO2CICLO_LDR , none , &Aux8 , none , none);

@@ -84,9 +84,10 @@
 #define		CsAnemometro		5*Fs0						//	Frecuencia de muestreo del anemómetro.
 #define		CsLDR			Fs0							//	Frecuencia de muestreo del LDR.
 #define		CsUVA			5*Fs0						//	Frecuencia de muestreo del UVA.
-#define		FsAudio			40000						//	10kHz de audio, Nyquist *= 2,	Yo *= 4.
+#define		FsAudio			12000						//	3kHz de audio, Nyquist *= 2,	Yo *= 4.
 #define		TsAudio			(float)1/(float)FsAudio			//	Periodo de muestreo del audio.
-#define		MUESTRAS_AUDIO		100000						//	2 segundos de audio.
+#define		DURACION_AUDIO		2							//	2 segundos de audio.
+#define		MUESTRAS_AUDIO		DURACION_AUDIO*FsAudio			//	Muestras en los 2 segundos de audio.
 //	Constantes universales.
 #define		PI				3.141592
 /**---------------------------------------------------------------------------------------------------------------------//

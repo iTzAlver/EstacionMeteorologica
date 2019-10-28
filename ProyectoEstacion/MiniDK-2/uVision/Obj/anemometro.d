@@ -12,3 +12,4 @@
 .\obj\anemometro.o: ..\ADC\LDR.h
 .\obj\anemometro.o: ..\BaseDeDatos\LUT.h
 .\obj\anemometro.o: ..\DAC\DAC.h
+.\obj\anemometro.o: ..\PWM\PWM.h
