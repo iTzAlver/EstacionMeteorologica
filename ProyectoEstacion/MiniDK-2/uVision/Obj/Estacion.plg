@@ -4,6 +4,26 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\Estacion.uvproj
-Project File Date:  10/26/2019
+Project File Date:  10/27/2019
 
 <h2>Output:</h2>
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+linking...
+Program Size: Code=103196 RO-data=4640 RW-data=688 ZI-data=24980  
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+linking...
+Program Size: Code=103196 RO-data=4640 RW-data=688 ZI-data=24980  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+"C:\Program Files (x86)\Flash Magic\FlashMagic.exe" 
+"C:\Program Files (x86)\Flash Magic\FlashMagic.exe" 
