@@ -30,10 +30,16 @@
 //		@brief		Bases de datos.																//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-uint8_t	Brillo_LCR[] =
+uint8_t	Brillo2ciclo_LDR[] =
 {
 	13	,	20	,	25	,	30	,	35	,	40	,	45	,	50	,	55	,	60	,
 	65	,	70	,	75	,	80
+};
+uint8_t	Brillo_LDR[]	=
+{
+	21	,	1	,	5	,	10	,	15	,	20	,	25	,	30	,	35	,	40	,
+	45	,	50	,	65	,	60	,	65	,	70	,	75	,	80	,	85	,	90	,
+	95	,	100
 };
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
@@ -45,10 +51,14 @@ uint8_t	Brillo_LCR[] =
 //---------------------------------------------------------------------------------------------------------------------**/
 void goto_LUT( float variable , uint8_t LUTn , float * ret_flotante , uint8_t * ret_int8 , uint16_t * ret_int16 , uint32_t * ret_int32)
 {
+	
 	switch( LUTn )
 	{
-		case BRILLO_LCR:
-			*ret_int8 = Brillo_LCR[(uint8_t)(variable/Brillo_LCR[0]) + 1];
+		case BRILLO_LDR:
+			*ret_int8 = Brillo_LDR[(uint8_t)((variable/LDRRESISTENCIA_MAX)*Brillo_LDR[0]) + 1];
+			break;
+		case	BRILLO2CICLO_LDR:
+			*ret_int8	= Brillo2ciclo_LDR[(uint8_t)(variable/BRILLO_MAX*Brillo2ciclo_LDR[0]) + 1];
 			break;
 		default:
 			break;

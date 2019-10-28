@@ -21,8 +21,13 @@
 #define	SYSTEMSYMBOLS
 #include	"Systemsymbols.h"
 #endif
+#ifndef	LDR
+#define	LDR
+#include	"LDR.h"
+#endif
 
-#define	BRILLO_LCR	0
+#define	BRILLO_LDR		0
+#define	BRILLO2CICLO_LDR	1
 
 void goto_LUT(	float dato , uint8_t LUTn , float * ret_f , uint8_t * ret_8 , uint16_t * ret_16 , uint32_t * ret_32);
 /**---------------------------------------------------------------------------------------------------------------------//

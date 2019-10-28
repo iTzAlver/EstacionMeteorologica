@@ -21,8 +21,9 @@
 #define	LDR
 #include	"LDR.h"
 #endif
-uint32_t	ELBUFF;
-extern actualizador_t	*	ACTUALIZADOR;
+extern	misDatos_t	*	DATOS;
+float	BUFFER_BRILLO = 0;
+extern 	actualizador_t	*	ACTUALIZADOR;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcion																					//
@@ -44,9 +45,11 @@ void	__configuraLDR__()
 }
 void	ADC_IRQHandler()
 {
-	LPC_SC->PCONP			&=	~PCONP_ADC_ON;		//	Mato el ADC.
-	ELBUFF = LPC_ADC->ADDR1;						//	Leo el ADC.
-	ACTUALIZADOR->LDRrev	=	0;
+	LPC_SC->PCONP			&=	~PCONP_ADC_ON;													//	Mato el ADC.
+	BUFFER_BRILLO			=	(float)((LPC_ADC->ADDR1 >> 4)&(0xFFF));								//	Empieza a partir del bit 4.
+	BUFFER_BRILLO			= 	(float)RESISTENCIA_PULL*(BUFFER_BRILLO)/(float)(0xFFF - BUFFER_BRILLO);	//	Leo el ADC. (Ressitencia del LDR en kOhms)
+	goto_LUT(	BUFFER_BRILLO	,	BRILLO2CICLO_LDR	,	(float *)&DATOS->Brillo	,	none	,	none	,	none	);	//	Traduzco resistencias a LUX.
+	ACTUALIZADOR->LDRrev	=	0;															//	Digo que el LDR ha sido leido.
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
