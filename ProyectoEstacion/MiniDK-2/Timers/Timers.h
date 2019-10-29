@@ -59,10 +59,10 @@
 //	Para cada timer.
 #define	ACTIVAR_TIMER			0x1
 #define	RESET_TIMER_TCR		0x2
-#define	TIMER0_BIT			0x1 << 1
-#define	TIMER1_BIT			0x1 << 2
-#define	TIMER2_BIT			0x1 << 3
-#define	TIMER3_BIT			0x1 << 4
+#define	TIMER0_BIT			(0x1 << 1)
+#define	TIMER1_BIT			(0x1 << 2)
+#define	TIMER2_BIT			(0x1 << 22)
+#define	TIMER3_BIT			(0x1 << 23)
 #define	TIMER0_MCR_MASK		0x3 << (0*3)					//	Activo la interrupción y reseteo el contador.
 #define	TIMER1_MCR_MASK		0x3 << (0*3)					//	No usado.
 #define	TIMER2_MCR_MASK		0x1 << (0*3)

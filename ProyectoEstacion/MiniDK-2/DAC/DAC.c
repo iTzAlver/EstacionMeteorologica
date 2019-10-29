@@ -33,10 +33,9 @@ extern	actualizador_t		*	ACTUALIZADOR;
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__configuraDAC__()
 {
+	LPC_SC->PCONP 	|= 	0x400000;			//	Activo el módulo del timer 2.
 	LPC_PINCON->PINSEL1	|=	(	DAC_FUNC	<< 	2*DAC_PIN);
-	LPC_SC->PCONP 	|= 	TIMER2_BIT;			//	Activo el módulo del timer 2.
-	LPC_TIM2->MCR 	=	TIMER2_MCR_MASK;		//	Activo el ISR y reseteo TC.
-	LPC_TIM2->PR	=	0;					//	Sin prescaler.
+	LPC_TIM2->MCR 	=	TIMER2_MCR_MASK;		//	Activo el ISR y reseteo TC. 
 	LPC_TIM2->TCR	|=	ACTIVAR_TIMER;			//	Activo el timer.
 	LPC_TIM2->MR0	=	Ftick * TsAudio - 1;	//	Cargo para que interrumpa cada 5s.
 	NVIC_SetPriority(	TIMER2_IRQn	,	0	);

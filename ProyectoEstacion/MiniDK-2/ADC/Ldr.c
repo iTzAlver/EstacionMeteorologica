@@ -37,6 +37,7 @@ void	__configuraLDR__()
 {
 	LPC_SC->PCONP 			|=	PCONP_ADC_ON;		//	Enciendo el ADClock.
 	LPC_PINCON->PINSEL1		|=	PINSEL_ADC01;		//	AD0.1
+	LPC_PINCON->PINMODE1	&=	~PINMODE_ADC01;	//	AD0.1
 	LPC_ADC->ADCR			|=	BRUST_PIN			//	Modo ráfaga.
 						|	SEL_CANAL1		//	AD0.1 activado.
 						|	ADC_POWER;		//	Empiezo apagando el ADC.
