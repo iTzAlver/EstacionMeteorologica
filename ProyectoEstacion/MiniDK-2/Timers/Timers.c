@@ -49,12 +49,12 @@ void __configuraSysTick__()
 //---------------------------------------------------------------------------------------------------------------------**/
 void __configuraTimer0__()
 {
-	LPC_SC->PCONP 	|= 	TIMER0_BIT;		//	Activo el módulo del timer 0.
-	LPC_TIM0->MCR 	=	TIMER0_MCR_MASK;	//	Activo el ISR y reseteo TC.
-	LPC_TIM0->PR	=	0;				//	Sin prescaler.
-	LPC_TIM0->TCR	|=	ACTIVAR_TIMER;		//	Activo el timer.
-	LPC_TIM0->MR0	=	Ftick * Ts0 - 1;	//	Cargo para que interrumpa cada 5s.
-	NVIC_SetPriority(	TIMER0_IRQn	,	0	);
+	LPC_SC->PCONP 	|= 	TIMER0_BIT;				//	Activo el módulo del timer 0.
+	LPC_TIM0->MCR 	=	TIMER0_MCR_MASK;			//	Activo el ISR y reseteo TC.
+	LPC_TIM0->PR	=	0;						//	Sin prescaler.
+	LPC_TIM0->TCR	|=	ACTIVAR_TIMER;				//	Activo el timer.
+	LPC_TIM0->MR0	=	Ftick * Ts0 - 1;			//	Cargo para que interrumpa cada 5s.
+	NVIC_SetPriority(	TIMER0_IRQn	,	1	);	//	Para que el ADC interrumpa bien.
 	NVIC_EnableIRQ(	TIMER0_IRQn	);
 }
 /**---------------------------------------------------------------------------------------------------------------------//
@@ -85,7 +85,7 @@ void TIMER0_IRQHandler(	void	)
 		ACTUALIZADOR->AnemometroRev = 0;
 	}
 	
-	if(	!(TIM0_ticks % (uint8_t)CsLDR)	)
+	if(	!(TIM0_ticks % (uint8_t)CsLDR)	)	//	LDR + UVA van el BURST.
 	{
 		if(	ACTUALIZADOR->LDRrev	)
 		{
@@ -94,11 +94,6 @@ void TIMER0_IRQHandler(	void	)
 			LPC_ADC->ADCR	&=	~ADC_START;	//	Ojito que es modo ráfaga, no hay start.
 			LPC_ADC->ADCR	|=	BRUST_PIN;	//	Ráfaga.
 		}
-	}
-	
-	if(	!(TIM0_ticks % (uint8_t)CsUVA)	)
-	{
-		
 	}
 	TIM0_ticks++;
 	modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Temperatura - TEMP_MIN)/(TEMP_MAX - TEMP_MIN))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);

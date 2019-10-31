@@ -6,3 +6,6 @@
 .\obj\uva30a.o: ..\Startup\core_cmInstr.h
 .\obj\uva30a.o: ..\Startup\core_cmFunc.h
 .\obj\uva30a.o: ..\Startup\system_LPC17xx.h
+.\obj\uva30a.o: ..\ADC\LDR.h
+.\obj\uva30a.o: ..\Principal\Systemsymbols.h
+.\obj\uva30a.o: ..\BaseDeDatos\LUT.h

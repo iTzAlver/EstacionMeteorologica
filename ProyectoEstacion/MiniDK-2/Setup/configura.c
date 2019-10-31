@@ -47,6 +47,7 @@ void __configuraPrograma__(	void	)
 	__configuraSysTick__();
 	__configuraTimer0__();
 	__configuraLDR__();
+	__configuraUVA30A__();
 	__configuraPWM__	(	Fpwm	,	ACTIVOS_2_1 | ACTIVOS_6_1	);
 	modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	90	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
 	modificaPulso		(	PWM6,	MODO_CICLO	,	50	,	none	,	none			,	none			);
@@ -55,7 +56,7 @@ void __configuraPrograma__(	void	)
 	__configuraWDT__		();
 	__configuraDAC__();
 	__configuraAnemometro__	();
- 	TouchPanel_Calibrate();
+// 	TouchPanel_Calibrate();
 	ESTADO->CHART = PANTALLA_INICIO;
 }
 /**---------------------------------------------------------------------------------------------------------------------//

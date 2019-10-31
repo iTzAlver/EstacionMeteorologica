@@ -31,3 +31,4 @@
 .\obj\configura.o: ..\TCPIP\lib\Net_Config.h
 .\obj\configura.o: ..\RTC\RTC.h
 .\obj\configura.o: ..\TCPIP\lib\HTTP_SOURCE.h
+.\obj\configura.o: ..\ADC\UVA30A.h
