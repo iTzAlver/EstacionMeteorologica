@@ -1,2 +1,9 @@
 .\obj\onewire.o: ..\OneWire\OneWire.c
 .\obj\onewire.o: ..\OneWire\OneWire.h
+.\obj\onewire.o: ..\Principal\Systemsymbols.h
+.\obj\onewire.o: ..\Startup\LPC17XX.H
+.\obj\onewire.o: ..\Startup\core_cm3.h
+.\obj\onewire.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\obj\onewire.o: ..\Startup\core_cmInstr.h
+.\obj\onewire.o: ..\Startup\core_cmFunc.h
+.\obj\onewire.o: ..\Startup\system_LPC17xx.h

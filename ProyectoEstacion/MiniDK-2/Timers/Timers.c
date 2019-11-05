@@ -21,7 +21,9 @@
 #define	TIMERS
 #include	"Timers.h"
 #endif
-uint8_t					TIM0_ticks = 0;
+uint8_t					TIM0_ticks 	= 	0;
+uint8_t					Timer2_MODO	=	MODO_SALIDA;
+extern	uint8_t			YaPuedesMedir;
 extern	Counters_t	*	COUNTERS;
 extern	misDatos_t	*	DATOS;
 extern	actualizador_t	*	ACTUALIZADOR;
@@ -111,7 +113,7 @@ void TIMER0_IRQHandler(	void	)
 	
 	if(	!(TIM0_ticks % (uint8_t)CsLDR)	)	//	LDR + UVA van el BURST.
 	{
-		if(	ACTUALIZADOR->LDRrev	)
+		if(	ACTUALIZADOR->LDRrev && YaPuedesMedir	)
 		{
 			LPC_SC->PCONP	|=	PCONP_ADC_ON;
 			ACTUALIZADOR->LDRrev = 0;
@@ -143,12 +145,22 @@ void TIMER0_IRQHandler(	void	)
 void TIMER2_IRQHandler()
 {
 	LPC_TIM2->IR	|=	LPC_TIM2->IR;							//	Borro flag de interrupción.
-	escribirEnDac(AUDIO[COUNTERS->Audio]	,	2	);			//	Escribo el valor del audio en el DAC.
+	if 	(	Timer2_MODO	==	MODO_SALIDA)
+	{
+		escribirEnDac(AUDIO[COUNTERS->Audio]	,	2	);			//	Escribo el valor del audio en el DAC.
+	}
+	if	(	Timer2_MODO	==	MODO_ENTRADA)
+	{
+		AUDIO[COUNTERS->Audio]	=	(uint8_t)((0xFF) & (LPC_ADC->ADDR0 >> (4+4)));			//	El ADC es de 12 bits y las muestras de 8 bits, por lo que hay que reducir los 4 LSB.
+		LPC_ADC->ADCR	|=	ADC_START;												//	Lanzar siguiente muestra.//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	}
 	if ( COUNTERS->Audio++ == MUESTRAS_AUDIO - 1	)				//	Reset y fin al audio.
 	{
 		COUNTERS->Audio = 0;								//	Reset al contador.
 		NVIC_DisableIRQ(	TIMER2_IRQn	);					//	Desactivo el timer del DAC cuando finaliza el audio.
 		ACTUALIZADOR->Audiorev	=	1;						//	Le digo al sistema que ya ha acabado el DAC.
+		recuperaContexto();									//	Recupero el contexto del micrófono en el ADC.
+		Timer2_MODO = MODO_SALIDA;							//	Default modo salida.
 	}
 }
 /**---------------------------------------------------------------------------------------------------------------------//

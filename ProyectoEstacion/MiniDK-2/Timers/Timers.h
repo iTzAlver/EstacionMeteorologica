@@ -45,6 +45,10 @@
 #define	PWM
 #include	"PWM.h"
 #endif
+#ifndef	UFONO
+#define	UFONO
+#include	"uFono.h"
+#endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes a los timers.									//
@@ -67,6 +71,9 @@
 #define	TIMER1_MCR_MASK		0x3 << (0*3)					//	No usado.
 #define	TIMER2_MCR_MASK		0x1 << (0*3)
 #define	TIMER3_MCR_MASK		0x1 << (0*3)
+
+#define	MODO_ENTRADA			1
+#define	MODO_SALIDA			0	
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcdef		Estas son las funciones correspondientes a los timers.	      							//

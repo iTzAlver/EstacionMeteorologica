@@ -37,7 +37,7 @@ void	__configuraDAC__()
 	LPC_PINCON->PINSEL1	|=	(	DAC_FUNC	<< 	2*DAC_PIN);
 	LPC_TIM2->MCR 	=	TIMER2_MCR_MASK;		//	Activo el ISR y reseteo TC. 
 	LPC_TIM2->TCR	|=	ACTIVAR_TIMER;			//	Activo el timer.
-	LPC_TIM2->MR0	=	Ftick * TsAudio - 1;	//	Cargo para que interrumpa cada 5s.
+	LPC_TIM2->MR0	=	Ftick * TsAudio - 1;	//	Cargo para que interrumpa cada TsAudio.
 	NVIC_SetPriority(	TIMER2_IRQn	,	0	);
 	ACTUALIZADOR->Audiorev	=	1;			//	Sistema listo para emitir/recibir el audio.
 }

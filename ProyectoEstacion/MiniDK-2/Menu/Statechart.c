@@ -143,12 +143,20 @@ void	__mainLoop__(	void	)
 			{
 				__brilloAuto = 1;
 			}
-			if (zoneNewPressed(	&zona_16))
+			if (zoneNewPressed(	&zona_12))
 			{
 				if	(	ACTUALIZADOR->Audiorev	)
 				{
 					ACTUALIZADOR->Audiorev = 0;
 					activarDac();
+				}
+			}
+			if (zoneNewPressed(	&zona_16))
+			{
+				if	(	ACTUALIZADOR->Audiorev	)
+				{
+					ACTUALIZADOR->Audiorev = 0;
+					lanzaUFONO();
 				}
 			}
 			break;

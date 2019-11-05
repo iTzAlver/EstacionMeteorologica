@@ -26,7 +26,8 @@
 //		@private		Estos son los símbolos correspondientes al protocolo OneWire.							//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-#define	SIZEOF_TRAMA			30		//	Tamaño del array como buffer de 8 bits.
+#define	SIZEOF_TRAMA			40		//	Tamaño del array como buffer de 8 bits.
+#define	SIZEOF_SLOT			8		//	Los últimos 8 bits son el checksum.
 
 #define	OW_RESET_BAJO			0.018	//	Tiempo a nivel bajo de la señal de start. (MCU -> Sensor)
 					/** @CHANGE: 0.04*/
