@@ -27,11 +27,9 @@ float	BUFFER_UVA    = 0;
 extern 	actualizador_t	*	ACTUALIZADOR;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
-//		@funcion																					//
+//		@funcion	__configuraLDR__()																	//
 //																								//
-//		@ref																						//
-//																								//
-//																								//
+//		@brief	Esta función configura el ADC y el LDR													//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__configuraLDR__()
@@ -47,6 +45,13 @@ void	__configuraLDR__()
 	LPC_ADC->ADINTEN		&=	~(SEL_CANAL_GLOBAL);//	Apago la interrupción global.
 	NVIC_EnableIRQ(	ADC_IRQn	);
 }
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@HANDLER	ADC_IRQHandler()																	//
+//																								//
+//		@brief	Esta función gestiona la interrupción del ADC.											//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
 void	ADC_IRQHandler()
 {
 	LPC_ADC->ADCR			&=	~BRUST_PIN;														//	Mato el BURST.

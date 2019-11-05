@@ -28,7 +28,7 @@ extern	actualizador_t		*	ACTUALIZADOR;
 //																								//
 //		@brief		Función de configuración del DAC y su timer (Timer2).									//
 //																								//
-//		@REMARK:		Para activar un periodo del DAC (2 segundos)																						//
+//		@REMARK:		Para activar un periodo del DAC (2 segundos)											//													//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__configuraDAC__()

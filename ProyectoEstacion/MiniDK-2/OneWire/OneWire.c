@@ -1,40 +1,41 @@
 /**---------------------------------------------------------------------------------------------------------------------//
-//		@filename		uFono.h																		//
+//		@filename		OneWire.c																		//
 //		@version		0.00																			//
 //		@author		Alberto Palomo Alonso															//
 //																								//
-//		@brief		Cabecera para configurar el audio del micrófono.										//
+//		@brief		Código que configura el protocolo monohilo del sensor de temperatura y humedad.				//
 //																								//
 //		@category		Opcional.																		//
 //																								//
 //		@map			@include																		//
-//					@funcdef																		//
+//					@funcion																		//
 //					@end																			//
 //																								//
 //																								//
 //----------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
-//		@include		Estos son los archivos utilizados para el audio del micrófono.							//
+//		@include		Estos son los archivos utilizados para el protocolo OneWire.							//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-
-
+#ifndef	ONEWIRE
+#define	ONEWIRE
+#include	"OneWire.h"
+#endif
+uint8_t	OW_TramaRx[SIZEOF_TRAMA];
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
-//		@private		Estos son los símbolos correspondientes al audio del micrófono.							//
+//		@function		__configuraOW__()																//
+//																								//
+//		@brief		Configura los pines y los recursos utilizados para el protocolo OneWire.					//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-
-
-/**---------------------------------------------------------------------------------------------------------------------//
-//																								//																																														//
-//		@funcdef		Estas son las funciones correspondientes al audio del micrófono.	      					//
-//																								//
-//---------------------------------------------------------------------------------------------------------------------**/
-
-
+void __configuraOW_()
+{
+	
+}
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
+

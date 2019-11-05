@@ -351,7 +351,7 @@
               <MiscControls></MiscControls>
               <Define>NO_RTX_KERNEL</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Startup;..\PWM;..\Principal;..\Setup;..\Menu;..\Menu\GLCD;..\Menu\Firmware\header;..\Menu\Firmware\source;..\Menu\Leds;..\Menu\TouchPanel;..\RTC;..\WDT;..\TCPIP;..\TCPIP\lib;C:\Keil\ARM\RV31\lib;..\TCPIP\FM\include;..\TCPIP\FM\source;..\Timers;..\Anemometro;..\FAT32;..\FAT32\FW\include;..\FAT32\FW\source;..\ADC;..\DAC;..\BaseDeDatos</IncludePath>
+              <IncludePath>..\Startup;..\PWM;..\Principal;..\Setup;..\Menu;..\Menu\GLCD;..\Menu\Firmware\header;..\Menu\Firmware\source;..\Menu\Leds;..\Menu\TouchPanel;..\RTC;..\WDT;..\TCPIP;..\TCPIP\lib;C:\Keil\ARM\RV31\lib;..\TCPIP\FM\include;..\TCPIP\FM\source;..\Timers;..\Anemometro;..\FAT32;..\FAT32\FW\include;..\FAT32\FW\source;..\ADC;..\DAC;..\BaseDeDatos;..\OneWire</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -665,6 +665,16 @@
               <FileName>Anemometro.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\ANEMOMETRO\Anemometro.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>OneWire</GroupName>
+          <Files>
+            <File>
+              <FileName>OneWire.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\OneWire\OneWire.c</FilePath>
             </File>
           </Files>
         </Group>

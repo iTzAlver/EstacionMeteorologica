@@ -37,14 +37,13 @@ void __configuraSysTick__()
 {
 	SysTick->LOAD = (SystemCoreClock / FREQ_OVERFLOW_SYSTICK) - 1;	//	SysTick configurado a desbordar cada 100 ms para TcpNet.
 	SysTick->CTRL = MASCARA_CTRL_SYSTICK;				//	Fcpu como clock y no activo la interrupción del SysTickTimer.
-//	NVIC_EnableIRQ(	SysTick_IRQn	);
 	SysTick_Config( SystemCoreClock / FREQ_OVERFLOW_SYSTICK);
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@function		__configuraTimer0__()															//
 //																								//
-//		@brief		Configura el Timer0 para muestrear cada TIEMPO_MUESTRO segundos.							//
+//		@brief		Configura el Timer0 para nterrumpir cada Ts0 segundos.									//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
 void __configuraTimer0__()
@@ -59,11 +58,36 @@ void __configuraTimer0__()
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
+//		@function		__configuraTimer1__()															//
+//																								//
+//		@GOTO		¡DEFINIDO EN EL OW! (OneWire.c)													//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
 //		@function		__configuraTimer2__()															//
 //																								//
 //		@GOTO		¡DEFINIDO EN EL DAC! (DAC.c)														//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@function		__configuraTimer3__()															//
+//																								//
+//		@brief																					//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@HANDLER		SysTick_Handler()																//
+//																								//
+//		@brief		Manejador de la interrupción del SysTick. Cada 100 ms se realizan acciones.				//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
+void SysTick_Handler()
+{
+	timer_tick();
+}
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@HANDLER		TIMER0_IRQHandler()																//
@@ -95,20 +119,20 @@ void TIMER0_IRQHandler(	void	)
 			LPC_ADC->ADCR	|=	BRUST_PIN;	//	Ráfaga.
 		}
 	}
+	if(	!(TIM0_ticks % (uint8_t)CsTnH)	)	//	Sensor de humedad y temperatura.
+	{
+		
+	}
 	TIM0_ticks++;
 	modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Temperatura - TEMP_MIN)/(TEMP_MAX - TEMP_MIN))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
-//		@HANDLER		SysTick_Handler()																//
+//		@HANDLER		TIMER1_IRQHandler()																//
 //																								//
-//		@brief		Manejador de la interrupción del SysTick. Cada 100 ms se realizan acciones.				//
+//		@brief																					//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-void SysTick_Handler()
-{
-	timer_tick();
-}
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@HANDLER		TIMER2_IRQHandler()																//
@@ -127,6 +151,13 @@ void TIMER2_IRQHandler()
 		ACTUALIZADOR->Audiorev	=	1;						//	Le digo al sistema que ya ha acabado el DAC.
 	}
 }
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@HANDLER		TIMER3_IRQHandler()																//
+//																								//
+//		@brief		Manejador de la interrupción del DAC. Hecha para generar el audio.						//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

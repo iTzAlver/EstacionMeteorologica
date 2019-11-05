@@ -79,15 +79,19 @@
 #define		Prescaler			0							//	Valor del prescaler, 0 after-reset.
 #define		Fclk				(float)Fcpu/(float)APBvalue		//	Valor del reloj prescalado por APB.
 #define		Ftick			Fclk/(float)(Prescaler+1)		//	Valor del reloj asociado a los contadores.
+
 #define		Ts0				0.5							//	Tiempo de muestreo en segundos sin prescaler. (Muestras)
 #define		Fs0				(float)1/(float)Ts0				//	Frecuencia de muestreo en Hz. (Muestras)
 #define		CsAnemometro		5*Fs0						//	Frecuencia de muestreo del anemómetro.
 #define		CsLDR			Fs0							//	Frecuencia de muestreo del LDR.
 #define		CsUVA			5*Fs0						//	Frecuencia de muestreo del UVA.
+#define		CsTnH			10*Fs0						//	Frecuencia de muestreo del sensor de temperatura y humedad.
+
 #define		FsAudio			12000						//	3kHz de audio, Nyquist *= 2,	Yo *= 4.
 #define		TsAudio			(float)1/(float)FsAudio			//	Periodo de muestreo del audio.
 #define		DURACION_AUDIO		2							//	2 segundos de audio.
 #define		MUESTRAS_AUDIO		DURACION_AUDIO*FsAudio			//	Muestras en los 2 segundos de audio.
+
 //	Constantes universales.
 #define		PI				3.141592
 /**---------------------------------------------------------------------------------------------------------------------//
