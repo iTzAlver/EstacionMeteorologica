@@ -13,3 +13,4 @@
 .\obj\anemometro.o: ..\BaseDeDatos\LUT.h
 .\obj\anemometro.o: ..\DAC\DAC.h
 .\obj\anemometro.o: ..\PWM\PWM.h
+.\obj\anemometro.o: ..\ADC\uFono.h

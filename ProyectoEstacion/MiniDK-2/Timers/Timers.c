@@ -113,12 +113,12 @@ void TIMER0_IRQHandler(	void	)
 	
 	if(	!(TIM0_ticks % (uint8_t)CsLDR)	)	//	LDR + UVA van el BURST.
 	{
-		if(	ACTUALIZADOR->LDRrev && YaPuedesMedir	)
+		if(	ACTUALIZADOR->LDRrev && YaPuedesMedir	)		//	Es bloqueable por el audio.
 		{
-			LPC_SC->PCONP	|=	PCONP_ADC_ON;
-			ACTUALIZADOR->LDRrev = 0;
-			LPC_ADC->ADCR	&=	~ADC_START;	//	Ojito que es modo ráfaga, no hay start.
-			LPC_ADC->ADCR	|=	BRUST_PIN;	//	Ráfaga.
+			LPC_SC->PCONP			|=	PCONP_ADC_ON;
+			ACTUALIZADOR->LDRrev 	= 	0;
+			LPC_ADC->ADCR			&=	~ADC_START;	//	Ojito que es modo ráfaga, no hay start.
+			LPC_ADC->ADCR			|=	BRUST_PIN;	//	Ráfaga.
 		}
 	}
 	if(	!(TIM0_ticks % (uint8_t)CsTnH)	)	//	Sensor de humedad y temperatura.
@@ -139,7 +139,7 @@ void TIMER0_IRQHandler(	void	)
 //																								//																																														//
 //		@HANDLER		TIMER2_IRQHandler()																//
 //																								//
-//		@brief		Manejador de la interrupción del DAC. Hecha para generar el audio.						//
+//		@brief		Manejador de la interrupción del DAC Y ADC. Hecha para generar y recibir el audio.			//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
 void TIMER2_IRQHandler()
@@ -152,7 +152,8 @@ void TIMER2_IRQHandler()
 	if	(	Timer2_MODO	==	MODO_ENTRADA)
 	{
 		AUDIO[COUNTERS->Audio]	=	(uint8_t)((0xFF) & (LPC_ADC->ADDR0 >> (4+4)));			//	El ADC es de 12 bits y las muestras de 8 bits, por lo que hay que reducir los 4 LSB.
-		LPC_ADC->ADCR	|=	ADC_START;												//	Lanzar siguiente muestra.//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		LPC_ADC->ADCR	&=	~ADC_START;												//	Lanzar siguiente muestra.		
+		LPC_ADC->ADCR	|=	ADC_START;												//	Lanzar siguiente muestra.
 	}
 	if ( COUNTERS->Audio++ == MUESTRAS_AUDIO - 1	)				//	Reset y fin al audio.
 	{
@@ -160,7 +161,6 @@ void TIMER2_IRQHandler()
 		NVIC_DisableIRQ(	TIMER2_IRQn	);					//	Desactivo el timer del DAC cuando finaliza el audio.
 		ACTUALIZADOR->Audiorev	=	1;						//	Le digo al sistema que ya ha acabado el DAC.
 		recuperaContexto();									//	Recupero el contexto del micrófono en el ADC.
-		Timer2_MODO = MODO_SALIDA;							//	Default modo salida.
 	}
 }
 /**---------------------------------------------------------------------------------------------------------------------//

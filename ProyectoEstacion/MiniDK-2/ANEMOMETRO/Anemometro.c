@@ -58,15 +58,17 @@ void __configuraAnemometro__()
 //---------------------------------------------------------------------------------------------------------------------**/
 void TIMER1_IRQHandler()
 {
-	/**	@WARNING:	Esto me parece un poco sucio, pero es la única manera de que no se generen 
-				interrupciones espúrias utilizando únicamente recursos sorftware. Idealmente
-				no debería usar delays y mucho menos en interrupciones. Si no uso esto se generan
-				varias interrupciones por flanco debido al ruido. Esto se arregla con un condensador
-				a masa en la entrada, pero es perder recursos hardware y he decidido perderlos 
-				mediante software.*/
-	int i;
-	for(i = 0; i < 30000; i++) {}		
-	/**	@TODO Poner condensadores entre Vin y masa del capture 1.0 para evitar doble int en flancos ascendentes.*/
+					/**	@WARNING:	Esto me parece un poco sucio, pero es la única manera de que no se generen 
+								interrupciones espúrias utilizando únicamente recursos sorftware. Idealmente
+								no debería usar delays y mucho menos en interrupciones. Si no uso esto se generan
+								varias interrupciones por flanco debido al ruido. Esto se arregla con un condensador
+								a masa en la entrada, pero es perder recursos hardware y he decidido perderlos 
+								mediante software.*/
+					int i;
+					for(i = 0; i < 30000; i++) {}		
+					/**	@TODO Poner condensadores entre Vin y masa del capture 1.0 para evitar doble int en flancos ascendentes.*/
+		
+		
 	LPC_TIM1->IR = 1 << 4;
 	CAPcont++;
 	if 	(	CAPcont 	>=	2*PULSOS_VUELTA	)	/**	@WARNING: Se generan __DOS__ interrupciones por pulso y 2*PULSOS_VUELTA por vuelta.*/

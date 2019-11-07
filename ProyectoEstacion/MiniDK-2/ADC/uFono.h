@@ -34,7 +34,9 @@
 //		@private		Estos son los símbolos correspondientes al audio del micrófono.							//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-
+#define	FUNC_ADC		0x1
+#define	PIN_UFONO		(23-16)
+#define	CANAL_ADC_UF	0x1
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcdef		Estas son las funciones correspondientes al audio del micrófono.	      					//

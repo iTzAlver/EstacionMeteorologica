@@ -14,7 +14,7 @@
 //																								//
 //----------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
-//		@include		Estos son los archivos utilizados en el código de configuración.							//
+//		@include		Estos son los archivos utilizados en el código de configuración del UVA.					//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
 #ifndef	UVA30A
@@ -23,9 +23,9 @@
 #endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
-//		@funcion																					//
+//		@funcion	__configuraUVA30A__()																//
 //																								//
-//		@ref																						//
+//		@ref		Configura todo lo necesario para que el UVA30A lea el índice UV.								//
 //																								//
 //																								//
 //																								//

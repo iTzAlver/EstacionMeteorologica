@@ -28,9 +28,9 @@
 .\obj\main.o: ..\ADC\LDR.h
 .\obj\main.o: ..\BaseDeDatos\LUT.h
 .\obj\main.o: ..\DAC\DAC.h
+.\obj\main.o: ..\ADC\uFono.h
 .\obj\main.o: ..\TCPIP\lib\HTTP_SOURCE.h
 .\obj\main.o: ..\TCPIP\lib\Net_Config.h
-.\obj\main.o: ..\ADC\uFono.h
 .\obj\main.o: ..\RTC\RTC.h
 .\obj\main.o: ..\TCPIP\lib\HTTP_SOURCE.h
 .\obj\main.o: ..\ADC\UVA30A.h

@@ -13,3 +13,4 @@
 .\obj\timers.o: ..\BaseDeDatos\LUT.h
 .\obj\timers.o: ..\DAC\DAC.h
 .\obj\timers.o: ..\PWM\PWM.h
+.\obj\timers.o: ..\ADC\uFono.h

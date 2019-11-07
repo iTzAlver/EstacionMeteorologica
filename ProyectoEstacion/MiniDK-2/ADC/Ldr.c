@@ -39,7 +39,8 @@ void	__configuraLDR__()
 	LPC_PINCON->PINMODE1	&=	~PINMODE_ADC01;	//	AD0.1
 	LPC_ADC->ADCR			|=	BRUST_PIN			//	Modo ráfaga.
 						|	SEL_CANAL1		//	AD0.1 activado.
-						|	ADC_POWER;		//	Empiezo ENCENDIENDO el ADC.
+						|	ADC_POWER			//	Empiezo ENCENDIENDO el ADC.
+						|	CLK_DIV_MAX;		//	Clkdiv hace que Fadc = 12.5, inferior al umbral de 13MHz. (Ojo: clkdiv = 0 implica que no funcione en placa).
 	LPC_ADC->ADINTEN		|=	SEL_CANAL1;		//	Genera interrupción el canal 1.	(Debería ser el penúltimo)
 	ACTUALIZADOR->LDRrev	=	1;				//	Inicia para activar.
 	LPC_ADC->ADINTEN		&=	~(SEL_CANAL_GLOBAL);//	Apago la interrupción global.
