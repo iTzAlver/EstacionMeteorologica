@@ -17,6 +17,7 @@
 ".\obj\statechart.o"
 ".\obj\touchpanel.o"
 ".\obj\anemometro.o"
+".\obj\onewire.o"
 ".\obj\ldr.o"
 ".\obj\ufono.o"
 ".\obj\uva30a.o"

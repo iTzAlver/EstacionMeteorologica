@@ -145,7 +145,7 @@
             <CpuDllArguments></CpuDllArguments>
             <PeripheralDll></PeripheralDll>
             <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile>..\Initialization\anemometro.ini</InitializationFile>
+            <InitializationFile>..\Initialization\LDR.ini</InitializationFile>
           </SimDlls>
           <TargetDlls>
             <CpuDll></CpuDll>
@@ -158,15 +158,15 @@
         </DebugOption>
         <Utilities>
           <Flash1>
-            <UseTargetDll>0</UseTargetDll>
-            <UseExternalTool>1</UseExternalTool>
+            <UseTargetDll>1</UseTargetDll>
+            <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>0</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>4096</DriverSelection>
+            <DriverSelection>4099</DriverSelection>
           </Flash1>
           <bUseTDR>0</bUseTDR>
-          <Flash2>BIN\UL2CM3.DLL</Flash2>
+          <Flash2>Segger\JL2CM3.dll</Flash2>
           <Flash3>"C:\Program Files (x86)\Flash Magic\FlashMagic.exe" ()</Flash3>
           <Flash4></Flash4>
         </Utilities>
@@ -351,7 +351,7 @@
               <MiscControls></MiscControls>
               <Define>NO_RTX_KERNEL</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Startup;..\PWM;..\Principal;..\Setup;..\Menu;..\Menu\GLCD;..\Menu\Firmware\header;..\Menu\Firmware\source;..\Menu\Leds;..\Menu\TouchPanel;..\RTC;..\WDT;..\TCPIP;..\TCPIP\lib;C:\Keil\ARM\RV31\lib;..\TCPIP\FM\include;..\TCPIP\FM\source;..\Timers;..\Anemometro;..\FAT32;..\FAT32\FW\include;..\FAT32\FW\source;..\ADC;..\DAC;..\BaseDeDatos</IncludePath>
+              <IncludePath>..\Startup;..\PWM;..\Principal;..\Setup;..\Menu;..\Menu\GLCD;..\Menu\Firmware\header;..\Menu\Firmware\source;..\Menu\Leds;..\Menu\TouchPanel;..\RTC;..\WDT;..\TCPIP;..\TCPIP\lib;C:\Keil\ARM\RV31\lib;..\TCPIP\FM\include;..\TCPIP\FM\source;..\Timers;..\Anemometro;..\FAT32;..\FAT32\FW\include;..\FAT32\FW\source;..\ADC;..\DAC;..\BaseDeDatos;..\OneWire</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -665,6 +665,16 @@
               <FileName>Anemometro.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\ANEMOMETRO\Anemometro.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>OneWire</GroupName>
+          <Files>
+            <File>
+              <FileName>OneWire.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\OneWire\OneWire.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -12,3 +12,4 @@
 .\obj\timers.o: ..\ADC\LDR.h
 .\obj\timers.o: ..\BaseDeDatos\LUT.h
 .\obj\timers.o: ..\DAC\DAC.h
+.\obj\timers.o: ..\PWM\PWM.h

@@ -27,3 +27,4 @@
 .\obj\statechart.o: ..\DAC\DAC.h
 .\obj\statechart.o: ..\TCPIP\lib\HTTP_SOURCE.h
 .\obj\statechart.o: ..\TCPIP\lib\Net_Config.h
+.\obj\statechart.o: ..\ADC\uFono.h

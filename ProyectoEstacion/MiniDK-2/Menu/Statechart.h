@@ -70,6 +70,10 @@
 #define	DAC
 #include	"DAC.h"
 #endif
+#ifndef	UFONO
+#define	UFONO
+#include	"uFono.h"
+#endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes al statechart.									//

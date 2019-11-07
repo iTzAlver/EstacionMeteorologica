@@ -12,3 +12,4 @@
 .\obj\dac.o: ..\Timers\Timers.h
 .\obj\dac.o: C:\Keil\ARM\RV31\INC\RTL.h
 .\obj\dac.o: ..\Anemometro\Anemometro.h
+.\obj\dac.o: ..\PWM\PWM.h

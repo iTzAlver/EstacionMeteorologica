@@ -61,6 +61,14 @@
 #define	DAC
 #include 	"DAC.h"
 #endif
+#ifndef	UVA30A
+#define	UVA30A
+#include	"UVA30A.h"
+#endif
+#ifndef	UFONO
+#define	UFONO
+#include	"uFono.h"
+#endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes a la configuración.								//
