@@ -49,16 +49,21 @@ void	lanzaUFONO()
 	NVIC_EnableIRQ(	TIMER2_IRQn	);			//	Reanimo el timer.
 	LPC_ADC->ADCR	&=	~ADC_START;				//	Lanzo la primera muestra.
 	LPC_ADC->ADCR	|=	ADC_START;				//	Lanzo la primera muestra.
+	//	Activo el timer.
+	NVIC_EnableIRQ(	TIMER2_IRQn	);			//	Activo la interrupción.
 }
 
 void recuperaContexto()
 {
 	//	Recupero el contexto.
-	LPC_ADC->ADCR		=	ADC_ConfigBuffer;	//	Cargo el contexto de la configuración.
-	LPC_ADC->ADINTEN	=	ADC_IntenBuffer;	//	Cargo el contexto de la configuración de interrupciones.
-	LPC_ADC->ADCR		&=	~ADC_START;		//	Borro el START del ADC.
-	YaPuedesMedir 		= 	1;				//	Desbloqueo el ADC.
-	Timer2_MODO 		= 	MODO_SALIDA;		//	Default modo salida.
+	if (	Timer2_MODO == MODO_ENTRADA	)			//	Si toca recuperar...
+	{
+		LPC_ADC->ADCR		=	ADC_ConfigBuffer;	//	Cargo el contexto de la configuración.
+		LPC_ADC->ADINTEN	=	ADC_IntenBuffer;	//	Cargo el contexto de la configuración de interrupciones.
+		LPC_ADC->ADCR		&=	~ADC_START;		//	Borro el START del ADC.
+		YaPuedesMedir 		= 	1;				//	Desbloqueo el ADC.
+		Timer2_MODO 		= 	MODO_SALIDA;		//	Default modo salida.
+	}
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//

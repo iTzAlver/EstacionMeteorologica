@@ -40,12 +40,22 @@
 
 #define	PERMISO_DIFERENCIAL		-0.005	//	Error que le permito tener al sensor.
 #define	PERMISO_PROPORCIONAL	0.005	//	Error que le permito tener al sensor.
+
+#define	OW_PULL_UP			0x0		//	Función de pull up.
+#define	OW_PULL_DOWN			0x3		//	Función de pull down.
+#define	OW_CAPTURE_FUNC		0x3		//	Función capture.
+#define	OW_CTCR_MASCARA		0x0		//	Dejar TC contando.
+#define	OW_CCR_MASCARA_EN		0x30		//	Activo por flanco de bajada.
+#define	OW_CCR_MASCARA_DIS		0x20		//	Desactivo por flanco.
+#define	CAP11_IR				0x20		//	El IR de CAP1.1
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcdef		Estas son las funciones correspondientes al protocolo OneWire.	      					//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__configuraOW__(	void	);	//	Configuración del protocolo OneWire.
+void	mideTemperatura(	void	);	//	Código de medición de temperatura.
+void	activaMedidaOW	(	void	);	//	Lanza el activador del one wire.
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

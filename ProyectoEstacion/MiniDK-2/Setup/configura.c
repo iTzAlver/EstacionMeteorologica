@@ -56,6 +56,7 @@ void __configuraPrograma__(	void	)
 	__configuraRTC__		();
 	__configuraWDT__		();
 	__configuraDAC__();
+	__configuraOW__();
 	__configuraAnemometro__	();
 // 	TouchPanel_Calibrate();
 	ESTADO->CHART = PANTALLA_INICIO;

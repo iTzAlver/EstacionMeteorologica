@@ -14,3 +14,4 @@
 .\obj\timers.o: ..\DAC\DAC.h
 .\obj\timers.o: ..\PWM\PWM.h
 .\obj\timers.o: ..\ADC\uFono.h
+.\obj\timers.o: ..\OneWire\OneWire.h

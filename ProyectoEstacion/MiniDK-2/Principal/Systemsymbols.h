@@ -82,10 +82,8 @@
 
 #define		Ts0				0.5							//	Tiempo de muestreo en segundos sin prescaler. (Muestras)
 #define		Fs0				(float)1/(float)Ts0				//	Frecuencia de muestreo en Hz. (Muestras)
-#define		CsAnemometro		5*Fs0						//	Frecuencia de muestreo del anemómetro.
-#define		CsLDR			Fs0							//	Frecuencia de muestreo del LDR.
-#define		CsUVA			5*Fs0						//	Frecuencia de muestreo del UVA.
-#define		CsTnH			10*Fs0						//	Frecuencia de muestreo del sensor de temperatura y humedad.
+#define		CsADC			Fs0							//	Frecuencia de muestreo del LDR.
+#define		CsCAP			5*Fs0						//	Frecuencia de muestreo del UVA.
 
 #define		FsAudio			12000						//	3kHz de audio, Nyquist *= 2,	Yo *= 4.
 #define		TsAudio			(float)1/(float)FsAudio			//	Periodo de muestreo del audio.
@@ -115,6 +113,7 @@ typedef 	struct {			//	Contadores de 8, 16 y 32 bits.
 	__IO	uint16_t	k;
 	__IO	uint32_t	Audio;
 	__IO uint32_t  Segundos;
+	__IO	uint32_t	RITicks;
 }Counters_t;
 
 typedef struct {

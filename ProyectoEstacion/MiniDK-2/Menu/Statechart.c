@@ -356,7 +356,7 @@ void	__pintaMedidas2__(	void	)
 	{
 		sprintf((char*)buffer, "%.02f metros/seg." ,	DATOS->VelViento);
 		squareButton(	&zona_33	,	CLEAR_BUFFER		,	Yellow	,	Green	);
-		ACTUALIZADOR->Anemometro = 0;
+		ACTUALIZADOR->Anemometro = 0;						//	Digo que toca medir.
 		squareButton(	&zona_33	,	(char *)buffer		,	Yellow	,	Green	);
 	}
 	squareButton(	&zona_34	,	"Claridad:"		,	Yellow	,	Green	);

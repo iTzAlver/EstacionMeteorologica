@@ -49,6 +49,10 @@
 #define	UFONO
 #include	"uFono.h"
 #endif
+#ifndef	ONEWIRE
+#define	ONEWIRE
+#include	"OneWire.h"
+#endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes a los timers.									//

@@ -14,3 +14,4 @@
 .\obj\dac.o: ..\Anemometro\Anemometro.h
 .\obj\dac.o: ..\PWM\PWM.h
 .\obj\dac.o: ..\ADC\uFono.h
+.\obj\dac.o: ..\OneWire\OneWire.h

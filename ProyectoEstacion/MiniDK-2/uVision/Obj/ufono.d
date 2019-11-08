@@ -14,3 +14,4 @@
 .\obj\ufono.o: ..\BaseDeDatos\LUT.h
 .\obj\ufono.o: ..\DAC\DAC.h
 .\obj\ufono.o: ..\PWM\PWM.h
+.\obj\ufono.o: ..\OneWire\OneWire.h

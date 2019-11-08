@@ -39,16 +39,18 @@
 #define	PULSOS_CENTIMETRO	(float)PULSOS_VUELTA/((float)PI*(float)DIAMETRO_ANEMOMETRO)
 #define	CTCR_MASCARA		0x0	// 	Dejar al TC contando.
 #define	CCR_MASCARA_EN		0x5	//	Generar interrupción.
-#define	CCR_MASCARA_DIS	0x1	//	Desactivar interrupción.
+#define	CCR_MASCARA_DIS	0x4	//	Desactivar interrupción.
 #define	WARMUP_CICLOS		4	//	Ciclos de calentamiento.
 #define	CAPTURE_FUNCION	0x3	//	Capture 1.0.
-#define	PULL_UP			0x0	//
+#define	PULL_UP			0x0	//	El pull.
+#define	CAP10_IR			0x10	//	El IR de CAP1.0
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcdef		Estas son las funciones correspondientes al anemómetro.								//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
 void __configuraAnemometro__	(	void	);
+void	mideAnemometro			(	void	);
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//
