@@ -69,6 +69,10 @@
 #define	UFONO
 #include	"uFono.h"
 #endif
+#ifndef	LUT
+#define	LUT
+#include	"LUT.h"
+#endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes a la configuración.								//

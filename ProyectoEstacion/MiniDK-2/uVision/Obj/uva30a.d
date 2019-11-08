@@ -9,3 +9,4 @@
 .\obj\uva30a.o: ..\ADC\LDR.h
 .\obj\uva30a.o: ..\Principal\Systemsymbols.h
 .\obj\uva30a.o: ..\BaseDeDatos\LUT.h
+.\obj\uva30a.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h

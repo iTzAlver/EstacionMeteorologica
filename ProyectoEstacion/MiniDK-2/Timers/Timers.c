@@ -173,7 +173,7 @@ void TIMER2_IRQHandler()
 	switch(	Timer2_MODO	)
 	{
 		case	MODO_SALIDA:
-			escribirEnDac(AUDIO[COUNTERS->Audio]	,	2	);		//	Escribo el valor del audio en el DAC.
+			escribirEnDac(AUDIO[COUNTERS->Audio]	,	12	);		//	Escribo el valor del audio en el DAC, con un cutoff de 2 dado que las muestras son de 8 bits.
 			break;
 		case	MODO_ENTRADA:
 			AUDIO[COUNTERS->Audio]	=	(uint8_t)((0xFF) & (LPC_ADC->ADDR0 >> (4+4)));		//	El ADC es de 12 bits y las muestras de 8 bits, por lo que hay que reducir los 4 LSB.

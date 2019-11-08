@@ -11,6 +11,7 @@
 .\obj\timers.o: ..\Anemometro\Anemometro.h
 .\obj\timers.o: ..\ADC\LDR.h
 .\obj\timers.o: ..\BaseDeDatos\LUT.h
+.\obj\timers.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
 .\obj\timers.o: ..\DAC\DAC.h
 .\obj\timers.o: ..\PWM\PWM.h
 .\obj\timers.o: ..\ADC\uFono.h

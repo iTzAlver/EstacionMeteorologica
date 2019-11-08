@@ -55,6 +55,9 @@
 #define	HTTPSOURCE
 #include "HTTP_SOURCE.h"
 #endif
+#ifdef	DEBUG
+#include	"DEBUG.h"
+#endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

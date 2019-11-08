@@ -24,6 +24,7 @@
 .\obj\statechart.o: ..\Anemometro\Anemometro.h
 .\obj\statechart.o: ..\ADC\LDR.h
 .\obj\statechart.o: ..\BaseDeDatos\LUT.h
+.\obj\statechart.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
 .\obj\statechart.o: ..\DAC\DAC.h
 .\obj\statechart.o: ..\ADC\uFono.h
 .\obj\statechart.o: ..\OneWire\OneWire.h

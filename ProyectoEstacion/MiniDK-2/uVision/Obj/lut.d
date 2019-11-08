@@ -8,3 +8,4 @@
 .\obj\lut.o: ..\Startup\core_cmFunc.h
 .\obj\lut.o: ..\Startup\system_LPC17xx.h
 .\obj\lut.o: ..\ADC\LDR.h
+.\obj\lut.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h

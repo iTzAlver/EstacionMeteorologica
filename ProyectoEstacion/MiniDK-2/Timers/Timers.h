@@ -73,7 +73,7 @@
 #define	TIMER3_BIT			(0x1 << 23)
 #define	TIMER0_MCR_MASK		0x3 << (0*3)					//	Activo la interrupción y reseteo el contador.
 #define	TIMER1_MCR_MASK		0x3 << (0*3)					//	No usado.
-#define	TIMER2_MCR_MASK		0x1 << (0*3)
+#define	TIMER2_MCR_MASK		0x3 << (0*3)
 #define	TIMER3_MCR_MASK		0x1 << (0*3)
 
 #define	MODO_ENTRADA			1

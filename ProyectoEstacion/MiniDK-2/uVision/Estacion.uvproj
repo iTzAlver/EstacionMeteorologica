@@ -349,9 +349,9 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>NO_RTX_KERNEL</Define>
+              <Define>NO_RTX_KERNEL DEBUG</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Startup;..\PWM;..\Principal;..\Setup;..\Menu;..\Menu\GLCD;..\Menu\Firmware\header;..\Menu\Firmware\source;..\Menu\Leds;..\Menu\TouchPanel;..\RTC;..\WDT;..\TCPIP;..\TCPIP\lib;C:\Keil\ARM\RV31\lib;..\TCPIP\FM\include;..\TCPIP\FM\source;..\Timers;..\Anemometro;..\FAT32;..\FAT32\FW\include;..\FAT32\FW\source;..\ADC;..\DAC;..\BaseDeDatos;..\OneWire</IncludePath>
+              <IncludePath>..\Startup;..\PWM;..\Principal;..\Setup;..\Menu;..\Menu\GLCD;..\Menu\Firmware\header;..\Menu\Firmware\source;..\Menu\Leds;..\Menu\TouchPanel;..\RTC;..\WDT;..\TCPIP;..\TCPIP\lib;C:\Keil\ARM\RV31\lib;..\TCPIP\FM\include;..\TCPIP\FM\source;..\Timers;..\Anemometro;..\FAT32;..\FAT32\FW\include;..\FAT32\FW\source;..\ADC;..\DAC;..\BaseDeDatos;..\OneWire;..\DEBUG</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -946,6 +946,21 @@
               <FileName>LUT.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BaseDeDatos\LUT.c</FilePath>
+            </File>
+            <File>
+              <FileName>DMA.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BaseDeDatos\DMA.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>DEBUG</GroupName>
+          <Files>
+            <File>
+              <FileName>DEBUG.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\DEBUG\DEBUG.c</FilePath>
             </File>
           </Files>
         </Group>

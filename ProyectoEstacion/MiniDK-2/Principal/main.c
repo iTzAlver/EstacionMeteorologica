@@ -46,9 +46,15 @@ uint8_t			AUDIO[MUESTRAS_AUDIO];		//   Audio.
 //---------------------------------------------------------------------------------------------------------------------**/
 int main	()
 {
+	#ifdef	DEBUG	
+	ON_DEBUG_SETUP();
+	#endif
 	__configuraPrograma__();
 	while (	1	)
 	{
+		#ifdef	DEBUG
+		ON_DEBUG();
+		#endif
 		__mainLoop__();
 		__mantenerTCP__();
 	}

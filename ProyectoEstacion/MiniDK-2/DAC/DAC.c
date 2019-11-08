@@ -50,14 +50,23 @@ void	__configuraDAC__()
 //					@Valor		Valor a escribir en el DAC.											//
 //					@Cutoff		Valor de reducción de formato: Elimina Cutoff LSB bits.					//
 //								Si viene del ADC: Cutoff debe de ser 2 por la diferencia del formato.			//
+//								Si Cutoff es mayor que 10, se desplaza las posiciones excedidas en 			//
+//								sentido contrario.													//
 //																								//
 //					BIAS_DAC:		Ver manual, settling time de 2.5us y corriente limitada en 350mA.			//
-//								Con las BIAS activadas, nos vale para audio y consume menos que sin ellas.		//
+//								Con las BIAS activadas, nos vale para audio.								//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
 void escribirEnDac(	uint16_t	Valor	,	uint8_t	Cutoff	)
 {
-	Valor		=	Valor >> Cutoff;		//	Desplazo los bits de corte.
+	if ( Cutoff > 10 )
+	{
+		Valor	=	Valor << (Cutoff-10);	//	Desplazo los bits de corte.
+	}
+	else
+	{
+		Valor	=	Valor >> Cutoff;		//	Desplazo los bits de corte.
+	}
 	LPC_DAC->DACR	&=	~BORRAR_DAC;			//	Borro del valor del DAC anterior.
 	LPC_DAC->DACR	|=	DAC_BIAS | (Valor << 6);	//	Escribo el nuevo valor del DAC con DAC Bias activado.
 }
