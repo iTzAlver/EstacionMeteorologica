@@ -42,24 +42,29 @@ void __configuraPrograma__(	void	)
 	DATOS->IndiceUV 		= 1.20;
 	DATOS->Lugar.Altura		= 500.12;	
 	DATOS->Lugar.Longitud	= 74.33;	
-	DATOS->Lugar.Latitud	= 74.33;	
-	crearSeno();
-	__configuraWEB__();
-	__configuraSysTick__();
-	__configuraTimer0__();
-	__configuraLDR__();
-	__configuraUVA30A__();
-	__configuraUFONO__();
+	DATOS->Lugar.Latitud	= 74.33;
+	LPC_SC->PCONP |= 	0x1 << 22 | 0x1 << 23 | 1 << 16;
+	//crearSeno();
+	__configuraWEB__		();
+	__configuraSysTick__	();
+	__configuraTimer0__		();
+	__configuraLDR__		();
+	__configuraUVA30A__		();
+	__configuraUFONO__		();
+	__configuraLCD__		();
+	__configuraRTC__		();
 	__configuraPWM__	(	Fpwm	,	ACTIVOS_2_1 | ACTIVOS_6_1	);
 	modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	90	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
 	modificaPulso		(	PWM6,	MODO_CICLO	,	50	,	none	,	none			,	none			);
 	__configuraLCD__		();
 	__configuraRTC__		();
 	__configuraWDT__		();
-	__configuraDAC__();
-	__configuraOW__();
+	__configuraDAC__		();
+	__configuraOW__		();
 	__configuraAnemometro__	();
-// 	TouchPanel_Calibrate();
+	#ifndef	DEBUG
+ 	TouchPanel_Calibrate();
+	#endif
 	ESTADO->CHART = PANTALLA_INICIO;
 }
 /**---------------------------------------------------------------------------------------------------------------------//

@@ -36,4 +36,3 @@
 .\obj\main.o: ..\RTC\RTC.h
 .\obj\main.o: ..\TCPIP\lib\HTTP_SOURCE.h
 .\obj\main.o: ..\ADC\UVA30A.h
-.\obj\main.o: ..\DEBUG\DEBUG.h

@@ -43,7 +43,7 @@
 #define	SEL_CANAL_GLOBAL	(1 << 8)
 #define	ADC_POWER		(1 << 21)
 #define	ADC_START		(1 << 24)
-#define	CLK_DIV_MAX	(1 << 8)
+#define	CLK_DIV_MAX	(0xFF << 8)
 
 #define	RESISTENCIA_PULL	1.00
 #define	LDRRESISTENCIA_MAX	100
