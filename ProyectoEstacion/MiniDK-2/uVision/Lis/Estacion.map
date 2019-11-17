@@ -2120,26 +2120,26 @@ Memory Map of the image
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x00000000   0x000000cc   Data   RO            3    RESET               startup_lpc17xx.o
-    0x000000cc   0x00000000   Code   RO         1196  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x000000cc   0x00000004   Code   RO         1520    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x000000d0   0x00000004   Code   RO         1523    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x000000d4   0x00000000   Code   RO         1525    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x000000d4   0x00000000   Code   RO         1527    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x000000d4   0x00000008   Code   RO         1528    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x000000dc   0x00000000   Code   RO         1530    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x000000dc   0x00000000   Code   RO         1532    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x000000dc   0x00000004   Code   RO         1521    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x000000cc   0x00000000   Code   RO         1199  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x000000cc   0x00000004   Code   RO         1523    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x000000d0   0x00000004   Code   RO         1526    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x000000d4   0x00000000   Code   RO         1528    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x000000d4   0x00000000   Code   RO         1530    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x000000d4   0x00000008   Code   RO         1531    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x000000dc   0x00000000   Code   RO         1533    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x000000dc   0x00000000   Code   RO         1535    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x000000dc   0x00000004   Code   RO         1524    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x000000e0   0x00000024   Code   RO            5    .text               startup_lpc17xx.o
     0x00000104   0x00000100   Code   RO           59    .text               configura.o
     0x00000204   0x00000010   Code   RO          171    .text               main.o
     0x00000214   0x00000028   Code   RO          277    .text               wdt.o
     0x0000023c   0x00000010   Code   RO          296    .text               http_source.o
     0x0000024c   0x00000074   Code   RO          321    .text               net_config.o
-    0x000002c0   0x0000002c   Code   RO          578    .text               uva30a.o
-    0x000002ec   0x00000004   Code   RO          737    .text               lpc17xx_libcfg_default.o
-    0x000002f0   0x0000000a   Code   RO         1488    .text               mf_w.l(ffltui.o)
-    0x000002fa   0x00000000   Code   RO         1554    .text               mc_w.l(iusefp.o)
-    0x000002fa   0x00000002   Code   RO         1612    i.__scatterload_null  mc_w.l(handlers.o)
+    0x000002c0   0x0000002c   Code   RO          581    .text               uva30a.o
+    0x000002ec   0x00000004   Code   RO          740    .text               lpc17xx_libcfg_default.o
+    0x000002f0   0x0000000a   Code   RO         1491    .text               mf_w.l(ffltui.o)
+    0x000002fa   0x00000000   Code   RO         1557    .text               mc_w.l(iusefp.o)
+    0x000002fa   0x00000002   Code   RO         1615    i.__scatterload_null  mc_w.l(handlers.o)
     0x000002fc   0x00000004   Code   RO            4    .ARM.__at_0x02FC    startup_lpc17xx.o
     0x00000300   0x00000318   Code   RO           24    .text               system_lpc17xx.o
     0x00000618   0x000002a0   Code   RO          200    .text               pwm.o
@@ -2147,220 +2147,220 @@ Memory Map of the image
     0x000009f4   0x0000033c   Code   RO          247    .text               timers.o
     0x00000d30   0x00000230   Code   RO          343    .text               http_cgi.o
     0x00000f60   0x000005d0   Code   RO          366    .text               emac_lpc17xx_lan8720.o
-    0x00001530   0x00000b80   Code   RO          403    .text               statechart.o
-    0x000020b0   0x00000844   Code   RO          449    .text               touchpanel.o
-    0x000028f4   0x00000184   Code   RO          472    .text               anemometro.o
-    0x00002a78   0x0000011c   Code   RO          502    .text               onewire.o
-    0x00002b94   0x00000180   Code   RO          526    .text               ldr.o
-    0x00002d14   0x000000d4   Code   RO          552    .text               ufono.o
-    0x00002de8   0x000000dc   Code   RO          597    .text               dac.o
-    0x00002ec4   0x00000020   Code   RO          625    .text               asciilib.o
-    0x00002ee4   0x00011100   Code   RO          643    .text               glcd.o
-    0x00013fe4   0x000006b8   Code   RO          661    .text               lpc17xx_ssp.o
-    0x0001469c   0x00000100   Code   RO          683    .text               lpc17xx_pinsel.o
-    0x0001479c   0x00000424   Code   RO          706    .text               lpc17xx_gpio.o
-    0x00014bc0   0x00000150   Code   RO          722    .text               lpc17xx_clkpwr.o
-    0x00014d10   0x00000130   Code   RO          832    .text               lut.o
-    0x00014e40   0x00000062   Code   RO         1199    .text               mc_w.l(uldiv.o)
-    0x00014ea2   0x00000024   Code   RO         1201    .text               mc_w.l(memcpya.o)
-    0x00014ec6   0x00000024   Code   RO         1203    .text               mc_w.l(memseta.o)
-    0x00014eea   0x0000000e   Code   RO         1205    .text               mc_w.l(strlen.o)
-    0x00014ef8   0x0000001c   Code   RO         1207    .text               mc_w.l(strcmp.o)
-    0x00014f14   0x0000001a   Code   RO         1472    .text               mc_w.l(atoi.o)
-    0x00014f2e   0x000000b0   Code   RO         1474    .text               mf_w.l(fadd.o)
-    0x00014fde   0x0000006c   Code   RO         1476    .text               mf_w.l(fmul.o)
-    0x0001504a   0x00000080   Code   RO         1478    .text               mf_w.l(fdiv.o)
-    0x000150ca   0x0000014e   Code   RO         1480    .text               mf_w.l(dadd.o)
-    0x00015218   0x000000e4   Code   RO         1482    .text               mf_w.l(dmul.o)
-    0x000152fc   0x000000de   Code   RO         1484    .text               mf_w.l(ddiv.o)
-    0x000153da   0x00000012   Code   RO         1486    .text               mf_w.l(fflti.o)
-    0x000153ec   0x00000022   Code   RO         1490    .text               mf_w.l(dflti.o)
-    0x0001540e   0x0000001a   Code   RO         1492    .text               mf_w.l(dfltui.o)
-    0x00015428   0x00000028   Code   RO         1494    .text               mf_w.l(ffixui.o)
-    0x00015450   0x00000032   Code   RO         1496    .text               mf_w.l(dfixui.o)
-    0x00015482   0x00000026   Code   RO         1498    .text               mf_w.l(f2d.o)
-    0x000154a8   0x00000028   Code   RO         1500    .text               mf_w.l(cdcmple.o)
-    0x000154d0   0x00000038   Code   RO         1502    .text               mf_w.l(d2f.o)
-    0x00015508   0x00000014   Code   RO         1504    .text               mf_w.l(cfcmple.o)
-    0x0001551c   0x0000002c   Code   RO         1537    .text               mc_w.l(uidiv.o)
-    0x00015548   0x0000001e   Code   RO         1539    .text               mc_w.l(llshl.o)
-    0x00015566   0x00000020   Code   RO         1541    .text               mc_w.l(llushr.o)
-    0x00015586   0x00000024   Code   RO         1543    .text               mc_w.l(llsshr.o)
-    0x000155aa   0x00000070   Code   RO         1552    .text               mc_w.l(strtol.o)
-    0x0001561a   0x0000006c   Code   RO         1555    .text               mf_w.l(fepilogue.o)
-    0x00015686   0x000000be   Code   RO         1557    .text               mf_w.l(depilogue.o)
-    0x00015744   0x0000002e   Code   RO         1559    .text               mf_w.l(dscalb.o)
-    0x00015772   0x00000030   Code   RO         1561    .text               mf_w.l(dfixul.o)
+    0x00001530   0x00000b80   Code   RO          406    .text               statechart.o
+    0x000020b0   0x00000844   Code   RO          452    .text               touchpanel.o
+    0x000028f4   0x00000184   Code   RO          475    .text               anemometro.o
+    0x00002a78   0x0000011c   Code   RO          505    .text               onewire.o
+    0x00002b94   0x00000180   Code   RO          529    .text               ldr.o
+    0x00002d14   0x000000d4   Code   RO          555    .text               ufono.o
+    0x00002de8   0x000000dc   Code   RO          600    .text               dac.o
+    0x00002ec4   0x00000020   Code   RO          628    .text               asciilib.o
+    0x00002ee4   0x00011100   Code   RO          646    .text               glcd.o
+    0x00013fe4   0x000006b8   Code   RO          664    .text               lpc17xx_ssp.o
+    0x0001469c   0x00000100   Code   RO          686    .text               lpc17xx_pinsel.o
+    0x0001479c   0x00000424   Code   RO          709    .text               lpc17xx_gpio.o
+    0x00014bc0   0x00000150   Code   RO          725    .text               lpc17xx_clkpwr.o
+    0x00014d10   0x00000130   Code   RO          835    .text               lut.o
+    0x00014e40   0x00000062   Code   RO         1202    .text               mc_w.l(uldiv.o)
+    0x00014ea2   0x00000024   Code   RO         1204    .text               mc_w.l(memcpya.o)
+    0x00014ec6   0x00000024   Code   RO         1206    .text               mc_w.l(memseta.o)
+    0x00014eea   0x0000000e   Code   RO         1208    .text               mc_w.l(strlen.o)
+    0x00014ef8   0x0000001c   Code   RO         1210    .text               mc_w.l(strcmp.o)
+    0x00014f14   0x0000001a   Code   RO         1475    .text               mc_w.l(atoi.o)
+    0x00014f2e   0x000000b0   Code   RO         1477    .text               mf_w.l(fadd.o)
+    0x00014fde   0x0000006c   Code   RO         1479    .text               mf_w.l(fmul.o)
+    0x0001504a   0x00000080   Code   RO         1481    .text               mf_w.l(fdiv.o)
+    0x000150ca   0x0000014e   Code   RO         1483    .text               mf_w.l(dadd.o)
+    0x00015218   0x000000e4   Code   RO         1485    .text               mf_w.l(dmul.o)
+    0x000152fc   0x000000de   Code   RO         1487    .text               mf_w.l(ddiv.o)
+    0x000153da   0x00000012   Code   RO         1489    .text               mf_w.l(fflti.o)
+    0x000153ec   0x00000022   Code   RO         1493    .text               mf_w.l(dflti.o)
+    0x0001540e   0x0000001a   Code   RO         1495    .text               mf_w.l(dfltui.o)
+    0x00015428   0x00000028   Code   RO         1497    .text               mf_w.l(ffixui.o)
+    0x00015450   0x00000032   Code   RO         1499    .text               mf_w.l(dfixui.o)
+    0x00015482   0x00000026   Code   RO         1501    .text               mf_w.l(f2d.o)
+    0x000154a8   0x00000028   Code   RO         1503    .text               mf_w.l(cdcmple.o)
+    0x000154d0   0x00000038   Code   RO         1505    .text               mf_w.l(d2f.o)
+    0x00015508   0x00000014   Code   RO         1507    .text               mf_w.l(cfcmple.o)
+    0x0001551c   0x0000002c   Code   RO         1540    .text               mc_w.l(uidiv.o)
+    0x00015548   0x0000001e   Code   RO         1542    .text               mc_w.l(llshl.o)
+    0x00015566   0x00000020   Code   RO         1544    .text               mc_w.l(llushr.o)
+    0x00015586   0x00000024   Code   RO         1546    .text               mc_w.l(llsshr.o)
+    0x000155aa   0x00000070   Code   RO         1555    .text               mc_w.l(strtol.o)
+    0x0001561a   0x0000006c   Code   RO         1558    .text               mf_w.l(fepilogue.o)
+    0x00015686   0x000000be   Code   RO         1560    .text               mf_w.l(depilogue.o)
+    0x00015744   0x0000002e   Code   RO         1562    .text               mf_w.l(dscalb.o)
+    0x00015772   0x00000030   Code   RO         1564    .text               mf_w.l(dfixul.o)
     0x000157a2   0x00000002   PAD
-    0x000157a4   0x00000028   Code   RO         1563    .text               mf_w.l(cdrcmple.o)
-    0x000157cc   0x00000024   Code   RO         1571    .text               mc_w.l(init.o)
-    0x000157f0   0x00000008   Code   RO         1574    .text               mc_w.l(ctype_o.o)
-    0x000157f8   0x0000009e   Code   RO         1602    .text               mc_w.l(_strtoul.o)
-    0x00015896   0x0000003e   Code   RO         1605    .text               mf_w.l(dfixi.o)
-    0x000158d4   0x0000001c   Code   RO         1607    .text               mc_w.l(_chval.o)
-    0x000158f0   0x0000005c   Code   RO         1617    .text               mc_w.l(__dczerorl2.o)
-    0x0001594c   0x00000028   Code   RO         1446    i.__0sprintf        mc_w.l(printfa.o)
-    0x00015974   0x00000028   Code   RO         1567    i.__ARM_fpclassify  m_ws.l(fpclassify.o)
-    0x0001599c   0x00000008   Code   RO         1545    i.__aeabi_errno_addr  mc_w.l(errno.o)
-    0x000159a4   0x00000388   Code   RO         1509    i.__ieee754_rem_pio2  m_ws.l(rred.o)
-    0x00015d2c   0x000000fc   Code   RO         1506    i.__kernel_cos      m_ws.l(cos_i.o)
-    0x00015e28   0x000000aa   Code   RO         1569    i.__kernel_poly     m_ws.l(poly.o)
+    0x000157a4   0x00000028   Code   RO         1566    .text               mf_w.l(cdrcmple.o)
+    0x000157cc   0x00000024   Code   RO         1574    .text               mc_w.l(init.o)
+    0x000157f0   0x00000008   Code   RO         1577    .text               mc_w.l(ctype_o.o)
+    0x000157f8   0x0000009e   Code   RO         1605    .text               mc_w.l(_strtoul.o)
+    0x00015896   0x0000003e   Code   RO         1608    .text               mf_w.l(dfixi.o)
+    0x000158d4   0x0000001c   Code   RO         1610    .text               mc_w.l(_chval.o)
+    0x000158f0   0x0000005c   Code   RO         1620    .text               mc_w.l(__dczerorl2.o)
+    0x0001594c   0x00000028   Code   RO         1449    i.__0sprintf        mc_w.l(printfa.o)
+    0x00015974   0x00000028   Code   RO         1570    i.__ARM_fpclassify  m_ws.l(fpclassify.o)
+    0x0001599c   0x00000008   Code   RO         1548    i.__aeabi_errno_addr  mc_w.l(errno.o)
+    0x000159a4   0x00000388   Code   RO         1512    i.__ieee754_rem_pio2  m_ws.l(rred.o)
+    0x00015d2c   0x000000fc   Code   RO         1509    i.__kernel_cos      m_ws.l(cos_i.o)
+    0x00015e28   0x000000aa   Code   RO         1572    i.__kernel_poly     m_ws.l(poly.o)
     0x00015ed2   0x00000002   PAD
-    0x00015ed4   0x000000ec   Code   RO         1514    i.__kernel_sin      m_ws.l(sin_i.o)
-    0x00015fc0   0x00000010   Code   RO         1565    i.__mathlib_dbl_underflow  m_ws.l(dunder.o)
-    0x00015fd0   0x0000000e   Code   RO         1611    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x00015fde   0x0000000e   Code   RO         1613    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x00015fec   0x0000000c   Code   RO         1547    i.__set_errno       mc_w.l(errno.o)
-    0x00015ff8   0x0000015c   Code   RO         1451    i._fp_digits        mc_w.l(printfa.o)
-    0x00016154   0x000006f0   Code   RO         1452    i._printf_core      mc_w.l(printfa.o)
-    0x00016844   0x00000026   Code   RO         1453    i._printf_post_padding  mc_w.l(printfa.o)
-    0x0001686a   0x00000030   Code   RO         1454    i._printf_pre_padding  mc_w.l(printfa.o)
-    0x0001689a   0x0000000a   Code   RO         1456    i._sputc            mc_w.l(printfa.o)
-    0x000168a4   0x00000034   Code   RO         1013    i.add_server_id     TCP_CM3.lib(at_http.o)
-    0x000168d8   0x000000b8   Code   RO         1099    i.alloc_mem         TCP_CM3.lib(at_mem.o)
-    0x00016990   0x000000b8   Code   RO          860    i.arp_cache_add     TCP_CM3.lib(at_arp.o)
-    0x00016a48   0x00000088   Code   RO          861    i.arp_cache_alloc   TCP_CM3.lib(at_arp.o)
-    0x00016ad0   0x00000098   Code   RO          862    i.arp_cache_early   TCP_CM3.lib(at_arp.o)
-    0x00016b68   0x000000b4   Code   RO          863    i.arp_cache_find    TCP_CM3.lib(at_arp.o)
-    0x00016c1c   0x000000f4   Code   RO          866    i.arp_cache_update  TCP_CM3.lib(at_arp.o)
-    0x00016d10   0x0000002c   Code   RO          869    i.arp_init          TCP_CM3.lib(at_arp.o)
-    0x00016d3c   0x00000034   Code   RO          870    i.arp_is_cacheable  TCP_CM3.lib(at_arp.o)
-    0x00016d70   0x00000028   Code   RO          871    i.arp_notify        TCP_CM3.lib(at_arp.o)
-    0x00016d98   0x00000088   Code   RO          873    i.arp_proc_response  TCP_CM3.lib(at_arp.o)
-    0x00016e20   0x00000138   Code   RO          874    i.arp_process       TCP_CM3.lib(at_arp.o)
-    0x00016f58   0x000000a0   Code   RO          875    i.arp_send_reply    TCP_CM3.lib(at_arp.o)
-    0x00016ff8   0x000000b8   Code   RO          876    i.arp_send_request  TCP_CM3.lib(at_arp.o)
-    0x000170b0   0x0000001c   Code   RO         1100    i.avail_mem         TCP_CM3.lib(at_mem.o)
-    0x000170cc   0x00000078   Code   RO         1129    i.b64_to_asc        TCP_CM3.lib(at_lib.o)
-    0x00017144   0x00000012   Code   RO         1131    i.calc_chksum16be   TCP_CM3.lib(at_lib.o)
-    0x00017156   0x00000004   Code   RO         1014    i.cgx_content_type  TCP_CM3.lib(at_http.o)
+    0x00015ed4   0x000000ec   Code   RO         1517    i.__kernel_sin      m_ws.l(sin_i.o)
+    0x00015fc0   0x00000010   Code   RO         1568    i.__mathlib_dbl_underflow  m_ws.l(dunder.o)
+    0x00015fd0   0x0000000e   Code   RO         1614    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00015fde   0x0000000e   Code   RO         1616    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00015fec   0x0000000c   Code   RO         1550    i.__set_errno       mc_w.l(errno.o)
+    0x00015ff8   0x0000015c   Code   RO         1454    i._fp_digits        mc_w.l(printfa.o)
+    0x00016154   0x000006f0   Code   RO         1455    i._printf_core      mc_w.l(printfa.o)
+    0x00016844   0x00000026   Code   RO         1456    i._printf_post_padding  mc_w.l(printfa.o)
+    0x0001686a   0x00000030   Code   RO         1457    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x0001689a   0x0000000a   Code   RO         1459    i._sputc            mc_w.l(printfa.o)
+    0x000168a4   0x00000034   Code   RO         1016    i.add_server_id     TCP_CM3.lib(at_http.o)
+    0x000168d8   0x000000b8   Code   RO         1102    i.alloc_mem         TCP_CM3.lib(at_mem.o)
+    0x00016990   0x000000b8   Code   RO          863    i.arp_cache_add     TCP_CM3.lib(at_arp.o)
+    0x00016a48   0x00000088   Code   RO          864    i.arp_cache_alloc   TCP_CM3.lib(at_arp.o)
+    0x00016ad0   0x00000098   Code   RO          865    i.arp_cache_early   TCP_CM3.lib(at_arp.o)
+    0x00016b68   0x000000b4   Code   RO          866    i.arp_cache_find    TCP_CM3.lib(at_arp.o)
+    0x00016c1c   0x000000f4   Code   RO          869    i.arp_cache_update  TCP_CM3.lib(at_arp.o)
+    0x00016d10   0x0000002c   Code   RO          872    i.arp_init          TCP_CM3.lib(at_arp.o)
+    0x00016d3c   0x00000034   Code   RO          873    i.arp_is_cacheable  TCP_CM3.lib(at_arp.o)
+    0x00016d70   0x00000028   Code   RO          874    i.arp_notify        TCP_CM3.lib(at_arp.o)
+    0x00016d98   0x00000088   Code   RO          876    i.arp_proc_response  TCP_CM3.lib(at_arp.o)
+    0x00016e20   0x00000138   Code   RO          877    i.arp_process       TCP_CM3.lib(at_arp.o)
+    0x00016f58   0x000000a0   Code   RO          878    i.arp_send_reply    TCP_CM3.lib(at_arp.o)
+    0x00016ff8   0x000000b8   Code   RO          879    i.arp_send_request  TCP_CM3.lib(at_arp.o)
+    0x000170b0   0x0000001c   Code   RO         1103    i.avail_mem         TCP_CM3.lib(at_mem.o)
+    0x000170cc   0x00000078   Code   RO         1132    i.b64_to_asc        TCP_CM3.lib(at_lib.o)
+    0x00017144   0x00000012   Code   RO         1134    i.calc_chksum16be   TCP_CM3.lib(at_lib.o)
+    0x00017156   0x00000004   Code   RO         1017    i.cgx_content_type  TCP_CM3.lib(at_http.o)
     0x0001715a   0x00000002   PAD
-    0x0001715c   0x000001cc   Code   RO         1015    i.chk_post_req      TCP_CM3.lib(at_http.o)
-    0x00017328   0x00000028   Code   RO         1132    i.chksum16_buf      TCP_CM3.lib(at_lib.o)
-    0x00017350   0x0000000a   Code   RO         1133    i.chksum16_val      TCP_CM3.lib(at_lib.o)
-    0x0001735a   0x0000001e   Code   RO         1016    i.cmp_fname_ext     TCP_CM3.lib(at_http.o)
-    0x00017378   0x00000028   Code   RO         1017    i.cmp_header        TCP_CM3.lib(at_http.o)
-    0x000173a0   0x00000010   Code   RO         1085    i.eth_chk_adr       TCP_CM3.lib(at_ethernet.o)
-    0x000173b0   0x00000034   Code   RO         1087    i.eth_init_link     TCP_CM3.lib(at_ethernet.o)
-    0x000173e4   0x000000d4   Code   RO         1088    i.eth_run_link      TCP_CM3.lib(at_ethernet.o)
-    0x000174b8   0x000000a8   Code   RO         1089    i.eth_send_frame    TCP_CM3.lib(at_ethernet.o)
-    0x00017560   0x00000084   Code   RO         1101    i.free_mem          TCP_CM3.lib(at_mem.o)
-    0x000175e4   0x00000028   Code   RO         1135    i.get_crc32         TCP_CM3.lib(at_lib.o)
-    0x0001760c   0x00000068   Code   RO         1018    i.get_file_type     TCP_CM3.lib(at_http.o)
-    0x00017674   0x00000028   Code   RO         1019    i.get_next_field    TCP_CM3.lib(at_http.o)
-    0x0001769c   0x00000032   Code   RO         1020    i.get_next_par      TCP_CM3.lib(at_http.o)
+    0x0001715c   0x000001cc   Code   RO         1018    i.chk_post_req      TCP_CM3.lib(at_http.o)
+    0x00017328   0x00000028   Code   RO         1135    i.chksum16_buf      TCP_CM3.lib(at_lib.o)
+    0x00017350   0x0000000a   Code   RO         1136    i.chksum16_val      TCP_CM3.lib(at_lib.o)
+    0x0001735a   0x0000001e   Code   RO         1019    i.cmp_fname_ext     TCP_CM3.lib(at_http.o)
+    0x00017378   0x00000028   Code   RO         1020    i.cmp_header        TCP_CM3.lib(at_http.o)
+    0x000173a0   0x00000010   Code   RO         1088    i.eth_chk_adr       TCP_CM3.lib(at_ethernet.o)
+    0x000173b0   0x00000034   Code   RO         1090    i.eth_init_link     TCP_CM3.lib(at_ethernet.o)
+    0x000173e4   0x000000d4   Code   RO         1091    i.eth_run_link      TCP_CM3.lib(at_ethernet.o)
+    0x000174b8   0x000000a8   Code   RO         1092    i.eth_send_frame    TCP_CM3.lib(at_ethernet.o)
+    0x00017560   0x00000084   Code   RO         1104    i.free_mem          TCP_CM3.lib(at_mem.o)
+    0x000175e4   0x00000028   Code   RO         1138    i.get_crc32         TCP_CM3.lib(at_lib.o)
+    0x0001760c   0x00000068   Code   RO         1021    i.get_file_type     TCP_CM3.lib(at_http.o)
+    0x00017674   0x00000028   Code   RO         1022    i.get_next_field    TCP_CM3.lib(at_http.o)
+    0x0001769c   0x00000032   Code   RO         1023    i.get_next_par      TCP_CM3.lib(at_http.o)
     0x000176ce   0x00000002   PAD
-    0x000176d0   0x0000001c   Code   RO         1113    i.get_rnd32         TCP_CM3.lib(at_system.o)
-    0x000176ec   0x00000004   Code   RO         1022    i.http_accept_host  TCP_CM3.lib(at_http.o)
-    0x000176f0   0x000002bc   Code   RO         1023    i.http_add_header   TCP_CM3.lib(at_http.o)
-    0x000179ac   0x00000004   Code   RO         1024    i.http_check_account  TCP_CM3.lib(at_http.o)
-    0x000179b0   0x00000188   Code   RO         1026    i.http_error_msg    TCP_CM3.lib(at_http.o)
-    0x00017b38   0x00000002   Code   RO         1178    i.http_fclose       TCP_CM3.lib(at_http_uif.o)
-    0x00017b3a   0x00000004   Code   RO         1179    i.http_fgets        TCP_CM3.lib(at_http_uif.o)
-    0x00017b3e   0x00000004   Code   RO         1027    i.http_file_access  TCP_CM3.lib(at_http.o)
-    0x00017b42   0x00000004   Code   RO         1180    i.http_finfo        TCP_CM3.lib(at_http_uif.o)
-    0x00017b46   0x00000004   Code   RO         1181    i.http_fopen        TCP_CM3.lib(at_http_uif.o)
-    0x00017b4a   0x00000004   Code   RO         1182    i.http_fread        TCP_CM3.lib(at_http_uif.o)
+    0x000176d0   0x0000001c   Code   RO         1116    i.get_rnd32         TCP_CM3.lib(at_system.o)
+    0x000176ec   0x00000004   Code   RO         1025    i.http_accept_host  TCP_CM3.lib(at_http.o)
+    0x000176f0   0x000002bc   Code   RO         1026    i.http_add_header   TCP_CM3.lib(at_http.o)
+    0x000179ac   0x00000004   Code   RO         1027    i.http_check_account  TCP_CM3.lib(at_http.o)
+    0x000179b0   0x00000188   Code   RO         1029    i.http_error_msg    TCP_CM3.lib(at_http.o)
+    0x00017b38   0x00000002   Code   RO         1181    i.http_fclose       TCP_CM3.lib(at_http_uif.o)
+    0x00017b3a   0x00000004   Code   RO         1182    i.http_fgets        TCP_CM3.lib(at_http_uif.o)
+    0x00017b3e   0x00000004   Code   RO         1030    i.http_file_access  TCP_CM3.lib(at_http.o)
+    0x00017b42   0x00000004   Code   RO         1183    i.http_finfo        TCP_CM3.lib(at_http_uif.o)
+    0x00017b46   0x00000004   Code   RO         1184    i.http_fopen        TCP_CM3.lib(at_http_uif.o)
+    0x00017b4a   0x00000004   Code   RO         1185    i.http_fread        TCP_CM3.lib(at_http_uif.o)
     0x00017b4e   0x00000002   PAD
-    0x00017b50   0x00000050   Code   RO         1034    i.http_init         TCP_CM3.lib(at_http.o)
-    0x00017ba0   0x0000005e   Code   RO         1035    i.http_kill_session  TCP_CM3.lib(at_http.o)
+    0x00017b50   0x00000050   Code   RO         1037    i.http_init         TCP_CM3.lib(at_http.o)
+    0x00017ba0   0x0000005e   Code   RO         1038    i.http_kill_session  TCP_CM3.lib(at_http.o)
     0x00017bfe   0x00000002   PAD
-    0x00017c00   0x00000224   Code   RO         1036    i.http_listener     TCP_CM3.lib(at_http.o)
-    0x00017e24   0x00000120   Code   RO         1037    i.http_open_file    TCP_CM3.lib(at_http.o)
-    0x00017f44   0x00000154   Code   RO         1038    i.http_proc_header  TCP_CM3.lib(at_http.o)
-    0x00018098   0x0000017c   Code   RO         1039    i.http_proc_multipart  TCP_CM3.lib(at_http.o)
-    0x00018214   0x000000f8   Code   RO         1040    i.http_proc_post    TCP_CM3.lib(at_http.o)
-    0x0001830c   0x0000033c   Code   RO         1041    i.http_run_server   TCP_CM3.lib(at_http.o)
-    0x00018648   0x0000001e   Code   RO         1042    i.http_strcpy       TCP_CM3.lib(at_http.o)
+    0x00017c00   0x00000224   Code   RO         1039    i.http_listener     TCP_CM3.lib(at_http.o)
+    0x00017e24   0x00000120   Code   RO         1040    i.http_open_file    TCP_CM3.lib(at_http.o)
+    0x00017f44   0x00000154   Code   RO         1041    i.http_proc_header  TCP_CM3.lib(at_http.o)
+    0x00018098   0x0000017c   Code   RO         1042    i.http_proc_multipart  TCP_CM3.lib(at_http.o)
+    0x00018214   0x000000f8   Code   RO         1043    i.http_proc_post    TCP_CM3.lib(at_http.o)
+    0x0001830c   0x0000033c   Code   RO         1044    i.http_run_server   TCP_CM3.lib(at_http.o)
+    0x00018648   0x0000001e   Code   RO         1045    i.http_strcpy       TCP_CM3.lib(at_http.o)
     0x00018666   0x00000002   PAD
-    0x00018668   0x000000a8   Code   RO         1043    i.http_to_utc       TCP_CM3.lib(at_http.o)
-    0x00018710   0x00000010   Code   RO          910    i.icmp_init         TCP_CM3.lib(at_icmp.o)
-    0x00018720   0x000000cc   Code   RO          912    i.icmp_process      TCP_CM3.lib(at_icmp.o)
-    0x000187ec   0x00000048   Code   RO          913    i.icmp_run_engine   TCP_CM3.lib(at_icmp.o)
-    0x00018834   0x00000070   Code   RO          914    i.icmp_send_message  TCP_CM3.lib(at_icmp.o)
-    0x000188a4   0x00000038   Code   RO         1102    i.ifree_mem         TCP_CM3.lib(at_mem.o)
-    0x000188dc   0x00000030   Code   RO         1114    i.init_TcpNet       TCP_CM3.lib(at_system.o)
-    0x0001890c   0x00000060   Code   RO         1103    i.init_mem          TCP_CM3.lib(at_mem.o)
-    0x0001896c   0x000000c8   Code   RO          896    i.ip_chk_frame      TCP_CM3.lib(at_ip.o)
-    0x00018a34   0x0000000a   Code   RO          897    i.ip_get_chksum     TCP_CM3.lib(at_ip.o)
+    0x00018668   0x000000a8   Code   RO         1046    i.http_to_utc       TCP_CM3.lib(at_http.o)
+    0x00018710   0x00000010   Code   RO          913    i.icmp_init         TCP_CM3.lib(at_icmp.o)
+    0x00018720   0x000000cc   Code   RO          915    i.icmp_process      TCP_CM3.lib(at_icmp.o)
+    0x000187ec   0x00000048   Code   RO          916    i.icmp_run_engine   TCP_CM3.lib(at_icmp.o)
+    0x00018834   0x00000070   Code   RO          917    i.icmp_send_message  TCP_CM3.lib(at_icmp.o)
+    0x000188a4   0x00000038   Code   RO         1105    i.ifree_mem         TCP_CM3.lib(at_mem.o)
+    0x000188dc   0x00000030   Code   RO         1117    i.init_TcpNet       TCP_CM3.lib(at_system.o)
+    0x0001890c   0x00000060   Code   RO         1106    i.init_mem          TCP_CM3.lib(at_mem.o)
+    0x0001896c   0x000000c8   Code   RO          899    i.ip_chk_frame      TCP_CM3.lib(at_ip.o)
+    0x00018a34   0x0000000a   Code   RO          900    i.ip_get_chksum     TCP_CM3.lib(at_ip.o)
     0x00018a3e   0x00000002   PAD
-    0x00018a40   0x000000b8   Code   RO          898    i.ip_get_locadr     TCP_CM3.lib(at_ip.o)
-    0x00018af8   0x0000000c   Code   RO          899    i.ip_init           TCP_CM3.lib(at_ip.o)
-    0x00018b04   0x0000005c   Code   RO          900    i.ip_run_local      TCP_CM3.lib(at_ip.o)
-    0x00018b60   0x00000150   Code   RO          901    i.ip_send_frame     TCP_CM3.lib(at_ip.o)
-    0x00018cb0   0x00000014   Code   RO         1136    i.is_subnet         TCP_CM3.lib(at_lib.o)
-    0x00018cc4   0x00000064   Code   RO         1115    i.main_TcpNet       TCP_CM3.lib(at_system.o)
-    0x00018d28   0x00000018   Code   RO         1137    i.mem_comp          TCP_CM3.lib(at_lib.o)
-    0x00018d40   0x00000016   Code   RO         1138    i.mem_copy          TCP_CM3.lib(at_lib.o)
-    0x00018d56   0x00000020   Code   RO         1139    i.mem_crc32         TCP_CM3.lib(at_lib.o)
-    0x00018d76   0x0000000a   Code   RO         1141    i.mem_set           TCP_CM3.lib(at_lib.o)
-    0x00018d80   0x00000014   Code   RO         1142    i.mem_test          TCP_CM3.lib(at_lib.o)
-    0x00018d94   0x00000016   Code   RO         1144    i.nrd_u32be         TCP_CM3.lib(at_lib.o)
-    0x00018daa   0x00000010   Code   RO         1146    i.nwr_u32be         TCP_CM3.lib(at_lib.o)
+    0x00018a40   0x000000b8   Code   RO          901    i.ip_get_locadr     TCP_CM3.lib(at_ip.o)
+    0x00018af8   0x0000000c   Code   RO          902    i.ip_init           TCP_CM3.lib(at_ip.o)
+    0x00018b04   0x0000005c   Code   RO          903    i.ip_run_local      TCP_CM3.lib(at_ip.o)
+    0x00018b60   0x00000150   Code   RO          904    i.ip_send_frame     TCP_CM3.lib(at_ip.o)
+    0x00018cb0   0x00000014   Code   RO         1139    i.is_subnet         TCP_CM3.lib(at_lib.o)
+    0x00018cc4   0x00000064   Code   RO         1118    i.main_TcpNet       TCP_CM3.lib(at_system.o)
+    0x00018d28   0x00000018   Code   RO         1140    i.mem_comp          TCP_CM3.lib(at_lib.o)
+    0x00018d40   0x00000016   Code   RO         1141    i.mem_copy          TCP_CM3.lib(at_lib.o)
+    0x00018d56   0x00000020   Code   RO         1142    i.mem_crc32         TCP_CM3.lib(at_lib.o)
+    0x00018d76   0x0000000a   Code   RO         1144    i.mem_set           TCP_CM3.lib(at_lib.o)
+    0x00018d80   0x00000014   Code   RO         1145    i.mem_test          TCP_CM3.lib(at_lib.o)
+    0x00018d94   0x00000016   Code   RO         1147    i.nrd_u32be         TCP_CM3.lib(at_lib.o)
+    0x00018daa   0x00000010   Code   RO         1149    i.nwr_u32be         TCP_CM3.lib(at_lib.o)
     0x00018dba   0x00000002   PAD
-    0x00018dbc   0x00000028   Code   RO         1044    i.proc_req_line     TCP_CM3.lib(at_http.o)
-    0x00018de4   0x00000028   Code   RO         1090    i.put_in_queue      TCP_CM3.lib(at_ethernet.o)
-    0x00018e0c   0x000000a0   Code   RO         1045    i.read_script_line  TCP_CM3.lib(at_http.o)
-    0x00018eac   0x00000048   Code   RO         1104    i.resize_mem        TCP_CM3.lib(at_mem.o)
-    0x00018ef4   0x0000004c   Code   RO         1046    i.search_delim      TCP_CM3.lib(at_http.o)
-    0x00018f40   0x000000b0   Code   RO         1189    i.sin               m_ws.l(sin.o)
-    0x00018ff0   0x00000012   Code   RO         1147    i.str_copy          TCP_CM3.lib(at_lib.o)
-    0x00019002   0x0000001a   Code   RO         1148    i.str_crc32         TCP_CM3.lib(at_lib.o)
-    0x0001901c   0x00000016   Code   RO         1149    i.str_pos           TCP_CM3.lib(at_lib.o)
-    0x00019032   0x0000001a   Code   RO         1150    i.str_scomp         TCP_CM3.lib(at_lib.o)
-    0x0001904c   0x00000050   Code   RO          921    i.tcp_abort         TCP_CM3.lib(at_tcp.o)
-    0x0001909c   0x0000009c   Code   RO          923    i.tcp_close         TCP_CM3.lib(at_tcp.o)
-    0x00019138   0x00000020   Code   RO          926    i.tcp_get_buf       TCP_CM3.lib(at_tcp.o)
-    0x00019158   0x0000004c   Code   RO          928    i.tcp_get_socket    TCP_CM3.lib(at_tcp.o)
-    0x000191a4   0x00000024   Code   RO          929    i.tcp_get_state     TCP_CM3.lib(at_tcp.o)
-    0x000191c8   0x00000018   Code   RO          930    i.tcp_init          TCP_CM3.lib(at_tcp.o)
-    0x000191e0   0x0000006c   Code   RO          932    i.tcp_listen        TCP_CM3.lib(at_tcp.o)
-    0x0001924c   0x00000098   Code   RO          933    i.tcp_map_socket    TCP_CM3.lib(at_tcp.o)
-    0x000192e4   0x00000024   Code   RO          934    i.tcp_max_dsize     TCP_CM3.lib(at_tcp.o)
-    0x00019308   0x0000005e   Code   RO          936    i.tcp_parse_opt     TCP_CM3.lib(at_tcp.o)
+    0x00018dbc   0x00000028   Code   RO         1047    i.proc_req_line     TCP_CM3.lib(at_http.o)
+    0x00018de4   0x00000028   Code   RO         1093    i.put_in_queue      TCP_CM3.lib(at_ethernet.o)
+    0x00018e0c   0x000000a0   Code   RO         1048    i.read_script_line  TCP_CM3.lib(at_http.o)
+    0x00018eac   0x00000048   Code   RO         1107    i.resize_mem        TCP_CM3.lib(at_mem.o)
+    0x00018ef4   0x0000004c   Code   RO         1049    i.search_delim      TCP_CM3.lib(at_http.o)
+    0x00018f40   0x000000b0   Code   RO         1192    i.sin               m_ws.l(sin.o)
+    0x00018ff0   0x00000012   Code   RO         1150    i.str_copy          TCP_CM3.lib(at_lib.o)
+    0x00019002   0x0000001a   Code   RO         1151    i.str_crc32         TCP_CM3.lib(at_lib.o)
+    0x0001901c   0x00000016   Code   RO         1152    i.str_pos           TCP_CM3.lib(at_lib.o)
+    0x00019032   0x0000001a   Code   RO         1153    i.str_scomp         TCP_CM3.lib(at_lib.o)
+    0x0001904c   0x00000050   Code   RO          924    i.tcp_abort         TCP_CM3.lib(at_tcp.o)
+    0x0001909c   0x0000009c   Code   RO          926    i.tcp_close         TCP_CM3.lib(at_tcp.o)
+    0x00019138   0x00000020   Code   RO          929    i.tcp_get_buf       TCP_CM3.lib(at_tcp.o)
+    0x00019158   0x0000004c   Code   RO          931    i.tcp_get_socket    TCP_CM3.lib(at_tcp.o)
+    0x000191a4   0x00000024   Code   RO          932    i.tcp_get_state     TCP_CM3.lib(at_tcp.o)
+    0x000191c8   0x00000018   Code   RO          933    i.tcp_init          TCP_CM3.lib(at_tcp.o)
+    0x000191e0   0x0000006c   Code   RO          935    i.tcp_listen        TCP_CM3.lib(at_tcp.o)
+    0x0001924c   0x00000098   Code   RO          936    i.tcp_map_socket    TCP_CM3.lib(at_tcp.o)
+    0x000192e4   0x00000024   Code   RO          937    i.tcp_max_dsize     TCP_CM3.lib(at_tcp.o)
+    0x00019308   0x0000005e   Code   RO          939    i.tcp_parse_opt     TCP_CM3.lib(at_tcp.o)
     0x00019366   0x00000002   PAD
-    0x00019368   0x00000284   Code   RO          937    i.tcp_poll_sockets  TCP_CM3.lib(at_tcp.o)
-    0x000195ec   0x000000c8   Code   RO          938    i.tcp_proc_acknr    TCP_CM3.lib(at_tcp.o)
-    0x000196b4   0x00000052   Code   RO          939    i.tcp_proc_dupack   TCP_CM3.lib(at_tcp.o)
+    0x00019368   0x00000284   Code   RO          940    i.tcp_poll_sockets  TCP_CM3.lib(at_tcp.o)
+    0x000195ec   0x000000c8   Code   RO          941    i.tcp_proc_acknr    TCP_CM3.lib(at_tcp.o)
+    0x000196b4   0x00000052   Code   RO          942    i.tcp_proc_dupack   TCP_CM3.lib(at_tcp.o)
     0x00019706   0x00000002   PAD
-    0x00019708   0x00000498   Code   RO          940    i.tcp_process       TCP_CM3.lib(at_tcp.o)
-    0x00019ba0   0x0000001a   Code   RO          941    i.tcp_que_free      TCP_CM3.lib(at_tcp.o)
-    0x00019bba   0x0000001a   Code   RO          942    i.tcp_que_init      TCP_CM3.lib(at_tcp.o)
-    0x00019bd4   0x00000094   Code   RO          943    i.tcp_que_resend    TCP_CM3.lib(at_tcp.o)
-    0x00019c68   0x000000d4   Code   RO          947    i.tcp_send          TCP_CM3.lib(at_tcp.o)
-    0x00019d3c   0x0000006a   Code   RO          948    i.tcp_send_ctrl     TCP_CM3.lib(at_tcp.o)
-    0x00019da6   0x00000050   Code   RO          949    i.tcp_send_data     TCP_CM3.lib(at_tcp.o)
-    0x00019df6   0x00000068   Code   RO          950    i.tcp_send_reset    TCP_CM3.lib(at_tcp.o)
-    0x00019e5e   0x00000026   Code   RO          951    i.tcp_set_cwnd      TCP_CM3.lib(at_tcp.o)
-    0x00019e84   0x00000068   Code   RO          952    i.tcp_transit       TCP_CM3.lib(at_tcp.o)
-    0x00019eec   0x000000c4   Code   RO          953    i.tcp_write         TCP_CM3.lib(at_tcp.o)
-    0x00019fb0   0x00000014   Code   RO         1116    i.timer_tick        TCP_CM3.lib(at_system.o)
-    0x00019fc4   0x00000018   Code   RO          992    i.udp_init          TCP_CM3.lib(at_udp.o)
-    0x00019fdc   0x000000b8   Code   RO          997    i.udp_process       TCP_CM3.lib(at_udp.o)
-    0x0001a094   0x000000e0   Code   RO         1047    i.utc_to_http       TCP_CM3.lib(at_http.o)
+    0x00019708   0x00000498   Code   RO          943    i.tcp_process       TCP_CM3.lib(at_tcp.o)
+    0x00019ba0   0x0000001a   Code   RO          944    i.tcp_que_free      TCP_CM3.lib(at_tcp.o)
+    0x00019bba   0x0000001a   Code   RO          945    i.tcp_que_init      TCP_CM3.lib(at_tcp.o)
+    0x00019bd4   0x00000094   Code   RO          946    i.tcp_que_resend    TCP_CM3.lib(at_tcp.o)
+    0x00019c68   0x000000d4   Code   RO          950    i.tcp_send          TCP_CM3.lib(at_tcp.o)
+    0x00019d3c   0x0000006a   Code   RO          951    i.tcp_send_ctrl     TCP_CM3.lib(at_tcp.o)
+    0x00019da6   0x00000050   Code   RO          952    i.tcp_send_data     TCP_CM3.lib(at_tcp.o)
+    0x00019df6   0x00000068   Code   RO          953    i.tcp_send_reset    TCP_CM3.lib(at_tcp.o)
+    0x00019e5e   0x00000026   Code   RO          954    i.tcp_set_cwnd      TCP_CM3.lib(at_tcp.o)
+    0x00019e84   0x00000068   Code   RO          955    i.tcp_transit       TCP_CM3.lib(at_tcp.o)
+    0x00019eec   0x000000c4   Code   RO          956    i.tcp_write         TCP_CM3.lib(at_tcp.o)
+    0x00019fb0   0x00000014   Code   RO         1119    i.timer_tick        TCP_CM3.lib(at_system.o)
+    0x00019fc4   0x00000018   Code   RO          995    i.udp_init          TCP_CM3.lib(at_udp.o)
+    0x00019fdc   0x000000b8   Code   RO         1000    i.udp_process       TCP_CM3.lib(at_udp.o)
+    0x0001a094   0x000000e0   Code   RO         1050    i.utc_to_http       TCP_CM3.lib(at_http.o)
     0x0001a174   0x00000090   Data   RO          323    .constdata          net_config.o
     0x0001a204   0x00000704   Data   RO          393    .constdata          web.o
-    0x0001a908   0x000005f0   Data   RO          626    .constdata          asciilib.o
-    0x0001aef8   0x00000006   Data   RO          877    .constdata          TCP_CM3.lib(at_arp.o)
-    0x0001aefe   0x00000008   Data   RO          902    .constdata          TCP_CM3.lib(at_ip.o)
-    0x0001af06   0x000000f4   Data   RO         1048    .constdata          TCP_CM3.lib(at_http.o)
-    0x0001affa   0x00000006   Data   RO         1092    .constdata          TCP_CM3.lib(at_ethernet.o)
-    0x0001b000   0x00000056   Data   RO         1122    .constdata          TCP_CM3.lib(http_err.o)
-    0x0001b056   0x00000051   Data   RO         1123    .constdata          TCP_CM3.lib(http_err.o)
-    0x0001b0a7   0x0000004e   Data   RO         1124    .constdata          TCP_CM3.lib(http_err.o)
-    0x0001b0f5   0x0000004b   Data   RO         1125    .constdata          TCP_CM3.lib(http_err.o)
-    0x0001b140   0x0000002f   Data   RO         1126    .constdata          TCP_CM3.lib(http_err.o)
-    0x0001b16f   0x00000088   Data   RO         1127    .constdata          TCP_CM3.lib(http_err.o)
+    0x0001a908   0x000005f0   Data   RO          629    .constdata          asciilib.o
+    0x0001aef8   0x00000006   Data   RO          880    .constdata          TCP_CM3.lib(at_arp.o)
+    0x0001aefe   0x00000008   Data   RO          905    .constdata          TCP_CM3.lib(at_ip.o)
+    0x0001af06   0x000000f4   Data   RO         1051    .constdata          TCP_CM3.lib(at_http.o)
+    0x0001affa   0x00000006   Data   RO         1095    .constdata          TCP_CM3.lib(at_ethernet.o)
+    0x0001b000   0x00000056   Data   RO         1125    .constdata          TCP_CM3.lib(http_err.o)
+    0x0001b056   0x00000051   Data   RO         1126    .constdata          TCP_CM3.lib(http_err.o)
+    0x0001b0a7   0x0000004e   Data   RO         1127    .constdata          TCP_CM3.lib(http_err.o)
+    0x0001b0f5   0x0000004b   Data   RO         1128    .constdata          TCP_CM3.lib(http_err.o)
+    0x0001b140   0x0000002f   Data   RO         1129    .constdata          TCP_CM3.lib(http_err.o)
+    0x0001b16f   0x00000088   Data   RO         1130    .constdata          TCP_CM3.lib(http_err.o)
     0x0001b1f7   0x00000001   PAD
-    0x0001b1f8   0x00000030   Data   RO         1507    .constdata          m_ws.l(cos_i.o)
-    0x0001b228   0x000000c8   Data   RO         1511    .constdata          m_ws.l(rred.o)
-    0x0001b2f0   0x00000028   Data   RO         1515    .constdata          m_ws.l(sin_i.o)
-    0x0001b318   0x00000081   Data   RO         1575    .constdata          mc_w.l(ctype_o.o)
+    0x0001b1f8   0x00000030   Data   RO         1510    .constdata          m_ws.l(cos_i.o)
+    0x0001b228   0x000000c8   Data   RO         1514    .constdata          m_ws.l(rred.o)
+    0x0001b2f0   0x00000028   Data   RO         1518    .constdata          m_ws.l(sin_i.o)
+    0x0001b318   0x00000081   Data   RO         1578    .constdata          mc_w.l(ctype_o.o)
     0x0001b399   0x00000003   PAD
-    0x0001b39c   0x00000004   Data   RO         1576    .constdata          mc_w.l(ctype_o.o)
+    0x0001b39c   0x00000004   Data   RO         1579    .constdata          mc_w.l(ctype_o.o)
     0x0001b3a0   0x00000019   Data   RO          324    .conststring        net_config.o
     0x0001b3b9   0x00000003   PAD
-    0x0001b3bc   0x00000040   Data   RO         1609    Region$$Table       anon$$obj.o
+    0x0001b3bc   0x00000040   Data   RO         1612    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x10000000, Size: 0x00006118, Max: 0x00008000, ABSOLUTE)
@@ -2372,16 +2372,16 @@ Memory Map of the image
     0x10000016   0x00000002   Data   RW          248    .data               timers.o
     0x10000018   0x0000002a   Data   RW          325    .data               net_config.o
     0x10000042   0x00000002   PAD
-    0x10000044   0x00000008   Data   RW          527    .data               ldr.o
-    0x1000004c   0x00000001   Data   RW          644    .data               glcd.o
-    0x1000004d   0x00000024   Data   RW          833    .data               lut.o
+    0x10000044   0x00000008   Data   RW          530    .data               ldr.o
+    0x1000004c   0x00000001   Data   RW          647    .data               glcd.o
+    0x1000004d   0x00000024   Data   RW          836    .data               lut.o
     0x10000071   0x00000003   PAD
-    0x10000074   0x0000000c   Data   RW          903    .data               TCP_CM3.lib(at_ip.o)
-    0x10000080   0x00000004   Data   RW          954    .data               TCP_CM3.lib(at_tcp.o)
+    0x10000074   0x0000000c   Data   RW          906    .data               TCP_CM3.lib(at_ip.o)
+    0x10000080   0x00000004   Data   RW          957    .data               TCP_CM3.lib(at_tcp.o)
     0x10000084   0x00005df4   Zero   RW          172    .bss                main.o
-    0x10005e78   0x0000000c   Zero   RW          450    .bss                touchpanel.o
-    0x10005e84   0x00000010   Zero   RW          915    .bss                TCP_CM3.lib(at_icmp.o)
-    0x10005e94   0x00000084   Zero   RW         1091    .bss                TCP_CM3.lib(at_ethernet.o)
+    0x10005e78   0x0000000c   Zero   RW          453    .bss                touchpanel.o
+    0x10005e84   0x00000010   Zero   RW          918    .bss                TCP_CM3.lib(at_icmp.o)
+    0x10005e94   0x00000084   Zero   RW         1094    .bss                TCP_CM3.lib(at_ethernet.o)
     0x10005f18   0x00000200   Zero   RW            1    STACK               startup_lpc17xx.o
 
 
@@ -2390,20 +2390,20 @@ Memory Map of the image
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x2007c000   0x00000014   Data   RW          368    .data               emac_lpc17xx_lan8720.o
-    0x2007c014   0x000001bc   Data   RW          404    .data               statechart.o
-    0x2007c1d0   0x0000004c   Data   RW          451    .data               touchpanel.o
-    0x2007c21c   0x00000010   Data   RW          473    .data               anemometro.o
-    0x2007c22c   0x0000000c   Data   RW          553    .data               ufono.o
-    0x2007c238   0x00000008   Data   RW          878    .data               TCP_CM3.lib(at_arp.o)
-    0x2007c240   0x0000000c   Data   RW         1049    .data               TCP_CM3.lib(at_http.o)
-    0x2007c24c   0x00000004   Data   RW         1548    .data               mc_w.l(errno.o)
+    0x2007c014   0x000001bc   Data   RW          407    .data               statechart.o
+    0x2007c1d0   0x0000004c   Data   RW          454    .data               touchpanel.o
+    0x2007c21c   0x00000010   Data   RW          476    .data               anemometro.o
+    0x2007c22c   0x0000000c   Data   RW          556    .data               ufono.o
+    0x2007c238   0x00000008   Data   RW          881    .data               TCP_CM3.lib(at_arp.o)
+    0x2007c240   0x0000000c   Data   RW         1052    .data               TCP_CM3.lib(at_http.o)
+    0x2007c24c   0x00000004   Data   RW         1551    .data               mc_w.l(errno.o)
     0x2007c250   0x00000017   Zero   RW          218    .bss                rtc.o
     0x2007c267   0x00000001   PAD
     0x2007c268   0x000033ec   Zero   RW          322    .bss                net_config.o
     0x2007f654   0x00000004   PAD
     0x2007f658   0x00002a64   Zero   RW          367    .bss                emac_lpc17xx_lan8720.o
-    0x200820bc   0x00000010   Zero   RW         1105    .bss                TCP_CM3.lib(at_mem.o)
-    0x200820cc   0x0000004c   Zero   RW         1117    .bss                TCP_CM3.lib(at_system.o)
+    0x200820bc   0x00000010   Zero   RW         1108    .bss                TCP_CM3.lib(at_mem.o)
+    0x200820cc   0x0000004c   Zero   RW         1120    .bss                TCP_CM3.lib(at_system.o)
 
 
 ==============================================================================
@@ -2442,10 +2442,10 @@ Image component sizes
        212         26          0         12          0       1182   ufono.o
         44          8          0          0          0        418   uva30a.o
         40          4          0          0          0        531   wdt.o
-         0          0       1796          0          0        533   web.o
+         0          0       1796          0          0       6805   web.o
 
     ----------------------------------------------------------------------
-     85332       2100       3756        684      48748     382305   Object Totals
+     85332       2100       3756        684      48748     388577   Object Totals
          0          0         64          0          0          0   (incl. Generated)
          0          0          3          5          5          0   (incl. Padding)
 
@@ -2546,8 +2546,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-    106664       4058       4948        724      48988     385497   Grand Totals
-    106664       4058       4948        352      48988     385497   ELF Image Totals (compressed)
+    106664       4058       4948        724      48988     391769   Grand Totals
+    106664       4058       4948        352      48988     391769   ELF Image Totals (compressed)
     106664       4058       4948        352          0          0   ROM Totals
 
 ==============================================================================

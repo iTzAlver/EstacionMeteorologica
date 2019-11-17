@@ -1,456 +1,437 @@
 Dependencies for Project 'Estacion', Target 'MiniDK-2': (DO NOT MODIFY !)
-F (..\README.md)(0x5DCAD8B3)()
-F (.\startup_LPC17xx.s)(0x5DCAD8B4)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\lis\startup_lpc17xx.lst --xref -o .\obj\startup_lpc17xx.o --depend .\obj\startup_lpc17xx.d)
-F (..\Startup\core_cm3.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\core_cm3.o --omf_browse .\obj\core_cm3.crf --depend .\obj\core_cm3.d)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-F (..\Startup\system_LPC17xx.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\system_lpc17xx.o --omf_browse .\obj\system_lpc17xx.crf --depend .\obj\system_lpc17xx.d)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-F (..\Setup\configura.c)(0x5DCAE988)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\configura.o --omf_browse .\obj\configura.crf --depend .\obj\configura.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Setup\configura.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\GLCD\GLCD.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\TouchPanel\TouchPanel.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\menu.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Statechart.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\WDT\WDT.h)(0x5DCAD8B4)
-I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\miGlobal.h)(0x5DCAD8B4)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DCAD8B4)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80156)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Anemometro\Anemometro.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DCADA60)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\DAC\DAC.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\uFono.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\OneWire\OneWire.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\HTTP_SOURCE.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\RTC\RTC.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\UVA30A.h)(0x5DCAD8B3)
-F (..\Principal\main.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Principal\header.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Setup\configura.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\GLCD\GLCD.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\TouchPanel\TouchPanel.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\menu.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Statechart.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\WDT\WDT.h)(0x5DCAD8B4)
-I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\miGlobal.h)(0x5DCAD8B4)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DCAD8B4)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80156)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Anemometro\Anemometro.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DCADA60)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\DAC\DAC.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\uFono.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\OneWire\OneWire.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\HTTP_SOURCE.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\RTC\RTC.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\UVA30A.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\DEBUG\DEBUG.h)(0x5DCAD8B3)
-F (..\PWM\PWM.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\pwm.o --omf_browse .\obj\pwm.crf --depend .\obj\pwm.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DCAD8B3)
-F (..\RTC\RTC.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\rtc.o --omf_browse .\obj\rtc.crf --depend .\obj\rtc.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\RTC\RTC.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C7FD94)
-I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7FD94)
-F (..\Timers\Timers.c)(0x5DCAD8B4)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\timers.o --omf_browse .\obj\timers.crf --depend .\obj\timers.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DCAD8B4)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80156)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Anemometro\Anemometro.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DCADA60)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\DAC\DAC.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\uFono.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\OneWire\OneWire.h)(0x5DCAD8B3)
-F (..\WDT\WDT.c)(0x5DCAD8B4)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\wdt.o --omf_browse .\obj\wdt.crf --depend .\obj\wdt.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\WDT\WDT.h)(0x5DCAD8B4)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-F (..\TCPIP\HTTP_SOURCE.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\http_source.o --omf_browse .\obj\http_source.crf --depend .\obj\http_source.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\HTTP_SOURCE.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80156)
-I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-F (..\TCPIP\config\Net_Config.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\net_config.o --omf_browse .\obj\net_config.crf --depend .\obj\net_config.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80156)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\miGlobal.h)(0x5DCAD8B4)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_lib.c)(0x5DCAD8B4)
-F (..\TCPIP\lib\TCP_CM3.lib)(0x5DCAD8B4)()
-F (..\TCPIP\HTTP_CGI.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\http_cgi.o --omf_browse .\obj\http_cgi.crf --depend .\obj\http_cgi.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\HTTP_CGI.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80156)
-I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7FD94)
-I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7FD94)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-F (..\TCPIP\index.cgi)(0x5DCAD8B3)()
-F (..\TCPIP\WEB.inp)(0x5DCAD8B3)()
-F (..\TCPIP\config\EMAC_LPC17xx_LAN8720.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\emac_lpc17xx_lan8720.o --omf_browse .\obj\emac_lpc17xx_lan8720.crf --depend .\obj\emac_lpc17xx_lan8720.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80156)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\EMAC_LPC17xx_LAN8720.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-F (..\TCPIP\WEB.C)(0x5DCAEA21)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\web.o --omf_browse .\obj\web.crf --depend .\obj\web.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80156)
-F (..\Menu\Statechart.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\statechart.o --omf_browse .\obj\statechart.crf --depend .\obj\statechart.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Statechart.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\GLCD\GLCD.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.H)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\TouchPanel\TouchPanel.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\menu.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\WDT\WDT.h)(0x5DCAD8B4)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\miGlobal.h)(0x5DCAD8B4)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DCAD8B4)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80156)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Anemometro\Anemometro.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DCADA60)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\DAC\DAC.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\uFono.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\OneWire\OneWire.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\HTTP_SOURCE.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DCAD8B3)
-F (..\Menu\menu.c)(0x5DCAD8B3)()
-F (..\Menu\TouchPanel\TouchPanel.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\touchpanel.o --omf_browse .\obj\touchpanel.crf --depend .\obj\touchpanel.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\GLCD\GLCD.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.H)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\TouchPanel\TouchPanel.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\WDT\WDT.h)(0x5DCAD8B4)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DCAD8B3)
-F (..\ANEMOMETRO\Anemometro.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\anemometro.o --omf_browse .\obj\anemometro.crf --depend .\obj\anemometro.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ANEMOMETRO\Anemometro.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DCAD8B4)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80156)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DCADA60)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\DAC\DAC.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\uFono.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\OneWire\OneWire.h)(0x5DCAD8B3)
-F (..\OneWire\OneWire.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\onewire.o --omf_browse .\obj\onewire.crf --depend .\obj\onewire.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\OneWire\OneWire.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-F (..\ADC\Ldr.c)(0x5DCADA7F)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\ldr.o --omf_browse .\obj\ldr.crf --depend .\obj\ldr.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DCADA60)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C7FD94)
-F (..\ADC\uFono.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\ufono.o --omf_browse .\obj\ufono.crf --depend .\obj\ufono.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\uFono.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DCAD8B4)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80156)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Anemometro\Anemometro.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DCADA60)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\DAC\DAC.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\OneWire\OneWire.h)(0x5DCAD8B3)
-F (..\ADC\UVA30A.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\uva30a.o --omf_browse .\obj\uva30a.crf --depend .\obj\uva30a.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\UVA30A.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DCADA60)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C7FD94)
-F (..\DAC\DAC.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\dac.o --omf_browse .\obj\dac.crf --depend .\obj\dac.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\DAC\DAC.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DCADA60)
-I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DCAD8B4)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80156)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Anemometro\Anemometro.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\uFono.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\OneWire\OneWire.h)(0x5DCAD8B3)
-F (..\Menu\GLCD\AsciiLib.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\asciilib.o --omf_browse .\obj\asciilib.crf --depend .\obj\asciilib.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\GLCD\AsciiLib.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C7FD94)
-F (..\Menu\GLCD\GLCD.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\glcd.o --omf_browse .\obj\glcd.crf --depend .\obj\glcd.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.H)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\GLCD\GLCD.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\GLCD\AsciiLib.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C7FD94)
-F (..\Menu\Firmware\source\lpc17xx_ssp.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\lpc17xx_ssp.o --omf_browse .\obj\lpc17xx_ssp.crf --depend .\obj\lpc17xx_ssp.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_clkpwr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_libcfg_default.h)(0x5DCAD8B3)
-F (..\Menu\Firmware\source\lpc17xx_pinsel.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\lpc17xx_pinsel.o --omf_browse .\obj\lpc17xx_pinsel.crf --depend .\obj\lpc17xx_pinsel.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\lpc17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DCAD8B3)
-F (..\Menu\Firmware\source\lpc17xx_gpio.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\lpc17xx_gpio.o --omf_browse .\obj\lpc17xx_gpio.crf --depend .\obj\lpc17xx_gpio.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_libcfg_default.h)(0x5DCAD8B3)
-F (..\Menu\Firmware\source\lpc17xx_clkpwr.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\lpc17xx_clkpwr.o --omf_browse .\obj\lpc17xx_clkpwr.crf --depend .\obj\lpc17xx_clkpwr.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_clkpwr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\lpc17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DCAD8B3)
-F (..\Menu\Firmware\source\lpc17xx_libcfg_default.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\lpc17xx_libcfg_default.o --omf_browse .\obj\lpc17xx_libcfg_default.crf --depend .\obj\lpc17xx_libcfg_default.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_libcfg_default.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-F (..\PWM\PWM.h)(0x5DCAD8B3)()
-F (..\Menu\Statechart.h)(0x5DCAD8B3)()
-F (..\Menu\menu.h)(0x5DCAD8B3)()
-F (..\Menu\TouchPanel\TouchPanel.h)(0x5DCAD8B3)()
+F (..\README.md)(0x5DB73097)()
+F (.\startup_LPC17xx.s)(0x5DB1DDB3)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\lis\startup_lpc17xx.lst --xref -o .\obj\startup_lpc17xx.o --depend .\obj\startup_lpc17xx.d)
+F (..\Startup\core_cm3.c)(0x5DAED60C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\core_cm3.o --omf_browse .\obj\core_cm3.crf --depend .\obj\core_cm3.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+F (..\Startup\system_LPC17xx.c)(0x5DAED60E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\system_lpc17xx.o --omf_browse .\obj\system_lpc17xx.crf --depend .\obj\system_lpc17xx.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+F (..\Setup\configura.c)(0x5DD16E9F)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\configura.o --omf_browse .\obj\configura.crf --depend .\obj\configura.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Setup\configura.h)(0x5DC7E533)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DB5D00B)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DC55FCF)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\GLCD\GLCD.h)(0x5DAED632)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\TouchPanel\TouchPanel.h)(0x5DAED634)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DAED63E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAED640)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DAED63A)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DAED63C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\menu.h)(0x5DAED60A)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Statechart.h)(0x5DC53518)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\WDT\WDT.h)(0x5DB02BC8)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\miGlobal.h)(0x5DB1EF9F)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DC7E533)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80F66)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Anemometro\Anemometro.h)(0x5DC55893)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DD16E9F)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DC7E533)
+I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\DAC\DAC.h)(0x5DB73097)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\uFono.h)(0x5DC53518)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\OneWire\OneWire.h)(0x5DC56187)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\HTTP_SOURCE.h)(0x5DB2054F)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DAED638)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\RTC\RTC.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\UVA30A.h)(0x5DBAD5F7)
+F (..\Principal\main.c)(0x5DC7E533)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Principal\header.h)(0x5DC7E533)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DC55FCF)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DB5D00B)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Setup\configura.h)(0x5DC7E533)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\GLCD\GLCD.h)(0x5DAED632)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\TouchPanel\TouchPanel.h)(0x5DAED634)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DAED63E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAED640)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DAED63A)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DAED63C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\menu.h)(0x5DAED60A)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Statechart.h)(0x5DC53518)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\WDT\WDT.h)(0x5DB02BC8)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\miGlobal.h)(0x5DB1EF9F)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DC7E533)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80F66)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Anemometro\Anemometro.h)(0x5DC55893)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DD16E9F)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DC7E533)
+I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\DAC\DAC.h)(0x5DB73097)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\uFono.h)(0x5DC53518)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\OneWire\OneWire.h)(0x5DC56187)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\HTTP_SOURCE.h)(0x5DB2054F)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DAED638)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\RTC\RTC.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\UVA30A.h)(0x5DBAD5F7)
+F (..\PWM\PWM.c)(0x5DB5CF32)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\pwm.o --omf_browse .\obj\pwm.crf --depend .\obj\pwm.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DB5D00B)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DC55FCF)
+F (..\RTC\RTC.c)(0x5DAED60C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\rtc.o --omf_browse .\obj\rtc.crf --depend .\obj\rtc.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\RTC\RTC.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DC55FCF)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C80BA4)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C80BA4)
+F (..\Timers\Timers.c)(0x5DC7E533)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\timers.o --omf_browse .\obj\timers.crf --depend .\obj\timers.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DC7E533)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80F66)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DC55FCF)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Anemometro\Anemometro.h)(0x5DC55893)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DD16E9F)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DC7E533)
+I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\DAC\DAC.h)(0x5DB73097)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DB5D00B)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\uFono.h)(0x5DC53518)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\OneWire\OneWire.h)(0x5DC56187)
+F (..\WDT\WDT.c)(0x5DAED632)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\wdt.o --omf_browse .\obj\wdt.crf --depend .\obj\wdt.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\WDT\WDT.h)(0x5DB02BC8)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DC55FCF)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+F (..\TCPIP\HTTP_SOURCE.c)(0x5DB29594)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\http_source.o --omf_browse .\obj\http_source.crf --depend .\obj\http_source.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\HTTP_SOURCE.h)(0x5DB2054F)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DAED638)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80F66)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+F (..\TCPIP\config\Net_Config.c)(0x5DB2A386)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\net_config.o --omf_browse .\obj\net_config.crf --depend .\obj\net_config.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DAED638)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80F66)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\miGlobal.h)(0x5DB1EF9F)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_lib.c)(0x5DAED638)
+F (..\TCPIP\lib\TCP_CM3.lib)(0x5DAED638)()
+F (..\TCPIP\HTTP_CGI.c)(0x5DB2066D)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\http_cgi.o --omf_browse .\obj\http_cgi.crf --depend .\obj\http_cgi.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\HTTP_CGI.h)(0x5DB2064B)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DAED638)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80F66)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C80BA4)
+I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C80BA4)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DC55FCF)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+F (..\TCPIP\index.cgi)(0x5DB20752)()
+F (..\TCPIP\WEB.inp)(0x5DB02D88)()
+F (..\TCPIP\config\EMAC_LPC17xx_LAN8720.c)(0x5DB45B1C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\emac_lpc17xx_lan8720.o --omf_browse .\obj\emac_lpc17xx_lan8720.crf --depend .\obj\emac_lpc17xx_lan8720.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DAED638)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80F66)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\EMAC_LPC17xx_LAN8720.h)(0x5DB45AE1)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+F (..\TCPIP\WEB.C)(0x5DD16FF9)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\web.o --omf_browse .\obj\web.crf --depend .\obj\web.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DAED638)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80F66)
+F (..\Menu\Statechart.c)(0x5DC54AFE)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\statechart.o --omf_browse .\obj\statechart.crf --depend .\obj\statechart.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Statechart.h)(0x5DC53518)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\GLCD\GLCD.h)(0x5DAED632)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.H)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\TouchPanel\TouchPanel.h)(0x5DAED634)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DAED63E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAED640)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DAED63A)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DAED63C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\menu.h)(0x5DAED60A)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DC55FCF)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\WDT\WDT.h)(0x5DB02BC8)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DB5D00B)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\miGlobal.h)(0x5DB1EF9F)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DC7E533)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80F66)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Anemometro\Anemometro.h)(0x5DC55893)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DD16E9F)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DC7E533)
+I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\DAC\DAC.h)(0x5DB73097)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\uFono.h)(0x5DC53518)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\OneWire\OneWire.h)(0x5DC56187)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\HTTP_SOURCE.h)(0x5DB2054F)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\TCPIP\lib\Net_Config.h)(0x5DAED638)
+F (..\Menu\menu.c)(0x5DAED608)()
+F (..\Menu\TouchPanel\TouchPanel.c)(0x5DB02718)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\touchpanel.o --omf_browse .\obj\touchpanel.crf --depend .\obj\touchpanel.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\GLCD\GLCD.h)(0x5DAED632)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.H)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\TouchPanel\TouchPanel.h)(0x5DAED634)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DAED63E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAED640)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DAED63A)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DAED63C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\WDT\WDT.h)(0x5DB02BC8)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DC55FCF)
+F (..\ANEMOMETRO\Anemometro.c)(0x5DC55831)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\anemometro.o --omf_browse .\obj\anemometro.crf --depend .\obj\anemometro.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ANEMOMETRO\Anemometro.h)(0x5DC55893)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DC55FCF)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DC7E533)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80F66)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DD16E9F)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DC7E533)
+I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\DAC\DAC.h)(0x5DB73097)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DB5D00B)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\uFono.h)(0x5DC53518)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\OneWire\OneWire.h)(0x5DC56187)
+F (..\OneWire\OneWire.c)(0x5DC56A2C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\onewire.o --omf_browse .\obj\onewire.crf --depend .\obj\onewire.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\OneWire\OneWire.h)(0x5DC56187)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DC55FCF)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+F (..\ADC\Ldr.c)(0x5DD16E9F)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\ldr.o --omf_browse .\obj\ldr.crf --depend .\obj\ldr.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DD16E9F)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DC55FCF)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DC7E533)
+I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C80BA4)
+F (..\ADC\uFono.c)(0x5DC54E3F)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\ufono.o --omf_browse .\obj\ufono.crf --depend .\obj\ufono.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\uFono.h)(0x5DC53518)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DC55FCF)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DC7E533)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80F66)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Anemometro\Anemometro.h)(0x5DC55893)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DD16E9F)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DC7E533)
+I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\DAC\DAC.h)(0x5DB73097)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DB5D00B)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\OneWire\OneWire.h)(0x5DC56187)
+F (..\ADC\UVA30A.c)(0x5DC53518)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\uva30a.o --omf_browse .\obj\uva30a.crf --depend .\obj\uva30a.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\UVA30A.h)(0x5DBAD5F7)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DD16E9F)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DC55FCF)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DC7E533)
+I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C80BA4)
+F (..\DAC\DAC.c)(0x5DC7E533)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\dac.o --omf_browse .\obj\dac.crf --depend .\obj\dac.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\DAC\DAC.h)(0x5DB73097)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DC55FCF)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DC7E533)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DD16E9F)
+I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DC7E533)
+I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80F66)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Anemometro\Anemometro.h)(0x5DC55893)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DB5D00B)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\uFono.h)(0x5DC53518)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\OneWire\OneWire.h)(0x5DC56187)
+F (..\Menu\GLCD\AsciiLib.c)(0x5DAED632)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\asciilib.o --omf_browse .\obj\asciilib.crf --depend .\obj\asciilib.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\GLCD\AsciiLib.h)(0x5DAED632)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C80BA4)
+F (..\Menu\GLCD\GLCD.c)(0x5DB454F1)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\glcd.o --omf_browse .\obj\glcd.crf --depend .\obj\glcd.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.H)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\GLCD\GLCD.h)(0x5DAED632)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\GLCD\AsciiLib.h)(0x5DAED632)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C80BA4)
+F (..\Menu\Firmware\source\lpc17xx_ssp.c)(0x5DAED646)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\lpc17xx_ssp.o --omf_browse .\obj\lpc17xx_ssp.crf --depend .\obj\lpc17xx_ssp.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DAED63E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAED640)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_clkpwr.h)(0x5DAED63A)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_libcfg_default.h)(0x5DAED63C)
+F (..\Menu\Firmware\source\lpc17xx_pinsel.c)(0x5DAED642)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\lpc17xx_pinsel.o --omf_browse .\obj\lpc17xx_pinsel.crf --depend .\obj\lpc17xx_pinsel.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DAED63C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\lpc17xx.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAED640)
+F (..\Menu\Firmware\source\lpc17xx_gpio.c)(0x5DAED642)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\lpc17xx_gpio.o --omf_browse .\obj\lpc17xx_gpio.crf --depend .\obj\lpc17xx_gpio.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DAED63A)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAED640)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_libcfg_default.h)(0x5DAED63C)
+F (..\Menu\Firmware\source\lpc17xx_clkpwr.c)(0x5DAED640)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\lpc17xx_clkpwr.o --omf_browse .\obj\lpc17xx_clkpwr.crf --depend .\obj\lpc17xx_clkpwr.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_clkpwr.h)(0x5DAED63A)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\lpc17xx.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAED640)
+F (..\Menu\Firmware\source\lpc17xx_libcfg_default.c)(0x5DAED644)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\lpc17xx_libcfg_default.o --omf_browse .\obj\lpc17xx_libcfg_default.crf --depend .\obj\lpc17xx_libcfg_default.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_libcfg_default.h)(0x5DAED63C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAED640)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+F (..\PWM\PWM.h)(0x5DB5D00B)()
+F (..\Menu\Statechart.h)(0x5DC53518)()
+F (..\Menu\menu.h)(0x5DAED60A)()
+F (..\Menu\TouchPanel\TouchPanel.h)(0x5DAED634)()
 F (..\Menu\Leds\leds.h)(0x00000000)()
-F (..\Menu\GLCD\GLCD.h)(0x5DCAD8B3)()
-F (..\Menu\GLCD\AsciiLib.h)(0x5DCAD8B3)()
-F (..\Principal\header.h)(0x5DCAD8B3)()
-F (..\Principal\Systemsymbols.h)(0x5DCAD8B3)()
-F (..\RTC\RTC.h)(0x5DCAD8B3)()
-F (..\Setup\configura.h)(0x5DCAD8B3)()
-F (..\WDT\WDT.h)(0x5DCAD8B4)()
-F (..\TCPIP\lib\HTTP_SOURCE.h)(0x5DCAD8B3)()
-F (..\TCPIP\lib\HTTP_CGI.h)(0x5DCAD8B3)()
-F (..\ANEMOMETRO\Anemometro.h)(0x5DCAD8B3)()
-F (..\Timers\Timers.h)(0x5DCAD8B4)()
-F (..\ADC\Ldr.h)(0x5DCADA60)()
-F (..\ADC\uFono.h)(0x5DCAD8B3)()
-F (..\ADC\UVA30A.h)(0x5DCAD8B3)()
-F (..\DAC\DAC.h)(0x5DCAD8B3)()
-F (..\TCPIP\lib\miGlobal.h)(0x5DCAD8B4)()
-F (..\FAT32\FW\source\diskio.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\diskio.o --omf_browse .\obj\diskio.crf --depend .\obj\diskio.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\FAT32\FW\include\diskio.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\FAT32\FW\include\integer.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\FAT32\FW\include\SPI_MSD_Driver.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DCAD8B3)
-F (..\FAT32\FW\source\ff.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\ff.o --omf_browse .\obj\ff.crf --depend .\obj\ff.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\FAT32\FW\include\ff.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\FAT32\FW\include\integer.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\FAT32\FW\include\ffconf.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\lpc17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\FAT32\FW\include\diskio.h)(0x5DCAD8B3)
-F (..\FAT32\FW\source\SPI_MSD_Driver.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\spi_msd_driver.o --omf_browse .\obj\spi_msd_driver.crf --depend .\obj\spi_msd_driver.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\FAT32\FW\include\SPI_MSD_Driver.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7FD94)
-F (..\BaseDeDatos\LUT.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\lut.o --omf_browse .\obj\lut.crf --depend .\obj\lut.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DCADA60)
-I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C7FD94)
-F (..\BaseDeDatos\DMA.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\dma.o --omf_browse .\obj\dma.crf --depend .\obj\dma.d)
-F (..\DEBUG\DEBUG.c)(0x5DCAD8B3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -DDEBUG -o .\obj\debug.o --omf_browse .\obj\debug.crf --depend .\obj\debug.d)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\DEBUG\DEBUG.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DCAD8B3)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\DAC\DAC.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DCADA60)
-I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C7FD94)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Timers\Timers.h)(0x5DCAD8B4)
-I (C:\Keil\ARM\RV31\INC\RTL.h)(0x51C80156)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\Anemometro\Anemometro.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\PWM\PWM.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\ADC\uFono.h)(0x5DCAD8B3)
-I (C:\Users\Alumno\Desktop\GIT\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\OneWire\OneWire.h)(0x5DCAD8B3)
+F (..\Menu\GLCD\GLCD.h)(0x5DAED632)()
+F (..\Menu\GLCD\AsciiLib.h)(0x5DAED632)()
+F (..\Principal\header.h)(0x5DC7E533)()
+F (..\Principal\Systemsymbols.h)(0x5DC55FCF)()
+F (..\RTC\RTC.h)(0x5DAED60C)()
+F (..\Setup\configura.h)(0x5DC7E533)()
+F (..\WDT\WDT.h)(0x5DB02BC8)()
+F (..\TCPIP\lib\HTTP_SOURCE.h)(0x5DB2054F)()
+F (..\TCPIP\lib\HTTP_CGI.h)(0x5DB2064B)()
+F (..\ANEMOMETRO\Anemometro.h)(0x5DC55893)()
+F (..\Timers\Timers.h)(0x5DC7E533)()
+F (..\ADC\Ldr.h)(0x5DD16E9F)()
+F (..\ADC\uFono.h)(0x5DC53518)()
+F (..\ADC\UVA30A.h)(0x5DBAD5F7)()
+F (..\DAC\DAC.h)(0x5DB73097)()
+F (..\TCPIP\lib\miGlobal.h)(0x5DB1EF9F)()
+F (..\FAT32\FW\source\diskio.c)(0x5DAED63A)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\diskio.o --omf_browse .\obj\diskio.crf --depend .\obj\diskio.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\FAT32\FW\include\diskio.h)(0x5DAED634)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\FAT32\FW\include\integer.h)(0x5DAED636)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\FAT32\FW\include\SPI_MSD_Driver.h)(0x5DAED636)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DAED63E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAED640)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DAED63A)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DAED63C)
+F (..\FAT32\FW\source\ff.c)(0x5DAED638)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\ff.o --omf_browse .\obj\ff.crf --depend .\obj\ff.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\FAT32\FW\include\ff.h)(0x5DAED634)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\FAT32\FW\include\integer.h)(0x5DAED636)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\FAT32\FW\include\ffconf.h)(0x5DAED636)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\lpc17xx.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\FAT32\FW\include\diskio.h)(0x5DAED634)
+F (..\FAT32\FW\source\SPI_MSD_Driver.c)(0x5DAED638)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\spi_msd_driver.o --omf_browse .\obj\spi_msd_driver.crf --depend .\obj\spi_msd_driver.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\FAT32\FW\include\SPI_MSD_Driver.h)(0x5DAED636)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17xx.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_ssp.h)(0x5DAED63E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc_types.h)(0x5DAED640)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_gpio.h)(0x5DAED63A)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Menu\Firmware\header\lpc17xx_pinsel.h)(0x5DAED63C)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C80BA4)
+F (..\BaseDeDatos\LUT.c)(0x5DC7E533)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\lut.o --omf_browse .\obj\lut.crf --depend .\obj\lut.d)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\BaseDeDatos\LUT.h)(0x5DC7E533)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Principal\Systemsymbols.h)(0x5DC55FCF)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\LPC17XX.H)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cm3.h)(0x5DAED60C)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C80BA4)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmInstr.h)(0x5DAED60E)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\core_cmFunc.h)(0x5DAED60C)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\Startup\system_LPC17xx.h)(0x5DAED610)
+I (C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\ADC\LDR.h)(0x5DD16E9F)
+I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C80BA4)
+F (..\BaseDeDatos\DMA.c)(0x5DC7E533)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\dma.o --omf_browse .\obj\dma.crf --depend .\obj\dma.d)
+F (..\DEBUG\DEBUG.c)(0x5DC7E533)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\Startup -I..\PWM -I..\Principal -I..\Setup -I..\Menu -I..\Menu\GLCD -I..\Menu\Firmware\header -I..\Menu\Firmware\source -I..\Menu\Leds -I..\Menu\TouchPanel -I..\RTC -I..\WDT -I..\TCPIP -I..\TCPIP\lib -IC:\Keil\ARM\RV31\lib -I..\TCPIP\FM\include -I..\TCPIP\FM\source -I..\Timers -I..\Anemometro -I..\FAT32 -I..\FAT32\FW\include -I..\FAT32\FW\source -I..\ADC -I..\DAC -I..\BaseDeDatos -I..\OneWire -I..\DEBUG-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DNO_RTX_KERNEL -o .\obj\debug.o --omf_browse .\obj\debug.crf --depend .\obj\debug.d)
