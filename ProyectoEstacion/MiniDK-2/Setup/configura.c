@@ -43,7 +43,6 @@ void __configuraPrograma__(	void	)
 	DATOS->Lugar.Altura		= 500.12;	
 	DATOS->Lugar.Longitud	= 74.33;	
 	DATOS->Lugar.Latitud	= 74.33;
-	LPC_SC->PCONP |= 	0x1 << 22 | 0x1 << 23 | 1 << 16;
 	//crearSeno();
 	__configuraWEB__		();
 	__configuraSysTick__	();

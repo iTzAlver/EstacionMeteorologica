@@ -87,7 +87,8 @@ void escribirEnDac(	uint16_t	Valor	,	uint8_t	Cutoff	)
 //---------------------------------------------------------------------------------------------------------------------**/
 void activarDac()
 {
-	NVIC_EnableIRQ(	TIMER2_IRQn	);		//	Activo el timer del DAC.
+	/**	@TODO:	DMA*/
+	NVIC_EnableIRQ(	TIMER2_IRQn	);		//	Activo el timer del DAC. /** @TODO: Quitar*/
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//

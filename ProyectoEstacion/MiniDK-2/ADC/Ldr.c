@@ -57,9 +57,9 @@ void	ADC_IRQHandler()
 {
 	LPC_ADC->ADCR			&=	~BRUST_PIN;														//	Mato el BURST.
 	BUFFER_BRILLO			=	(float)((LPC_ADC->ADDR1&(0xFFF0)) >> 4);								//	Empieza a partir del bit 4.
-	BUFFER_BRILLO			/=	(float)0xFFF;														//	Relacción de código. (Código/Código máximo)
-	BUFFER_BRILLO			= 	RESISTENCIA_PULL*(BUFFER_BRILLO)/(BUFFER_BRILLO - 1.00);					//	Leo el ADC. (Ressitencia del LDR en kOhms)
-	goto_LUT(	BUFFER_BRILLO	,	BRILLO_LDR	,	(float *)&DATOS->Brillo	,	none	,	none	,	none	);	//	Traduzco resistencias a LUX.
+	BUFFER_BRILLO			/=	(float)0xFFF;	//*rel												//	Relacción de código. (Código/Código máximo)
+	BUFFER_BRILLO			= 	RESISTENCIA_PULL*(BUFFER_BRILLO)/(1.00 - BUFFER_BRILLO);					//	Leo el ADC. (Ressitencia del LDR en kOhms)
+	goto_LUT(	BUFFER_BRILLO	,	BRILLO_LDR_NOLUT,	(float *)&DATOS->Brillo	,	none	,	none	,	none	);	//	Traduzco resistencias a LUX.
 	BUFFER_UVA			=	(float)((LPC_ADC->ADDR2&(0xFFF0)) >> 4);								//	Empieza a partir del bit 4.
 	DATOS->IndiceUV		= 	(float)VINDICE*VREF*BUFFER_UVA/(float)(0xFFF);							//	Traducción del código al índice.
 	ACTUALIZADOR->LDRrev	=	1;																//	Digo que el LDR ha sido leido.

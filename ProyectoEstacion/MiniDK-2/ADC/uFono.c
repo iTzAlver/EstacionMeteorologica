@@ -31,6 +31,13 @@ void __configuraUFONO__()
 {
 //	LPC_PINCON->PINSEL1 |= ~(0x3 << (2*PIN_UFONO));
 	LPC_PINCON->PINSEL1 |= (FUNC_ADC << (2*PIN_UFONO));
+	
+	//	NEW:
+	LPC_TIM1->MR0	=	Fclk*TsAudio - 1;	//	Cada MR0 se genera una interrupción de leer el audio.
+	LPC_TIM1->TCR	=	0x2;				//	Reset al contador.
+	LPC_TIM1->TCR  =	0x1;				//	Activo contador.
+	LPC_TIM1->MCR  =    0x0;				//	MR0 que NO genera la interrupción.
+	NVIC_EnableIRQ(	TIMER0_IRQn	);	//	Activo interrupción.
 }
 
 void	lanzaUFONO()
@@ -45,12 +52,13 @@ void	lanzaUFONO()
 	LPC_ADC->ADCR		&=	~0xFF;				//	Borro el sel entero, sólo voy a usar un canal.
 	LPC_ADC->ADCR		|=	CANAL_ADC_UF;			//	Canal para el audio.
 	//	Empiezo con la conversión.
-	LPC_ADC->ADCR	&=	~BRUST_PIN;				//	QUITO EL MODO BURST.
-	NVIC_EnableIRQ(	TIMER2_IRQn	);			//	Reanimo el timer.
-	LPC_ADC->ADCR	&=	~ADC_START;				//	Lanzo la primera muestra.
-	LPC_ADC->ADCR	|=	ADC_START;				//	Lanzo la primera muestra.
+	LPC_ADC->ADCR	&=	~BRUST_PIN;				//	QUITO EL MODO BURST.			//	Reanimo el timer.
+	LPC_ADC->ADCR	&=	(0x7 << 24);				//	Configuro el start.
+	LPC_ADC->ADCR	|=	ADC_START;				//	Configuro el start.
 	//	Activo el timer.
-	NVIC_EnableIRQ(	TIMER2_IRQn	);			//	Activo la interrupción.
+	LPC_TIM1->MCR	=	0x1;						//	Lanzo la IRQ.
+	LPC_TIM1->TCR	=	0x2;						//	Que resetee.
+	LPC_TIM1->TCR	=	0x1;						//	Que cuente.
 }
 
 void recuperaContexto()
@@ -60,7 +68,7 @@ void recuperaContexto()
 	{
 		LPC_ADC->ADCR		=	ADC_ConfigBuffer;	//	Cargo el contexto de la configuración.
 		LPC_ADC->ADINTEN	=	ADC_IntenBuffer;	//	Cargo el contexto de la configuración de interrupciones.
-		LPC_ADC->ADCR		&=	~ADC_START;		//	Borro el START del ADC.
+		LPC_ADC->ADCR		&=	(0x7 << 24);		//	Borro el START del ADC.
 		YaPuedesMedir 		= 	1;				//	Desbloqueo el ADC.
 		Timer2_MODO 		= 	MODO_SALIDA;		//	Default modo salida.
 	}

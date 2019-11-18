@@ -456,42 +456,22 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Startup</GroupName>
+          <GroupName>WDT</GroupName>
           <Files>
             <File>
-              <FileName>startup_LPC17xx.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\startup_LPC17xx.s</FilePath>
-            </File>
-            <File>
-              <FileName>core_cm3.c</FileName>
+              <FileName>WDT.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Startup\core_cm3.c</FilePath>
-            </File>
-            <File>
-              <FileName>system_LPC17xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Startup\system_LPC17xx.c</FilePath>
+              <FilePath>..\WDT\WDT.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>Setup</GroupName>
+          <GroupName>ANEMOMETRO</GroupName>
           <Files>
             <File>
-              <FileName>configura.c</FileName>
+              <FileName>Anemometro.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Setup\configura.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Principal</GroupName>
-          <Files>
-            <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Principal\main.c</FilePath>
+              <FilePath>..\ANEMOMETRO\Anemometro.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -512,26 +492,6 @@
               <FileName>RTC.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\RTC\RTC.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Timers</GroupName>
-          <Files>
-            <File>
-              <FileName>Timers.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Timers\Timers.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>WDT</GroupName>
-          <Files>
-            <File>
-              <FileName>WDT.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\WDT\WDT.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -607,51 +567,6 @@
               <FilePath>..\Menu\Statechart.c</FilePath>
             </File>
             <File>
-              <FileName>menu.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Menu\menu.c</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                </CommonProperty>
-                <FileArmAds>
-                  <Cads>
-                    <interw>2</interw>
-                    <Optim>0</Optim>
-                    <oTime>2</oTime>
-                    <SplitLS>2</SplitLS>
-                    <OneElfS>2</OneElfS>
-                    <Strict>2</Strict>
-                    <EnumInt>2</EnumInt>
-                    <PlainCh>2</PlainCh>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <wLevel>0</wLevel>
-                    <uThumb>2</uThumb>
-                    <uSurpInc>2</uSurpInc>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Cads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
               <FileName>TouchPanel.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Menu\TouchPanel\TouchPanel.c</FilePath>
@@ -659,12 +574,52 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>ANEMOMETRO</GroupName>
+          <GroupName>Principal</GroupName>
           <Files>
             <File>
-              <FileName>Anemometro.c</FileName>
+              <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\ANEMOMETRO\Anemometro.c</FilePath>
+              <FilePath>..\Principal\main.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Startup</GroupName>
+          <Files>
+            <File>
+              <FileName>startup_LPC17xx.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\startup_LPC17xx.s</FilePath>
+            </File>
+            <File>
+              <FileName>core_cm3.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Startup\core_cm3.c</FilePath>
+            </File>
+            <File>
+              <FileName>system_LPC17xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Startup\system_LPC17xx.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Setup</GroupName>
+          <Files>
+            <File>
+              <FileName>configura.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Setup\configura.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Timers</GroupName>
+          <Files>
+            <File>
+              <FileName>Timers.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Timers\Timers.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -709,17 +664,47 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>GLCD</GroupName>
+          <GroupName>DATABASE</GroupName>
           <Files>
             <File>
-              <FileName>AsciiLib.c</FileName>
+              <FileName>LUT.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Menu\GLCD\AsciiLib.c</FilePath>
+              <FilePath>..\BaseDeDatos\LUT.c</FilePath>
             </File>
             <File>
-              <FileName>GLCD.c</FileName>
+              <FileName>DMA.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Menu\GLCD\GLCD.c</FilePath>
+              <FilePath>..\BaseDeDatos\DMA.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>SDCARD</GroupName>
+          <Files>
+            <File>
+              <FileName>diskio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FAT32\FW\source\diskio.c</FilePath>
+            </File>
+            <File>
+              <FileName>ff.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FAT32\FW\source\ff.c</FilePath>
+            </File>
+            <File>
+              <FileName>SPI_MSD_Driver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FAT32\FW\source\SPI_MSD_Driver.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>DEBUG</GroupName>
+          <Files>
+            <File>
+              <FileName>DEBUG.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\DEBUG\DEBUG.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -750,6 +735,21 @@
               <FileName>lpc17xx_libcfg_default.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Menu\Firmware\source\lpc17xx_libcfg_default.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>GLCD</GroupName>
+          <Files>
+            <File>
+              <FileName>AsciiLib.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Menu\GLCD\AsciiLib.c</FilePath>
+            </File>
+            <File>
+              <FileName>GLCD.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Menu\GLCD\GLCD.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -916,51 +916,6 @@
               <FileName>miGlobal.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\TCPIP\lib\miGlobal.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>SDCARD</GroupName>
-          <Files>
-            <File>
-              <FileName>diskio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\FAT32\FW\source\diskio.c</FilePath>
-            </File>
-            <File>
-              <FileName>ff.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\FAT32\FW\source\ff.c</FilePath>
-            </File>
-            <File>
-              <FileName>SPI_MSD_Driver.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\FAT32\FW\source\SPI_MSD_Driver.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>DATABASE</GroupName>
-          <Files>
-            <File>
-              <FileName>LUT.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BaseDeDatos\LUT.c</FilePath>
-            </File>
-            <File>
-              <FileName>DMA.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BaseDeDatos\DMA.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>DEBUG</GroupName>
-          <Files>
-            <File>
-              <FileName>DEBUG.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\DEBUG\DEBUG.c</FilePath>
             </File>
           </Files>
         </Group>

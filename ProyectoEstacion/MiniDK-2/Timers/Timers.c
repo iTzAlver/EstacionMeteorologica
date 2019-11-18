@@ -51,6 +51,7 @@ void __configuraSysTick__()
 //---------------------------------------------------------------------------------------------------------------------**/
 void __configuraTimer0__()
 {
+	LPC_SC->PCONP |= 	0x1 << 22 | 0x1 << 23 | 1 << 16;	//	Todos los timer.
 	LPC_SC->PCONP 	|= 	TIMER0_BIT;				//	Activo el módulo del timer 0.
 	LPC_TIM0->MCR 	=	TIMER0_MCR_MASK;			//	Activo el ISR y reseteo TC.
 	LPC_TIM0->PR	=	0;						//	Sin prescaler.
@@ -148,12 +149,27 @@ void TIMER0_IRQHandler(	void	)
 //---------------------------------------------------------------------------------------------------------------------**/
 void TIMER1_IRQHandler()
 {
-	switch(	LPC_TIM1->IR	)
+	uint8_t SWART	=	(uint8_t)(LPC_TIM1->IR);
+	switch(	SWART	)
 	{
 		case	CAP10_IR:
 			mideAnemometro();
+			break;
 		case	CAP11_IR:
-			mideTemperatura();
+			//mideTemperatura();
+			break;
+		case MR0_IR:
+			LPC_TIM1->MR0 += LPC_TIM1->MR0;
+			AUDIO[COUNTERS->Audio]	=	(uint8_t)((0xFF) & (LPC_ADC->ADDR0 >> (4+4)));		//	El ADC es de 12 bits y las muestras de 8 bits, por lo que hay que reducir los 4 LSB.
+			COUNTERS->Audio++;
+			if (COUNTERS->Audio++ >= MUESTRAS_AUDIO - 1)
+			{
+				COUNTERS->Audio 	= 	0;		//	Reseteo el contador.
+				LPC_TIM1->MCR		=	0;		//	No interrumpe el MR0.
+				ACTUALIZADOR->Audiorev = 1;		//	Señalizo el fin del audio.
+				recuperaContexto();				//	Recupero el contexto del ADC.
+			}
+			break;
 		default:
 			/**	@TOUSE:	Puedo configurar el timer por match.	*/
 			break;

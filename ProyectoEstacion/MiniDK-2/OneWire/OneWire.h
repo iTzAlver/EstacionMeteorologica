@@ -47,7 +47,8 @@
 #define	OW_CTCR_MASCARA		0x0		//	Dejar TC contando.
 #define	OW_CCR_MASCARA_EN		0x30		//	Activo por flanco de bajada.
 #define	OW_CCR_MASCARA_DIS		0x20		//	Desactivo por flanco.
-#define	CAP11_IR				0x20		//	El IR de CAP1.1
+#define	CAP11_IR				0x00000020//	El IR de CAP1.1
+#define	MR0_IR				0x00000001//	El IR de MR0.
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcdef		Estas son las funciones correspondientes al protocolo OneWire.	      					//
