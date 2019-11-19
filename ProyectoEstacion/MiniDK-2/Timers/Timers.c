@@ -109,7 +109,7 @@ static void	_subAnemoTempe()
 		LPC_TIM1->CCR	|=	CCR_MASCARA_EN;		//	Genera interrupción el CAP1.0, ojo que se mata así en el timer 1.
 		LPC_TIM1->CCR	|=	OW_CCR_MASCARA_EN;		//	Genera interrupción el CAP1.1, ojo que se mata así en el timer 1.
 		activaMedidaOW();						//	Le digo a la placa que lanze la señal de request.
-		if ( !ACTUALIZADOR->AnemometroRev )		//	Si el actualizador está a 0 (Es decir, no hay datos capturados).
+		if ( !ACTUALIZADOR->AnemometroRev && YaPuedesMedir)		//	Si el actualizador está a 0 (Es decir, no hay datos capturados).
 		{
 			DATOS->VelViento = 0;				//	No hay viento.
 			ACTUALIZADOR->Anemometro = 1;			//	Ya está medido, es 0 m/s.
@@ -159,16 +159,6 @@ void TIMER1_IRQHandler()
 			//mideTemperatura();
 			break;
 		case MR0_IR:
-			LPC_TIM1->MR0 += LPC_TIM1->MR0;
-			AUDIO[COUNTERS->Audio]	=	(uint8_t)((0xFF) & (LPC_ADC->ADDR0 >> (4+4)));		//	El ADC es de 12 bits y las muestras de 8 bits, por lo que hay que reducir los 4 LSB.
-			COUNTERS->Audio++;
-			if (COUNTERS->Audio++ >= MUESTRAS_AUDIO - 1)
-			{
-				COUNTERS->Audio 	= 	0;		//	Reseteo el contador.
-				LPC_TIM1->MCR		=	0;		//	No interrumpe el MR0.
-				ACTUALIZADOR->Audiorev = 1;		//	Señalizo el fin del audio.
-				recuperaContexto();				//	Recupero el contexto del ADC.
-			}
 			break;
 		default:
 			/**	@TOUSE:	Puedo configurar el timer por match.	*/

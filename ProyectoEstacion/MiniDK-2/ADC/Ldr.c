@@ -25,6 +25,10 @@ extern	misDatos_t	*	DATOS;
 float	BUFFER_BRILLO = 0;
 float	BUFFER_UVA    = 0;
 extern 	actualizador_t	*	ACTUALIZADOR;
+extern 	__IO	uint8_t		*	AUDIO;
+extern	__IO Counters_t	*	COUNTERS;
+extern 	uint8_t	YaPuedesMedir;
+uint32_t	contador;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcion	__configuraLDR__()																	//
@@ -55,14 +59,29 @@ void	__configuraLDR__()
 //---------------------------------------------------------------------------------------------------------------------**/
 void	ADC_IRQHandler()
 {
-	LPC_ADC->ADCR			&=	~BRUST_PIN;														//	Mato el BURST.
-	BUFFER_BRILLO			=	(float)((LPC_ADC->ADDR1&(0xFFF0)) >> 4);								//	Empieza a partir del bit 4.
-	BUFFER_BRILLO			/=	(float)0xFFF;	//*rel												//	Relacción de código. (Código/Código máximo)
-	BUFFER_BRILLO			= 	RESISTENCIA_PULL*(BUFFER_BRILLO)/(1.00 - BUFFER_BRILLO);					//	Leo el ADC. (Ressitencia del LDR en kOhms)
-	goto_LUT(	BUFFER_BRILLO	,	BRILLO_LDR_NOLUT,	(float *)&DATOS->Brillo	,	none	,	none	,	none	);	//	Traduzco resistencias a LUX.
-	BUFFER_UVA			=	(float)((LPC_ADC->ADDR2&(0xFFF0)) >> 4);								//	Empieza a partir del bit 4.
-	DATOS->IndiceUV		= 	(float)VINDICE*VREF*BUFFER_UVA/(float)(0xFFF);							//	Traducción del código al índice.
-	ACTUALIZADOR->LDRrev	=	1;																//	Digo que el LDR ha sido leido.
+	switch( YaPuedesMedir )
+	{
+		case 1:
+			LPC_ADC->ADCR			&=	~BRUST_PIN;														//	Mato el BURST.
+			BUFFER_BRILLO			=	(float)((LPC_ADC->ADDR1&(0xFFF0)) >> 4);								//	Empieza a partir del bit 4.
+			BUFFER_BRILLO			/=	(float)0xFFF;	//*rel												//	Relacción de código. (Código/Código máximo)
+			BUFFER_BRILLO			= 	RESISTENCIA_PULL*(BUFFER_BRILLO)/(1.00 - BUFFER_BRILLO);					//	Leo el ADC. (Ressitencia del LDR en kOhms)
+			goto_LUT(	BUFFER_BRILLO	,	BRILLO_LDR_NOLUT,	(float *)&DATOS->Brillo	,	none	,	none	,	none	);	//	Traduzco resistencias a LUX.
+			BUFFER_UVA			=	(float)((LPC_ADC->ADDR2&(0xFFF0)) >> 4);								//	Empieza a partir del bit 4.
+			DATOS->IndiceUV		= 	(float)VINDICE*VREF*BUFFER_UVA/(float)(0xFFF);							//	Traducción del código al índice.
+			ACTUALIZADOR->LDRrev	=	1;																//	Digo que el LDR ha sido leido.
+			break;
+		case 0:
+			AUDIO[contador]	=	(uint8_t)((0xFF) & LPC_ADC->ADDR0 >> (4+4));		//	El ADC es de 12 bits y las muestras de 8 bits, por lo que hay que reducir los 4 LSB.
+			if (contador++ >= MUESTRAS_AUDIO - 1)
+			{
+					COUNTERS->Audio 	= 	0;		//	Reseteo el contador.
+					LPC_TIM1->MCR		=	0;		//	No interrumpe el MR0.
+					ACTUALIZADOR->Audiorev = 1;		//	Señalizo el fin del audio.
+					recuperaContexto();				//	Recupero el contexto del ADC.
+			}
+			break;
+	}
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//

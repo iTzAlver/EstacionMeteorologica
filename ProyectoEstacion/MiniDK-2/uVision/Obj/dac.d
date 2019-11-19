@@ -9,10 +9,10 @@
 .\obj\dac.o: ..\Principal\Systemsymbols.h
 .\obj\dac.o: ..\BaseDeDatos\LUT.h
 .\obj\dac.o: ..\ADC\LDR.h
-.\obj\dac.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\obj\dac.o: ..\ADC\uFono.h
 .\obj\dac.o: ..\Timers\Timers.h
 .\obj\dac.o: C:\Keil\ARM\RV31\INC\RTL.h
 .\obj\dac.o: ..\Anemometro\Anemometro.h
 .\obj\dac.o: ..\PWM\PWM.h
-.\obj\dac.o: ..\ADC\uFono.h
 .\obj\dac.o: ..\OneWire\OneWire.h
+.\obj\dac.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h

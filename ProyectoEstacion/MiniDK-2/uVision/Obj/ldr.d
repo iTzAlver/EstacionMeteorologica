@@ -9,3 +9,10 @@
 .\obj\ldr.o: ..\Principal\Systemsymbols.h
 .\obj\ldr.o: ..\BaseDeDatos\LUT.h
 .\obj\ldr.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
+.\obj\ldr.o: ..\ADC\uFono.h
+.\obj\ldr.o: ..\Timers\Timers.h
+.\obj\ldr.o: C:\Keil\ARM\RV31\INC\RTL.h
+.\obj\ldr.o: ..\Anemometro\Anemometro.h
+.\obj\ldr.o: ..\DAC\DAC.h
+.\obj\ldr.o: ..\PWM\PWM.h
+.\obj\ldr.o: ..\OneWire\OneWire.h
