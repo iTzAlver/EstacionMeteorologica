@@ -33,13 +33,12 @@ extern	actualizador_t		*	ACTUALIZADOR;
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__configuraDAC__()
 {
-	LPC_SC->PCONP 	|= 	0x400000;			//	Activo el módulo del timer 2.
-	LPC_PINCON->PINSEL1	|=	(	DAC_FUNC	<< 	2*DAC_PIN);
-	LPC_TIM2->MCR 	=	TIMER2_MCR_MASK;		//	Activo el ISR y reseteo TC. 
-	LPC_TIM2->TCR	|=	ACTIVAR_TIMER;			//	Activo el timer.
-	LPC_TIM2->MR0	=	Ftick * TsAudio - 1;	//	Cargo para que interrumpa cada TsAudio.
-	NVIC_SetPriority(	TIMER2_IRQn	,	0	);
-	ACTUALIZADOR->Audiorev	=	1;			//	Sistema listo para emitir/recibir el audio.
+	LPC_PINCON->PINSEL1		|=	(2	<<	(26-16)*2);
+	LPC_DAC->DACCNTVAL	=	(uint32_t)(Fclk / FsAudio - 1);			//	Ajusto la frecuencia del DAC.
+	LPC_DAC->DACCTRL	=	(1	<<	1)							//	Activo la modalidad de doble buffer.
+					|	(1	<<	2)							//	Activo la acción por timeout.
+					|	(1	<<	3);							//	Salida en ráfaga.	
+	ACTUALIZADOR->Audiorev	=	1;								//	Señal de activación de audio..
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
@@ -88,7 +87,19 @@ void escribirEnDac(	uint16_t	Valor	,	uint8_t	Cutoff	)
 void activarDac()
 {
 	/**	@TODO:	DMA*/
-	NVIC_EnableIRQ(	TIMER2_IRQn	);		//	Activo el timer del DAC. /** @TODO: Quitar*/
+	LPC_GPDMACH0->DMACCConfig	|=	1;								//	Activo el DMA.
+	LPC_TIM1->MCR				=	(1	<<3	)	|	(1	<<	4);		//	Activo la interrupción por MR1 y reset por MR1.
+	LPC_TIM1->MR1				=	0.9*(Fclk*DURACION_AUDIO) - 1;		//	Valor de MR0.
+	LPC_TIM1->TCR				=	0x2;								//	Reset del timer.
+	LPC_TIM1->TCR				=	0x1;								//	El timer cuenta.
+}
+
+void desactivarDAC()
+{
+	LPC_GPDMACH0->DMACCConfig	&=	~0x1;			//	Desactivo el DMA.
+	ACTUALIZADOR->Audiorev		=	1;				//	Señalizo el fin del DAC.
+	LPC_TIM1->MCR				&=	~(7	<<	3);		//	Desactivo la interrupción por MR0 y reset tras MR1.
+	LPC_DAC->DACR				=	0;				//	No hay señal de salida.
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//

@@ -158,7 +158,8 @@ void TIMER1_IRQHandler()
 		case	CAP11_IR:
 			//mideTemperatura();
 			break;
-		case MR0_IR:
+		case MR1_IR:
+			desactivarDAC();
 			break;
 		default:
 			/**	@TOUSE:	Puedo configurar el timer por match.	*/

@@ -55,9 +55,8 @@ void __configuraPrograma__(	void	)
 	__configuraPWM__	(	Fpwm	,	ACTIVOS_2_1 | ACTIVOS_6_1	);
 	modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	90	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
 	modificaPulso		(	PWM6,	MODO_CICLO	,	50	,	none	,	none			,	none			);
-	__configuraLCD__		();
-	__configuraRTC__		();
 	__configuraWDT__		();
+	__configuraDMA__		();
 	__configuraDAC__		();
 	__configuraOW__		();
 	__configuraAnemometro__	();

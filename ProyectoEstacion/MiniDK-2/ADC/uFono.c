@@ -72,7 +72,7 @@ void recuperaContexto()
 	{
 		LPC_ADC->ADCR		=	ADC_ConfigBuffer;	//	Cargo el contexto de la configuración.
 		LPC_ADC->ADINTEN	=	ADC_IntenBuffer;	//	Cargo el contexto de la configuración de interrupciones.
-		LPC_ADC->ADCR		&=	(0x7 << 24);		//	Borro el START del ADC.
+		LPC_ADC->ADCR		&=	~(0x7 << 24);		//	Borro el START del ADC.
 		LPC_ADC->ADCR		|=	(0xFF << 8);		//	CLKDIV max.
 		YaPuedesMedir 		= 	1;				//	Desbloqueo el ADC.
 		Timer2_MODO 		= 	MODO_SALIDA;		//	Default modo salida.

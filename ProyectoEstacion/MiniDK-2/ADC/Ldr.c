@@ -25,10 +25,9 @@ extern	misDatos_t	*	DATOS;
 float	BUFFER_BRILLO = 0;
 float	BUFFER_UVA    = 0;
 extern 	actualizador_t	*	ACTUALIZADOR;
-extern 	__IO	uint8_t		*	AUDIO;
-extern	__IO Counters_t	*	COUNTERS;
 extern 	uint8_t	YaPuedesMedir;
 uint32_t	contador;
+uint8_t	AUDIO[MUESTRAS_AUDIO];
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcion	__configuraLDR__()																	//
@@ -75,7 +74,7 @@ void	ADC_IRQHandler()
 			AUDIO[contador]	=	(uint8_t)((0xFF) & LPC_ADC->ADDR0 >> (4+4));		//	El ADC es de 12 bits y las muestras de 8 bits, por lo que hay que reducir los 4 LSB.
 			if (contador++ >= MUESTRAS_AUDIO - 1)
 			{
-					COUNTERS->Audio 	= 	0;		//	Reseteo el contador.
+					contador		 	= 	0;		//	Reseteo el contador.
 					LPC_TIM1->MCR		=	0;		//	No interrumpe el MR0.
 					ACTUALIZADOR->Audiorev = 1;		//	Señalizo el fin del audio.
 					recuperaContexto();				//	Recupero el contexto del ADC.

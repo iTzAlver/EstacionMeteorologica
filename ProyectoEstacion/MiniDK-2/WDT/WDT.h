@@ -27,7 +27,7 @@
 //		@private		Estos son los símbolos correspondientes al WDT.										//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-#define	WATCHDOG_TIMEOUT	500			//	En segundos.
+#define	WATCHDOG_TIMEOUT	10			//	En segundos.
 #define	Fwdt				Fclk/(float)4	//	Reloj seleccionado del WDT.
 #define	WDMOD_MASK		0x03			//	Se activa y resetea el programa tras el timeout.
 #define	WDCLKSEL_MASK		0x01			//	Se ha escogido el reloj Fclk.

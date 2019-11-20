@@ -35,3 +35,4 @@
 .\obj\configura.o: ..\RTC\RTC.h
 .\obj\configura.o: ..\TCPIP\lib\HTTP_SOURCE.h
 .\obj\configura.o: ..\ADC\UVA30A.h
+.\obj\configura.o: ..\BaseDeDatos\DMA.h

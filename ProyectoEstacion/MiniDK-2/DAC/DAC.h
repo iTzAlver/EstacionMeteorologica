@@ -51,6 +51,7 @@
 void __configuraDAC__	(	void	);
 void escribirEnDac		(	uint16_t	valor	,	uint8_t	cutoff	);
 void	activarDac		(	void	);
+void desactivarDAC		(	void	);
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

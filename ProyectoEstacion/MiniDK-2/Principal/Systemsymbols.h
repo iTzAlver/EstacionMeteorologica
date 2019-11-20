@@ -146,6 +146,13 @@ typedef struct {
 	__IO	uint8_t	Audio:1;
 	__IO	uint8_t	Audiorev:1;
 }actualizador_t;
+
+typedef struct {
+	uint32_t Origen;
+	uint32_t Destino;
+	uint32_t Linked;
+	uint32_t CR;
+}LinkedModeDMA_t;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

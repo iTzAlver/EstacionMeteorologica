@@ -3,8 +3,8 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-C:\Users\Alumno\Desktop\GITf\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\uVision\Estacion.uvproj
-Project File Date:  11/19/2019
+C:\Users\alver\Desktop\GitFolder\ProyectoEstacion\MiniDK-2\uVision\Estacion.uvproj
+Project File Date:  11/20/2019
 
 <h2>Output:</h2>
 Build target 'MiniDK-2'
@@ -12,60 +12,58 @@ custom translating WEB.inp...
 Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
 FCARM FILE CONVERTER V2.41
 Completed 1 File(s), Ratio 48%
+compiling main.c...
+compiling Ldr.c...
 linking...
-Program Size: Code=106876 RO-data=4952 RW-data=728 ZI-data=48992  
+Program Size: Code=106908 RO-data=4952 RW-data=736 ZI-data=48984  
 FromELF: creating hex file...
 ".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\Alumno\\Desktop\\GITf\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Internal DLL Error
-Build target 'MiniDK-2'
+Rebuild target 'MiniDK-2'
 custom translating WEB.inp...
 Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
 FCARM FILE CONVERTER V2.41
 Completed 1 File(s), Ratio 48%
+compiling WDT.c...
+compiling Anemometro.c...
+compiling PWM.c...
+compiling RTC.c...
+compiling HTTP_SOURCE.c...
+compiling Net_Config.c...
+compiling HTTP_CGI.c...
+compiling EMAC_LPC17xx_LAN8720.c...
 compiling WEB.C...
+compiling Statechart.c...
+compiling TouchPanel.c...
+compiling main.c...
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling configura.c...
+compiling Timers.c...
+compiling OneWire.c...
+compiling Ldr.c...
+compiling uFono.c...
+compiling UVA30A.c...
+compiling DAC.c...
+compiling LUT.c...
+compiling DMA.c...
+compiling diskio.c...
+compiling ff.c...
+compiling SPI_MSD_Driver.c...
+compiling DEBUG.c...
+compiling lpc17xx_ssp.c...
+compiling lpc17xx_pinsel.c...
+compiling lpc17xx_gpio.c...
+compiling lpc17xx_clkpwr.c...
+compiling lpc17xx_libcfg_default.c...
+compiling AsciiLib.c...
+compiling GLCD.c...
 linking...
-Program Size: Code=106876 RO-data=4952 RW-data=728 ZI-data=48992  
+Program Size: Code=106908 RO-data=4952 RW-data=736 ZI-data=48984  
 FromELF: creating hex file...
 ".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\Alumno\\Desktop\\GITf\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Load "C:\\Users\\Alumno\\Desktop\\GITf\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Set JLink Project File to "C:\Users\Alumno\Desktop\GITf\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
-* JLink Info: Device "LPC1768" selected.
- 
-JLink info:
-------------
-DLL: V5.12f, compiled May 17 2016 16:03:35
-Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-Hardware: V8.00
-S/N : 268002154 
-OEM : SEGGER-EDU 
-Feature(s) : FlashBP, GDB 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: CoreSight components:
-* JLink Info: ROMTbl 0 @ E00FF000
-* JLink Info: ROMTbl 0 [0]: FFF0F000, CID: B105E00D, PID: 002BB000 SCS
-* JLink Info: ROMTbl 0 [1]: FFF02000, CID: B105E00D, PID: 002BB002 DWT
-* JLink Info: ROMTbl 0 [2]: FFF03000, CID: B105E00D, PID: 002BB003 FPB
-* JLink Info: ROMTbl 0 [3]: FFF01000, CID: B105E00D, PID: 002BB001 ITM
-* JLink Info: ROMTbl 0 [4]: FFF41000, CID: B105900D, PID: 002BB923 TPIU-Lite
-* JLink Info: ROMTbl 0 [5]: FFF42000, CID: B105900D, PID: 002BB924 ETM-M3
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.325V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 0, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 4000 kHz
- 
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
@@ -74,481 +72,467 @@ custom translating WEB.inp...
 Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
 FCARM FILE CONVERTER V2.41
 Completed 1 File(s), Ratio 48%
-linking...
-Program Size: Code=106876 RO-data=4952 RW-data=728 ZI-data=48992  
-FromELF: creating hex file...
-".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\Alumno\\Desktop\\GITf\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Set JLink Project File to "C:\Users\Alumno\Desktop\GITf\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
-* JLink Info: Device "LPC1768" selected.
- 
-JLink info:
-------------
-DLL: V5.12f, compiled May 17 2016 16:03:35
-Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-Hardware: V8.00
-S/N : 268002154 
-OEM : SEGGER-EDU 
-Feature(s) : FlashBP, GDB 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: CoreSight components:
-* JLink Info: ROMTbl 0 @ E00FF000
-* JLink Info: ROMTbl 0 [0]: FFF0F000, CID: B105E00D, PID: 002BB000 SCS
-* JLink Info: ROMTbl 0 [1]: FFF02000, CID: B105E00D, PID: 002BB002 DWT
-* JLink Info: ROMTbl 0 [2]: FFF03000, CID: B105E00D, PID: 002BB003 FPB
-* JLink Info: ROMTbl 0 [3]: FFF01000, CID: B105E00D, PID: 002BB001 ITM
-* JLink Info: ROMTbl 0 [4]: FFF41000, CID: B105900D, PID: 002BB923 TPIU-Lite
-* JLink Info: ROMTbl 0 [5]: FFF42000, CID: B105900D, PID: 002BB924 ETM-M3
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.325V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 4000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'MiniDK-2'
-custom translating WEB.inp...
-Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
-FCARM FILE CONVERTER V2.41
-Completed 1 File(s), Ratio 48%
-compiling WEB.C...
 compiling uFono.c...
 linking...
-Program Size: Code=106876 RO-data=4952 RW-data=728 ZI-data=48992  
+Program Size: Code=106908 RO-data=4952 RW-data=736 ZI-data=48984  
 FromELF: creating hex file...
 ".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\Alumno\\Desktop\\GITf\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Set JLink Project File to "C:\Users\Alumno\Desktop\GITf\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
-* JLink Info: Device "LPC1768" selected.
- 
-JLink info:
-------------
-DLL: V5.12f, compiled May 17 2016 16:03:35
-Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-Hardware: V8.00
-S/N : 268002154 
-OEM : SEGGER-EDU 
-Feature(s) : FlashBP, GDB 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: CoreSight components:
-* JLink Info: ROMTbl 0 @ E00FF000
-* JLink Info: ROMTbl 0 [0]: FFF0F000, CID: B105E00D, PID: 002BB000 SCS
-* JLink Info: ROMTbl 0 [1]: FFF02000, CID: B105E00D, PID: 002BB002 DWT
-* JLink Info: ROMTbl 0 [2]: FFF03000, CID: B105E00D, PID: 002BB003 FPB
-* JLink Info: ROMTbl 0 [3]: FFF01000, CID: B105E00D, PID: 002BB001 ITM
-* JLink Info: ROMTbl 0 [4]: FFF41000, CID: B105900D, PID: 002BB923 TPIU-Lite
-* JLink Info: ROMTbl 0 [5]: FFF42000, CID: B105900D, PID: 002BB924 ETM-M3
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.325V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 4000 kHz
- 
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WDT.c...
+compiling WEB.C...
+compiling Statechart.c...
+compiling TouchPanel.c...
+compiling main.c...
+compiling configura.c...
+linking...
+Program Size: Code=106908 RO-data=4952 RW-data=736 ZI-data=48984  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+linking...
+Program Size: Code=106908 RO-data=4952 RW-data=736 ZI-data=48984  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+linking...
+Program Size: Code=106908 RO-data=4952 RW-data=736 ZI-data=48984  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+linking...
+Program Size: Code=106908 RO-data=4952 RW-data=736 ZI-data=48984  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+linking...
+Program Size: Code=106908 RO-data=4952 RW-data=736 ZI-data=48984  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WDT.c...
+compiling Anemometro.c...
+compiling PWM.c...
+compiling RTC.c...
+compiling HTTP_CGI.c...
+compiling Statechart.c...
+compiling TouchPanel.c...
+compiling main.c...
+compiling configura.c...
+compiling Timers.c...
+compiling OneWire.c...
+compiling Ldr.c...
+compiling uFono.c...
+compiling UVA30A.c...
+compiling DAC.c...
+compiling LUT.c...
+compiling DMA.c...
+linking...
+Program Size: Code=106908 RO-data=4952 RW-data=736 ZI-data=48984  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling DMA.c...
+..\BaseDeDatos\DMA.c(49): warning:  #173-D: floating-point value does not fit in required integral type
+linking...
+Program Size: Code=106908 RO-data=4952 RW-data=736 ZI-data=48984  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 1 Warning(s).
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling main.c...
+compiling configura.c...
+compiling DMA.c...
+..\BaseDeDatos\DMA.c(49): warning:  #173-D: floating-point value does not fit in required integral type
+linking...
+Program Size: Code=107060 RO-data=4952 RW-data=736 ZI-data=49004  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 1 Warning(s).
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling DMA.c...
+..\BaseDeDatos\DMA.c(49): warning:  #173-D: floating-point value does not fit in required integral type
+linking...
+Program Size: Code=107060 RO-data=4952 RW-data=736 ZI-data=49004  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 1 Warning(s).
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling DMA.c...
+..\BaseDeDatos\DMA.c(49): warning:  #173-D: floating-point value does not fit in required integral type
+linking...
+Program Size: Code=107060 RO-data=4952 RW-data=736 ZI-data=49004  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 1 Warning(s).
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling DMA.c...
+..\BaseDeDatos\DMA.c(49): error:  #20: identifier "uint36_t" is undefined
+".\Obj\Estacion.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling DMA.c...
+..\BaseDeDatos\DMA.c(49): warning:  #173-D: floating-point value does not fit in required integral type
+linking...
+Program Size: Code=107060 RO-data=4952 RW-data=736 ZI-data=49004  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 1 Warning(s).
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling DMA.c...
+..\BaseDeDatos\DMA.c(49): warning:  #173-D: floating-point value does not fit in required integral type
+linking...
+Program Size: Code=107060 RO-data=4952 RW-data=736 ZI-data=49004  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 1 Warning(s).
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling DMA.c...
+linking...
+Program Size: Code=107056 RO-data=4948 RW-data=736 ZI-data=49004  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling DMA.c...
+linking...
+Program Size: Code=107056 RO-data=4948 RW-data=736 ZI-data=49004  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling DMA.c...
+linking...
+Program Size: Code=107056 RO-data=4948 RW-data=736 ZI-data=49004  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling DAC.c...
+linking...
+Program Size: Code=107056 RO-data=4948 RW-data=736 ZI-data=49004  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling DMA.c...
+..\BaseDeDatos\DMA.c(49): error:  #20: identifier "LPC_PCONP" is undefined
+..\BaseDeDatos\DMA.c(49): error:  #29: expected an expression
+".\Obj\Estacion.axf" - 2 Errors, 0 Warning(s).
+Target not created
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling DMA.c...
+linking...
+Program Size: Code=107056 RO-data=4948 RW-data=736 ZI-data=49004  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling configura.c...
+compiling DMA.c...
+..\BaseDeDatos\DMA.c(49): error:  #20: identifier "LPC_PINSEL1" is undefined
+..\BaseDeDatos\DMA.c(49): error:  #109: expression must have (pointer-to-) function type
+".\Obj\Estacion.axf" - 2 Errors, 0 Warning(s).
+Target not created
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling DMA.c...
+linking...
+Program Size: Code=107068 RO-data=4952 RW-data=736 ZI-data=49004  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling DMA.c...
+linking...
+Program Size: Code=107068 RO-data=4952 RW-data=736 ZI-data=49004  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling configura.c...
+linking...
+Program Size: Code=106896 RO-data=4948 RW-data=736 ZI-data=48984  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+linking...
+Program Size: Code=106896 RO-data=4948 RW-data=736 ZI-data=48984  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling configura.c...
+linking...
+Program Size: Code=107068 RO-data=4952 RW-data=736 ZI-data=49004  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling configura.c...
+compiling DAC.c...
+compiling DMA.c...
+linking...
+Program Size: Code=106932 RO-data=4952 RW-data=736 ZI-data=49004  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling DAC.c...
+linking...
+Program Size: Code=106932 RO-data=4952 RW-data=736 ZI-data=49004  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling DAC.c...
+linking...
+Program Size: Code=106952 RO-data=4948 RW-data=736 ZI-data=49004  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+linking...
+Program Size: Code=106952 RO-data=4948 RW-data=736 ZI-data=49004  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling DMA.c...
+linking...
+Program Size: Code=106952 RO-data=4948 RW-data=736 ZI-data=49004  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
 Build target 'MiniDK-2'
 custom translating WEB.inp...
 Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
 FCARM FILE CONVERTER V2.41
 Completed 1 File(s), Ratio 48%
 compiling Anemometro.c...
-compiling Statechart.c...
-compiling main.c...
-compiling configura.c...
-compiling Timers.c...
-compiling Ldr.c...
-compiling uFono.c...
-compiling UVA30A.c...
-compiling DAC.c...
-compiling LUT.c...
-linking...
-Program Size: Code=106876 RO-data=4952 RW-data=728 ZI-data=48992  
-FromELF: creating hex file...
-".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\Alumno\\Desktop\\GITf\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Set JLink Project File to "C:\Users\Alumno\Desktop\GITf\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
-* JLink Info: Device "LPC1768" selected.
- 
-JLink info:
-------------
-DLL: V5.12f, compiled May 17 2016 16:03:35
-Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-Hardware: V8.00
-S/N : 268002154 
-OEM : SEGGER-EDU 
-Feature(s) : FlashBP, GDB 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: CoreSight components:
-* JLink Info: ROMTbl 0 @ E00FF000
-* JLink Info: ROMTbl 0 [0]: FFF0F000, CID: B105E00D, PID: 002BB000 SCS
-* JLink Info: ROMTbl 0 [1]: FFF02000, CID: B105E00D, PID: 002BB002 DWT
-* JLink Info: ROMTbl 0 [2]: FFF03000, CID: B105E00D, PID: 002BB003 FPB
-* JLink Info: ROMTbl 0 [3]: FFF01000, CID: B105E00D, PID: 002BB001 ITM
-* JLink Info: ROMTbl 0 [4]: FFF41000, CID: B105900D, PID: 002BB923 TPIU-Lite
-* JLink Info: ROMTbl 0 [5]: FFF42000, CID: B105900D, PID: 002BB924 ETM-M3
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.325V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 4000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'MiniDK-2'
-custom translating WEB.inp...
-Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
-FCARM FILE CONVERTER V2.41
-Completed 1 File(s), Ratio 48%
-compiling Anemometro.c...
 compiling WEB.C...
 compiling Statechart.c...
 compiling main.c...
 compiling configura.c...
 compiling Timers.c...
+compiling OneWire.c...
 compiling Ldr.c...
 compiling uFono.c...
 compiling UVA30A.c...
 compiling DAC.c...
+..\DAC\DAC.c(91): warning:  #223-D: function "activarTimer" declared implicitly
+..\DAC\DAC.c(91): error:  #20: identifier "Timeout" is undefined
 compiling LUT.c...
-linking...
-Program Size: Code=106876 RO-data=4952 RW-data=728 ZI-data=48992  
-FromELF: creating hex file...
-".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\Alumno\\Desktop\\GITf\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Set JLink Project File to "C:\Users\Alumno\Desktop\GITf\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
-* JLink Info: Device "LPC1768" selected.
- 
-JLink info:
-------------
-DLL: V5.12f, compiled May 17 2016 16:03:35
-Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-Hardware: V8.00
-S/N : 268002154 
-OEM : SEGGER-EDU 
-Feature(s) : FlashBP, GDB 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: CoreSight components:
-* JLink Info: ROMTbl 0 @ E00FF000
-* JLink Info: ROMTbl 0 [0]: FFF0F000, CID: B105E00D, PID: 002BB000 SCS
-* JLink Info: ROMTbl 0 [1]: FFF02000, CID: B105E00D, PID: 002BB002 DWT
-* JLink Info: ROMTbl 0 [2]: FFF03000, CID: B105E00D, PID: 002BB003 FPB
-* JLink Info: ROMTbl 0 [3]: FFF01000, CID: B105E00D, PID: 002BB001 ITM
-* JLink Info: ROMTbl 0 [4]: FFF41000, CID: B105900D, PID: 002BB923 TPIU-Lite
-* JLink Info: ROMTbl 0 [5]: FFF42000, CID: B105900D, PID: 002BB924 ETM-M3
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.325V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 4000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'MiniDK-2'
-custom translating WEB.inp...
-Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
-FCARM FILE CONVERTER V2.41
-Completed 1 File(s), Ratio 48%
-compiling Timers.c...
-linking...
-Program Size: Code=106872 RO-data=4948 RW-data=728 ZI-data=48992  
-FromELF: creating hex file...
-".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\Alumno\\Desktop\\GITf\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Set JLink Project File to "C:\Users\Alumno\Desktop\GITf\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
-* JLink Info: Device "LPC1768" selected.
- 
-JLink info:
-------------
-DLL: V5.12f, compiled May 17 2016 16:03:35
-Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-Hardware: V8.00
-S/N : 268002154 
-OEM : SEGGER-EDU 
-Feature(s) : FlashBP, GDB 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: CoreSight components:
-* JLink Info: ROMTbl 0 @ E00FF000
-* JLink Info: ROMTbl 0 [0]: FFF0F000, CID: B105E00D, PID: 002BB000 SCS
-* JLink Info: ROMTbl 0 [1]: FFF02000, CID: B105E00D, PID: 002BB002 DWT
-* JLink Info: ROMTbl 0 [2]: FFF03000, CID: B105E00D, PID: 002BB003 FPB
-* JLink Info: ROMTbl 0 [3]: FFF01000, CID: B105E00D, PID: 002BB001 ITM
-* JLink Info: ROMTbl 0 [4]: FFF41000, CID: B105900D, PID: 002BB923 TPIU-Lite
-* JLink Info: ROMTbl 0 [5]: FFF42000, CID: B105900D, PID: 002BB924 ETM-M3
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.325V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 4000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'MiniDK-2'
-custom translating WEB.inp...
-Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
-FCARM FILE CONVERTER V2.41
-Completed 1 File(s), Ratio 48%
-compiling WEB.C...
-compiling Timers.c...
-linking...
-Program Size: Code=106876 RO-data=4952 RW-data=728 ZI-data=48992  
-FromELF: creating hex file...
-".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\Alumno\\Desktop\\GITf\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Set JLink Project File to "C:\Users\Alumno\Desktop\GITf\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
-* JLink Info: Device "LPC1768" selected.
- 
-JLink info:
-------------
-DLL: V5.12f, compiled May 17 2016 16:03:35
-Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-Hardware: V8.00
-S/N : 268002154 
-OEM : SEGGER-EDU 
-Feature(s) : FlashBP, GDB 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: CoreSight components:
-* JLink Info: ROMTbl 0 @ E00FF000
-* JLink Info: ROMTbl 0 [0]: FFF0F000, CID: B105E00D, PID: 002BB000 SCS
-* JLink Info: ROMTbl 0 [1]: FFF02000, CID: B105E00D, PID: 002BB002 DWT
-* JLink Info: ROMTbl 0 [2]: FFF03000, CID: B105E00D, PID: 002BB003 FPB
-* JLink Info: ROMTbl 0 [3]: FFF01000, CID: B105E00D, PID: 002BB001 ITM
-* JLink Info: ROMTbl 0 [4]: FFF41000, CID: B105900D, PID: 002BB923 TPIU-Lite
-* JLink Info: ROMTbl 0 [5]: FFF42000, CID: B105900D, PID: 002BB924 ETM-M3
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.332V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 4000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'MiniDK-2'
-custom translating WEB.inp...
-Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
-FCARM FILE CONVERTER V2.41
-Completed 1 File(s), Ratio 48%
-compiling main.c...
-linking...
-Program Size: Code=106876 RO-data=4952 RW-data=728 ZI-data=48992  
-FromELF: creating hex file...
-".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\Alumno\\Desktop\\GITf\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Set JLink Project File to "C:\Users\Alumno\Desktop\GITf\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
-* JLink Info: Device "LPC1768" selected.
- 
-JLink info:
-------------
-DLL: V5.12f, compiled May 17 2016 16:03:35
-Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-Hardware: V8.00
-S/N : 268002154 
-OEM : SEGGER-EDU 
-Feature(s) : FlashBP, GDB 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: CoreSight components:
-* JLink Info: ROMTbl 0 @ E00FF000
-* JLink Info: ROMTbl 0 [0]: FFF0F000, CID: B105E00D, PID: 002BB000 SCS
-* JLink Info: ROMTbl 0 [1]: FFF02000, CID: B105E00D, PID: 002BB002 DWT
-* JLink Info: ROMTbl 0 [2]: FFF03000, CID: B105E00D, PID: 002BB003 FPB
-* JLink Info: ROMTbl 0 [3]: FFF01000, CID: B105E00D, PID: 002BB001 ITM
-* JLink Info: ROMTbl 0 [4]: FFF41000, CID: B105900D, PID: 002BB923 TPIU-Lite
-* JLink Info: ROMTbl 0 [5]: FFF42000, CID: B105900D, PID: 002BB924 ETM-M3
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.325V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 4000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'MiniDK-2'
-custom translating WEB.inp...
-Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
-FCARM FILE CONVERTER V2.41
-Completed 1 File(s), Ratio 48%
-compiling Anemometro.c...
-compiling WEB.C...
-compiling Statechart.c...
-compiling main.c...
-compiling configura.c...
-compiling Timers.c...
-compiling Ldr.c...
-compiling uFono.c...
-compiling UVA30A.c...
-compiling DAC.c...
-compiling LUT.c...
-linking...
-Program Size: Code=106772 RO-data=4952 RW-data=728 ZI-data=48992  
-FromELF: creating hex file...
-".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Build target 'MiniDK-2'
-custom translating WEB.inp...
-Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
-FCARM FILE CONVERTER V2.41
-Completed 1 File(s), Ratio 48%
-compiling uFono.c...
-linking...
-Program Size: Code=106800 RO-data=4948 RW-data=728 ZI-data=48992  
-FromELF: creating hex file...
-".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Build target 'MiniDK-2'
-custom translating WEB.inp...
-Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
-FCARM FILE CONVERTER V2.41
-Completed 1 File(s), Ratio 48%
-compiling WEB.C...
-compiling main.c...
-compiling Timers.c...
-..\Timers\Timers.c(163): error:  #65: expected a ";"
-compiling Ldr.c...
-..\ADC\Ldr.c(77): warning:  #223-D: function "recuperaContexto" declared implicitly
 ".\Obj\Estacion.axf" - 1 Errors, 1 Warning(s).
 Target not created
-Build target 'MiniDK-2'
+Rebuild target 'MiniDK-2'
 custom translating WEB.inp...
 Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
 FCARM FILE CONVERTER V2.41
 Completed 1 File(s), Ratio 48%
+compiling WDT.c...
 compiling Anemometro.c...
+compiling PWM.c...
+compiling RTC.c...
+compiling HTTP_SOURCE.c...
+compiling Net_Config.c...
+compiling HTTP_CGI.c...
+compiling EMAC_LPC17xx_LAN8720.c...
+compiling WEB.C...
 compiling Statechart.c...
+compiling TouchPanel.c...
 compiling main.c...
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
 compiling configura.c...
 compiling Timers.c...
-..\Timers\Timers.c(163): error:  #65: expected a ";"
+..\Timers\Timers.c(162): warning:  #223-D: function "desactivaDAC" declared implicitly
+compiling OneWire.c...
 compiling Ldr.c...
 compiling uFono.c...
 compiling UVA30A.c...
 compiling DAC.c...
+..\DAC\DAC.c(91): error:  #29: expected an expression
+..\DAC\DAC.c(98): error:  #29: expected an expression
 compiling LUT.c...
-".\Obj\Estacion.axf" - 1 Errors, 0 Warning(s).
-Target not created
-Load "C:\\Users\\Alumno\\Desktop\\GITf\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Set JLink Project File to "C:\Users\Alumno\Desktop\GITf\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
-* JLink Info: Device "LPC1768" selected.
- 
-JLink info:
-------------
-DLL: V5.12f, compiled May 17 2016 16:03:35
-Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-Hardware: V8.00
-S/N : 268002154 
-OEM : SEGGER-EDU 
-Feature(s) : FlashBP, GDB 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: CoreSight components:
-* JLink Info: ROMTbl 0 @ E00FF000
-* JLink Info: ROMTbl 0 [0]: FFF0F000, CID: B105E00D, PID: 002BB000 SCS
-* JLink Info: ROMTbl 0 [1]: FFF02000, CID: B105E00D, PID: 002BB002 DWT
-* JLink Info: ROMTbl 0 [2]: FFF03000, CID: B105E00D, PID: 002BB003 FPB
-* JLink Info: ROMTbl 0 [3]: FFF01000, CID: B105E00D, PID: 002BB001 ITM
-* JLink Info: ROMTbl 0 [4]: FFF41000, CID: B105900D, PID: 002BB923 TPIU-Lite
-* JLink Info: ROMTbl 0 [5]: FFF42000, CID: B105900D, PID: 002BB924 ETM-M3
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.332V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 4000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'MiniDK-2'
-custom translating WEB.inp...
-Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
-FCARM FILE CONVERTER V2.41
-Completed 1 File(s), Ratio 48%
-compiling WEB.C...
-compiling Timers.c...
-..\Timers\Timers.c(163): error:  #65: expected a ";"
-".\Obj\Estacion.axf" - 1 Errors, 0 Warning(s).
+compiling DMA.c...
+compiling diskio.c...
+compiling ff.c...
+compiling SPI_MSD_Driver.c...
+compiling DEBUG.c...
+compiling lpc17xx_ssp.c...
+compiling lpc17xx_pinsel.c...
+compiling lpc17xx_gpio.c...
+compiling lpc17xx_clkpwr.c...
+compiling lpc17xx_libcfg_default.c...
+compiling AsciiLib.c...
+compiling GLCD.c...
+".\Obj\Estacion.axf" - 2 Errors, 1 Warning(s).
 Target not created
 Build target 'MiniDK-2'
 custom translating WEB.inp...
@@ -556,108 +540,12 @@ Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
 FCARM FILE CONVERTER V2.41
 Completed 1 File(s), Ratio 48%
 compiling Timers.c...
+compiling DAC.c...
 linking...
-Program Size: Code=106920 RO-data=4948 RW-data=728 ZI-data=48992  
+Program Size: Code=107016 RO-data=4948 RW-data=736 ZI-data=49004  
 FromELF: creating hex file...
 ".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Build target 'MiniDK-2'
-custom translating WEB.inp...
-Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
-FCARM FILE CONVERTER V2.41
-Completed 1 File(s), Ratio 48%
-compiling WEB.C...
-compiling uFono.c...
-linking...
-Program Size: Code=106920 RO-data=4948 RW-data=728 ZI-data=48992  
-FromELF: creating hex file...
-".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\Alumno\\Desktop\\GITf\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Set JLink Project File to "C:\Users\Alumno\Desktop\GITf\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
-* JLink Info: Device "LPC1768" selected.
- 
-JLink info:
-------------
-DLL: V5.12f, compiled May 17 2016 16:03:35
-Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-Hardware: V8.00
-S/N : 268002154 
-OEM : SEGGER-EDU 
-Feature(s) : FlashBP, GDB 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: CoreSight components:
-* JLink Info: ROMTbl 0 @ E00FF000
-* JLink Info: ROMTbl 0 [0]: FFF0F000, CID: B105E00D, PID: 002BB000 SCS
-* JLink Info: ROMTbl 0 [1]: FFF02000, CID: B105E00D, PID: 002BB002 DWT
-* JLink Info: ROMTbl 0 [2]: FFF03000, CID: B105E00D, PID: 002BB003 FPB
-* JLink Info: ROMTbl 0 [3]: FFF01000, CID: B105E00D, PID: 002BB001 ITM
-* JLink Info: ROMTbl 0 [4]: FFF41000, CID: B105900D, PID: 002BB923 TPIU-Lite
-* JLink Info: ROMTbl 0 [5]: FFF42000, CID: B105900D, PID: 002BB924 ETM-M3
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.325V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 4000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'MiniDK-2'
-custom translating WEB.inp...
-Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
-FCARM FILE CONVERTER V2.41
-Completed 1 File(s), Ratio 48%
-compiling Timers.c...
-linking...
-Program Size: Code=106936 RO-data=4948 RW-data=728 ZI-data=48992  
-FromELF: creating hex file...
-".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\Alumno\\Desktop\\GITf\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Set JLink Project File to "C:\Users\Alumno\Desktop\GITf\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
-* JLink Info: Device "LPC1768" selected.
- 
-JLink info:
-------------
-DLL: V5.12f, compiled May 17 2016 16:03:35
-Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-Hardware: V8.00
-S/N : 268002154 
-OEM : SEGGER-EDU 
-Feature(s) : FlashBP, GDB 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: CoreSight components:
-* JLink Info: ROMTbl 0 @ E00FF000
-* JLink Info: ROMTbl 0 [0]: FFF0F000, CID: B105E00D, PID: 002BB000 SCS
-* JLink Info: ROMTbl 0 [1]: FFF02000, CID: B105E00D, PID: 002BB002 DWT
-* JLink Info: ROMTbl 0 [2]: FFF03000, CID: B105E00D, PID: 002BB003 FPB
-* JLink Info: ROMTbl 0 [3]: FFF01000, CID: B105E00D, PID: 002BB001 ITM
-* JLink Info: ROMTbl 0 [4]: FFF41000, CID: B105900D, PID: 002BB923 TPIU-Lite
-* JLink Info: ROMTbl 0 [5]: FFF42000, CID: B105900D, PID: 002BB924 ETM-M3
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.332V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 4000 kHz
- 
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
@@ -667,48 +555,12 @@ Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
 FCARM FILE CONVERTER V2.41
 Completed 1 File(s), Ratio 48%
 compiling WEB.C...
-compiling uFono.c...
+compiling DAC.c...
 linking...
-Program Size: Code=106940 RO-data=4952 RW-data=728 ZI-data=48992  
+Program Size: Code=107024 RO-data=4948 RW-data=736 ZI-data=49004  
 FromELF: creating hex file...
 ".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\Alumno\\Desktop\\GITf\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Set JLink Project File to "C:\Users\Alumno\Desktop\GITf\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
-* JLink Info: Device "LPC1768" selected.
- 
-JLink info:
-------------
-DLL: V5.12f, compiled May 17 2016 16:03:35
-Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-Hardware: V8.00
-S/N : 268002154 
-OEM : SEGGER-EDU 
-Feature(s) : FlashBP, GDB 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: CoreSight components:
-* JLink Info: ROMTbl 0 @ E00FF000
-* JLink Info: ROMTbl 0 [0]: FFF0F000, CID: B105E00D, PID: 002BB000 SCS
-* JLink Info: ROMTbl 0 [1]: FFF02000, CID: B105E00D, PID: 002BB002 DWT
-* JLink Info: ROMTbl 0 [2]: FFF03000, CID: B105E00D, PID: 002BB003 FPB
-* JLink Info: ROMTbl 0 [3]: FFF01000, CID: B105E00D, PID: 002BB001 ITM
-* JLink Info: ROMTbl 0 [4]: FFF41000, CID: B105900D, PID: 002BB923 TPIU-Lite
-* JLink Info: ROMTbl 0 [5]: FFF42000, CID: B105900D, PID: 002BB924 ETM-M3
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.332V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 4000 kHz
- 
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
@@ -717,50 +569,12 @@ custom translating WEB.inp...
 Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
 FCARM FILE CONVERTER V2.41
 Completed 1 File(s), Ratio 48%
-compiling Timers.c...
-compiling Ldr.c...
-compiling uFono.c...
+compiling DAC.c...
 linking...
-Program Size: Code=106948 RO-data=4952 RW-data=728 ZI-data=48992  
+Program Size: Code=107044 RO-data=4952 RW-data=736 ZI-data=49004  
 FromELF: creating hex file...
 ".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\Alumno\\Desktop\\GITf\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Set JLink Project File to "C:\Users\Alumno\Desktop\GITf\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
-* JLink Info: Device "LPC1768" selected.
- 
-JLink info:
-------------
-DLL: V5.12f, compiled May 17 2016 16:03:35
-Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-Hardware: V8.00
-S/N : 268002154 
-OEM : SEGGER-EDU 
-Feature(s) : FlashBP, GDB 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: CoreSight components:
-* JLink Info: ROMTbl 0 @ E00FF000
-* JLink Info: ROMTbl 0 [0]: FFF0F000, CID: B105E00D, PID: 002BB000 SCS
-* JLink Info: ROMTbl 0 [1]: FFF02000, CID: B105E00D, PID: 002BB002 DWT
-* JLink Info: ROMTbl 0 [2]: FFF03000, CID: B105E00D, PID: 002BB003 FPB
-* JLink Info: ROMTbl 0 [3]: FFF01000, CID: B105E00D, PID: 002BB001 ITM
-* JLink Info: ROMTbl 0 [4]: FFF41000, CID: B105900D, PID: 002BB923 TPIU-Lite
-* JLink Info: ROMTbl 0 [5]: FFF42000, CID: B105900D, PID: 002BB924 ETM-M3
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.325V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 4000 kHz
- 
+Load "C:\\Users\\alver\\Desktop\\GitFolder\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
 Erase Done.
 Programming Done.
 Verify OK.
@@ -770,109 +584,7 @@ Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
 FCARM FILE CONVERTER V2.41
 Completed 1 File(s), Ratio 48%
 compiling WEB.C...
-compiling Timers.c...
-compiling uFono.c...
 linking...
-Program Size: Code=106916 RO-data=4952 RW-data=728 ZI-data=48992  
+Program Size: Code=107044 RO-data=4952 RW-data=736 ZI-data=49004  
 FromELF: creating hex file...
 ".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Build target 'MiniDK-2'
-custom translating WEB.inp...
-Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
-FCARM FILE CONVERTER V2.41
-Completed 1 File(s), Ratio 48%
-linking...
-Program Size: Code=106916 RO-data=4952 RW-data=728 ZI-data=48992  
-FromELF: creating hex file...
-".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\Alumno\\Desktop\\GITf\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Set JLink Project File to "C:\Users\Alumno\Desktop\GITf\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
-* JLink Info: Device "LPC1768" selected.
- 
-JLink info:
-------------
-DLL: V5.12f, compiled May 17 2016 16:03:35
-Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-Hardware: V8.00
-S/N : 268002154 
-OEM : SEGGER-EDU 
-Feature(s) : FlashBP, GDB 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: CoreSight components:
-* JLink Info: ROMTbl 0 @ E00FF000
-* JLink Info: ROMTbl 0 [0]: FFF0F000, CID: B105E00D, PID: 002BB000 SCS
-* JLink Info: ROMTbl 0 [1]: FFF02000, CID: B105E00D, PID: 002BB002 DWT
-* JLink Info: ROMTbl 0 [2]: FFF03000, CID: B105E00D, PID: 002BB003 FPB
-* JLink Info: ROMTbl 0 [3]: FFF01000, CID: B105E00D, PID: 002BB001 ITM
-* JLink Info: ROMTbl 0 [4]: FFF41000, CID: B105900D, PID: 002BB923 TPIU-Lite
-* JLink Info: ROMTbl 0 [5]: FFF42000, CID: B105900D, PID: 002BB924 ETM-M3
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.332V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 4000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'MiniDK-2'
-custom translating WEB.inp...
-Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
-FCARM FILE CONVERTER V2.41
-Completed 1 File(s), Ratio 48%
-compiling WEB.C...
-compiling Ldr.c...
-linking...
-Program Size: Code=106916 RO-data=4952 RW-data=732 ZI-data=48988  
-FromELF: creating hex file...
-".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
-Load "C:\\Users\\Alumno\\Desktop\\GITf\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
-Set JLink Project File to "C:\Users\Alumno\Desktop\GITf\EstacionMeteorologica\ProyectoEstacion\MiniDK-2\uVision\JLinkSettings.ini"
-* JLink Info: Device "LPC1768" selected.
- 
-JLink info:
-------------
-DLL: V5.12f, compiled May 17 2016 16:03:35
-Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
-Hardware: V8.00
-S/N : 268002154 
-OEM : SEGGER-EDU 
-Feature(s) : FlashBP, GDB 
- 
-* JLink Info: Found SWD-DP with ID 0x2BA01477
-* JLink Info: Found Cortex-M3 r2p0, Little endian.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-* JLink Info: CoreSight components:
-* JLink Info: ROMTbl 0 @ E00FF000
-* JLink Info: ROMTbl 0 [0]: FFF0F000, CID: B105E00D, PID: 002BB000 SCS
-* JLink Info: ROMTbl 0 [1]: FFF02000, CID: B105E00D, PID: 002BB002 DWT
-* JLink Info: ROMTbl 0 [2]: FFF03000, CID: B105E00D, PID: 002BB003 FPB
-* JLink Info: ROMTbl 0 [3]: FFF01000, CID: B105E00D, PID: 002BB001 ITM
-* JLink Info: ROMTbl 0 [4]: FFF41000, CID: B105900D, PID: 002BB923 TPIU-Lite
-* JLink Info: ROMTbl 0 [5]: FFF42000, CID: B105900D, PID: 002BB924 ETM-M3
-ROMTableAddr = 0xE00FF003
- 
-Target info:
-------------
-Device: LPC1768
-VTarget = 3.325V
-State of Pins: 
-TCK: 0, TDI: 1, TDO: 1, TMS: 1, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 4000 kHz
- 
-Erase Done.
-Programming Done.
-Verify OK.

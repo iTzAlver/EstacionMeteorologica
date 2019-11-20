@@ -73,6 +73,10 @@
 #define	LUT
 #include	"LUT.h"
 #endif
+#ifndef	DMA
+#define	DMA	
+#include	"DMA.h"
+#endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes a la configuración.								//
