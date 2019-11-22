@@ -31,6 +31,7 @@ extern uint8_t 		Clock[23];
 extern State_t		*	ESTADO;
 extern misDatos_t	*	DATOS;
 extern actualizador_t	*	ACTUALIZADOR;
+extern uint8_t 			OWEjecutameExterno;
 uint8_t	pressedTouchPanel;
 uint8_t	__brilloAuto = 0;
 uint8_t	Aux8;

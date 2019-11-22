@@ -23,6 +23,7 @@
 #endif
 uint8_t					TIM0_ticks 	= 	0;
 uint8_t					Timer2_MODO	=	MODO_SALIDA;
+uint32_t					CAP11_BUFF	=	0;
 extern	uint8_t			YaPuedesMedir;
 extern	Counters_t	*	COUNTERS;
 extern	misDatos_t	*	DATOS;
@@ -108,7 +109,7 @@ static void	_subAnemoTempe()
 	{
 		LPC_TIM1->CCR	|=	CCR_MASCARA_EN;		//	Genera interrupción el CAP1.0, ojo que se mata así en el timer 1.
 		LPC_TIM1->CCR	|=	OW_CCR_MASCARA_EN;		//	Genera interrupción el CAP1.1, ojo que se mata así en el timer 1.
-		activaMedidaOW();						//	Le digo a la placa que lanze la señal de request.
+		mideTemperatura();						//	Le digo a la placa que lanze la señal de request.
 		if ( !ACTUALIZADOR->AnemometroRev && YaPuedesMedir)		//	Si el actualizador está a 0 (Es decir, no hay datos capturados).
 		{
 			DATOS->VelViento = 0;				//	No hay viento.
@@ -156,10 +157,14 @@ void TIMER1_IRQHandler()
 			mideAnemometro();
 			break;
 		case	CAP11_IR:
-			//mideTemperatura();
+			StateChartOneWire(	LPC_TIM1->CR1 - CAP11_BUFF	);
+			CAP11_BUFF	=	LPC_TIM1->CR1;
 			break;
 		case MR1_IR:
 			desactivarDAC();
+			break;
+		case MR2_IR:
+			StateChartOneWire(0);
 			break;
 		default:
 			/**	@TOUSE:	Puedo configurar el timer por match.	*/
@@ -176,28 +181,7 @@ void TIMER1_IRQHandler()
 //---------------------------------------------------------------------------------------------------------------------**/
 void TIMER2_IRQHandler()
 {
-	LPC_TIM2->IR	|=	LPC_TIM2->IR;								//	Borro flag de interrupción.
-	switch(	Timer2_MODO	)
-	{
-		case	MODO_SALIDA:
-			escribirEnDac(AUDIO[COUNTERS->Audio]	,	12	);		//	Escribo el valor del audio en el DAC, con un cutoff de 2 dado que las muestras son de 8 bits.
-			break;
-		case	MODO_ENTRADA:
-			AUDIO[COUNTERS->Audio]	=	(uint8_t)((0xFF) & (LPC_ADC->ADDR0 >> (4+4)));		//	El ADC es de 12 bits y las muestras de 8 bits, por lo que hay que reducir los 4 LSB.
-			LPC_ADC->ADCR	&=	~ADC_START;											//	Lanzar siguiente muestra.		
-			LPC_ADC->ADCR	|=	ADC_START;											//	Lanzar siguiente muestra.
-			break;
-		default:
-			/**	@TODO:	Añaidr códigos de error.	*/
-			break;
-	}
-	if ( COUNTERS->Audio++ == MUESTRAS_AUDIO - 1	)				//	Reset y fin al audio.
-	{
-		COUNTERS->Audio = 0;								//	Reset al contador.
-		NVIC_DisableIRQ(	TIMER2_IRQn	);					//	Desactivo el timer del DAC cuando finaliza el audio.
-		ACTUALIZADOR->Audiorev	=	1;						//	Le digo al statechart que ya ha acabado el ciclo de audio.
-		recuperaContexto();									//	Recupero el contexto del micrófono en el ADC.
-	}
+
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//

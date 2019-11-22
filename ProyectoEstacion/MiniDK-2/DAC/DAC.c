@@ -89,7 +89,7 @@ void activarDac()
 	/**	@TODO:	DMA*/
 	LPC_GPDMACH0->DMACCConfig	|=	1;								//	Activo el DMA.
 	LPC_TIM1->MCR				=	(1	<<3	)	|	(1	<<	4);		//	Activo la interrupción por MR1 y reset por MR1.
-	LPC_TIM1->MR1				=	0.9*(Fclk*DURACION_AUDIO) - 1;		//	Valor de MR0.
+	LPC_TIM1->MR1				=	0.9*(Fclk*DURACION_AUDIO) - 1;		//	Valor de MR1.
 	LPC_TIM1->TCR				=	0x2;								//	Reset del timer.
 	LPC_TIM1->TCR				=	0x1;								//	El timer cuenta.
 }
@@ -98,7 +98,7 @@ void desactivarDAC()
 {
 	LPC_GPDMACH0->DMACCConfig	&=	~0x1;			//	Desactivo el DMA.
 	ACTUALIZADOR->Audiorev		=	1;				//	Señalizo el fin del DAC.
-	LPC_TIM1->MCR				&=	~(7	<<	3);		//	Desactivo la interrupción por MR0 y reset tras MR1.
+	LPC_TIM1->MCR				&=	~(7	<<	3);		//	Desactivo la interrupción por MR1 y reset tras MR1.
 	LPC_DAC->DACR				=	0;				//	No hay señal de salida.
 }
 /**---------------------------------------------------------------------------------------------------------------------//

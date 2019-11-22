@@ -145,6 +145,7 @@ typedef struct {
 	__IO	uint8_t	UVArev:1;
 	__IO	uint8_t	Audio:1;
 	__IO	uint8_t	Audiorev:1;
+	__IO uint8_t	TempRev:1;
 }actualizador_t;
 
 typedef struct {
