@@ -157,15 +157,16 @@ void InvalidChecksum()
 
 void mideTemperatura()
 {
-//	sigInit = 1;						//	Doy señal para iniciar la máquina de estados.
-//	if (	OWESTADO == OWDEEPSLEEP )		//	Si está sin hacer nada...
-//	{
-//		StateChartOneWire(0);			//	Ejecútala.
-//	}
-//	ACTUALIZADOR->TempRev	=	0;		//	Le digo al LCD que no hay temperatura medida.
-//	LPC_TIM1->MCR			=	(1 << 3*2) | (1 <  (3*2)+1);	//	Activo interrupción por MR2 y reset tras MR2.
-//	LPC_TIM1->TCR			=	2;
-//	LPC_TIM1->TCR			=	1;
+	sigInit = 1;						//	Doy señal para iniciar la máquina de estados.
+	if (	OWESTADO == OWDEEPSLEEP )		//	Si está sin hacer nada...
+	{
+		StateChartOneWire(0);			//	Ejecútala.
+	}
+	OWESTADO	==	OWDEEPSLEEP;
+	ACTUALIZADOR->TempRev	=	0;		//	Le digo al LCD que no hay temperatura medida.
+	LPC_TIM1->MCR			=	(1 << 3*2) | (1 <  (3*2)+1);	//	Activo interrupción por MR2 y reset tras MR2.
+	LPC_TIM1->TCR			=	2;
+	LPC_TIM1->TCR			=	1;
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//

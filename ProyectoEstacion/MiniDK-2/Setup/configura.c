@@ -58,7 +58,7 @@ void __configuraPrograma__(	void	)
 //	__configuraWDT__		();
 	__configuraDMA__		();
 	__configuraDAC__		();
-//	__configuraOW__		();
+	__configuraOW__		();
 	__configuraAnemometro__	();
 	#ifndef	DEBUG
  	TouchPanel_Calibrate();

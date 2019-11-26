@@ -24,6 +24,8 @@
 uint8_t					TIM0_ticks 	= 	0;
 uint8_t					Timer2_MODO	=	MODO_SALIDA;
 uint32_t					CAP11_BUFF	=	0;
+uint8_t					contadorLUZ	=	0;
+extern 	uint8_t			__brilloAuto;			//	Esta línea no me gusta nada, pero era mucho mejor que complicarlo.
 extern	uint8_t			YaPuedesMedir;
 extern	Counters_t	*	COUNTERS;
 extern	misDatos_t	*	DATOS;
@@ -92,6 +94,14 @@ void __configuraTimer0__()
 void SysTick_Handler()
 {
 	timer_tick();
+	if (contadorLUZ	>=	100 && !__brilloAuto)									//	Si pasan 10s y el brillo automático está desactivado...
+	{
+		modificaPulso(	PWM6	,	MODO_CICLO	,	0	,	none	,	none	,	none	);	//	Apago la pantalla.
+	}
+	if (contadorLUZ 	<	250)
+	{
+		contadorLUZ++;
+	}
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
@@ -151,25 +161,25 @@ void TIMER0_IRQHandler(	void	)
 void TIMER1_IRQHandler()
 {
 	uint8_t SWART	=	(uint8_t)(LPC_TIM1->IR);
-	switch(	SWART	)
+
+	if	(SWART	&	CAP10_IR)
 	{
-		case	CAP10_IR:
-			mideAnemometro();
-			break;
-		case	CAP11_IR:
-			StateChartOneWire(	LPC_TIM1->CR1 - CAP11_BUFF	);
-			CAP11_BUFF	=	LPC_TIM1->CR1;
-			break;
-		case MR1_IR:
-			desactivarDAC();
-			break;
-		case MR2_IR:
-			StateChartOneWire(0);
-			break;
-		default:
-			/**	@TOUSE:	Puedo configurar el timer por match.	*/
-			break;
-	}		
+		mideAnemometro();
+	}
+	if	(SWART	&	CAP11_IR)
+	{
+		StateChartOneWire(	LPC_TIM1->CR1 - CAP11_BUFF	);
+		CAP11_BUFF	=	LPC_TIM1->CR1;
+	}
+	if	(SWART	&	MR1_IR)
+	{
+		desactivarDAC();
+	}
+	if	(SWART	&	MR2_IR)
+	{
+		StateChartOneWire(0);
+	}
+	
 	LPC_TIM1->IR	=	LPC_TIM1->IR;			//	No pierdo nada en asegurarme que se cierra el timer.			
 }
 /**---------------------------------------------------------------------------------------------------------------------//
