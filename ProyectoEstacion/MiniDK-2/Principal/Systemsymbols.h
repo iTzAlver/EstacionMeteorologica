@@ -20,6 +20,9 @@
 #ifndef 		null
 #define		null				0
 #endif
+#ifndef		NULL
+#define		NULL				0
+#endif
 #define		none				0
 #define		NONE				0
 #define		VOID				void

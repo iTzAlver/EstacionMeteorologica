@@ -35,6 +35,8 @@
 ".\obj\lpc17xx_libcfg_default.o"
 ".\obj\asciilib.o"
 ".\obj\glcd.o"
+".\obj\uart0.o"
+".\obj\uart3.o"
 --library_type=microlib --strict --scatter ".\Obj\Estacion.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

@@ -30,8 +30,8 @@
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
 #define	DLP				7
-#define	UART0_MTX			(1	<<	1)
-#define	UART0_MRX			(1	<<	2)
+#define	UART3_MTX			(1	<<	1)
+#define	UART3_MRX			(1	<<	2)
 #define	RetornoDeCarro		13
 #define	CADMAX			20
 /**---------------------------------------------------------------------------------------------------------------------//
@@ -39,7 +39,7 @@
 //		@funcdef		Estas son las funciones correspondientes al protocolo UART0.	      					//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-void	__configuraUART0__	(	void	);
+void	__configuraUART3__	(	void	);
 void	__transmitirDatos	(	void	);
 void __recibirDatos		(	void	);
 void __ignore			(	void	);

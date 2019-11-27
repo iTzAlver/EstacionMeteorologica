@@ -1,0 +1,9 @@
+.\obj\uart3.o: ..\UART\UART3.c
+.\obj\uart3.o: ..\UART\UART3.h
+.\obj\uart3.o: ..\Startup\LPC17XX.H
+.\obj\uart3.o: ..\Startup\core_cm3.h
+.\obj\uart3.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\obj\uart3.o: ..\Startup\core_cmInstr.h
+.\obj\uart3.o: ..\Startup\core_cmFunc.h
+.\obj\uart3.o: ..\Startup\system_LPC17xx.h
+.\obj\uart3.o: ..\Principal\Systemsymbols.h
