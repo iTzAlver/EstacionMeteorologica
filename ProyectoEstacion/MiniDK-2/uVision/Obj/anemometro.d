@@ -16,3 +16,4 @@
 .\obj\anemometro.o: ..\DAC\DAC.h
 .\obj\anemometro.o: ..\PWM\PWM.h
 .\obj\anemometro.o: ..\OneWire\OneWire.h
+.\obj\anemometro.o: ..\I2C\I2C.h

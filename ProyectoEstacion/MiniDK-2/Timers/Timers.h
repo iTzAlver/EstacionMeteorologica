@@ -53,6 +53,10 @@
 #define	ONEWIRE
 #include	"OneWire.h"
 #endif
+#ifndef	I2C
+#define	I2C
+#include	"I2C.h"
+#endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes a los timers.									//

@@ -15,4 +15,5 @@
 .\obj\dac.o: ..\Anemometro\Anemometro.h
 .\obj\dac.o: ..\PWM\PWM.h
 .\obj\dac.o: ..\OneWire\OneWire.h
+.\obj\dac.o: ..\I2C\I2C.h
 .\obj\dac.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h

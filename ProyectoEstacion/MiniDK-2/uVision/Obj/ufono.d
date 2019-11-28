@@ -16,3 +16,4 @@
 .\obj\ufono.o: ..\DAC\DAC.h
 .\obj\ufono.o: ..\PWM\PWM.h
 .\obj\ufono.o: ..\OneWire\OneWire.h
+.\obj\ufono.o: ..\I2C\I2C.h

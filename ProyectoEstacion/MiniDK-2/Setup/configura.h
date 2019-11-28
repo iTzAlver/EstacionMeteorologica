@@ -77,6 +77,18 @@
 #define	DMA	
 #include	"DMA.h"
 #endif
+#ifndef	I2C
+#define	I2C	
+#include	"I2C.h"
+#endif
+#ifndef	UART0
+#define	UART0
+#include	"UART0.h"
+#endif
+#ifndef	UART3
+#define	UART3
+#include	"UART3.h"
+#endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes a la configuración.								//
@@ -94,7 +106,8 @@
 //		@funcdef		Estas son las funciones correspondientes a la configuración.							//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-void __configuraPrograma__(	void	);
+void __configuraPrograma__	(	void	);
+void __iniciaVariables__		(	void	);
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

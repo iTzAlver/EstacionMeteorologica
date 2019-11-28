@@ -23,8 +23,8 @@
 //	Variables globales y externas.
 char	UART0_BUFFER_RX[CADMAX + 1];
 char UART0_BUFFER_TX[CADMAX + 1];
-char * _prx	=	UART0_BUFFER_RX;
-char * _ptx	=	UART0_BUFFER_TX;
+static char * _prx	=	UART0_BUFFER_RX;
+static char * _ptx	=	UART0_BUFFER_TX;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@function		__configuraUART0__()															//
@@ -59,7 +59,7 @@ void	__configuraUART0__(	void	)				//	Configurado a 9600 baudios.
 //		@brief		Esta función no hace nada.														//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-void __ignore(	void	)
+static void __ignore(	void	)
 {
 	/**	@DO:	No hace nada.	*/
 }
@@ -70,7 +70,7 @@ void __ignore(	void	)
 //		@brief		Esta subfunción de apoyo para el handler del uart0, se encarga de recibir datos.			//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-void __recibirDatos(	void	)
+static void __recibirDatos(	void	)
 {
 	*_prx = LPC_UART0->RBR;					//	Guardo el byte que ha llegado.
 	
@@ -78,6 +78,7 @@ void __recibirDatos(	void	)
 	{
 		*_prx 	= 	NULL;				//	Se añade el caracter null en vez de el retorno de carro.			
 		_prx		=	UART0_BUFFER_RX;		//	Vuelve al inicio del buffer.
+		procesarComando(	UART0_BUFFER_RX);	//	Proceso el comando recibido.
 	}
 	else									//	Si no es el último byte...
 	{
@@ -91,7 +92,7 @@ void __recibirDatos(	void	)
 //		@brief		Esta subfunción de apoyo para el handler del uart0, se encarga de transmitir datos.			//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-void __transmitirDatos(	void	)
+static void __transmitirDatos(	void	)
 {
 	if	(*_ptx	==	NULL)				//	Si es el fin de la cadena...
 	{
@@ -113,7 +114,7 @@ void __transmitirDatos(	void	)
 //		@brief		Esta función manda el UART0_BUFFER_TX a la salida TX del UART0.							//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-void UART0_mandaBufferTx(	void	)
+void UART0_MandaBufferTx(	void	)
 {
 	if	(	(LPC_UART0->IER & (	1	<<	1))	==	0)	//	Si no hay transmisión pendiente...
 	{
@@ -121,6 +122,111 @@ void UART0_mandaBufferTx(	void	)
 		LPC_UART0->THR	=	*_ptx;		//	Envío el primer caracter.
 		_ptx++;						//	Cargo el siguiente caracter.
 	}
+}
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@function		procesarComando()																//
+//																								//
+//		@brief		Esta función manda el UART0_BUFFER_TX a la salida TX del UART0.							//
+//																								//
+//		@input		char * Buff:	El buffer donde está contenido el comando.								//
+//																								//
+//		@ret			Devuelve 1 si ha sido exitoso y 0 si no se ha obtenido el comando.						//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
+uint8_t	procesarComando(	char	*	Buff	)
+{
+	uint8_t 	retval = 0;
+	uint8_t	comSET = 0;
+	/**	SECCIÓN PARA LOS COMANDOS DE TIPO 0:	ABOUT*/
+	if	(	strcmp(	Buff	,	COM0	)	)
+	{
+		retval = 1;
+		strcpy(	UART0_BUFFER_TX	,	"\n Autor: \t Alberto Palomo Alonso \n Version: \t 0.0.0 \n Sistemas Electronicos Digitales Avanzados \t UAH \n"	);
+	}
+	/**	SECCIÓN PARA LOS COMANDOS DE TIPO 1:	GIMME*/
+	if	(	strcmp( Buff , COM1)	)
+	{
+		if 	(	strcmp(	&Buff[6]	,	COM10)	)
+		{
+			strcpy	(	UART0_BUFFER_TX	,	"\nSUGAAAAR!!!!!!!!!!!!!!!!!!!!!!\n");
+			retval = 1;
+		}
+		if 	(	strcmp(	&Buff[6]	,	COM11)	)
+		{
+			strcpy	(	UART0_BUFFER_TX	,	"\nIP: 192.168.1.120 \n");
+			retval = 1;
+		}
+		if 	(	strcmp(	&Buff[6]	,	COM12)	)
+		{
+			strcpy	(	UART0_BUFFER_TX	,	"\nTEMPERATURA: \n");
+			retval = 1;
+		}
+		if 	(	strcmp(	&Buff[6]	,	COM13)	)
+		{
+			strcpy	(	UART0_BUFFER_TX	,	"\nPRESION: \n");
+			retval = 1;
+		}
+		if 	(	strcmp(	&Buff[6]	,	COM14)	)
+		{
+			strcpy	(	UART0_BUFFER_TX	,	"\nVELOCIDAD DEL VIENTO: \n");
+			retval = 1;
+		}
+		if 	(	strcmp(	&Buff[6]	,	COM15)	)
+		{
+			strcpy	(	UART0_BUFFER_TX	,	"\nX:   \nY:   \nZ:\n");
+			retval = 1;
+		}
+		if 	(	strcmp(	&Buff[6]	,	COM16)	)
+		{
+			strcpy	(	UART0_BUFFER_TX	,	"\nINDICE UV: \n");
+			retval = 1;
+		}
+		if 	(	strcmp(	&Buff[6]	,	COM17)	)
+		{
+			strcpy	(	UART0_BUFFER_TX	,	"\n / / / : : \n");
+			retval = 1;
+		}
+		if 	(	strcmp(	&Buff[6]	,	COM18)	)
+		{
+			strcpy	(	UART0_BUFFER_TX	,	"\nHUMEDAD: \n");
+			retval = 1;
+		}
+		if 	(	strcmp(	&Buff[6]	,	COM19)	)
+		{
+			strcpy	(	UART0_BUFFER_TX	,	"\nBRILLO: \n");
+			retval = 1;
+		}
+	}
+	/**	SECCIÓN PARA LOS COMANDOS DE TIPO 2:	SET*/
+	if	(	strcmp(	Buff	,	COM2	)	)
+	{
+		if (	strcmp	(	&Buff[4]	,	COM20)	)
+		{
+			sscanf(	&Buff[11]	,	"%c"	,	&comSET);
+			modificaPulso		(	PWM6,	MODO_CICLO	,	comSET	,	none	,	none			,	none			);
+			retval = 1;
+		}
+	}
+	/**	SECCIÓN PARA LOS COMANDOS DE TIPO 3:	KILL*/
+	if	(	strcmp(	Buff	,	COM3	)	)
+	{
+		while (1);
+	}
+	/**	SECCIÓN PARA LOS COMANDOS DE TIPO 4:	HELP	*/
+	if	(	strcmp(	Buff	,	COM4	)	)
+	{
+		strcpy(	UART0_BUFFER_TX	,	"ABOUT: Muestra info. del sistema. \n GIMME: Proporciona el dato deseado. \n   IP: Ip web.\n   TEMPERATURA\n   PRESION\n   LUGAR\n   VIENTO\n   INDICEUV\n   HORA\n   HUMEDAD\n   BRILLO\n SET: Configura parametros del sistema.\n   BRILLO X\n KILL: Cuelga el programa.\n"	);
+		retval = 1;
+	}
+	/**	CONTROL DE ERROR:	*/
+	if (	!retval	)
+	{
+		strcpy(	UART0_BUFFER_TX,	"Error: comando no definido, escriba 'HELP' para ver la lista.\n");
+	}
+	UART0_MandaBufferTx();
+	/**	ZONA RETURN	*/
+	return retval;
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//

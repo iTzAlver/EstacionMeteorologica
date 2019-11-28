@@ -23,8 +23,8 @@
 //	Variables globales y externas.
 char	UART3_BUFFER_RX[CADMAX + 1];
 char UART3_BUFFER_TX[CADMAX + 1];
-char * _prx	=	UART3_BUFFER_RX;
-char * _ptx	=	UART3_BUFFER_TX;
+static char * _prx	=	UART3_BUFFER_RX;
+static char * _ptx	=	UART3_BUFFER_TX;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@function		__configuraUART3__()															//
@@ -59,7 +59,7 @@ void	__configuraUART3__(	void	)				//	Configurado a 9600 baudios.
 //		@brief		Esta función no hace nada.														//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-void __ignore(	void	)
+static void __ignore(	void	)
 {
 	/**	@DO:	No hace nada.	*/
 }
@@ -70,7 +70,7 @@ void __ignore(	void	)
 //		@brief		Esta subfunción de apoyo para el handler del uart3, se encarga de recibir datos.			//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-void __recibirDatos(	void	)
+static void __recibirDatos(	void	)
 {
 	*_prx = LPC_UART3->RBR;					//	Guardo el byte que ha llegado.
 	
@@ -91,7 +91,7 @@ void __recibirDatos(	void	)
 //		@brief		Esta subfunción de apoyo para el handler del uart3, se encarga de transmitir datos.			//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-void __transmitirDatos(	void	)
+static void __transmitirDatos(	void	)
 {
 	if	(*_ptx	==	NULL)				//	Si es el fin de la cadena...
 	{
@@ -113,7 +113,7 @@ void __transmitirDatos(	void	)
 //		@brief		Esta función manda el UART0_BUFFER_TX a la salida TX del UART3.							//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-void UART3_mandaBufferTx(	void	)
+void UART3_MandaBufferTx(	void	)
 {
 	if	(	(LPC_UART3->IER & (	1	<<	1))	==	0)	//	Si no hay transmisión pendiente...
 	{

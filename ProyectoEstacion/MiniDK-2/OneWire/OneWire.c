@@ -162,7 +162,7 @@ void mideTemperatura()
 	{
 		StateChartOneWire(0);			//	Ejecútala.
 	}
-	OWESTADO	==	OWDEEPSLEEP;
+	OWESTADO	=	OWDEEPSLEEP;
 	ACTUALIZADOR->TempRev	=	0;		//	Le digo al LCD que no hay temperatura medida.
 	LPC_TIM1->MCR			=	(1 << 3*2) | (1 <  (3*2)+1);	//	Activo interrupción por MR2 y reset tras MR2.
 	LPC_TIM1->TCR			=	2;

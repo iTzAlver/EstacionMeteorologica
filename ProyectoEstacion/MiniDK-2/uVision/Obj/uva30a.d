@@ -17,3 +17,4 @@
 .\obj\uva30a.o: ..\DAC\DAC.h
 .\obj\uva30a.o: ..\PWM\PWM.h
 .\obj\uva30a.o: ..\OneWire\OneWire.h
+.\obj\uva30a.o: ..\I2C\I2C.h

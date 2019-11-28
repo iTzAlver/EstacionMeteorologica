@@ -15,4 +15,5 @@
 .\obj\lut.o: ..\DAC\DAC.h
 .\obj\lut.o: ..\PWM\PWM.h
 .\obj\lut.o: ..\OneWire\OneWire.h
+.\obj\lut.o: ..\I2C\I2C.h
 .\obj\lut.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h

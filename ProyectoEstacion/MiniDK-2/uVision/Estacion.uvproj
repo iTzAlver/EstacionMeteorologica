@@ -351,7 +351,7 @@
               <MiscControls></MiscControls>
               <Define>NO_RTX_KERNEL</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Startup;..\PWM;..\Principal;..\Setup;..\Menu;..\Menu\GLCD;..\Menu\Firmware\header;..\Menu\Firmware\source;..\Menu\Leds;..\Menu\TouchPanel;..\RTC;..\WDT;..\TCPIP;..\TCPIP\lib;C:\Keil\ARM\RV31\lib;..\TCPIP\FM\include;..\TCPIP\FM\source;..\Timers;..\Anemometro;..\FAT32;..\FAT32\FW\include;..\FAT32\FW\source;..\ADC;..\DAC;..\BaseDeDatos;..\OneWire;..\DEBUG;..\UART</IncludePath>
+              <IncludePath>..\Startup;..\PWM;..\Principal;..\Setup;..\Menu;..\Menu\GLCD;..\Menu\Firmware\header;..\Menu\Firmware\source;..\Menu\Leds;..\Menu\TouchPanel;..\RTC;..\WDT;..\TCPIP;..\TCPIP\lib;C:\Keil\ARM\RV31\lib;..\TCPIP\FM\include;..\TCPIP\FM\source;..\Timers;..\Anemometro;..\FAT32;..\FAT32\FW\include;..\FAT32\FW\source;..\ADC;..\DAC;..\BaseDeDatos;..\OneWire;..\DEBUG;..\UART;..\I2C</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -936,6 +936,21 @@
               <FileName>UART3.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\UART\UART3.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>I2C</GroupName>
+          <Files>
+            <File>
+              <FileName>I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\I2C\I2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>I2Clib.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\I2C\I2Clib.c</FilePath>
             </File>
           </Files>
         </Group>

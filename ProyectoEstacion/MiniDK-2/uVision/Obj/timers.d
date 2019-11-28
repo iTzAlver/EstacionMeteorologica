@@ -16,3 +16,4 @@
 .\obj\timers.o: ..\DAC\DAC.h
 .\obj\timers.o: ..\PWM\PWM.h
 .\obj\timers.o: ..\OneWire\OneWire.h
+.\obj\timers.o: ..\I2C\I2C.h

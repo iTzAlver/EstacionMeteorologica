@@ -33,16 +33,17 @@
 #define	UART3_MTX			(1	<<	1)
 #define	UART3_MRX			(1	<<	2)
 #define	RetornoDeCarro		13
-#define	CADMAX			20
+#define	CADMAX			120
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcdef		Estas son las funciones correspondientes al protocolo UART0.	      					//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__configuraUART3__	(	void	);
-void	__transmitirDatos	(	void	);
-void __recibirDatos		(	void	);
-void __ignore			(	void	);
+void UART3_MandaBufferTx	(	void	);
+static void	__transmitirDatos	(	void	);
+static void 	__recibirDatos		(	void	);
+static void 	__ignore			(	void	);
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

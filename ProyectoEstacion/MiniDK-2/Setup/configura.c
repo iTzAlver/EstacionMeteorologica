@@ -34,16 +34,8 @@ extern misDatos_t	*	DATOS;
 //---------------------------------------------------------------------------------------------------------------------**/
 void __configuraPrograma__(	void	)	
 {
-	ESTADO->CHART = PANTALLA_LOADING;
-	DATOS->Temperatura 		= 24.00;
-	DATOS->Humedad 		= 1.55;
-	DATOS->Presion 		= 1.55;
-	DATOS->VelViento 		= 3.33;
-	DATOS->IndiceUV 		= 1.20;
-	DATOS->Lugar.Altura		= 500.12;	
-	DATOS->Lugar.Longitud	= 74.33;	
-	DATOS->Lugar.Latitud	= 74.33;
-	//crearSeno();
+	__iniciaVariables__		();
+//	crearSeno				();
 	__configuraWEB__		();
 	__configuraSysTick__	();
 	__configuraTimer0__		();
@@ -60,10 +52,32 @@ void __configuraPrograma__(	void	)
 	__configuraDAC__		();
 	__configuraOW__		();
 	__configuraAnemometro__	();
-	#ifndef	DEBUG
+	__configuraUART0__		();
+	__configuraUART3__		();
+	__configuraI2C__		();
+#ifndef	DEBUG
  	TouchPanel_Calibrate();
-	#endif
+#endif
 	ESTADO->CHART = PANTALLA_INICIO;
+}
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@funcion		__iniciaVariables__()															//
+//																								//
+//		@brief		Esta función inicia las variables del sistema para que tengan un momento inicial.			//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
+void __iniciaVariables__()
+{
+	ESTADO->CHART = PANTALLA_LOADING;
+	DATOS->Temperatura 		= 24.00;
+	DATOS->Humedad 		= 1.55;
+	DATOS->Presion 		= 1.55;
+	DATOS->VelViento 		= 3.33;
+	DATOS->IndiceUV 		= 1.20;
+	DATOS->Lugar.Altura		= 500.12;	
+	DATOS->Lugar.Longitud	= 74.33;	
+	DATOS->Lugar.Latitud	= 74.33;
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
