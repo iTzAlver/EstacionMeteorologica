@@ -21,11 +21,14 @@
 #include	"I2C.h"
 #endif	
 //	Variables globales y externas.
+BMP_t	COEF			;
 extern 	misDatos_t	*	DATOS;
 uint8_t	TemperaturaConBmp	=	0;
 uint8_t	LecturaBMP0	;
 uint8_t	LecturaBMP1	;
 uint16_t	LecturaBMP	;
+float temperatura;
+float presion;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@function		__configuraI2C__()																//
@@ -35,7 +38,55 @@ uint16_t	LecturaBMP	;
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__configuraI2C__	(	void	)
 {
-	//	Creo que no hay que tocar nada...
+	__calibraBMP();
+}
+void __calibraBMP()
+{
+	I2CSendAddr(	BMP_ADD	,	WRITE	);
+	I2CSendByte(	AC1	);
+	I2CSendAddr(	BMP_ADD	,	READ	);
+	COEF.ac1	=	I2CGetByte(	SACK	)	<< 8;	
+	COEF.ac1	|=	I2CGetByte(	NACK	);
+	I2CSendAddr(	BMP_ADD	,	WRITE	);
+	I2CSendByte(	AC2	);
+	I2CSendAddr(	BMP_ADD	,	READ	);
+	COEF.ac2	=	I2CGetByte(	SACK	)	<< 8;	
+	COEF.ac2	|=	I2CGetByte(	NACK	);
+	I2CSendAddr(	BMP_ADD	,	WRITE	);
+	I2CSendByte(	AC3	);
+	I2CSendAddr(	BMP_ADD	,	READ	);
+	COEF.ac3	=	I2CGetByte(	SACK	)	<< 8;	
+	COEF.ac3	|=	I2CGetByte(	NACK	);	
+	I2CSendAddr(	BMP_ADD	,	WRITE	);
+	I2CSendByte(	AC4	);
+	I2CSendAddr(	BMP_ADD	,	READ	);
+	COEF.ac4	=	I2CGetByte(	SACK	)	<< 8;	
+	COEF.ac4	|=	I2CGetByte(	NACK	);
+	I2CSendAddr(	BMP_ADD	,	WRITE	);
+	I2CSendByte(	B1	);
+	I2CSendAddr(	BMP_ADD	,	READ	);
+	COEF.b1	=	I2CGetByte(	SACK	)	<< 8;	
+	COEF.b2	|=	I2CGetByte(	NACK	);
+	I2CSendAddr(	BMP_ADD	,	WRITE	);
+	I2CSendByte(	B2	);
+	I2CSendAddr(	BMP_ADD	,	READ	);
+	COEF.b2	=	I2CGetByte(	SACK	)	<< 8;	
+	COEF.b2	|=	I2CGetByte(	NACK	);
+	I2CSendAddr(	BMP_ADD	,	WRITE	);
+	I2CSendByte(	MB	);
+	I2CSendAddr(	BMP_ADD	,	READ	);
+	COEF.mb	=	I2CGetByte(	SACK	)	<< 8;	
+	COEF.mb	|=	I2CGetByte(	NACK	);
+	I2CSendAddr(	BMP_ADD	,	WRITE	);
+	I2CSendByte(	MC	);
+	I2CSendAddr(	BMP_ADD	,	READ	);
+	COEF.mc	=	I2CGetByte(	SACK	)	<< 8;	
+	COEF.mc	|=	I2CGetByte(	NACK	);
+	I2CSendAddr(	BMP_ADD	,	WRITE	);
+	I2CSendByte(	MD	);
+	I2CSendAddr(	BMP_ADD	,	READ	);
+	COEF.md	=	I2CGetByte(	SACK	)	<< 8;	
+	COEF.md	|=	I2CGetByte(	NACK	);
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
@@ -46,13 +97,14 @@ void	__configuraI2C__	(	void	)
 //---------------------------------------------------------------------------------------------------------------------**/
 void	procesarDato	(	uint8_t	Tipo	)
 {
+	medirBMP();
 	if (	Tipo	==	PRESION_BMP	)
 	{
-		DATOS->Presion	=	(float)bmp180_get_pressure( (uint32_t)LecturaBMP );	/**	@TODO:	Comprobar que el chino no me engaña.	*/
+		DATOS->Presion		=	presion;		/**	@TODO:	Comprobar que el chino no me engaña.	*/
 	}
 	if (	Tipo	==	TEMPERATURA_BMP	)
 	{
-		DATOS->Temperatura;		/**	@TODO:	Rellenar esta fórmula.	*/
+		DATOS->Temperatura	=	temperatura;		/**	@TODO:	Rellenar esta fórmula.	*/
 	}
 }
 /**---------------------------------------------------------------------------------------------------------------------//
@@ -104,68 +156,75 @@ void irRegistro	(	uint8_t	REG	)	//	Acceso al registro REG del sensor.
 //		@ref			Extraido de https://github.com/BoschSensortec/BMP180_driver; referido por la datasheet.		//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-struct bmp180_t * p_bmp180;
-int32_t bmp180_get_pressure(uint32_t v_uncomp_pressure_u32)
+uint16_t obtenerDato	(	uint8_t	REG	)
 {
-	int32_t v_pressure_s32, v_x1_s32, v_x2_s32,
-	v_x3_s32, v_b3_s32, v_b6_s32 = 0;
-	uint32_t v_b4_u32, v_b7_u32 = 0;
+	uint16_t	RETVAL;
+	I2CSendAddr(	BMP_ADD	,	WRITE	);
+	I2CSendByte(	REG	);
+	I2CSendAddr(	BMP_ADD	,	READ	);
+	RETVAL	=	I2CGetByte(	SACK	)	<< 8;	
+	RETVAL	|=	I2CGetByte(	NACK	);
+	return RETVAL;
+}
+void	mandaDato	(	uint8_t	REG	,	uint8_t	DATA)
+{
+	I2CSendAddr(	BMP_ADD	,	WRITE	);
+	I2CSendByte(	REG	);
+	I2CSendByte(	DATA	);
+}
 
-		v_b6_s32 = p_bmp180->param_b5 - 4000;
-	/*****calculate B3************/
-	v_x1_s32 = (v_b6_s32*v_b6_s32)
-	>> 12;
-	v_x1_s32 *= p_bmp180->calib_param.b2;
-	v_x1_s32 >>= 11;
-
-	v_x2_s32 = (p_bmp180->calib_param.ac2*v_b6_s32);
-	v_x2_s32 >>= 11;
-
-	v_x3_s32 = v_x1_s32 + v_x2_s32;
-	v_b3_s32 = (((((int32_t)p_bmp180->calib_param.ac1)*4 + v_x3_s32) <<
-	p_bmp180->oversamp_setting) + 2)
-	>> 2;
-
-	/*****calculate B4************/
-	v_x1_s32 = (p_bmp180->calib_param.ac3 * v_b6_s32)
-	>> 13;
-	v_x2_s32 = (p_bmp180->calib_param.b1 *
-	((v_b6_s32 * v_b6_s32) >> 12))
-	>> 16;
-	v_x3_s32 = ((v_x1_s32 + v_x2_s32) + 2)
-	>> 2;
-	v_b4_u32 = (p_bmp180->calib_param.ac4 * (uint32_t)
-	(v_x3_s32 + 32768)) >> 15;
-
-	v_b7_u32 = ((uint32_t)(v_uncomp_pressure_u32 - v_b3_s32) *
-	(50000 >> p_bmp180->oversamp_setting));
-	if (v_b7_u32 < 0x80000000) {
-		if (v_b4_u32 != 0)
-			v_pressure_s32 =
-			(v_b7_u32
-			<< 1) / v_b4_u32;
-		 else
-			return 0;
-	} else {
-		if (v_b4_u32 != 0)
-			v_pressure_s32 = (v_b7_u32 / v_b4_u32)
-			<< 1;
-		else
-			return 0;
+void medirBMP()
+{
+	int i;
+	long	UT, UP , X1 , X2 , X3 , B3 , B5 , B6 , T , p;
+	unsigned long B4, B7;
+	mandaDato		(	0xF4	,	0x2E	);
+	//Espera 4.7ms.
+	for ( i = 0; i < 1000; i++)
+	{
+		I2Cdelay();
 	}
-
-		v_x1_s32 = v_pressure_s32
-		>> 8;
-		v_x1_s32 *= v_x1_s32;
-		v_x1_s32 =
-		(v_x1_s32 * 3038)
-		>> 16;
-		v_x2_s32 = (v_pressure_s32 * -7357)
-		>> 16;
-		/*pressure in Pa*/
-		v_pressure_s32 += (v_x1_s32 + v_x2_s32 + 3791)
-		>> 4;
-	return v_pressure_s32;
+	//Espera activa corta!
+	UT = obtenerDato	(	0xF6);
+	mandaDato		(	0xF4	,	0x34	);
+	//Esperar 4.7ms.
+		for ( i = 0; i < 1000; i++)
+	{
+		I2Cdelay();
+	}
+	//Espera activa corta!
+	UP = obtenerDato	(	0xF6);
+	X1 = ((UT - COEF.ac6) * COEF.ac5) >> 15;
+	X2 = (COEF.mc << 11) / (X1 + COEF.md);
+	B5 = X1 + X2;
+	T  = ((B5 + 8) >> 4);
+	
+	B6 = B5 - 4000;
+	X1 = (COEF.b2 * ((B6 * B6) >> 12)) >> 11;
+	X2 = (COEF.ac2 * B6) >> 11;
+	X3 = X1 + X2;
+	B3 = ((COEF.ac1 * 4 + X3) + 2) / 4;
+	X1 = (COEF.ac3 * B6) >> 13;
+	X2 = (COEF.b1 * ((B6 * B6) >> 12)) >> 16;
+	X3 = (X1 + X2 + 2) >> 2;
+	B4 = COEF.ac4 * (unsigned long)((X3 + 32768) >> 15);
+	B7 = ((unsigned long)UP - B3)*(50000);
+	
+	if	(B7 < 0x80000000)
+	{
+		p = (B7*2) / B4;
+	}
+	else
+	{
+		p = (B7 / B4) * 2;
+	}
+	
+	X1 = (p >> 8)*(p >> 8);
+	X1 = (X1 * 3038 >> 16);
+	X2 = (-7357 * p) >> 16;
+	p = p + ((X1 + X2 + 3791) >> 4);
+	temperatura 	= (float)T;
+	presion		= (float)p;	
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																															//

@@ -140,7 +140,7 @@ static void 	_subBurst()
 			ACTUALIZADOR->LDRrev 	= 	0;			//	Aviso que no he medido aún.
 			LPC_ADC->ADCR			&=	~ADC_START;	//	Ojito que es modo ráfaga, no hay start.
 			LPC_ADC->ADCR			|=	BRUST_PIN;	//	Ráfaga.
-			pedirDatoReg(	REGISTRO_PRESION	);		//	Leo el sensor de presión atmosférica.
+			medirBMP();							//	Leo el sensor de presión atmosférica.
 		}
 	}	
 }

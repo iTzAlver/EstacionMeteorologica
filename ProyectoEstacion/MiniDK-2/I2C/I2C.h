@@ -25,49 +25,20 @@
 #include	"Systemsymbols.h"
 #endif
 
-/**	@REMARK:	Yo no he hecho esto, sólo lo he adaptado.	*/
-#define	u8	uint8_t
-#define	u16	uint16_t
-#define	s8	int8_t
-#define	s32	int32_t
-#define	s16	int16_t
-
-#define BMP180_WR_FUNC_PTR s8 (*bus_write)(u8, u8, u8 *, u8)
-
-#define BMP180_RD_FUNC_PTR s8 (*bus_read)(u8, u8, u8 *, u8)
-
-struct bmp180_calib_param_t {
-	s16 ac1;/**<calibration ac1 data*/
-	s16 ac2;/**<calibration ac2 data*/
-	s16 ac3;/**<calibration ac3 data*/
-	u16 ac4;/**<calibration ac4 data*/
-	u16 ac5;/**<calibration ac5 data*/
-	u16 ac6;/**<calibration ac6 data*/
-	s16 b1;/**<calibration b1 data*/
-	s16 b2;/**<calibration b2 data*/
-	s16 mb;/**<calibration mb data*/
-	s16 mc;/**<calibration mc data*/
-	s16 md;/**<calibration md data*/
-};
-struct bmp180_t {
-	struct bmp180_calib_param_t calib_param;/**<calibration data*/
-	u8 mode;/**<power mode*/
-	u8 chip_id; /**<chip id*/
-	u8 ml_version;/**<ml version*/
-	u8 al_version;/**<al version*/
-	u8 dev_addr;/**<device address*/
-	u8 sensortype;/**< sensor type*/
-
-	s32 param_b5;/**<pram*/
-	s32 number_of_samples;/**<sample calculation*/
-	s16 oversamp_setting;/**<oversampling setting*/
-	s16 sw_oversamp;/**<software oversampling*/
-
-	BMP180_WR_FUNC_PTR;/**< bus write function pointer*/
-	BMP180_RD_FUNC_PTR;/**< bus read function pointer*/
-	void (*delay_msec)(uint32_t);/**< delay function pointer*/
-};
-/**	@ENDREMARK:	Yo no he hecho esto, sólo lo he adaptado.	*/
+typedef struct 
+{
+	uint16_t ac1;
+	uint16_t ac2;
+	uint16_t ac3;
+	int16_t  ac4;
+	int16_t  ac5;
+	int16_t  ac6;
+	uint16_t b1;
+	uint16_t b2;
+	uint16_t mb;
+	uint16_t mc;
+	uint16_t md;
+}BMP_t;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes al protocolo I2C.								//
@@ -78,7 +49,8 @@ struct bmp180_t {
 #define	DELAYTOTAL	100		//	Ajustar.
 
 #define	BMP_ADD			119		//	Cambia en función del sensor.
-#define	REGISTRO_PRESION	0xF6		//	Acceso al registro de presión.
+#define	REGISTRO_PRESION		0xF6		//	Acceso al registro de presión.
+#define	REGISTRO_TEMPERATURA	0x
 
 #define	READ				1
 #define	WRITE			0
@@ -87,6 +59,17 @@ struct bmp180_t {
 #define	PRESION_BMP		10
 #define	TEMPERATURA_BMP	11
 
+#define	AC1				0xAA
+#define	AC2				0xAC
+#define	AC3				0xAE
+#define	AC4				0xB0
+#define	AC5				0xB2
+#define	AC6				0xB4
+#define	B1				0xB6
+#define	B2				0xB8
+#define	MB				0xBA
+#define	MC				0xBC
+#define	MD				0xBE
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcdef		Estas son las funciones correspondientes al protocolo I2C.		      					//
@@ -96,14 +79,18 @@ void	__configuraI2C__	(	void	)		;
 void	irRegistro		(	uint8_t	REG)	;
 void	pedirDato			(	void	)		;
 void pedirDatoReg		(	uint8_t	REG)	;
+void __calibraBMP		(	void	)		;
+int32_t calculaTemperatura(	void	)		;
+int32_t calculaPresion	(	void	)		;
+void	medirBMP			(	void	)		;
+uint16_t obtenerDato	(	uint8_t	REG	);
+void	mandaDato			(	uint8_t	REG	,	uint8_t	DATA);
 
-void I2CDelay		(	void	)			;
+void I2Cdelay		(	void	)			;
 void I2CSendAddr	(	uint8_t	addr	,	uint8_t	rw	);
 void	I2CSendByte	(	uint8_t	byte)	;
 uint8_t I2CGetByte	(	uint8_t	ACK)		;
 void I2CSendStop	(	void	)			;
-
-int32_t bmp180_get_pressure(	uint32_t	dato	);
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//
