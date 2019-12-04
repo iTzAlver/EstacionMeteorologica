@@ -49,6 +49,8 @@ void	__configuraUART0__(	void	)				//	Configurado a 9600 baudios.
 	LPC_UART0->LCR			|=	 (1	<<	DLP);		//	Desactivo el latch.
 	
 	LPC_UART0->IER			=	(1	<<	2);	//	Activo interrupción por RX lleno.
+	strcpy(UART0_BUFFER_TX	,	"Hola\n\r");
+	UART0_MandaBufferTx();
 	
 	NVIC_EnableIRQ(	UART0_IRQn	);		//	Activo el manejador de la interrupción.
 }

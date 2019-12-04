@@ -36,7 +36,7 @@ void __configuraPrograma__(	void	)
 {
 	__iniciaVariables__		();
 //	crearSeno				();
-	__configuraWEB__		();
+//	__configuraWEB__		();
 	__configuraSysTick__	();
 	__configuraTimer0__		();
 	__configuraLDR__		();
@@ -52,8 +52,8 @@ void __configuraPrograma__(	void	)
 	__configuraDAC__		();
 	__configuraOW__		();
 	__configuraAnemometro__	();
-	__configuraUART0__		();
-	__configuraUART3__		();
+//	__configuraUART0__		();
+//	__configuraUART3__		();
 	__configuraI2C__		();
 #ifndef	DEBUG
  	TouchPanel_Calibrate();
@@ -75,9 +75,9 @@ void __iniciaVariables__()
 	DATOS->Presion 		= 1.55;
 	DATOS->VelViento 		= 3.33;
 	DATOS->IndiceUV 		= 1.20;
-	DATOS->Lugar.Altura		= 500.12;	
-	DATOS->Lugar.Longitud	= 74.33;	
-	DATOS->Lugar.Latitud	= 74.33;
+	DATOS->Lugar.Altura		= 0.0;	
+	DATOS->Lugar.Longitud	= 0.0;	
+	DATOS->Lugar.Latitud	= 0.0;
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//

@@ -24,7 +24,7 @@
 uint8_t					TIM0_ticks 	= 	0;
 uint8_t					Timer2_MODO	=	MODO_SALIDA;
 uint32_t					CAP11_BUFF	=	0;
-uint8_t					contadorLUZ	=	0;
+uint16_t					contadorLUZ	=	0;
 extern 	uint8_t			__brilloAuto;			//	Esta línea no me gusta nada, pero era mucho mejor que complicarlo.
 extern	uint8_t			YaPuedesMedir;
 extern	Counters_t	*	COUNTERS;
@@ -94,11 +94,11 @@ void __configuraTimer0__()
 void SysTick_Handler()
 {
 	timer_tick();
-	if (contadorLUZ	>=	100 && !__brilloAuto)									//	Si pasan 10s y el brillo automático está desactivado...
+	if (contadorLUZ	>=	SYST_BRILLO && !__brilloAuto)									//	Si pasan 60s y el brillo automático está desactivado...
 	{
 		modificaPulso(	PWM6	,	MODO_CICLO	,	0	,	none	,	none	,	none	);	//	Apago la pantalla.
 	}
-	if (contadorLUZ 	<	250)
+	if (contadorLUZ 	<	SYST_BRILLO)
 	{
 		contadorLUZ++;
 	}
@@ -120,6 +120,7 @@ static void	_subAnemoTempe()
 		LPC_TIM1->CCR	|=	CCR_MASCARA_EN;		//	Genera interrupción el CAP1.0, ojo que se mata así en el timer 1.
 		LPC_TIM1->CCR	|=	OW_CCR_MASCARA_EN;		//	Genera interrupción el CAP1.1, ojo que se mata así en el timer 1.
 		mideTemperatura();						//	Le digo a la placa que lanze la señal de request.
+		medirBMP();							//	Leo el sensor de presión atmosférica.
 		if ( !ACTUALIZADOR->AnemometroRev && YaPuedesMedir)		//	Si el actualizador está a 0 (Es decir, no hay datos capturados).
 		{
 			DATOS->VelViento = 0;				//	No hay viento.
@@ -140,7 +141,6 @@ static void 	_subBurst()
 			ACTUALIZADOR->LDRrev 	= 	0;			//	Aviso que no he medido aún.
 			LPC_ADC->ADCR			&=	~ADC_START;	//	Ojito que es modo ráfaga, no hay start.
 			LPC_ADC->ADCR			|=	BRUST_PIN;	//	Ráfaga.
-			medirBMP();							//	Leo el sensor de presión atmosférica.
 		}
 	}	
 }

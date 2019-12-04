@@ -7,3 +7,4 @@
 .\obj\i2clib.o: ..\Startup\core_cmFunc.h
 .\obj\i2clib.o: ..\Startup\system_LPC17xx.h
 .\obj\i2clib.o: ..\Principal\Systemsymbols.h
+.\obj\i2clib.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h

@@ -32,7 +32,7 @@ extern State_t		*	ESTADO;
 extern misDatos_t	*	DATOS;
 extern actualizador_t	*	ACTUALIZADOR;
 extern uint8_t 			OWEjecutameExterno;
-extern uint8_t			contadorLUZ;
+extern uint16_t			contadorLUZ;
 uint8_t	pressedTouchPanel;
 uint8_t	__brilloAuto = 0;
 uint8_t	Aux8;

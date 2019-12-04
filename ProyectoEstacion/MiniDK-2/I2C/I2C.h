@@ -24,31 +24,35 @@
 #define	SYSTEMSYMBOLS
 #include	"Systemsymbols.h"
 #endif
+#ifndef	MATH
+#define	MATH
+#include	<math.h>
+#endif
 
 typedef struct 
 {
-	uint16_t ac1;
-	uint16_t ac2;
-	uint16_t ac3;
-	int16_t  ac4;
-	int16_t  ac5;
-	int16_t  ac6;
-	uint16_t b1;
-	uint16_t b2;
-	uint16_t mb;
-	uint16_t mc;
-	uint16_t md;
+	short ac1;
+	short ac2;
+	short ac3;
+	unsigned short  ac4;
+	unsigned short  ac5;
+	unsigned short  ac6;
+	short b1;
+	short b2;
+	short mb;
+	short mc;
+	short md;
 }BMP_t;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes al protocolo I2C.								//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-#define 	SDA 0 				//	Pin 0
-#define 	SCL 1 				//	Pin 1
-#define	DELAYTOTAL	100		//	Ajustar.
+#define 	SDA 					0 		//	Pin 0
+#define 	SCL 					1 		//	Pin 1
+#define	DELAYTOTAL			100		//	Ajustar.
 
-#define	BMP_ADD			119		//	Cambia en función del sensor.
+#define	BMP_ADD				119		//	Cambia en función del sensor.
 #define	REGISTRO_PRESION		0xF6		//	Acceso al registro de presión.
 #define	REGISTRO_TEMPERATURA	0x
 

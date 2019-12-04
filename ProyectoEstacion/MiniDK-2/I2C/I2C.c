@@ -39,6 +39,17 @@ float presion;
 void	__configuraI2C__	(	void	)
 {
 	__calibraBMP();
+//	COEF.ac1 = 408;
+//	COEF.ac2 = -72;
+//	COEF.ac3 = -14383;
+//	COEF.ac4 = 32741;
+//	COEF.ac5 = 32757;
+//	COEF.ac6 = 23153;
+//	COEF.b1 = 6190;
+//	COEF.b2 = 4;
+//	COEF.mb = -32768;
+//	COEF.mc = -8711;
+//	COEF.md = 2868;
 }
 void __calibraBMP()
 {
@@ -47,41 +58,61 @@ void __calibraBMP()
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.ac1	=	I2CGetByte(	SACK	)	<< 8;	
 	COEF.ac1	|=	I2CGetByte(	NACK	);
+	
 	I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	AC2	);
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.ac2	=	I2CGetByte(	SACK	)	<< 8;	
 	COEF.ac2	|=	I2CGetByte(	NACK	);
+	
 	I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	AC3	);
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.ac3	=	I2CGetByte(	SACK	)	<< 8;	
-	COEF.ac3	|=	I2CGetByte(	NACK	);	
+	COEF.ac3	|=	I2CGetByte(	NACK	);
+	
 	I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	AC4	);
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.ac4	=	I2CGetByte(	SACK	)	<< 8;	
 	COEF.ac4	|=	I2CGetByte(	NACK	);
+	
+	I2CSendAddr(	BMP_ADD	,	WRITE	);
+	I2CSendByte(	AC5	);
+	I2CSendAddr(	BMP_ADD	,	READ	);
+	COEF.ac5	=	I2CGetByte(	SACK	)	<< 8;	
+	COEF.ac5	|=	I2CGetByte(	NACK	);
+	
+		I2CSendAddr(	BMP_ADD	,	WRITE	);
+	I2CSendByte(	AC6	);
+	I2CSendAddr(	BMP_ADD	,	READ	);
+	COEF.ac6	=	I2CGetByte(	SACK	)	<< 8;	
+	COEF.ac6	|=	I2CGetByte(	NACK	);
+	
 	I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	B1	);
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.b1	=	I2CGetByte(	SACK	)	<< 8;	
 	COEF.b2	|=	I2CGetByte(	NACK	);
+	
 	I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	B2	);
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.b2	=	I2CGetByte(	SACK	)	<< 8;	
 	COEF.b2	|=	I2CGetByte(	NACK	);
+	
 	I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	MB	);
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.mb	=	I2CGetByte(	SACK	)	<< 8;	
 	COEF.mb	|=	I2CGetByte(	NACK	);
+	
 	I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	MC	);
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.mc	=	I2CGetByte(	SACK	)	<< 8;	
 	COEF.mc	|=	I2CGetByte(	NACK	);
+	
 	I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	MD	);
 	I2CSendAddr(	BMP_ADD	,	READ	);
@@ -97,15 +128,9 @@ void __calibraBMP()
 //---------------------------------------------------------------------------------------------------------------------**/
 void	procesarDato	(	uint8_t	Tipo	)
 {
-	medirBMP();
-	if (	Tipo	==	PRESION_BMP	)
-	{
-		DATOS->Presion		=	presion;		/**	@TODO:	Comprobar que el chino no me engaña.	*/
-	}
-	if (	Tipo	==	TEMPERATURA_BMP	)
-	{
-		DATOS->Temperatura	=	temperatura;		/**	@TODO:	Rellenar esta fórmula.	*/
-	}
+	DATOS->Presion		=	presion;		/**	@TODO:	Comprobar que el chino no me engaña.	*/
+	DATOS->Temperatura	=	temperatura;		/**	@TODO:	Rellenar esta fórmula.	*/
+	DATOS->Lugar.Altura =    (float)44330*( 1 - pow((presion / 101325 ),(1/5.255)));
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
@@ -186,16 +211,18 @@ void medirBMP()
 	}
 	//Espera activa corta!
 	UT = obtenerDato	(	0xF6);
+//	UT = 27898;
 	mandaDato		(	0xF4	,	0x34	);
 	//Esperar 4.7ms.
-		for ( i = 0; i < 1000; i++)
+	for ( i = 0; i < 1000; i++)
 	{
 		I2Cdelay();
 	}
 	//Espera activa corta!
 	UP = obtenerDato	(	0xF6);
-	X1 = ((UT - COEF.ac6) * COEF.ac5) >> 15;
-	X2 = (COEF.mc << 11) / (X1 + COEF.md);
+//	UP = 23843;
+	X1 = (UT - COEF.ac6) * COEF.ac5 / 32768;
+	X2 = COEF.mc * 2048 / (X1 + COEF.md);
 	B5 = X1 + X2;
 	T  = ((B5 + 8) >> 4);
 	
@@ -207,7 +234,7 @@ void medirBMP()
 	X1 = (COEF.ac3 * B6) >> 13;
 	X2 = (COEF.b1 * ((B6 * B6) >> 12)) >> 16;
 	X3 = (X1 + X2 + 2) >> 2;
-	B4 = COEF.ac4 * (unsigned long)((X3 + 32768) >> 15);
+	B4 = COEF.ac4 * (unsigned long)(X3 + 32768) >> 15;
 	B7 = ((unsigned long)UP - B3)*(50000);
 	
 	if	(B7 < 0x80000000)
@@ -223,11 +250,12 @@ void medirBMP()
 	X1 = (X1 * 3038 >> 16);
 	X2 = (-7357 * p) >> 16;
 	p = p + ((X1 + X2 + 3791) >> 4);
-	temperatura 	= (float)T;
-	presion		= (float)p;	
+	temperatura 	= (float)(28.0/107.0)*((float)T)/10;
+	presion		= (float)(936.0/1150.0)*(float)p;
+	procesarDato(0);
 }
 /**---------------------------------------------------------------------------------------------------------------------//
-//																								//																															//
+//																								//
 //		@end		ENDFILE.																			//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
