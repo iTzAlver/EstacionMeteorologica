@@ -62,13 +62,13 @@
 //		@private		Estos son los símbolos correspondientes a los timers.									//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-#define	FREQ_OVERFLOW_SYSTICK	10							//	Frecuencia en Hz de overflow o fin de cuenta del SysTick.
+#define	FREQ_OVERFLOW_SYSTICK	10						//	Frecuencia en Hz de overflow o fin de cuenta del SysTick. (Tsyst = 100ms)
 #define	ENABLEBIT_SYST			0x1
 #define	FCPUBIT_SYST			0x4
 #define	ENABLEINTBIT_SYST		0x2
 #define	MASCARA_CTRL_SYSTICK	FCPUBIT_SYST | ENABLEBIT_SYST | ENABLEINTBIT_SYST
 #define	SYSTICK_COUNTFLAG		0x1 << 16
-#define	SYST_BRILLO			600
+#define	SYST_BRILLO			60*FREQ_OVERFLOW_SYSTICK
 //	Para cada timer.
 #define	ACTIVAR_TIMER			0x1
 #define	RESET_TIMER_TCR		0x2

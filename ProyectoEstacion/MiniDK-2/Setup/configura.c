@@ -36,7 +36,7 @@ void __configuraPrograma__(	void	)
 {
 	__iniciaVariables__		();
 //	crearSeno				();
-//	__configuraWEB__		();
+	__configuraWEB__		();
 	__configuraSysTick__	();
 	__configuraTimer0__		();
 	__configuraLDR__		();

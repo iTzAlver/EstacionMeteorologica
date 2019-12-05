@@ -24,7 +24,9 @@
 uint8_t					TIM0_ticks 	= 	0;
 uint8_t					Timer2_MODO	=	MODO_SALIDA;
 uint32_t					CAP11_BUFF	=	0;
+
 uint16_t					contadorLUZ	=	0;
+
 extern 	uint8_t			__brilloAuto;			//	Esta línea no me gusta nada, pero era mucho mejor que complicarlo.
 extern	uint8_t			YaPuedesMedir;
 extern	Counters_t	*	COUNTERS;
@@ -93,6 +95,7 @@ void __configuraTimer0__()
 //---------------------------------------------------------------------------------------------------------------------**/
 void SysTick_Handler()
 {
+
 	timer_tick();
 	if (contadorLUZ	>=	SYST_BRILLO && !__brilloAuto)									//	Si pasan 60s y el brillo automático está desactivado...
 	{
@@ -167,20 +170,10 @@ void TIMER1_IRQHandler()
 	{
 		mideAnemometro();
 	}
-	if	(SWART	&	CAP11_IR)
-	{
-		StateChartOneWire(	LPC_TIM1->CR1 - CAP11_BUFF	);
-		CAP11_BUFF	=	LPC_TIM1->CR1;
-	}
 	if	(SWART	&	MR1_IR)
 	{
 		desactivarDAC();
 	}
-	if	(SWART	&	MR2_IR)
-	{
-		StateChartOneWire(0);
-	}
-	
 	LPC_TIM1->IR	=	LPC_TIM1->IR;			//	No pierdo nada en asegurarme que se cierra el timer.			
 }
 /**---------------------------------------------------------------------------------------------------------------------//
@@ -192,7 +185,7 @@ void TIMER1_IRQHandler()
 //---------------------------------------------------------------------------------------------------------------------**/
 void TIMER2_IRQHandler()
 {
-
+	
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
@@ -201,6 +194,11 @@ void TIMER2_IRQHandler()
 //		@brief		Manejador de la interrupción del DAC. Hecha para generar el audio.						//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
+//	USADO POR EL MONOHILO.
+void	TIMER3_IRQHandler()
+{
+	
+}
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

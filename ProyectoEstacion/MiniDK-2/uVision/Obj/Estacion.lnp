@@ -17,7 +17,7 @@
 ".\obj\system_lpc17xx.o"
 ".\obj\configura.o"
 ".\obj\timers.o"
-".\obj\onewire.o"
+".\obj\onewirev2.o"
 ".\obj\ldr.o"
 ".\obj\ufono.o"
 ".\obj\uva30a.o"

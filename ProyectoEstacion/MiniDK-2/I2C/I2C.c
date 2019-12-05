@@ -58,66 +58,77 @@ void __calibraBMP()
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.ac1	=	I2CGetByte(	SACK	)	<< 8;	
 	COEF.ac1	|=	I2CGetByte(	NACK	);
+	I2CSendStop();
 	
 	I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	AC2	);
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.ac2	=	I2CGetByte(	SACK	)	<< 8;	
 	COEF.ac2	|=	I2CGetByte(	NACK	);
+	I2CSendStop();
 	
 	I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	AC3	);
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.ac3	=	I2CGetByte(	SACK	)	<< 8;	
 	COEF.ac3	|=	I2CGetByte(	NACK	);
+	I2CSendStop();
 	
 	I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	AC4	);
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.ac4	=	I2CGetByte(	SACK	)	<< 8;	
 	COEF.ac4	|=	I2CGetByte(	NACK	);
+	I2CSendStop();
 	
 	I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	AC5	);
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.ac5	=	I2CGetByte(	SACK	)	<< 8;	
 	COEF.ac5	|=	I2CGetByte(	NACK	);
+	I2CSendStop();
 	
 		I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	AC6	);
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.ac6	=	I2CGetByte(	SACK	)	<< 8;	
 	COEF.ac6	|=	I2CGetByte(	NACK	);
+	I2CSendStop();
 	
 	I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	B1	);
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.b1	=	I2CGetByte(	SACK	)	<< 8;	
 	COEF.b2	|=	I2CGetByte(	NACK	);
+	I2CSendStop();
 	
 	I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	B2	);
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.b2	=	I2CGetByte(	SACK	)	<< 8;	
 	COEF.b2	|=	I2CGetByte(	NACK	);
+	I2CSendStop();
 	
 	I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	MB	);
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.mb	=	I2CGetByte(	SACK	)	<< 8;	
 	COEF.mb	|=	I2CGetByte(	NACK	);
+	I2CSendStop();
 	
 	I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	MC	);
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.mc	=	I2CGetByte(	SACK	)	<< 8;	
 	COEF.mc	|=	I2CGetByte(	NACK	);
+	I2CSendStop();
 	
 	I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	MD	);
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	COEF.md	=	I2CGetByte(	SACK	)	<< 8;	
 	COEF.md	|=	I2CGetByte(	NACK	);
+	I2CSendStop();
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
@@ -189,6 +200,7 @@ uint16_t obtenerDato	(	uint8_t	REG	)
 	I2CSendAddr(	BMP_ADD	,	READ	);
 	RETVAL	=	I2CGetByte(	SACK	)	<< 8;	
 	RETVAL	|=	I2CGetByte(	NACK	);
+	I2CSendStop();
 	return RETVAL;
 }
 void	mandaDato	(	uint8_t	REG	,	uint8_t	DATA)
@@ -196,6 +208,7 @@ void	mandaDato	(	uint8_t	REG	,	uint8_t	DATA)
 	I2CSendAddr(	BMP_ADD	,	WRITE	);
 	I2CSendByte(	REG	);
 	I2CSendByte(	DATA	);
+	I2CSendStop();
 }
 
 void medirBMP()
@@ -250,8 +263,10 @@ void medirBMP()
 	X1 = (X1 * 3038 >> 16);
 	X2 = (-7357 * p) >> 16;
 	p = p + ((X1 + X2 + 3791) >> 4);
-	temperatura 	= (float)(28.0/107.0)*((float)T)/10;
-	presion		= (float)(936.0/1150.0)*(float)p;
+//	temperatura 	= (float)(28.0/107.0)*((float)T)/10;
+//	presion		= (float)(936.0/1150.0)*(float)p;
+	temperatura 	= ((float)T)/10;
+	presion		= (float)p;
 	procesarDato(0);
 }
 /**---------------------------------------------------------------------------------------------------------------------//
