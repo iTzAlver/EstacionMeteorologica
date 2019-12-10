@@ -39,7 +39,9 @@ uint8_t 	compruebaRespuesta	(	void	);
 uint8_t	leerByte			(	void	);
 
 extern misDatos_t *	DATOS;
-
+uint32_t	TRAZA	[100];
+uint32_t  HOLD		[100];
+int p;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@function		__configuraOW__()																//
@@ -64,6 +66,7 @@ void	mideTemperatura	(	void	)
 	int i;
 	uint64_t Rx		=	0;
 	uint8_t Checksum	=	0;
+	p = 0;
 	/**	@state:	Estado en el que mandamos la señal de petición.	*/
 	CONFIG_OUT;
 	CLEAR_PIN;
@@ -78,7 +81,7 @@ void	mideTemperatura	(	void	)
 	/**	@state:	Leemos los 5 bytes...						*/
 	for(i = 0; i < 5; i++)
 	{
-		Rx |= (leerByte() << i*8);
+		Rx |= (leerByte() << (4-i)*8);
 	}
 	/**	@state:	Procesamos Rx.								*/
 	for(i = 0; i < 32; i++)
@@ -154,6 +157,7 @@ uint8_t	compruebaRespuesta()
 												//	Mantente en espera.
 	}
 	Tiempo = reiniciaCuenta();						//	Me quedo con cuentos us han pasado.
+	TRAZA[p++] = Tiempo;	//!!!!!
 	if (	Tiempo < 5 || Tiempo > 45)					//	Si el márgen de pull down del sensor no es el adecuado.
 	{
 		return 1;									//	Exit error code.
@@ -165,6 +169,7 @@ uint8_t	compruebaRespuesta()
 		
 	}
 	Tiempo = reiniciaCuenta();
+	TRAZA[p++] = Tiempo;	//!!!!!
 	if (	Tiempo < 70 || Tiempo > 90)					//	Si el tiempo de pull down no es adecuado...
 	{
 		return 1;									//	Exit error code.
@@ -175,6 +180,7 @@ uint8_t	compruebaRespuesta()
 		
 	}
 	Tiempo = reiniciaCuenta();
+	TRAZA[p++] = Tiempo;	//!!!!!
 	if (	Tiempo < 70 || Tiempo > 90)					//	Si el tiempo de pull down no es adecuado...
 	{
 		return 1;									//	Exit error code.
@@ -201,7 +207,8 @@ uint8_t	leerByte(	void	)
 													//	Mantenernos esperando.
 		}
 		Tiempo = reiniciaCuenta();
-		if (Tiempo < 40 || Tiempo > 60)					//	Si el tiempo está fuera del margen.
+		TRAZA[p++] = Tiempo;	//!!!!!
+		if (Tiempo < 40 || Tiempo > 67)					//	Si el tiempo está fuera del margen.
 		{
 			return 0;									//	Error al leer el bit, retorna 0.
 		}
@@ -212,9 +219,10 @@ uint8_t	leerByte(	void	)
 													//	Mantenernos esperando.
 		}
 		Tiempo = reiniciaCuenta();
+		TRAZA[p++] = Tiempo;	//!!!!!
 		if (	Tiempo > 60 && Tiempo < 80)					//	Si entra en el márgen del 1...
 		{
-			Rx	|=	1 << i;							//	Añadimos un 1.
+			Rx	|=	1 << (7-i);							//	Añadimos un 1.
 		}
 		else
 		{
