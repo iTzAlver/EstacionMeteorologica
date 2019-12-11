@@ -95,6 +95,7 @@ screenZone_t	zona_35	=	{ 	MAXIMOX*0		,	MAXIMOY*0.8	, 	MAXIMOX		, 	MAXIMOY*0.2	, 
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__mainLoop__(	void	)
 {
+	/**	@LOOP:	Primera parte del programa.	*/
 	alimentaWDT();
 	checkTouchPanel();
 	if ( __brilloAuto && (SysTick->CTRL & 0x10000))	//	Cada 100 ms si el brillo auto está activado.
@@ -102,6 +103,7 @@ void	__mainLoop__(	void	)
 		goto_LUT( DATOS->Brillo, BRILLO2CICLO_LDR , none , &Aux8 , none , none);
 		modificaPulso(	PWM6	,	MODO_CICLO	,	Aux8	,	none	,	none	,	none	);	/**	@TODO: Cambiar por brillo automático. */
 	}
+	/**	@LOOP:	Máquina de estados LCD.		*/
 	switch(	ESTADO->CHART	)
 	{
 		case	PANTALLA_INICIO:
@@ -428,7 +430,7 @@ int8_t zoneNewPressed(screenZone_t * zone)
 		   return 0;
       }
 	 /**	@MOD:	Esto lo he añadido yo	*/
-	 if (contadorLUZ	>=	100)	//	Si se ha activado el apagar pantalla...
+	 if (contadorLUZ	>=	SYST_BRILLO)	//	Si se ha activado el apagar pantalla...
 	 {
 		 modificaPulso		(	PWM6,	MODO_CICLO	,	50	,	none	,	none			,	none			);	//	La enciendo como si hubiese habido un reset.
 	 }

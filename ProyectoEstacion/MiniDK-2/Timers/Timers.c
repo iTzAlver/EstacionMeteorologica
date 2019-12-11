@@ -99,7 +99,7 @@ void SysTick_Handler()
 	timer_tick();
 	if (contadorLUZ	>=	SYST_BRILLO && !__brilloAuto)									//	Si pasan 60s y el brillo automático está desactivado...
 	{
-		modificaPulso(	PWM6	,	MODO_CICLO	,	0	,	none	,	none	,	none	);	//	Apago la pantalla.
+		modificaPulso(	PWM6	,	MODO_CICLO	,	1	,	none	,	none	,	none	);	//	Apago la pantalla.
 	}
 	if (contadorLUZ 	<	SYST_BRILLO)
 	{

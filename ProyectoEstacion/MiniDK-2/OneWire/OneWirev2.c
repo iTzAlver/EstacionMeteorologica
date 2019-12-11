@@ -42,6 +42,7 @@ extern misDatos_t *	DATOS;
 uint32_t	TRAZA	[100];
 uint32_t  HOLD		[100];
 int p;
+uint8_t Checksum;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@function		__configuraOW__()																//
@@ -64,9 +65,11 @@ void __configuraOW__()
 void	mideTemperatura	(	void	)
 {
 	int i;
-	uint64_t Rx		=	0;
-	uint8_t Checksum	=	0;
+	uint8_t Check[4];
+	uint32_t Rx				=	0;
+	uint8_t Checksum_Recibido	=	0;
 	p = 0;
+	Checksum = 0;
 	/**	@state:	Estado en el que mandamos la señal de petición.	*/
 	CONFIG_OUT;
 	CLEAR_PIN;
@@ -79,22 +82,22 @@ void	mideTemperatura	(	void	)
 		return;
 	}
 	/**	@state:	Leemos los 5 bytes...						*/
-	for(i = 0; i < 5; i++)
+	for(i = 0; i < 4; i++)
 	{
-		Rx |= (leerByte() << (4-i)*8);
+		Rx |= (leerByte() << (3-i)*8);
 	}
-	/**	@state:	Procesamos Rx.								*/
-	for(i = 0; i < 32; i++)
+	Checksum_Recibido = leerByte();
+	/**	@state:	Procesamos Rx.		*/
+	Check[0]	=	((Rx & (0xFF000000)) >> 6*4);
+	Check[1]	=	((Rx & (0x00FF0000)) >> 4*4);
+	Check[2]	=	((Rx & (0x0000FF00)) >> 2*4);
+	Check[3]	=	((Rx & (0x000000FF)) >> 0*4);
+	Checksum = Check[0] + Check[1] + Check[2] + Check[3] ;
+	
+	if( Checksum == Checksum_Recibido )
 	{
-		if(	Rx & (1 << (i+8)))
-		{
-			Checksum ++;
-		}
-	}
-	if( Checksum == (Rx & 0xFF) )
-	{
-		DATOS->Humedad 	= (float)((Rx >> 24) & 0xFF);
-		DATOS->Temperatura 	= (float)((Rx >> 16) & 0xFF);
+		DATOS->Humedad 	= (float)(((Rx >> 16) & 0xFFFF)/10.0);
+		DATOS->Temperatura 	= (float)(((Rx >> 00) & 0xFFFF)/10.0);
 	}
 }
 /**---------------------------------------------------------------------------------------------------------------------//
