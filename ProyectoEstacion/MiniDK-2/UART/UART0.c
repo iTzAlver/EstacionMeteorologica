@@ -34,7 +34,7 @@ static char * _ptx	=	UART0_BUFFER_TX;
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__configuraUART0__(	void	)				//	Configurado a 9600 baudios.
 {
-	LPC_SC->PCONP			=	(1	<<	3);	//	Activo el bit de power para la UART0.
+	LPC_SC->PCONP			|=	(1	<<	3);	//	Activo el bit de power para la UART0.
 	LPC_PINCON->PINSEL0		|=	(1	<<	4)	//	P0.2	como TXD0.
 						|	(1	<<	6);	// 	P0.2 como RXD0.
 	

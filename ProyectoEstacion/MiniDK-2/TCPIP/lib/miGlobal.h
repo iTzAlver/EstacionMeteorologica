@@ -1,4 +1,4 @@
-#define	MI_CASA
+#define	BIBLIOTECA_ARRIBA
 
 
 #ifdef	BIBLIOTECA_ARRIBA

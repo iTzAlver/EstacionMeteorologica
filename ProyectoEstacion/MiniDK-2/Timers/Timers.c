@@ -27,6 +27,9 @@ uint32_t					CAP11_BUFF	=	0;
 
 uint16_t					contadorLUZ	=	0;
 
+float					TEMP_min		=	TEMP_MIN;
+float					TEMP_max		=	TEMP_MAX;
+
 extern 	uint8_t			__brilloAuto;			//	Esta línea no me gusta nada, pero era mucho mejor que complicarlo.
 extern	uint8_t			YaPuedesMedir;
 extern	Counters_t	*	COUNTERS;
@@ -57,12 +60,12 @@ void __configuraSysTick__()
 void __configuraTimer0__()
 {
 	LPC_SC->PCONP |= 	0x1 << 22 | 0x1 << 23 | 1 << 16;	//	Todos los timer.
-	LPC_SC->PCONP 	|= 	TIMER0_BIT;				//	Activo el módulo del timer 0.
-	LPC_TIM0->MCR 	=	TIMER0_MCR_MASK;			//	Activo el ISR y reseteo TC.
-	LPC_TIM0->PR	=	0;						//	Sin prescaler.
-	LPC_TIM0->TCR	|=	ACTIVAR_TIMER;				//	Activo el timer.
-	LPC_TIM0->MR0	=	Ftick * Ts0 - 1;			//	Cargo para que interrumpa cada 0.5s.
-	NVIC_SetPriority(	TIMER0_IRQn	,	1	);	//	Para que el ADC interrumpa bien.
+	LPC_SC->PCONP 	|= 	TIMER0_BIT;					//	Activo el módulo del timer 0.
+	LPC_TIM0->MCR 	=	TIMER0_MCR_MASK;				//	Activo el ISR y reseteo TC.
+	LPC_TIM0->PR	=	0;							//	Sin prescaler.
+	LPC_TIM0->TCR	|=	ACTIVAR_TIMER;					//	Activo el timer.
+	LPC_TIM0->MR0	=	Ftick * Ts0 - 1;				//	Cargo para que interrumpa cada 0.5s.
+	NVIC_SetPriority(	TIMER0_IRQn	,	1	);		//	Para que el ADC interrumpa bien.
 	NVIC_EnableIRQ(	TIMER0_IRQn	);
 }
 /**---------------------------------------------------------------------------------------------------------------------//
@@ -153,7 +156,7 @@ void TIMER0_IRQHandler(	void	)
 	_subAnemoTempe();
 	_subBurst();
 	TIM0_ticks++;
-	modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Temperatura - TEMP_MIN)/(TEMP_MAX - TEMP_MIN))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+	modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Temperatura - TEMP_min)/(TEMP_max - TEMP_min))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//

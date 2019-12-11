@@ -34,7 +34,7 @@ static char * _ptx	=	UART3_BUFFER_TX;
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__configuraUART3__(	void	)				//	Configurado a 9600 baudios.
 {
-	LPC_SC->PCONP			=	(1	<<	25);	//	Activo el bit de power para la UART3.
+	LPC_SC->PCONP			|=	(1	<<	25);	//	Activo el bit de power para la UART3.
 	LPC_PINCON->PINSEL0		|=	(1	<<	4)	//	P0.2	como TXD3.
 						|	(1	<<	6);	// 	P0.2 como RXD3.
 	

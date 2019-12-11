@@ -56,8 +56,9 @@ void __configuraPrograma__(	void	)
 //	__configuraUART3__		();
 	__configuraI2C__		();
 #ifndef	DEBUG
- 	TouchPanel_Calibrate();
+// 	TouchPanel_Calibrate();
 #endif
+	LCD_Clear(Black);
 	ESTADO->CHART = PANTALLA_INICIO;
 }
 /**---------------------------------------------------------------------------------------------------------------------//
