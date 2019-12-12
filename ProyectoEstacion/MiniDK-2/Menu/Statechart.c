@@ -326,18 +326,25 @@ void	__pintaMedidas1__(	void	)
 	squareButton(	&zona_2	,	"->"				,	Yellow	,	Green	);
 	squareButton(	&zona_3	,	"<-"				,	Yellow	,	Green	);
 	squareButton(	&zona_17	,	"MEDIDAS ACTUALES"	,	Yellow	,	Green	);
-	sprintf((char*)buffer,"X:%.02f Y:%.02f Z:%.02f",	DATOS->Lugar.Longitud	,	DATOS->Lugar.Latitud	,	DATOS->Lugar.Altura);
-	squareButton(	&zona_18	,	(char *)buffer		,	Yellow	,	Green	);
+	if	(	ACTUALIZADOR->TempRev	)
+	{
+		sprintf((char*)buffer,"Altura: %.02f m.",	DATOS->Lugar.Altura);
+		squareButton(	&zona_18	,	(char *)buffer		,	Yellow	,	Green	);
+	}
 	squareButton(	&zona_19	,	"Temperatura:"		,	Yellow	,	Green	);
 	squareButton(	&zona_20	,	"Humedad:"		,	Yellow	,	Green	);
 	squareButton(	&zona_21	,	"Presion:"		,	Yellow	,	Green	);
 	squareButton(	&zona_22	,	"Incide UV:"		,	Yellow	,	Green	);
-	sprintf((char*)buffer,"%.02f dC",	DATOS->Temperatura);
-	squareButton(	&zona_23	,	(char *)buffer		,	Yellow	,	Green	);
-	sprintf((char*)buffer,"%.02f %%",	DATOS->Humedad);
-	squareButton(	&zona_24	,	(char *)buffer		,	Yellow	,	Green	);
-	sprintf((char*)buffer,"%.02f Pas.",DATOS->Presion);
-	squareButton(	&zona_25	,	(char *)buffer		,	Yellow	,	Green	);
+	if	(	ACTUALIZADOR->TempRev	)
+	{
+		sprintf((char*)buffer,"%.02f dC",	DATOS->Temperatura);
+		squareButton(	&zona_23	,	(char *)buffer		,	Yellow	,	Green	);
+		sprintf((char*)buffer,"%.02f %%",	DATOS->Humedad);
+		squareButton(	&zona_24	,	(char *)buffer		,	Yellow	,	Green	);
+		sprintf((char*)buffer,"%.02f mBar.",DATOS->Presion);
+		squareButton(	&zona_25	,	(char *)buffer		,	Yellow	,	Green	);
+		ACTUALIZADOR->TempRev = 0;
+	}
 	sprintf((char*)buffer,"%.02f UVs",	DATOS->IndiceUV);
 	squareButton(	&zona_26	,	(char *)buffer		,	Yellow	,	Green	);
 }
@@ -365,8 +372,8 @@ void	__pintaMedidas2__(	void	)
 	}
 	squareButton(	&zona_34	,	"Claridad:"		,	Yellow	,	Green	);
 	sprintf((char*)buffer,"%.02f LUX",	DATOS->Brillo);
-	squareButton(	&zona_35	,	CLEAR_BUFFER		,	Yellow	,	Green	);
 	squareButton(	&zona_35	,	(char *)buffer		,	Yellow	,	Green	);
+
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//

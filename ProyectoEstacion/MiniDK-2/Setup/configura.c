@@ -76,9 +76,9 @@ void __iniciaVariables__()
 	DATOS->Presion 		= 1.55;
 	DATOS->VelViento 		= 3.33;
 	DATOS->IndiceUV 		= 1.20;
-	DATOS->Lugar.Altura		= 0.0;	
-	DATOS->Lugar.Longitud	= 0.0;	
-	DATOS->Lugar.Latitud	= 0.0;
+	DATOS->Lugar.Altura		= 2.1;	
+	DATOS->Lugar.Longitud	= 2.1;	
+	DATOS->Lugar.Latitud	= 2.1;
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//

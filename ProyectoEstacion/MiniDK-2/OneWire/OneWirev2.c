@@ -38,7 +38,7 @@ void _delayUS				(	uint16_t usegundos	);
 uint8_t 	compruebaRespuesta	(	void	);
 uint8_t	leerByte			(	void	);
 
-extern misDatos_t *	DATOS;
+extern misDatos_t 		*	DATOS;
 uint32_t	TRAZA	[100];
 uint32_t  HOLD		[100];
 int p;

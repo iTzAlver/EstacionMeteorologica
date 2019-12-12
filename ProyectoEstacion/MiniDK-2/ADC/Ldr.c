@@ -69,6 +69,7 @@ void	ADC_IRQHandler()
 			BUFFER_UVA			=	(float)((LPC_ADC->ADDR2&(0xFFF0)) >> 4);								//	Empieza a partir del bit 4.
 			DATOS->IndiceUV		= 	(float)VINDICE*VREF*BUFFER_UVA/(float)(0xFFF);							//	Traducción del código al índice.
 			ACTUALIZADOR->LDRrev	=	1;																//	Digo que el LDR ha sido leido.
+			//ACTUALIZADOR->LDR		=	1;																//	Señal al LCD para que muestre por pantalla.
 			break;
 		case 0:
 			AUDIO[contador]	=	(uint8_t)((0xFF) & LPC_ADC->ADDR0 >> (4+4));		//	El ADC es de 12 bits y las muestras de 8 bits, por lo que hay que reducir los 4 LSB.

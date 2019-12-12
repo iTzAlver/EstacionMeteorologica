@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Obj\Estacion.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Obj\Estacion.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Wed Dec 11 13:35:41 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Thu Dec 12 14:06:11 2019
 <BR><P>
 <H3>Maximum Stack Usage =        384 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -489,7 +489,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mainLoop__
 </UL>
 
-<P><STRONG><a name="[6c]"></a>__pintaMedidas2__</STRONG> (Thumb, 252 bytes, Stack size 40 bytes, statechart.o(.text))
+<P><STRONG><a name="[6c]"></a>__pintaMedidas2__</STRONG> (Thumb, 236 bytes, Stack size 40 bytes, statechart.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = __pintaMedidas2__ &rArr; squareButton &rArr; GUI_Text &rArr; PutChar &rArr; LCD_SetPoint
 </UL>
 <BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;squareButton
@@ -499,8 +499,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mainLoop__
 </UL>
 
-<P><STRONG><a name="[6d]"></a>__pintaMedidas1__</STRONG> (Thumb, 692 bytes, Stack size 72 bytes, statechart.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = __pintaMedidas1__ &rArr; squareButton &rArr; GUI_Text &rArr; PutChar &rArr; LCD_SetPoint
+<P><STRONG><a name="[6d]"></a>__pintaMedidas1__</STRONG> (Thumb, 722 bytes, Stack size 40 bytes, statechart.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = __pintaMedidas1__ &rArr; squareButton &rArr; GUI_Text &rArr; PutChar &rArr; LCD_SetPoint
 </UL>
 <BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;squareButton
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
@@ -526,8 +526,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mainLoop__
 </UL>
 
-<P><STRONG><a name="[43]"></a>__mainLoop__</STRONG> (Thumb, 1036 bytes, Stack size 16 bytes, statechart.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = __mainLoop__ &rArr; __pintaMedidas1__ &rArr; squareButton &rArr; GUI_Text &rArr; PutChar &rArr; LCD_SetPoint
+<P><STRONG><a name="[43]"></a>__mainLoop__</STRONG> (Thumb, 1002 bytes, Stack size 16 bytes, statechart.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = __mainLoop__ &rArr; checkTouchPanel &rArr; Read_Ads7846 &rArr; TP_GetAdXY &rArr; Read_Y &rArr; RD_AD &rArr; WR_CMD &rArr; SSP_SendData
 </UL>
 <BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lanzaUFONO
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;goto_LUT
@@ -696,7 +696,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraPrograma__
 </UL>
 
-<P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, timers.o(.text))
+<P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, timers.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = SysTick_Handler &rArr; modificaPulso &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_tick
@@ -1262,7 +1262,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraPrograma__
 </UL>
 
-<P><STRONG><a name="[fa]"></a>procesarDato</STRONG> (Thumb, 86 bytes, Stack size 40 bytes, i2c.o(.text))
+<P><STRONG><a name="[fa]"></a>procesarDato</STRONG> (Thumb, 106 bytes, Stack size 40 bytes, i2c.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = procesarDato &rArr; pow &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
@@ -1318,7 +1318,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;medirBMP
 </UL>
 
-<P><STRONG><a name="[a8]"></a>medirBMP</STRONG> (Thumb, 402 bytes, Stack size 64 bytes, i2c.o(.text))
+<P><STRONG><a name="[a8]"></a>medirBMP</STRONG> (Thumb, 410 bytes, Stack size 64 bytes, i2c.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 328<LI>Call Chain = medirBMP &rArr; procesarDato &rArr; pow &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
@@ -2709,7 +2709,7 @@ Local Symbols
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraSysTick__
 </UL>
 
-<P><STRONG><a name="[a4]"></a>_subAnemoTempe</STRONG> (Thumb, 160 bytes, Stack size 24 bytes, timers.o(.text))
+<P><STRONG><a name="[a4]"></a>_subAnemoTempe</STRONG> (Thumb, 178 bytes, Stack size 24 bytes, timers.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 352<LI>Call Chain = _subAnemoTempe &rArr; medirBMP &rArr; procesarDato &rArr; pow &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mideTemperatura

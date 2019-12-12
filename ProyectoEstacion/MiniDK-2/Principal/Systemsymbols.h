@@ -86,7 +86,7 @@
 #define		Ts0				0.5							//	Tiempo de muestreo en segundos sin prescaler. (Muestras)
 #define		Fs0				(float)1/(float)Ts0				//	Frecuencia de muestreo en Hz. (Muestras)
 #define		CsADC			Fs0							//	Frecuencia de muestreo del LDR.
-#define		CsCAP			20*Fs0						//	Frecuencia de muestreo del UVA.
+#define		CsCAP			5*Fs0						//	Frecuencia de muestreo del UVA.
 
 #define		FsAudio			12000						//	3kHz de audio, Nyquist *= 2,	Yo *= 4.
 #define		TsAudio			(float)1/(float)FsAudio			//	Periodo de muestreo del audio.
@@ -124,19 +124,19 @@ typedef struct {
 }State_t;
 
 typedef struct {
-	__IO float	Longitud;
-	__IO	float	Latitud;
-	__IO	float	Altura;		
+		float	Longitud;
+		float	Latitud;
+		float	Altura;		
 }locat_t;
 
 typedef struct {
-	__IO	float	Temperatura;	//	En grados celsius.
-	__IO	float	Presion;		//	En pascales.
-	__IO	float	Humedad;		//	En	%.
-	__IO	float	IndiceUV;		//	En	UVs.
+		float	Temperatura;	//	En grados celsius.
+		float	Presion;		//	En pascales.
+		float	Humedad;		//	En	%.
+		float	IndiceUV;		//	En	UVs.
 	locat_t	Lugar;		//	Sitio donde el GPS nos posiciona.
-	__IO	float	VelViento;	//	En 	m/s.
-	__IO float	Brillo;		//	En 	LUX.
+		float	VelViento;	//	En 	m/s.
+		float	Brillo;		//	En 	LUX.
 }misDatos_t;
 
 typedef struct {

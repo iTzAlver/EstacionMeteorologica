@@ -100,13 +100,16 @@ void SysTick_Handler()
 {
 
 	timer_tick();
-	if (contadorLUZ	>=	SYST_BRILLO && !__brilloAuto)									//	Si pasan 60s y el brillo automático está desactivado...
-	{
-		modificaPulso(	PWM6	,	MODO_CICLO	,	1	,	none	,	none	,	none	);	//	Apago la pantalla.
-	}
 	if (contadorLUZ 	<	SYST_BRILLO)
 	{
 		contadorLUZ++;
+	}
+	else
+	{
+		if (!__brilloAuto)									//	Si pasan 60s y el brillo automático está desactivado...
+		{
+			modificaPulso(	PWM6	,	MODO_CICLO	,	1	,	none	,	none	,	none	);	//	Apago la pantalla.
+		}
 	}
 }
 /**---------------------------------------------------------------------------------------------------------------------//
@@ -133,6 +136,7 @@ static void	_subAnemoTempe()
 			ACTUALIZADOR->Anemometro = 1;			//	Ya está medido, es 0 m/s.
 		}
 		ACTUALIZADOR->AnemometroRev = 0;			//	Digo que ya he medido.
+		ACTUALIZADOR->TempRev	=	1;
 	}	
 }
 //	Bloque 2:	ADC burst:
