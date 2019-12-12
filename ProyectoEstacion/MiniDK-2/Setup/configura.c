@@ -23,6 +23,7 @@
 #endif
 extern State_t		*	ESTADO;
 extern misDatos_t	*	DATOS;
+extern modificables_t	*	MODIFICABLES;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcion		Esta función configura el programa entero.											//
@@ -79,6 +80,17 @@ void __iniciaVariables__()
 	DATOS->Lugar.Altura		= 2.1;	
 	DATOS->Lugar.Longitud	= 2.1;	
 	DATOS->Lugar.Latitud	= 2.1;
+	
+	MODIFICABLES->Max_servo_t	=	MAXIMO_SERVO;
+	MODIFICABLES->Min_servo_t	= 	MINIMO_SERVO;
+	MODIFICABLES->Max_servo_p	=	MAXIMO_PRESION;
+	MODIFICABLES->Min_servo_p	=	MINIMO_PRESION;
+	MODIFICABLES->Max_temp_alarma = 	50;
+	MODIFICABLES->Min_temp_alarma = 	-10;
+	MODIFICABLES->Max_pres_alarma = 	1000;
+	MODIFICABLES->Min_pres_alarma = 	20;
+	MODIFICABLES->TiempoBrillo 	=	10;
+	MODIFICABLES->Var_medida		=	0;		//	0 la temperatura, 1 la presión.
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//

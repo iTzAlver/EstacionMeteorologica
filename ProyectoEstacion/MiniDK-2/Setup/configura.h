@@ -101,6 +101,9 @@
 #define	ACTIVOS_2_1		0x0200
 #define	ACTIVOS_6_2		0x0020
 #define	ACTIVOS_6_1		0x2000
+
+#define	MAXIMO_PRESION		1000
+#define	MINIMO_PRESION		20
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcdef		Estas son las funciones correspondientes a la configuración.							//

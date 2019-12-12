@@ -27,16 +27,20 @@ uint32_t					CAP11_BUFF	=	0;
 
 uint16_t					contadorLUZ	=	0;
 
-float					TEMP_min		=	TEMP_MIN;
-float					TEMP_max		=	TEMP_MAX;
+#define	MAX_PRES		MODIFICABLES->Max_servo_p
+#define	MAX_TEMP		MODIFICABLES->Max_servo_t
+#define	MIN_PRES		MODIFICABLES->Min_servo_p
+#define	MIN_TEMP		MODIFICABLES->Min_servo_t
 
-extern 	uint8_t			__brilloAuto;			//	Esta línea no me gusta nada, pero era mucho mejor que complicarlo.
+extern 	uint8_t			__brilloAuto;
+extern	uint8_t			__brilloFade;
 extern	uint8_t			YaPuedesMedir;
 extern	Counters_t	*	COUNTERS;
 extern	misDatos_t	*	DATOS;
 extern	actualizador_t	*	ACTUALIZADOR;
 extern	uint8_t		*	AUDIO;
 extern	uint8_t		*	CAPcont;
+extern	modificables_t	*	MODIFICABLES;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@function		__configuraSysTick__()															//
@@ -100,14 +104,16 @@ void SysTick_Handler()
 {
 
 	timer_tick();
-	if (contadorLUZ 	<	SYST_BRILLO)
+	if (contadorLUZ 	<	FREQ_OVERFLOW_SYSTICK * (MODIFICABLES->TiempoBrillo))
 	{
 		contadorLUZ++;
 	}
 	else
 	{
-		if (!__brilloAuto)									//	Si pasan 60s y el brillo automático está desactivado...
+		if (__brilloFade)									//	Si pasan 60s y el brillo automático está desactivado...
 		{
+			__brilloAuto = 0;
+			__brilloFade = 0;
 			modificaPulso(	PWM6	,	MODO_CICLO	,	1	,	none	,	none	,	none	);	//	Apago la pantalla.
 		}
 	}
@@ -160,7 +166,14 @@ void TIMER0_IRQHandler(	void	)
 	_subAnemoTempe();
 	_subBurst();
 	TIM0_ticks++;
-	modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Temperatura - TEMP_min)/(TEMP_max - TEMP_min))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+	if (	!MODIFICABLES->Var_medida	)
+	{
+		modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Temperatura - MIN_TEMP)/(MAX_TEMP - MIN_TEMP))	,	MIN_TEMP	,	MAX_TEMP	);
+	}
+	else
+	{
+		modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Presion - MIN_PRES)/(MAX_PRES - MIN_PRES))	,	MIN_PRES	,	MAX_PRES	);
+	}
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//

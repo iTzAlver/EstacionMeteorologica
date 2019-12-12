@@ -157,6 +157,22 @@ typedef struct {
 	uint32_t Linked;
 	uint32_t CR;
 }LinkedModeDMA_t;
+
+typedef struct {
+	double	Max_servo_t;		//	Done
+	double	Min_servo_t;		//	Done
+	double	Max_servo_p;		//	Done
+	double	Min_servo_p;		//	Done
+	
+	double	Max_temp_alarma;
+	double	Max_pres_alarma;
+	double	Min_temp_alarma;
+	double	Min_pres_alarma;
+	
+	uint8_t	Var_medida;		//	Done
+	uint32_t	TiempoBrillo;		//	Done
+}modificables_t;
+
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//
