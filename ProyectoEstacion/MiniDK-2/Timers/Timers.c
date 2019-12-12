@@ -24,6 +24,7 @@
 uint8_t					TIM0_ticks 	= 	0;
 uint8_t					Timer2_MODO	=	MODO_SALIDA;
 uint32_t					CAP11_BUFF	=	0;
+uint8_t					bloq_flag		=	0;
 
 uint16_t					contadorLUZ	=	0;
 
@@ -106,9 +107,10 @@ void SysTick_Handler()
 	}
 	else
 	{
-		if (!__brilloAuto)									//	Si pasan 60s y el brillo automático está desactivado...
+		if (!__brilloAuto	&&	!bloq_flag)									//	Si pasan 60s y el brillo automático está desactivado...
 		{
 			modificaPulso(	PWM6	,	MODO_CICLO	,	1	,	none	,	none	,	none	);	//	Apago la pantalla.
+			bloq_flag = 1;
 		}
 	}
 }

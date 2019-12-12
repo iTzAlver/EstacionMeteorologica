@@ -33,6 +33,7 @@ extern misDatos_t	*	DATOS;
 extern actualizador_t	*	ACTUALIZADOR;
 extern uint8_t 			OWEjecutameExterno;
 extern uint16_t			contadorLUZ;
+extern uint8_t				bloq_flag;
 uint8_t	pressedTouchPanel;
 uint8_t	__brilloAuto = 0;
 uint8_t	Aux8;
@@ -439,6 +440,7 @@ int8_t zoneNewPressed(screenZone_t * zone)
 	 /**	@MOD:	Esto lo he añadido yo	*/
 	 if (contadorLUZ	>=	SYST_BRILLO)	//	Si se ha activado el apagar pantalla...
 	 {
+		 bloq_flag = 0;
 		 modificaPulso		(	PWM6,	MODO_CICLO	,	50	,	none	,	none			,	none			);	//	La enciendo como si hubiese habido un reset.
 	 }
 	 contadorLUZ = 0;		//	Reseteo el contador de apagar la pantalla.
