@@ -39,7 +39,7 @@ void __configuraPrograma__(	void	)
 //	crearSeno				();
 //	__configuraWEB__		();
 	__configuraSysTick__	();
-//	__configuraTimer0__		();
+	__configuraTimer0__		();
 	__configuraLDR__		();
 	__configuraUVA30A__		();
 	__configuraUFONO__		();

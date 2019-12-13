@@ -98,6 +98,7 @@
 #define	MAX_TEMP		MODIFICABLES.Max_servo_t
 #define	MIN_PRES		MODIFICABLES.Min_servo_p
 #define	MIN_TEMP		MODIFICABLES.Min_servo_t
+
 //	Constantes universales.
 #define		PI				3.141592
 /**---------------------------------------------------------------------------------------------------------------------//

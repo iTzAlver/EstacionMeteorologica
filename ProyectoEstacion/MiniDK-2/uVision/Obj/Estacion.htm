@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Obj\Estacion.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Obj\Estacion.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Fri Dec 13 17:37:30 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Fri Dec 13 20:03:28 2019
 <BR><P>
 <H3>Maximum Stack Usage =        384 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -118,7 +118,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;alimentaWDT
 </UL>
 
-<P><STRONG><a name="[a3]"></a>__configuraAnemometro__</STRONG> (Thumb, 148 bytes, Stack size 0 bytes, anemometro.o(.text))
+<P><STRONG><a name="[a4]"></a>__configuraAnemometro__</STRONG> (Thumb, 148 bytes, Stack size 0 bytes, anemometro.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraPrograma__
 </UL>
 
@@ -294,7 +294,7 @@ Global Symbols
 <P><STRONG><a name="[a]"></a>WDT_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_lpc17xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
 </UL>
-<P><STRONG><a name="[9d]"></a>__configuraUVA30A__</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, uva30a.o(.text))
+<P><STRONG><a name="[9e]"></a>__configuraUVA30A__</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, uva30a.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraPrograma__
 </UL>
 
@@ -328,7 +328,7 @@ Global Symbols
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;procesarComando
 </UL>
 
-<P><STRONG><a name="[9f]"></a>__configuraRTC__</STRONG> (Thumb, 152 bytes, Stack size 8 bytes, rtc.o(.text))
+<P><STRONG><a name="[a0]"></a>__configuraRTC__</STRONG> (Thumb, 152 bytes, Stack size 8 bytes, rtc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __configuraRTC__
 </UL>
 <BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraPrograma__
@@ -480,8 +480,8 @@ Global Symbols
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__pintaAjustes__
 </UL>
 
-<P><STRONG><a name="[6b]"></a>__pintaAjustes__</STRONG> (Thumb, 284 bytes, Stack size 40 bytes, statechart.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = __pintaAjustes__ &rArr; squareButton &rArr; GUI_Text &rArr; PutChar &rArr; LCD_SetPoint
+<P><STRONG><a name="[6b]"></a>__pintaAjustes__</STRONG> (Thumb, 280 bytes, Stack size 16 bytes, statechart.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = __pintaAjustes__ &rArr; squareButton &rArr; GUI_Text &rArr; PutChar &rArr; LCD_SetPoint
 </UL>
 <BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;squareButton
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
@@ -497,8 +497,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__pintaMedidas2__
 </UL>
 
-<P><STRONG><a name="[6d]"></a>__pintaMedidas2__</STRONG> (Thumb, 3160 bytes, Stack size 48 bytes, statechart.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = __pintaMedidas2__ &rArr; squareButton &rArr; GUI_Text &rArr; PutChar &rArr; LCD_SetPoint
+<P><STRONG><a name="[6d]"></a>__pintaMedidas2__</STRONG> (Thumb, 3164 bytes, Stack size 24 bytes, statechart.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = __pintaMedidas2__ &rArr; squareButton &rArr; GUI_Text &rArr; PutChar &rArr; LCD_SetPoint
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2iz
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cfrcmple
@@ -514,8 +514,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mainLoop__
 </UL>
 
-<P><STRONG><a name="[71]"></a>__pintaMedidas1__</STRONG> (Thumb, 408 bytes, Stack size 40 bytes, statechart.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = __pintaMedidas1__ &rArr; squareButton &rArr; GUI_Text &rArr; PutChar &rArr; LCD_SetPoint
+<P><STRONG><a name="[71]"></a>__pintaMedidas1__</STRONG> (Thumb, 404 bytes, Stack size 16 bytes, statechart.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = __pintaMedidas1__ &rArr; squareButton &rArr; GUI_Text &rArr; PutChar &rArr; LCD_SetPoint
 </UL>
 <BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;squareButton
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
@@ -524,7 +524,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mainLoop__
 </UL>
 
-<P><STRONG><a name="[72]"></a>__pintaInicio__</STRONG> (Thumb, 986 bytes, Stack size 8 bytes, statechart.o(.text))
+<P><STRONG><a name="[72]"></a>__pintaInicio__</STRONG> (Thumb, 990 bytes, Stack size 8 bytes, statechart.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = __pintaInicio__ &rArr; squareButton &rArr; GUI_Text &rArr; PutChar &rArr; LCD_SetPoint
 </UL>
 <BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;squareButton
@@ -542,7 +542,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[43]"></a>__mainLoop__</STRONG> (Thumb, 1070 bytes, Stack size 16 bytes, statechart.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = __mainLoop__ &rArr; __pintaMedidas2__ &rArr; squareButton &rArr; GUI_Text &rArr; PutChar &rArr; LCD_SetPoint
+<BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = __mainLoop__ &rArr; checkTouchPanel &rArr; Read_Ads7846 &rArr; TP_GetAdXY &rArr; Read_Y &rArr; RD_AD &rArr; WR_CMD &rArr; SSP_SendData
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lanzaUFONO
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;goto_LUT
@@ -672,26 +672,27 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraPrograma__
 </UL>
 
-<P><STRONG><a name="[42]"></a>__configuraPrograma__</STRONG> (Thumb, 122 bytes, Stack size 16 bytes, configura.o(.text))
+<P><STRONG><a name="[42]"></a>__configuraPrograma__</STRONG> (Thumb, 126 bytes, Stack size 16 bytes, configura.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = __configuraPrograma__ &rArr; modificaPulso &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraUVA30A__
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraUFONO__
-<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraUART3__
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraUART0__
+<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraUVA30A__
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraUFONO__
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraUART3__
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraUART0__
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraTimer0__
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraSysTick__
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraOW__
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraLDR__
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraI2C__
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraDMA__
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraDAC__
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraOW__
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraLDR__
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraI2C__
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraDMA__
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraDAC__
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__iniciaVariables__
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Clear
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraLCD__
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraRTC__
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraRTC__
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modificaPulso
 <LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraPWM__
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraAnemometro__
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraAnemometro__
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -699,13 +700,17 @@ Global Symbols
 <P><STRONG><a name="[9b]"></a>__configuraSysTick__</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, timers.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __configuraSysTick__ &rArr; NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
+<BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
 </UL>
 <BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraPrograma__
 </UL>
 
-<P><STRONG><a name="[a8]"></a>__configuraTimer0__</STRONG> (Thumb, 94 bytes, Stack size 8 bytes, timers.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
+<P><STRONG><a name="[9c]"></a>__configuraTimer0__</STRONG> (Thumb, 94 bytes, Stack size 8 bytes, timers.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = __configuraTimer0__ &rArr; NVIC_SetPriority
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
+</UL>
+<BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraPrograma__
 </UL>
 
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, timers.o(.text))
@@ -744,17 +749,17 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
 </UL>
 <P><STRONG><a name="[b2]"></a>reiniciaCuenta</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, onewirev2.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraOW__
+<BR><BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraOW__
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_delayUS
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;compruebaRespuesta
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;leerByte
 </UL>
 
 <P><STRONG><a name="[b1]"></a>inicializaT3</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, onewirev2.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraOW__
+<BR><BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraOW__
 </UL>
 
-<P><STRONG><a name="[a2]"></a>__configuraOW__</STRONG> (Thumb, 12 bytes, Stack size 4 bytes, onewirev2.o(.text))
+<P><STRONG><a name="[a3]"></a>__configuraOW__</STRONG> (Thumb, 12 bytes, Stack size 4 bytes, onewirev2.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __configuraOW__
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;inicializaT3
@@ -800,7 +805,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_subAnemoTempe
 </UL>
 
-<P><STRONG><a name="[9c]"></a>__configuraLDR__</STRONG> (Thumb, 124 bytes, Stack size 0 bytes, ldr.o(.text))
+<P><STRONG><a name="[9d]"></a>__configuraLDR__</STRONG> (Thumb, 124 bytes, Stack size 0 bytes, ldr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraPrograma__
 </UL>
 
@@ -819,7 +824,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
 </UL>
-<P><STRONG><a name="[9e]"></a>__configuraUFONO__</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, ufono.o(.text))
+<P><STRONG><a name="[9f]"></a>__configuraUFONO__</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, ufono.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraPrograma__
 </UL>
 
@@ -831,7 +836,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_IRQHandler
 </UL>
 
-<P><STRONG><a name="[a1]"></a>__configuraDAC__</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, dac.o(.text))
+<P><STRONG><a name="[a2]"></a>__configuraDAC__</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, dac.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraPrograma__
 </UL>
 
@@ -872,7 +877,7 @@ Global Symbols
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sin
 </UL>
 
-<P><STRONG><a name="[a0]"></a>__configuraDMA__</STRONG> (Thumb, 94 bytes, Stack size 0 bytes, dma.o(.text))
+<P><STRONG><a name="[a1]"></a>__configuraDMA__</STRONG> (Thumb, 94 bytes, Stack size 0 bytes, dma.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraPrograma__
 </UL>
 
@@ -1213,11 +1218,11 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[ef]"></a>UART0_MandaBufferTx</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, uart0.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraUART0__
+<BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraUART0__
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;procesarComando
 </UL>
 
-<P><STRONG><a name="[a4]"></a>__configuraUART0__</STRONG> (Thumb, 126 bytes, Stack size 8 bytes, uart0.o(.text))
+<P><STRONG><a name="[a5]"></a>__configuraUART0__</STRONG> (Thumb, 126 bytes, Stack size 8 bytes, uart0.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __configuraUART0__
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_MandaBufferTx
@@ -1247,7 +1252,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
 </UL>
-<P><STRONG><a name="[a5]"></a>__configuraUART3__</STRONG> (Thumb, 120 bytes, Stack size 0 bytes, uart3.o(.text))
+<P><STRONG><a name="[a6]"></a>__configuraUART3__</STRONG> (Thumb, 120 bytes, Stack size 0 bytes, uart3.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraPrograma__
 </UL>
 
@@ -1270,10 +1275,10 @@ Global Symbols
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2CSendAddr
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2CGetByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraI2C__
+<BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraI2C__
 </UL>
 
-<P><STRONG><a name="[a6]"></a>__configuraI2C__</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, i2c.o(.text))
+<P><STRONG><a name="[a7]"></a>__configuraI2C__</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, i2c.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = __configuraI2C__ &rArr; __calibraBMP &rArr; I2CSendAddr &rArr; I2CSendByte &rArr; pulso_SCL
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__calibraBMP
@@ -1467,7 +1472,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[ee]"></a>strcpy</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, strcpy.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraUART0__
+<BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraUART0__
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;procesarComando
 </UL>
 
@@ -2733,22 +2738,22 @@ Local Symbols
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_X
 </UL>
 
-<P><STRONG><a name="[a7]"></a>NVIC_SetPriority</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, timers.o(.text))
+<P><STRONG><a name="[a8]"></a>NVIC_SetPriority</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, timers.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = NVIC_SetPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraTimer0__
+<BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraTimer0__
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__configuraSysTick__
 </UL>
 
 <P><STRONG><a name="[aa]"></a>_subAnemoTempe</STRONG> (Thumb, 178 bytes, Stack size 24 bytes, timers.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 352<LI>Call Chain = _subAnemoTempe &rArr; medirBMP &rArr; procesarDato &rArr; pow &rArr; __kernel_poly &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cfcmpeq
-<LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+<BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
 <LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mideTemperatura
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;medirBMP
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cfcmpeq
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER0_IRQHandler
 </UL>
@@ -2756,9 +2761,9 @@ Local Symbols
 <P><STRONG><a name="[af]"></a>_subBurst</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, timers.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = _subBurst &rArr; __aeabi_fdiv
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cfcmpeq
-<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<BR>[Calls]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cfcmpeq
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER0_IRQHandler
 </UL>
@@ -3257,11 +3262,11 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[121]"></a>_printf_core</STRONG> (Thumb, 1762 bytes, Stack size 136 bytes, printfa.o(i._printf_core), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
-<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<BR><BR>[Calls]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 <LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
+<LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
 </UL>
 <BR>[Called By]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sprintf
 </UL>

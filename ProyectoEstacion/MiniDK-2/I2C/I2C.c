@@ -213,7 +213,6 @@ void medirBMP()
 	}
 	//Espera activa corta!
 	UT = obtenerDato	(	0xF6);
-//	UT = 27898;
 	mandaDato		(	0xF4	,	0x34	);
 	//Esperar 4.7ms.
 	for ( i = 0; i < 1000; i++)
@@ -222,7 +221,6 @@ void medirBMP()
 	}
 	//Espera activa corta!
 	UP = obtenerDato	(	0xF6);
-//	UP = 23843;
 	X1 = (UT - COEF.ac6) * COEF.ac5 / 32768;
 	X2 = COEF.mc * 2048 / (X1 + COEF.md);
 	B5 = X1 + X2;

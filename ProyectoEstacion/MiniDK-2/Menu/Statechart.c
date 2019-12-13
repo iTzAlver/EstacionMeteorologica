@@ -34,6 +34,7 @@ extern actualizador_t	*	ACTUALIZADOR;
 extern uint8_t 			OWEjecutameExterno;
 extern uint16_t			contadorLUZ;
 modificables_t		MODIFICABLES;
+char buffer[23];
 uint8_t	Modo_energetico=0;
 uint8_t	Modo_brillo=3;
 uint8_t	pressedTouchPanel;
@@ -409,7 +410,6 @@ void	__pintaInicio__(	void	)
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__pintaAjustes__(	void	)
 {
-	uint8_t buffer[23];
 	squareButton(	&zona_1	,	(char *)Clock		,	Yellow	,	Green	);
 	squareButton(	&zona_2	,	"->"				,	Yellow	,	Green	);
 	squareButton(	&zona_3	,	"<-"				,	Yellow	,	Green	);
@@ -438,7 +438,6 @@ void	__pintaAjustes__(	void	)
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__pintaMedidas1__(	void	)
 {
-	uint8_t buffer[23];
 	squareButton(	&zona_1	,	(char *)Clock		,	Yellow	,	Green	);
 	squareButton(	&zona_2	,	"->"				,	Yellow	,	Green	);
 	squareButton(	&zona_3	,	"<-"				,	Yellow	,	Green	);
@@ -479,7 +478,6 @@ void	__pintaMedidas1__(	void	)
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__pintaMedidas2__(	void	)
 {
-	char buffer[23];
 	squareButton(	&zona_1	,	(char *)Clock		,	Yellow	,	Green	);
 	squareButton(	&zona_2	,	"->"				,	Yellow	,	Green	);
 	squareButton(	&zona_3	,	"<-"				,	Yellow	,	Green	);
@@ -492,7 +490,7 @@ void	__pintaMedidas2__(	void	)
 		squareButton(	&zona_34n	,	(char *)buffer		,	Yellow	,	Green	);
 		ACTUALIZADOR->TempRev = 0;
 	}						//	Digo que toca medir.
-	switch	(	(int)(10*(DATOS->Temperatura - MIN_TEMP)/(MAX_TEMP - MIN_TEMP)))
+	switch	(	(int)(10*(DATOS->Temperatura - MIN_TEMP)/(MAX_TEMP - MIN_TEMP))	)
 	{
 		case 0:
 			squareBox( &zona_330 , Black);
@@ -656,7 +654,7 @@ void	__pintaMedidas2__(	void	)
 	};
 	
 	squareButton(	&zona_34	,	"Presion:"		,	Yellow	,	Green	);
-	switch	(	(int)(10*(DATOS->Presion - MIN_PRES)/(MAX_PRES - MIN_PRES)))
+	switch	(	(int)(10*(DATOS->Presion - MIN_PRES)/(MAX_PRES - MIN_PRES))	)
 	{
 		case 0:
 			squareBox( &zona_350 , Black);
