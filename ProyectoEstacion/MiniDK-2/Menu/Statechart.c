@@ -85,9 +85,11 @@ screenZone_t 	zona_28M	=	{ 	MAXIMOX*0.75	,	MAXIMOY*0.35	, 	MAXIMOX*0.25	, 	MAXIM
 screenZone_t 	zona_29M	=	{ 	MAXIMOX*0.75	,	MAXIMOY*0.5	, 	MAXIMOX*0.25	, 	MAXIMOY*0.15	, 	0	};	//	Suma segundos.
 screenZone_t 	zona_30M	=	{ 	MAXIMOX*0.75	,	MAXIMOY*0.65	, 	MAXIMOX*0.25	, 	MAXIMOY*0.15	, 	0	};	//	Suma dia.
 //	ZONAS DE MEDIDAS 2 (VIENTO)
-screenZone_t	zona_32	=	{ 	MAXIMOX*0		,	MAXIMOY*0.2	, 	MAXIMOX		, 	MAXIMOY*0.2	, 	0	};	//	Velocidad del viento.
+screenZone_t	zona_32	=	{ 	MAXIMOX*0		,	MAXIMOY*0.2	, 	MAXIMOX*0.5	, 	MAXIMOY*0.2	, 	0	};	//	Velocidad del viento.
+screenZone_t	zona_32n	=	{ 	MAXIMOX*0.5	,	MAXIMOY*0.2	, 	MAXIMOX*0.5	, 	MAXIMOY*0.2	, 	0	};	//	Velocidad del viento.
 screenZone_t	zona_33	=	{ 	MAXIMOX*0		,	MAXIMOY*0.4	, 	MAXIMOX 		, 	MAXIMOY*0.2	, 	0	};	//	Velocidad del viento.
-screenZone_t	zona_34	=	{ 	MAXIMOX*0		,	MAXIMOY*0.6	, 	MAXIMOX 		, 	MAXIMOY*0.2	, 	0	};	//	Cantidad de brillo.
+screenZone_t	zona_34	=	{ 	MAXIMOX*0		,	MAXIMOY*0.6	, 	MAXIMOX*0.5	, 	MAXIMOY*0.2	, 	0	};	//	Cantidad de brillo.
+screenZone_t	zona_34n	=	{ 	MAXIMOX*0.5	,	MAXIMOY*0.6	, 	MAXIMOX*0.5	, 	MAXIMOY*0.2	, 	0	};	//	Cantidad de brillo.
 screenZone_t	zona_35	=	{ 	MAXIMOX*0		,	MAXIMOY*0.8	, 	MAXIMOX 		, 	MAXIMOY*0.2	, 	0	};	//	Cantidad de brillo.
 //	Display de barras.
 screenZone_t	zona_350	=	{ 	MAXIMOX*0		,	MAXIMOY*0.8	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
@@ -477,12 +479,19 @@ void	__pintaMedidas1__(	void	)
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__pintaMedidas2__(	void	)
 {
+	char buffer[23];
 	squareButton(	&zona_1	,	(char *)Clock		,	Yellow	,	Green	);
 	squareButton(	&zona_2	,	"->"				,	Yellow	,	Green	);
 	squareButton(	&zona_3	,	"<-"				,	Yellow	,	Green	);
 	squareButton(	&zona_32	,	"Temperatura:"		,	Yellow	,	Green	);
-
-	ACTUALIZADOR->TempRev = 0;						//	Digo que toca medir.
+	if	(	ACTUALIZADOR->TempRev	)
+	{
+		sprintf((char*)buffer,"%.02f dC",	DATOS->Temperatura);
+		squareButton(	&zona_32n	,	(char *)buffer		,	Yellow	,	Green	);
+		sprintf((char*)buffer,"%.02f mBar.",	DATOS->Presion);
+		squareButton(	&zona_34n	,	(char *)buffer		,	Yellow	,	Green	);
+		ACTUALIZADOR->TempRev = 0;
+	}						//	Digo que toca medir.
 	switch	(	(int)(10*(DATOS->Temperatura - MIN_TEMP)/(MAX_TEMP - MIN_TEMP)))
 	{
 		case 0:

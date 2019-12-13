@@ -39,17 +39,6 @@ float presion;
 void	__configuraI2C__	(	void	)
 {
 	__calibraBMP();
-//	COEF.ac1 = 408;
-//	COEF.ac2 = -72;
-//	COEF.ac3 = -14383;
-//	COEF.ac4 = 32741;
-//	COEF.ac5 = 32757;
-//	COEF.ac6 = 23153;
-//	COEF.b1 = 6190;
-//	COEF.b2 = 4;
-//	COEF.mb = -32768;
-//	COEF.mc = -8711;
-//	COEF.md = 2868;
 }
 void __calibraBMP()
 {

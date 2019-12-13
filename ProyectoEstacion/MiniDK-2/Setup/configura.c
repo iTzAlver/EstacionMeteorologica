@@ -39,7 +39,7 @@ void __configuraPrograma__(	void	)
 //	crearSeno				();
 //	__configuraWEB__		();
 	__configuraSysTick__	();
-	__configuraTimer0__		();
+//	__configuraTimer0__		();
 	__configuraLDR__		();
 	__configuraUVA30A__		();
 	__configuraUFONO__		();
@@ -53,8 +53,8 @@ void __configuraPrograma__(	void	)
 	__configuraDAC__		();
 	__configuraOW__		();
 	__configuraAnemometro__	();
-//	__configuraUART0__		();
-//	__configuraUART3__		();
+	__configuraUART0__		();
+	__configuraUART3__		();
 	__configuraI2C__		();
 #ifndef	DEBUG
 // 	TouchPanel_Calibrate();
