@@ -33,7 +33,7 @@ extern misDatos_t	*	DATOS;
 extern actualizador_t	*	ACTUALIZADOR;
 extern uint8_t 			OWEjecutameExterno;
 extern uint16_t			contadorLUZ;
-extern modificables_t	*	MODIFICABLES;
+modificables_t		MODIFICABLES;
 uint8_t	Modo_energetico=0;
 uint8_t	Modo_brillo=3;
 uint8_t	pressedTouchPanel;
@@ -481,132 +481,145 @@ void	__pintaMedidas2__(	void	)
 	squareButton(	&zona_2	,	"->"				,	Yellow	,	Green	);
 	squareButton(	&zona_3	,	"<-"				,	Yellow	,	Green	);
 	squareButton(	&zona_32	,	"Temperatura:"		,	Yellow	,	Green	);
-	if (	ACTUALIZADOR->TempRev	)
+
+	ACTUALIZADOR->TempRev = 0;						//	Digo que toca medir.
+	switch	(	(int)(10*(DATOS->Temperatura - MIN_TEMP)/(MAX_TEMP - MIN_TEMP)))
 	{
-		ACTUALIZADOR->TempRev = 0;						//	Digo que toca medir.
-		switch	(	(int)(10*(DATOS->Temperatura - MIN_TEMP)/(MAX_TEMP - MIN_TEMP)))
-		{
-			case 0:
-				squareBox( &zona_330 , Black);
-				squareBox( &zona_331 , Black);
-				squareBox( &zona_332 , Black);
-				squareBox( &zona_333 , Black);
-				squareBox( &zona_334 , Black);
-				squareBox( &zona_335 , Black);
-				squareBox( &zona_336 , Black);
-				squareBox( &zona_337 , Black);
-				squareBox( &zona_338 , Black);
-				squareBox( &zona_339 , Black);
-				break;
-			case 1:
-				squareBox( &zona_330 , White);
-				squareBox( &zona_331 , Black);
-				squareBox( &zona_332 , Black);
-				squareBox( &zona_333 , Black);
-				squareBox( &zona_334 , Black);
-				squareBox( &zona_335 , Black);
-				squareBox( &zona_336 , Black);
-				squareBox( &zona_337 , Black);
-				squareBox( &zona_338 , Black);
-				squareBox( &zona_339 , Black);
-				break;
-			case 2:
-				squareBox( &zona_330 , White);
-				squareBox( &zona_331 , White);
-				squareBox( &zona_332 , Black);
-				squareBox( &zona_333 , Black);
-				squareBox( &zona_334 , Black);
-				squareBox( &zona_335 , Black);
-				squareBox( &zona_336 , Black);
-				squareBox( &zona_337 , Black);
-				squareBox( &zona_338 , Black);
-				squareBox( &zona_339 , Black);
-				break;
-			case 3:
-				squareBox( &zona_330 , Yellow);
-				squareBox( &zona_331 , Yellow);
-				squareBox( &zona_332 , Yellow);
-				squareBox( &zona_333 , Black);
-				squareBox( &zona_334 , Black);
-				squareBox( &zona_335 , Black);
-				squareBox( &zona_336 , Black);
-				squareBox( &zona_337 , Black);
-				squareBox( &zona_338 , Black);
-				squareBox( &zona_339 , Black);
-				break;
-			case 4:
-				squareBox( &zona_330 , Yellow);
-				squareBox( &zona_331 , Yellow);
-				squareBox( &zona_332 , Yellow);
-				squareBox( &zona_333 , Yellow);
-				squareBox( &zona_334 , Black);
-				squareBox( &zona_335 , Black);
-				squareBox( &zona_336 , Black);
-				squareBox( &zona_337 , Black);
-				squareBox( &zona_338 , Black);
-				squareBox( &zona_339 , Black);
-				break;
-			case 5:
-				squareBox( &zona_330 , Blue);
-				squareBox( &zona_331 , Blue);
-				squareBox( &zona_332 , Blue);
-				squareBox( &zona_333 , Blue);
-				squareBox( &zona_334 , Blue);
-				squareBox( &zona_335 , Black);
-				squareBox( &zona_336 , Black);
-				squareBox( &zona_337 , Black);
-				squareBox( &zona_338 , Black);
-				squareBox( &zona_339 , Black);
-				break;
-			case 6:
-				squareBox( &zona_330 , Blue);
-				squareBox( &zona_331 , Blue);
-				squareBox( &zona_332 , Blue);
-				squareBox( &zona_333 , Blue);
-				squareBox( &zona_334 , Blue);
-				squareBox( &zona_335 , Blue);
-				squareBox( &zona_336 , Black);
-				squareBox( &zona_337 , Black);
-				squareBox( &zona_338 , Black);
-				squareBox( &zona_339 , Black);
-				break;
-			case 7:
-				squareBox( &zona_330 , Green);
-				squareBox( &zona_331 , Green);
-				squareBox( &zona_332 , Green);
-				squareBox( &zona_333 , Green);
-				squareBox( &zona_334 , Green);
-				squareBox( &zona_335 , Green);
-				squareBox( &zona_336 , Green);
-				squareBox( &zona_337 , Black);
-				squareBox( &zona_338 , Black);
-				squareBox( &zona_339 , Black);
-				break;
-			case 8:
-				squareBox( &zona_330 , Green);
-				squareBox( &zona_331 , Green);
-				squareBox( &zona_332 , Green);
-				squareBox( &zona_333 , Green);
-				squareBox( &zona_334 , Green);
-				squareBox( &zona_335 , Green);
-				squareBox( &zona_336 , Green);
-				squareBox( &zona_337 , Green);
-				squareBox( &zona_338 , Black);
-				squareBox( &zona_339 , Black);
-				break;
-			case 9:
-				squareBox( &zona_330 , Red);
-				squareBox( &zona_331 , Red);
-				squareBox( &zona_332 , Red);
-				squareBox( &zona_333 , Red);
-				squareBox( &zona_334 , Red);
-				squareBox( &zona_335 , Red);
-				squareBox( &zona_336 , Red);
-				squareBox( &zona_337 , Red);
-				squareBox( &zona_338 , Red);
-				squareBox( &zona_339 , Black);
-				break;
-			case 10:
+		case 0:
+			squareBox( &zona_330 , Black);
+			squareBox( &zona_331 , Black);
+			squareBox( &zona_332 , Black);
+			squareBox( &zona_333 , Black);
+			squareBox( &zona_334 , Black);
+			squareBox( &zona_335 , Black);
+			squareBox( &zona_336 , Black);
+			squareBox( &zona_337 , Black);
+			squareBox( &zona_338 , Black);
+			squareBox( &zona_339 , Black);
+			break;
+		case 1:
+			squareBox( &zona_330 , White);
+			squareBox( &zona_331 , Black);
+			squareBox( &zona_332 , Black);
+			squareBox( &zona_333 , Black);
+			squareBox( &zona_334 , Black);
+			squareBox( &zona_335 , Black);
+			squareBox( &zona_336 , Black);
+			squareBox( &zona_337 , Black);
+			squareBox( &zona_338 , Black);
+			squareBox( &zona_339 , Black);
+			break;
+		case 2:
+			squareBox( &zona_330 , White);
+			squareBox( &zona_331 , White);
+			squareBox( &zona_332 , Black);
+			squareBox( &zona_333 , Black);
+			squareBox( &zona_334 , Black);
+			squareBox( &zona_335 , Black);
+			squareBox( &zona_336 , Black);
+			squareBox( &zona_337 , Black);
+			squareBox( &zona_338 , Black);
+			squareBox( &zona_339 , Black);
+			break;
+		case 3:
+			squareBox( &zona_330 , Yellow);
+			squareBox( &zona_331 , Yellow);
+			squareBox( &zona_332 , Yellow);
+			squareBox( &zona_333 , Black);
+			squareBox( &zona_334 , Black);
+			squareBox( &zona_335 , Black);
+			squareBox( &zona_336 , Black);
+			squareBox( &zona_337 , Black);
+			squareBox( &zona_338 , Black);
+			squareBox( &zona_339 , Black);
+			break;
+		case 4:
+			squareBox( &zona_330 , Yellow);
+			squareBox( &zona_331 , Yellow);
+			squareBox( &zona_332 , Yellow);
+			squareBox( &zona_333 , Yellow);
+			squareBox( &zona_334 , Black);
+			squareBox( &zona_335 , Black);
+			squareBox( &zona_336 , Black);
+			squareBox( &zona_337 , Black);
+			squareBox( &zona_338 , Black);
+			squareBox( &zona_339 , Black);
+			break;
+		case 5:
+			squareBox( &zona_330 , Blue);
+			squareBox( &zona_331 , Blue);
+			squareBox( &zona_332 , Blue);
+			squareBox( &zona_333 , Blue);
+			squareBox( &zona_334 , Blue);
+			squareBox( &zona_335 , Black);
+			squareBox( &zona_336 , Black);
+			squareBox( &zona_337 , Black);
+			squareBox( &zona_338 , Black);
+			squareBox( &zona_339 , Black);
+			break;
+		case 6:
+			squareBox( &zona_330 , Blue);
+			squareBox( &zona_331 , Blue);
+			squareBox( &zona_332 , Blue);
+			squareBox( &zona_333 , Blue);
+			squareBox( &zona_334 , Blue);
+			squareBox( &zona_335 , Blue);
+			squareBox( &zona_336 , Black);
+			squareBox( &zona_337 , Black);
+			squareBox( &zona_338 , Black);
+			squareBox( &zona_339 , Black);
+			break;
+		case 7:
+			squareBox( &zona_330 , Green);
+			squareBox( &zona_331 , Green);
+			squareBox( &zona_332 , Green);
+			squareBox( &zona_333 , Green);
+			squareBox( &zona_334 , Green);
+			squareBox( &zona_335 , Green);
+			squareBox( &zona_336 , Green);
+			squareBox( &zona_337 , Black);
+			squareBox( &zona_338 , Black);
+			squareBox( &zona_339 , Black);
+			break;
+		case 8:
+			squareBox( &zona_330 , Green);
+			squareBox( &zona_331 , Green);
+			squareBox( &zona_332 , Green);
+			squareBox( &zona_333 , Green);
+			squareBox( &zona_334 , Green);
+			squareBox( &zona_335 , Green);
+			squareBox( &zona_336 , Green);
+			squareBox( &zona_337 , Green);
+			squareBox( &zona_338 , Black);
+			squareBox( &zona_339 , Black);
+			break;
+		case 9:
+			squareBox( &zona_330 , Red);
+			squareBox( &zona_331 , Red);
+			squareBox( &zona_332 , Red);
+			squareBox( &zona_333 , Red);
+			squareBox( &zona_334 , Red);
+			squareBox( &zona_335 , Red);
+			squareBox( &zona_336 , Red);
+			squareBox( &zona_337 , Red);
+			squareBox( &zona_338 , Red);
+			squareBox( &zona_339 , Black);
+			break;
+		case 10:
+			squareBox( &zona_330 , Red);
+			squareBox( &zona_331 , Red);
+			squareBox( &zona_332 , Red);
+			squareBox( &zona_333 , Red);
+			squareBox( &zona_334 , Red);
+			squareBox( &zona_335 , Red);
+			squareBox( &zona_336 , Red);
+			squareBox( &zona_337 , Red);
+			squareBox( &zona_338 , Red);
+			squareBox( &zona_339 , Red);
+			break;
+		default:
+			if ( DATOS->Temperatura > MIN_TEMP)
+			{
 				squareBox( &zona_330 , Red);
 				squareBox( &zona_331 , Red);
 				squareBox( &zona_332 , Red);
@@ -617,36 +630,21 @@ void	__pintaMedidas2__(	void	)
 				squareBox( &zona_337 , Red);
 				squareBox( &zona_338 , Red);
 				squareBox( &zona_339 , Red);
-				break;
-			default:
-				if ( DATOS->Temperatura > MIN_TEMP)
-				{
-					squareBox( &zona_330 , Red);
-					squareBox( &zona_331 , Red);
-					squareBox( &zona_332 , Red);
-					squareBox( &zona_333 , Red);
-					squareBox( &zona_334 , Red);
-					squareBox( &zona_335 , Red);
-					squareBox( &zona_336 , Red);
-					squareBox( &zona_337 , Red);
-					squareBox( &zona_338 , Red);
-					squareBox( &zona_339 , Red);
-				}
-				if ( DATOS->Temperatura < MIN_TEMP)
-				{
-					squareBox( &zona_330 , Black);
-					squareBox( &zona_331 , Black);
-					squareBox( &zona_332 , Black);
-					squareBox( &zona_333 , Black);
-					squareBox( &zona_334 , Black);
-					squareBox( &zona_335 , Black);
-					squareBox( &zona_336 , Black);
-					squareBox( &zona_337 , Black);
-					squareBox( &zona_338 , Black);
-					squareBox( &zona_339 , Black);
-				}
-		};
-	}
+			}
+			if ( DATOS->Temperatura < MIN_TEMP)
+			{
+				squareBox( &zona_330 , Black);
+				squareBox( &zona_331 , Black);
+				squareBox( &zona_332 , Black);
+				squareBox( &zona_333 , Black);
+				squareBox( &zona_334 , Black);
+				squareBox( &zona_335 , Black);
+				squareBox( &zona_336 , Black);
+				squareBox( &zona_337 , Black);
+				squareBox( &zona_338 , Black);
+				squareBox( &zona_339 , Black);
+			}
+	};
 	
 	squareButton(	&zona_34	,	"Presion:"		,	Yellow	,	Green	);
 	switch	(	(int)(10*(DATOS->Presion - MIN_PRES)/(MAX_PRES - MIN_PRES)))
@@ -889,7 +887,7 @@ int8_t zoneNewPressed(screenZone_t * zone)
 		   return 0;
       }
 	 /**	@MOD:	Esto lo he añadido yo	*/
-	 if (contadorLUZ	>=	(FREQ_OVERFLOW_SYSTICK * MODIFICABLES->TiempoBrillo))	//	Si se ha activado el apagar pantalla...
+	 if (contadorLUZ	>=	(FREQ_OVERFLOW_SYSTICK * MODIFICABLES.TiempoBrillo))	//	Si se ha activado el apagar pantalla...
 	 {
 		modificaPulso		(	PWM6,	MODO_CICLO	,	60	,	none	,	none			,	none			);	//	La enciendo como si hubiese habido un reset.
 		Modo_brillo = 3;

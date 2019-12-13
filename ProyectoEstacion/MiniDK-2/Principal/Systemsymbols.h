@@ -94,10 +94,10 @@
 #define		MUESTRAS_AUDIO		DURACION_AUDIO*FsAudio			//	Muestras en los 2 segundos de audio.
 
 
-#define	MAX_PRES		MODIFICABLES->Max_servo_p
-#define	MAX_TEMP		MODIFICABLES->Max_servo_t
-#define	MIN_PRES		MODIFICABLES->Min_servo_p
-#define	MIN_TEMP		MODIFICABLES->Min_servo_t
+#define	MAX_PRES		MODIFICABLES.Max_servo_p
+#define	MAX_TEMP		MODIFICABLES.Max_servo_t
+#define	MIN_PRES		MODIFICABLES.Min_servo_p
+#define	MIN_TEMP		MODIFICABLES.Min_servo_t
 //	Constantes universales.
 #define		PI				3.141592
 /**---------------------------------------------------------------------------------------------------------------------//
@@ -164,15 +164,10 @@ typedef struct {
 }LinkedModeDMA_t;
 
 typedef struct {
-	double	Max_servo_t;		//	Done
-	double	Min_servo_t;		//	Done
-	double	Max_servo_p;		//	Done
-	double	Min_servo_p;		//	Done
-	
-	double	Max_temp_alarma;
-	double	Max_pres_alarma;
-	double	Min_temp_alarma;
-	double	Min_pres_alarma;
+	float	Max_servo_t;		//	Done
+	float	Min_servo_t;		//	Done
+	float	Max_servo_p;		//	Done
+	float	Min_servo_p;		//	Done
 	
 	uint8_t	Var_medida;		//	Done
 	uint32_t	TiempoBrillo;		//	Done

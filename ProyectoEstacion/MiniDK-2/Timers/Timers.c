@@ -35,7 +35,7 @@ extern	misDatos_t	*	DATOS;
 extern	actualizador_t	*	ACTUALIZADOR;
 extern	uint8_t		*	AUDIO;
 extern	uint8_t		*	CAPcont;
-extern	modificables_t	*	MODIFICABLES;
+extern	modificables_t	MODIFICABLES;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@function		__configuraSysTick__()															//
@@ -99,7 +99,7 @@ void SysTick_Handler()
 {
 
 	timer_tick();
-	if (contadorLUZ 	<	FREQ_OVERFLOW_SYSTICK * (MODIFICABLES->TiempoBrillo))
+	if (contadorLUZ 	<	FREQ_OVERFLOW_SYSTICK * (MODIFICABLES.TiempoBrillo))
 	{
 		contadorLUZ++;
 	}
@@ -161,7 +161,7 @@ void TIMER0_IRQHandler(	void	)
 	_subAnemoTempe();
 	_subBurst();
 	TIM0_ticks++;
-	if (	!MODIFICABLES->Var_medida	)
+	if (	!MODIFICABLES.Var_medida	)
 	{
 		modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Temperatura - MIN_TEMP)/(MAX_TEMP - MIN_TEMP))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
 	}
