@@ -118,6 +118,7 @@ void	__pintaMedidas2__	(	void	);
 void squareButton		( screenZone_t *	zone		, char * 		text	, uint16_t 	textColor	, uint16_t 	lineColor);
 void checkTouchPanel	(	void	);
 int8_t zoneNewPressed	(screenZone_t * zone		);
+void squareBox			( screenZone_t *	zone		,	uint16_t	color);
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

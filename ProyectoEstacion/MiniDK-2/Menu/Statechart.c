@@ -89,6 +89,28 @@ screenZone_t	zona_32	=	{ 	MAXIMOX*0		,	MAXIMOY*0.2	, 	MAXIMOX		, 	MAXIMOY*0.2	, 
 screenZone_t	zona_33	=	{ 	MAXIMOX*0		,	MAXIMOY*0.4	, 	MAXIMOX 		, 	MAXIMOY*0.2	, 	0	};	//	Velocidad del viento.
 screenZone_t	zona_34	=	{ 	MAXIMOX*0		,	MAXIMOY*0.6	, 	MAXIMOX 		, 	MAXIMOY*0.2	, 	0	};	//	Cantidad de brillo.
 screenZone_t	zona_35	=	{ 	MAXIMOX*0		,	MAXIMOY*0.8	, 	MAXIMOX 		, 	MAXIMOY*0.2	, 	0	};	//	Cantidad de brillo.
+//	Display de barras.
+screenZone_t	zona_350	=	{ 	MAXIMOX*0		,	MAXIMOY*0.8	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+screenZone_t	zona_351	=	{ 	MAXIMOX*0.1	,	MAXIMOY*0.8	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+screenZone_t	zona_352	=	{ 	MAXIMOX*0.2	,	MAXIMOY*0.8	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+screenZone_t	zona_353	=	{ 	MAXIMOX*0.3	,	MAXIMOY*0.8	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+screenZone_t	zona_354	=	{ 	MAXIMOX*0.4	,	MAXIMOY*0.8	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+screenZone_t	zona_355	=	{ 	MAXIMOX*0.5	,	MAXIMOY*0.8	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+screenZone_t	zona_356	=	{ 	MAXIMOX*0.6	,	MAXIMOY*0.8	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+screenZone_t	zona_357	=	{ 	MAXIMOX*0.7	,	MAXIMOY*0.8	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+screenZone_t	zona_358	=	{ 	MAXIMOX*0.8	,	MAXIMOY*0.8	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+screenZone_t	zona_359	=	{ 	MAXIMOX*0.9	,	MAXIMOY*0.8	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+//	Display de barras.
+screenZone_t	zona_330	=	{ 	MAXIMOX*0.0	,	MAXIMOY*0.4	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+screenZone_t	zona_331	=	{ 	MAXIMOX*0.1	,	MAXIMOY*0.4	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+screenZone_t	zona_332	=	{ 	MAXIMOX*0.2	,	MAXIMOY*0.4	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+screenZone_t	zona_333	=	{ 	MAXIMOX*0.3	,	MAXIMOY*0.4	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+screenZone_t	zona_334	=	{ 	MAXIMOX*0.4	,	MAXIMOY*0.4	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+screenZone_t	zona_335	=	{ 	MAXIMOX*0.5	,	MAXIMOY*0.4	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+screenZone_t	zona_336	=	{ 	MAXIMOX*0.6	,	MAXIMOY*0.4	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+screenZone_t	zona_337	=	{ 	MAXIMOX*0.7	,	MAXIMOY*0.4	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+screenZone_t	zona_338	=	{ 	MAXIMOX*0.8	,	MAXIMOY*0.4	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+screenZone_t	zona_339	=	{ 	MAXIMOX*0.9	,	MAXIMOY*0.4	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@function		__mainLoop__()																	//
@@ -424,20 +446,25 @@ void	__pintaMedidas1__(	void	)
 		sprintf((char*)buffer,"Altura: %.02f m.",	DATOS->Lugar.Altura);
 		squareButton(	&zona_18	,	(char *)buffer		,	Yellow	,	Green	);
 	}
-	squareButton(	&zona_19	,	"Temperatura:"		,	Yellow	,	Green	);
+	squareButton(	&zona_19	,	"Vel. v.:"		,	Yellow	,	Green	);
 	squareButton(	&zona_20	,	"Humedad:"		,	Yellow	,	Green	);
-	squareButton(	&zona_21	,	"Presion:"		,	Yellow	,	Green	);
+	squareButton(	&zona_21	,	"Claridad:"		,	Yellow	,	Green	);
 	squareButton(	&zona_22	,	"Incide UV:"		,	Yellow	,	Green	);
+	if	(	ACTUALIZADOR->Anemometro )
+	{
+		sprintf((char*)buffer,"%.02f mps",	DATOS->VelViento);
+		squareButton(	&zona_23	,	(char *)buffer		,	Yellow	,	Green	);
+		ACTUALIZADOR->Anemometro = 0;
+	}
+	
 	if	(	ACTUALIZADOR->TempRev	)
 	{
-		sprintf((char*)buffer,"%.02f dC",	DATOS->Temperatura);
-		squareButton(	&zona_23	,	(char *)buffer		,	Yellow	,	Green	);
 		sprintf((char*)buffer,"%.02f %%",	DATOS->Humedad);
 		squareButton(	&zona_24	,	(char *)buffer		,	Yellow	,	Green	);
-		sprintf((char*)buffer,"%.02f mBar.",DATOS->Presion);
-		squareButton(	&zona_25	,	(char *)buffer		,	Yellow	,	Green	);
 		ACTUALIZADOR->TempRev = 0;
 	}
+	sprintf((char*)buffer,"%.02f LUX",DATOS->Brillo);
+	squareButton(	&zona_25	,	(char *)buffer		,	Yellow	,	Green	);
 	sprintf((char*)buffer,"%.02f UVs",	DATOS->IndiceUV);
 	squareButton(	&zona_26	,	(char *)buffer		,	Yellow	,	Green	);
 }
@@ -450,23 +477,340 @@ void	__pintaMedidas1__(	void	)
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__pintaMedidas2__(	void	)
 {
-	uint8_t buffer[23];
 	squareButton(	&zona_1	,	(char *)Clock		,	Yellow	,	Green	);
 	squareButton(	&zona_2	,	"->"				,	Yellow	,	Green	);
 	squareButton(	&zona_3	,	"<-"				,	Yellow	,	Green	);
-	squareButton(	&zona_32	,	"Vel. del viento:"	,	Yellow	,	Green	);
-	sprintf((char*)buffer, "%.02f metros/seg." ,	DATOS->VelViento);
-	if (	ACTUALIZADOR->Anemometro	)
+	squareButton(	&zona_32	,	"Temperatura:"		,	Yellow	,	Green	);
+	if (	ACTUALIZADOR->TempRev	)
 	{
-		sprintf((char*)buffer, "%.02f metros/seg." ,	DATOS->VelViento);
-		squareButton(	&zona_33	,	CLEAR_BUFFER		,	Yellow	,	Green	);
-		ACTUALIZADOR->Anemometro = 0;						//	Digo que toca medir.
-		squareButton(	&zona_33	,	(char *)buffer		,	Yellow	,	Green	);
+		ACTUALIZADOR->TempRev = 0;						//	Digo que toca medir.
+		switch	(	(int)(10*(DATOS->Temperatura - MIN_TEMP)/(MAX_TEMP - MIN_TEMP)))
+		{
+			case 0:
+				squareBox( &zona_330 , Black);
+				squareBox( &zona_331 , Black);
+				squareBox( &zona_332 , Black);
+				squareBox( &zona_333 , Black);
+				squareBox( &zona_334 , Black);
+				squareBox( &zona_335 , Black);
+				squareBox( &zona_336 , Black);
+				squareBox( &zona_337 , Black);
+				squareBox( &zona_338 , Black);
+				squareBox( &zona_339 , Black);
+				break;
+			case 1:
+				squareBox( &zona_330 , White);
+				squareBox( &zona_331 , Black);
+				squareBox( &zona_332 , Black);
+				squareBox( &zona_333 , Black);
+				squareBox( &zona_334 , Black);
+				squareBox( &zona_335 , Black);
+				squareBox( &zona_336 , Black);
+				squareBox( &zona_337 , Black);
+				squareBox( &zona_338 , Black);
+				squareBox( &zona_339 , Black);
+				break;
+			case 2:
+				squareBox( &zona_330 , White);
+				squareBox( &zona_331 , White);
+				squareBox( &zona_332 , Black);
+				squareBox( &zona_333 , Black);
+				squareBox( &zona_334 , Black);
+				squareBox( &zona_335 , Black);
+				squareBox( &zona_336 , Black);
+				squareBox( &zona_337 , Black);
+				squareBox( &zona_338 , Black);
+				squareBox( &zona_339 , Black);
+				break;
+			case 3:
+				squareBox( &zona_330 , Yellow);
+				squareBox( &zona_331 , Yellow);
+				squareBox( &zona_332 , Yellow);
+				squareBox( &zona_333 , Black);
+				squareBox( &zona_334 , Black);
+				squareBox( &zona_335 , Black);
+				squareBox( &zona_336 , Black);
+				squareBox( &zona_337 , Black);
+				squareBox( &zona_338 , Black);
+				squareBox( &zona_339 , Black);
+				break;
+			case 4:
+				squareBox( &zona_330 , Yellow);
+				squareBox( &zona_331 , Yellow);
+				squareBox( &zona_332 , Yellow);
+				squareBox( &zona_333 , Yellow);
+				squareBox( &zona_334 , Black);
+				squareBox( &zona_335 , Black);
+				squareBox( &zona_336 , Black);
+				squareBox( &zona_337 , Black);
+				squareBox( &zona_338 , Black);
+				squareBox( &zona_339 , Black);
+				break;
+			case 5:
+				squareBox( &zona_330 , Blue);
+				squareBox( &zona_331 , Blue);
+				squareBox( &zona_332 , Blue);
+				squareBox( &zona_333 , Blue);
+				squareBox( &zona_334 , Blue);
+				squareBox( &zona_335 , Black);
+				squareBox( &zona_336 , Black);
+				squareBox( &zona_337 , Black);
+				squareBox( &zona_338 , Black);
+				squareBox( &zona_339 , Black);
+				break;
+			case 6:
+				squareBox( &zona_330 , Blue);
+				squareBox( &zona_331 , Blue);
+				squareBox( &zona_332 , Blue);
+				squareBox( &zona_333 , Blue);
+				squareBox( &zona_334 , Blue);
+				squareBox( &zona_335 , Blue);
+				squareBox( &zona_336 , Black);
+				squareBox( &zona_337 , Black);
+				squareBox( &zona_338 , Black);
+				squareBox( &zona_339 , Black);
+				break;
+			case 7:
+				squareBox( &zona_330 , Green);
+				squareBox( &zona_331 , Green);
+				squareBox( &zona_332 , Green);
+				squareBox( &zona_333 , Green);
+				squareBox( &zona_334 , Green);
+				squareBox( &zona_335 , Green);
+				squareBox( &zona_336 , Green);
+				squareBox( &zona_337 , Black);
+				squareBox( &zona_338 , Black);
+				squareBox( &zona_339 , Black);
+				break;
+			case 8:
+				squareBox( &zona_330 , Green);
+				squareBox( &zona_331 , Green);
+				squareBox( &zona_332 , Green);
+				squareBox( &zona_333 , Green);
+				squareBox( &zona_334 , Green);
+				squareBox( &zona_335 , Green);
+				squareBox( &zona_336 , Green);
+				squareBox( &zona_337 , Green);
+				squareBox( &zona_338 , Black);
+				squareBox( &zona_339 , Black);
+				break;
+			case 9:
+				squareBox( &zona_330 , Red);
+				squareBox( &zona_331 , Red);
+				squareBox( &zona_332 , Red);
+				squareBox( &zona_333 , Red);
+				squareBox( &zona_334 , Red);
+				squareBox( &zona_335 , Red);
+				squareBox( &zona_336 , Red);
+				squareBox( &zona_337 , Red);
+				squareBox( &zona_338 , Red);
+				squareBox( &zona_339 , Black);
+				break;
+			case 10:
+				squareBox( &zona_330 , Red);
+				squareBox( &zona_331 , Red);
+				squareBox( &zona_332 , Red);
+				squareBox( &zona_333 , Red);
+				squareBox( &zona_334 , Red);
+				squareBox( &zona_335 , Red);
+				squareBox( &zona_336 , Red);
+				squareBox( &zona_337 , Red);
+				squareBox( &zona_338 , Red);
+				squareBox( &zona_339 , Red);
+				break;
+			default:
+				if ( DATOS->Temperatura > MIN_TEMP)
+				{
+					squareBox( &zona_330 , Red);
+					squareBox( &zona_331 , Red);
+					squareBox( &zona_332 , Red);
+					squareBox( &zona_333 , Red);
+					squareBox( &zona_334 , Red);
+					squareBox( &zona_335 , Red);
+					squareBox( &zona_336 , Red);
+					squareBox( &zona_337 , Red);
+					squareBox( &zona_338 , Red);
+					squareBox( &zona_339 , Red);
+				}
+				if ( DATOS->Temperatura < MIN_TEMP)
+				{
+					squareBox( &zona_330 , Black);
+					squareBox( &zona_331 , Black);
+					squareBox( &zona_332 , Black);
+					squareBox( &zona_333 , Black);
+					squareBox( &zona_334 , Black);
+					squareBox( &zona_335 , Black);
+					squareBox( &zona_336 , Black);
+					squareBox( &zona_337 , Black);
+					squareBox( &zona_338 , Black);
+					squareBox( &zona_339 , Black);
+				}
+		};
 	}
-	squareButton(	&zona_34	,	"Claridad:"		,	Yellow	,	Green	);
-	sprintf((char*)buffer,"%.02f LUX",	DATOS->Brillo);
-	squareButton(	&zona_35	,	(char *)buffer		,	Yellow	,	Green	);
-
+	
+	squareButton(	&zona_34	,	"Presion:"		,	Yellow	,	Green	);
+	switch	(	(int)(10*(DATOS->Presion - MIN_PRES)/(MAX_PRES - MIN_PRES)))
+	{
+		case 0:
+			squareBox( &zona_350 , Black);
+			squareBox( &zona_351 , Black);
+			squareBox( &zona_352 , Black);
+			squareBox( &zona_353 , Black);
+			squareBox( &zona_354 , Black);
+			squareBox( &zona_355 , Black);
+			squareBox( &zona_356 , Black);
+			squareBox( &zona_357 , Black);
+			squareBox( &zona_358 , Black);
+			squareBox( &zona_359 , Black);
+			break;
+		case 1:
+			squareBox( &zona_350 , White);
+			squareBox( &zona_351 , Black);
+			squareBox( &zona_352 , Black);
+			squareBox( &zona_353 , Black);
+			squareBox( &zona_354 , Black);
+			squareBox( &zona_355 , Black);
+			squareBox( &zona_356 , Black);
+			squareBox( &zona_357 , Black);
+			squareBox( &zona_358 , Black);
+			squareBox( &zona_359 , Black);
+			break;
+		case 2:
+			squareBox( &zona_350 , White);
+			squareBox( &zona_351 , White);
+			squareBox( &zona_352 , Black);
+			squareBox( &zona_353 , Black);
+			squareBox( &zona_354 , Black);
+			squareBox( &zona_355 , Black);
+			squareBox( &zona_356 , Black);
+			squareBox( &zona_357 , Black);
+			squareBox( &zona_358 , Black);
+			squareBox( &zona_359 , Black);
+			break;
+		case 3:
+			squareBox( &zona_350 , Yellow);
+			squareBox( &zona_351 , Yellow);
+			squareBox( &zona_352 , Yellow);
+			squareBox( &zona_353 , Black);
+			squareBox( &zona_354 , Black);
+			squareBox( &zona_355 , Black);
+			squareBox( &zona_356 , Black);
+			squareBox( &zona_357 , Black);
+			squareBox( &zona_358 , Black);
+			squareBox( &zona_359 , Black);
+			break;
+		case 4:
+			squareBox( &zona_350 , Yellow);
+			squareBox( &zona_351 , Yellow);
+			squareBox( &zona_352 , Yellow);
+			squareBox( &zona_353 , Yellow);
+			squareBox( &zona_354 , Black);
+			squareBox( &zona_355 , Black);
+			squareBox( &zona_356 , Black);
+			squareBox( &zona_357 , Black);
+			squareBox( &zona_358 , Black);
+			squareBox( &zona_359 , Black);
+			break;
+		case 5:
+			squareBox( &zona_350 , Blue);
+			squareBox( &zona_351 , Blue);
+			squareBox( &zona_352 , Blue);
+			squareBox( &zona_353 , Blue);
+			squareBox( &zona_354 , Blue);
+			squareBox( &zona_355 , Black);
+			squareBox( &zona_356 , Black);
+			squareBox( &zona_357 , Black);
+			squareBox( &zona_358 , Black);
+			squareBox( &zona_359 , Black);
+			break;
+		case 6:
+			squareBox( &zona_350 , Blue);
+			squareBox( &zona_351 , Blue);
+			squareBox( &zona_352 , Blue);
+			squareBox( &zona_353 , Blue);
+			squareBox( &zona_354 , Blue);
+			squareBox( &zona_355 , Blue);
+			squareBox( &zona_356 , Black);
+			squareBox( &zona_357 , Black);
+			squareBox( &zona_358 , Black);
+			squareBox( &zona_359 , Black);
+			break;
+		case 7:
+			squareBox( &zona_350 , Green);
+			squareBox( &zona_351 , Green);
+			squareBox( &zona_352 , Green);
+			squareBox( &zona_353 , Green);
+			squareBox( &zona_354 , Green);
+			squareBox( &zona_355 , Green);
+			squareBox( &zona_356 , Green);
+			squareBox( &zona_357 , Black);
+			squareBox( &zona_358 , Black);
+			squareBox( &zona_359 , Black);
+			break;
+		case 8:
+			squareBox( &zona_350 , Green);
+			squareBox( &zona_351 , Green);
+			squareBox( &zona_352 , Green);
+			squareBox( &zona_353 , Green);
+			squareBox( &zona_354 , Green);
+			squareBox( &zona_355 , Green);
+			squareBox( &zona_356 , Green);
+			squareBox( &zona_357 , Green);
+			squareBox( &zona_358 , Black);
+			squareBox( &zona_359 , Black);
+			break;
+		case 9:
+			squareBox( &zona_350 , Red);
+			squareBox( &zona_351 , Red);
+			squareBox( &zona_352 , Red);
+			squareBox( &zona_353 , Red);
+			squareBox( &zona_354 , Red);
+			squareBox( &zona_355 , Red);
+			squareBox( &zona_356 , Red);
+			squareBox( &zona_357 , Red);
+			squareBox( &zona_358 , Red);
+			squareBox( &zona_359 , Black);
+			break;
+		case 10:
+			squareBox( &zona_350 , Red);
+			squareBox( &zona_351 , Red);
+			squareBox( &zona_352 , Red);
+			squareBox( &zona_353 , Red);
+			squareBox( &zona_354 , Red);
+			squareBox( &zona_355 , Red);
+			squareBox( &zona_356 , Red);
+			squareBox( &zona_357 , Red);
+			squareBox( &zona_358 , Red);
+			squareBox( &zona_359 , Red);
+			break;
+		default:
+			if ( DATOS->Presion > MAX_PRES)
+			{
+				squareBox( &zona_350 , Red);
+				squareBox( &zona_351 , Red);
+				squareBox( &zona_352 , Red);
+				squareBox( &zona_353 , Red);
+				squareBox( &zona_354 , Red);
+				squareBox( &zona_355 , Red);
+				squareBox( &zona_356 , Red);
+				squareBox( &zona_357 , Red);
+				squareBox( &zona_358 , Red);
+				squareBox( &zona_359 , Red);
+			}
+			if ( DATOS->Presion < MIN_PRES)
+			{
+				squareBox( &zona_350 , Black);
+				squareBox( &zona_351 , Black);
+				squareBox( &zona_352 , Black);
+				squareBox( &zona_353 , Black);
+				squareBox( &zona_354 , Black);
+				squareBox( &zona_355 , Black);
+				squareBox( &zona_356 , Black);
+				squareBox( &zona_357 , Black);
+				squareBox( &zona_358 , Black);
+				squareBox( &zona_359 , Black);
+			}
+	}
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
@@ -482,6 +826,21 @@ void squareButton(screenZone_t* zone, char * text, uint16_t textColor, uint16_t 
 	LCD_DrawLine( zone->x, zone->y + zone->size_y - 1, zone->x + zone->size_x - 1, zone->y + zone->size_y - 1, lineColor);
 	LCD_DrawLine( zone->x + zone->size_x - 1, zone->y, zone->x + zone->size_x - 1, zone->y + zone->size_y - 1, lineColor);
 	GUI_Text(zone->x + zone->size_x/2 - (strlen(text)/2)*8, zone->y + zone->size_y/2 - 8, (uint8_t*) text, textColor, Black);	
+}
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@function		squareBox()																	//
+//																								//
+//		@brief		Dibuja un cuadrado de un color.													//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
+void squareBox(screenZone_t* zone, uint16_t color)
+{
+	int i;
+	for (i = 0; i < (zone->size_x - 4) ; i++)
+	{
+		LCD_DrawLine( zone->x + i + 2, zone->y + 2, zone->x + i + 2, zone->y + zone->size_y - 2, color);
+	}
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//

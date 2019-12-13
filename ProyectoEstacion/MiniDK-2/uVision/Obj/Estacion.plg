@@ -358,3 +358,523 @@ Load "C:\\Users\\alver\\Desktop\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK
 Erase Done.
 Programming Done.
 Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling Statechart.c...
+linking...
+Program Size: Code=115672 RO-data=5452 RW-data=792 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling Statechart.c...
+linking...
+Program Size: Code=115544 RO-data=5452 RW-data=792 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling Statechart.c...
+compiling configura.c...
+linking...
+Program Size: Code=115520 RO-data=5452 RW-data=792 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling Statechart.c...
+linking...
+Program Size: Code=115508 RO-data=5456 RW-data=792 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling Statechart.c...
+linking...
+Program Size: Code=115520 RO-data=5452 RW-data=792 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Rebuild target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WDT.c...
+compiling Anemometro.c...
+compiling PWM.c...
+compiling RTC.c...
+compiling HTTP_SOURCE.c...
+compiling Net_Config.c...
+compiling HTTP_CGI.c...
+compiling EMAC_LPC17xx_LAN8720.c...
+compiling WEB.C...
+compiling Statechart.c...
+..\Menu\Statechart.c(488): error:  #31: expression must have integral type
+..\Menu\Statechart.c(489): warning:  #111-D: statement is unreachable
+compiling TouchPanel.c...
+compiling main.c...
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling configura.c...
+compiling Timers.c...
+compiling OneWirev2.c...
+compiling Ldr.c...
+compiling uFono.c...
+compiling UVA30A.c...
+compiling DAC.c...
+compiling LUT.c...
+compiling DMA.c...
+compiling diskio.c...
+compiling ff.c...
+compiling SPI_MSD_Driver.c...
+compiling DEBUG.c...
+compiling lpc17xx_ssp.c...
+compiling lpc17xx_pinsel.c...
+compiling lpc17xx_gpio.c...
+compiling lpc17xx_clkpwr.c...
+compiling lpc17xx_libcfg_default.c...
+compiling AsciiLib.c...
+compiling GLCD.c...
+compiling UART0.c...
+compiling UART3.c...
+compiling I2C.c...
+compiling I2Clib.c...
+".\Obj\Estacion.axf" - 1 Errors, 1 Warning(s).
+Target not created
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling Statechart.c...
+..\Menu\Statechart.h(121): error:  #20: identifier "creenZone_t" is undefined
+compiling main.c...
+..\Menu\Statechart.h(121): error:  #20: identifier "creenZone_t" is undefined
+compiling configura.c...
+..\Menu\Statechart.h(121): error:  #20: identifier "creenZone_t" is undefined
+".\Obj\Estacion.axf" - 3 Errors, 0 Warning(s).
+Target not created
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling Statechart.c...
+compiling main.c...
+compiling configura.c...
+linking...
+Program Size: Code=115788 RO-data=5456 RW-data=996 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+linking...
+Program Size: Code=115788 RO-data=5456 RW-data=996 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling Statechart.c...
+linking...
+Program Size: Code=115792 RO-data=5452 RW-data=996 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+linking...
+Program Size: Code=115792 RO-data=5452 RW-data=996 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling Statechart.c...
+linking...
+Program Size: Code=115796 RO-data=5456 RW-data=996 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling Statechart.c...
+linking...
+Program Size: Code=115784 RO-data=5452 RW-data=996 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling Statechart.c...
+linking...
+Program Size: Code=115796 RO-data=5456 RW-data=996 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling Statechart.c...
+linking...
+Program Size: Code=115792 RO-data=5452 RW-data=996 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling Statechart.c...
+linking...
+Program Size: Code=115792 RO-data=5452 RW-data=996 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling Statechart.c...
+linking...
+Program Size: Code=115788 RO-data=5456 RW-data=996 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling Statechart.c...
+linking...
+Program Size: Code=115796 RO-data=5456 RW-data=996 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling Statechart.c...
+linking...
+Program Size: Code=115796 RO-data=5456 RW-data=996 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling Statechart.c...
+linking...
+Program Size: Code=115800 RO-data=5452 RW-data=996 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling Statechart.c...
+..\Menu\Statechart.c(575): error:  #20: identifier "Orange" is undefined
+..\Menu\Statechart.c(623): error:  #20: identifier "PRES_MAX" is undefined
+..\Menu\Statechart.c(636): error:  #20: identifier "PRES_MIN" is undefined
+..\Menu\Statechart.c(653): error:  #79: expected a type specifier
+..\Menu\Statechart.c(653): error:  #79: expected a type specifier
+..\Menu\Statechart.c(653): error:  #79: expected a type specifier
+..\Menu\Statechart.c(653): error:  #79: expected a type specifier
+..\Menu\Statechart.c(653): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(653): error:  #147: declaration is incompatible with "void squareButton(screenZone_t *, char *, uint16_t, uint16_t)" (declared at line 118 of "..\Menu\Statechart.h")
+..\Menu\Statechart.c(654): error:  #169: expected a declaration
+..\Menu\Statechart.c(676): warning:  #12-D: parsing restarts here after previous syntax error
+..\Menu\Statechart.c(677): error:  #79: expected a type specifier
+..\Menu\Statechart.c(677): error:  #79: expected a type specifier
+..\Menu\Statechart.c(677): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(677): error:  #147: declaration is incompatible with "void squareBox(screenZone_t *, uint16_t)" (declared at line 121 of "..\Menu\Statechart.h")
+..\Menu\Statechart.c(678): error:  #79: expected a type specifier
+..\Menu\Statechart.c(678): error:  #79: expected a type specifier
+..\Menu\Statechart.c(678): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(679): error:  #169: expected a declaration
+..\Menu\Statechart.c(680): error:  #169: expected a declaration
+..\Menu\Statechart.c(682): error:  #79: expected a type specifier
+..\Menu\Statechart.c(682): error:  #79: expected a type specifier
+..\Menu\Statechart.c(682): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(683): error:  #79: expected a type specifier
+..\Menu\Statechart.c(683): error:  #79: expected a type specifier
+..\Menu\Statechart.c(683): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(684): error:  #79: expected a type specifier
+..\Menu\Statechart.c(684): error:  #79: expected a type specifier
+..\Menu\Statechart.c(684): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(685): error:  #79: expected a type specifier
+..\Menu\Statechart.c(685): error:  #79: expected a type specifier
+..\Menu\Statechart.c(685): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(686): error:  #79: expected a type specifier
+..\Menu\Statechart.c(686): error:  #79: expected a type specifier
+..\Menu\Statechart.c(686): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(687): error:  #79: expected a type specifier
+..\Menu\Statechart.c(687): error:  #79: expected a type specifier
+..\Menu\Statechart.c(687): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(688): error:  #79: expected a type specifier
+..\Menu\Statechart.c(688): error:  #79: expected a type specifier
+".\Obj\Estacion.axf" - 30 Errors, 10 Warning(s).
+Target not created
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling Statechart.c...
+..\Menu\Statechart.c(575): error:  #20: identifier "Orange" is undefined
+..\Menu\Statechart.c(653): error:  #79: expected a type specifier
+..\Menu\Statechart.c(653): error:  #79: expected a type specifier
+..\Menu\Statechart.c(653): error:  #79: expected a type specifier
+..\Menu\Statechart.c(653): error:  #79: expected a type specifier
+..\Menu\Statechart.c(653): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(653): error:  #147: declaration is incompatible with "void squareButton(screenZone_t *, char *, uint16_t, uint16_t)" (declared at line 118 of "..\Menu\Statechart.h")
+..\Menu\Statechart.c(654): error:  #169: expected a declaration
+..\Menu\Statechart.c(676): warning:  #12-D: parsing restarts here after previous syntax error
+..\Menu\Statechart.c(677): error:  #79: expected a type specifier
+..\Menu\Statechart.c(677): error:  #79: expected a type specifier
+..\Menu\Statechart.c(677): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(677): error:  #147: declaration is incompatible with "void squareBox(screenZone_t *, uint16_t)" (declared at line 121 of "..\Menu\Statechart.h")
+..\Menu\Statechart.c(678): error:  #79: expected a type specifier
+..\Menu\Statechart.c(678): error:  #79: expected a type specifier
+..\Menu\Statechart.c(678): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(679): error:  #169: expected a declaration
+..\Menu\Statechart.c(680): error:  #169: expected a declaration
+..\Menu\Statechart.c(682): error:  #79: expected a type specifier
+..\Menu\Statechart.c(682): error:  #79: expected a type specifier
+..\Menu\Statechart.c(682): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(683): error:  #79: expected a type specifier
+..\Menu\Statechart.c(683): error:  #79: expected a type specifier
+..\Menu\Statechart.c(683): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(684): error:  #79: expected a type specifier
+..\Menu\Statechart.c(684): error:  #79: expected a type specifier
+..\Menu\Statechart.c(684): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(685): error:  #79: expected a type specifier
+..\Menu\Statechart.c(685): error:  #79: expected a type specifier
+..\Menu\Statechart.c(685): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(686): error:  #79: expected a type specifier
+..\Menu\Statechart.c(686): error:  #79: expected a type specifier
+..\Menu\Statechart.c(686): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(687): error:  #79: expected a type specifier
+..\Menu\Statechart.c(687): error:  #79: expected a type specifier
+..\Menu\Statechart.c(687): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(688): error:  #79: expected a type specifier
+..\Menu\Statechart.c(688): error:  #79: expected a type specifier
+..\Menu\Statechart.c(688): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(689): error:  #79: expected a type specifier
+..\Menu\Statechart.c(689): error:  #79: expected a type specifier
+".\Obj\Estacion.axf" - 30 Errors, 11 Warning(s).
+Target not created
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling Statechart.c...
+..\Menu\Statechart.c(575): error:  #20: identifier "Orange" is undefined
+..\Menu\Statechart.c(653): error:  #79: expected a type specifier
+..\Menu\Statechart.c(653): error:  #79: expected a type specifier
+..\Menu\Statechart.c(653): error:  #79: expected a type specifier
+..\Menu\Statechart.c(653): error:  #79: expected a type specifier
+..\Menu\Statechart.c(653): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(653): error:  #147: declaration is incompatible with "void squareButton(screenZone_t *, char *, uint16_t, uint16_t)" (declared at line 118 of "..\Menu\Statechart.h")
+..\Menu\Statechart.c(654): error:  #169: expected a declaration
+..\Menu\Statechart.c(676): warning:  #12-D: parsing restarts here after previous syntax error
+..\Menu\Statechart.c(677): error:  #79: expected a type specifier
+..\Menu\Statechart.c(677): error:  #79: expected a type specifier
+..\Menu\Statechart.c(677): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(677): error:  #147: declaration is incompatible with "void squareBox(screenZone_t *, uint16_t)" (declared at line 121 of "..\Menu\Statechart.h")
+..\Menu\Statechart.c(678): error:  #79: expected a type specifier
+..\Menu\Statechart.c(678): error:  #79: expected a type specifier
+..\Menu\Statechart.c(678): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(679): error:  #169: expected a declaration
+..\Menu\Statechart.c(680): error:  #169: expected a declaration
+..\Menu\Statechart.c(682): error:  #79: expected a type specifier
+..\Menu\Statechart.c(682): error:  #79: expected a type specifier
+..\Menu\Statechart.c(682): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(683): error:  #79: expected a type specifier
+..\Menu\Statechart.c(683): error:  #79: expected a type specifier
+..\Menu\Statechart.c(683): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(684): error:  #79: expected a type specifier
+..\Menu\Statechart.c(684): error:  #79: expected a type specifier
+..\Menu\Statechart.c(684): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(685): error:  #79: expected a type specifier
+..\Menu\Statechart.c(685): error:  #79: expected a type specifier
+..\Menu\Statechart.c(685): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(686): error:  #79: expected a type specifier
+..\Menu\Statechart.c(686): error:  #79: expected a type specifier
+..\Menu\Statechart.c(686): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(687): error:  #79: expected a type specifier
+..\Menu\Statechart.c(687): error:  #79: expected a type specifier
+..\Menu\Statechart.c(687): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(688): error:  #79: expected a type specifier
+..\Menu\Statechart.c(688): error:  #79: expected a type specifier
+..\Menu\Statechart.c(688): warning:  #77-D: this declaration has no storage class or type specifier
+..\Menu\Statechart.c(689): error:  #79: expected a type specifier
+..\Menu\Statechart.c(689): error:  #79: expected a type specifier
+".\Obj\Estacion.axf" - 30 Errors, 11 Warning(s).
+Target not created
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling Statechart.c...
+..\Menu\Statechart.c(752): error:  #20: identifier "Orange" is undefined
+".\Obj\Estacion.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling Statechart.c...
+linking...
+Program Size: Code=118520 RO-data=5452 RW-data=996 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling Statechart.c...
+..\Menu\Statechart.c(480): warning:  #177-D: variable "buffer" was declared but never referenced
+linking...
+Program Size: Code=118492 RO-data=5456 RW-data=996 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 1 Warning(s).
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling Statechart.c...
+linking...
+Program Size: Code=118492 RO-data=5456 RW-data=996 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).
+Load "C:\\Users\\alver\\Desktop\\EstacionMeteorologica\\ProyectoEstacion\\MiniDK-2\\uVision\\Obj\\Estacion.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'MiniDK-2'
+custom translating WEB.inp...
+Custom: C:\Keil\ARM\bin\fcarm @..\TCPIP\Web.inp
+FCARM FILE CONVERTER V2.41
+Completed 1 File(s), Ratio 48%
+compiling WEB.C...
+compiling configura.c...
+linking...
+Program Size: Code=118492 RO-data=5456 RW-data=996 ZI-data=50388  
+FromELF: creating hex file...
+".\Obj\Estacion.axf" - 0 Errors, 0 Warning(s).

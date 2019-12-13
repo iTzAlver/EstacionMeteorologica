@@ -72,23 +72,23 @@ void __configuraPrograma__(	void	)
 void __iniciaVariables__()
 {
 	ESTADO->CHART = PANTALLA_LOADING;
-	DATOS->Temperatura 		= 24.00;
-	DATOS->Humedad 		= 1.55;
-	DATOS->Presion 		= 1.55;
-	DATOS->VelViento 		= 3.33;
-	DATOS->IndiceUV 		= 1.20;
-	DATOS->Lugar.Altura		= 2.1;	
-	DATOS->Lugar.Longitud	= 2.1;	
-	DATOS->Lugar.Latitud	= 2.1;
+	DATOS->Temperatura 		= 0;
+	DATOS->Humedad 		= 0;
+	DATOS->Presion 		= 0;
+	DATOS->VelViento 		= 0;
+	DATOS->IndiceUV 		= 0;
+	DATOS->Lugar.Altura		= 0;	
+	DATOS->Lugar.Longitud	= 0;	
+	DATOS->Lugar.Latitud	= 0;
 	
-	MODIFICABLES->Max_servo_t	=	MAXIMO_SERVO;
-	MODIFICABLES->Min_servo_t	= 	MINIMO_SERVO;
-	MODIFICABLES->Max_servo_p	=	MAXIMO_PRESION;
-	MODIFICABLES->Min_servo_p	=	MINIMO_PRESION;
-	MODIFICABLES->Max_temp_alarma = 	50;
-	MODIFICABLES->Min_temp_alarma = 	-10;
-	MODIFICABLES->Max_pres_alarma = 	1000;
-	MODIFICABLES->Min_pres_alarma = 	20;
+	MODIFICABLES->Max_servo_t	=	(double)MAXIMO_TEMPERATURA;
+	MODIFICABLES->Min_servo_t	= 	(double)MINIMO_TEMPERATURA;
+	MODIFICABLES->Max_servo_p	=	(double)MAXIMO_PRESION;
+	MODIFICABLES->Min_servo_p	=	(double)MINIMO_PRESION;
+	MODIFICABLES->Max_temp_alarma = 	(double)50;
+	MODIFICABLES->Min_temp_alarma = 	(double)-10;
+	MODIFICABLES->Max_pres_alarma = 	(double)1000;
+	MODIFICABLES->Min_pres_alarma = 	(double)20;
 	MODIFICABLES->TiempoBrillo 	=	10;
 	MODIFICABLES->Var_medida		=	0;		//	0 la temperatura, 1 la presión.
 }

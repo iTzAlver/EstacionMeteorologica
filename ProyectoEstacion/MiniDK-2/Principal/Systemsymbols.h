@@ -93,6 +93,11 @@
 #define		DURACION_AUDIO		2							//	2 segundos de audio.
 #define		MUESTRAS_AUDIO		DURACION_AUDIO*FsAudio			//	Muestras en los 2 segundos de audio.
 
+
+#define	MAX_PRES		MODIFICABLES->Max_servo_p
+#define	MAX_TEMP		MODIFICABLES->Max_servo_t
+#define	MIN_PRES		MODIFICABLES->Min_servo_p
+#define	MIN_TEMP		MODIFICABLES->Min_servo_t
 //	Constantes universales.
 #define		PI				3.141592
 /**---------------------------------------------------------------------------------------------------------------------//

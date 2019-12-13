@@ -104,6 +104,8 @@
 
 #define	MAXIMO_PRESION		1000
 #define	MINIMO_PRESION		20
+#define	MAXIMO_TEMPERATURA	50
+#define	MINIMO_TEMPERATURA	-10
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcdef		Estas son las funciones correspondientes a la configuración.							//

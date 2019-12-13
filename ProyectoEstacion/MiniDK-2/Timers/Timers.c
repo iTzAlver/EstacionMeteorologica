@@ -27,11 +27,6 @@ uint32_t					CAP11_BUFF	=	0;
 
 uint16_t					contadorLUZ	=	0;
 
-#define	MAX_PRES		MODIFICABLES->Max_servo_p
-#define	MAX_TEMP		MODIFICABLES->Max_servo_t
-#define	MIN_PRES		MODIFICABLES->Min_servo_p
-#define	MIN_TEMP		MODIFICABLES->Min_servo_t
-
 extern 	uint8_t			__brilloAuto;
 extern	uint8_t			__brilloFade;
 extern	uint8_t			YaPuedesMedir;
@@ -168,11 +163,11 @@ void TIMER0_IRQHandler(	void	)
 	TIM0_ticks++;
 	if (	!MODIFICABLES->Var_medida	)
 	{
-		modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Temperatura - MIN_TEMP)/(MAX_TEMP - MIN_TEMP))	,	MIN_TEMP	,	MAX_TEMP	);
+		modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Temperatura - MIN_TEMP)/(MAX_TEMP - MIN_TEMP))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
 	}
 	else
 	{
-		modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Presion - MIN_PRES)/(MAX_PRES - MIN_PRES))	,	MIN_PRES	,	MAX_PRES	);
+		modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Presion - MIN_PRES)/(MAX_PRES - MIN_PRES))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
 	}
 }
 /**---------------------------------------------------------------------------------------------------------------------//
