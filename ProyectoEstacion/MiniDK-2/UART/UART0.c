@@ -42,28 +42,17 @@ void	__configuraUART0__(	void	)				//	Configurado a 9600 baudios.
 	LPC_UART0->LCR			&=	~(1	<<	2)	//	Un bit de stop.
 						|	~(1	<<	3);	//	Sin bit de paridad.
 	
-	LPC_UART0->LCR			&=	~(1	<<	DLP);		//	Activo el latch.
+	LPC_UART0->LCR			|=	(1	<<	DLP);		//	Activo el latch.
 	LPC_UART0->DLL			=	163;					//	9600 baudios. -> 9645,06 el real.
 	LPC_UART0->DLM			=	0;					//	No supera 255;
 	LPC_UART0->FDR;								//	No toco el FR, no hay mucha variación.	
-	LPC_UART0->LCR			|=	 (1	<<	DLP);		//	Desactivo el latch.
+	LPC_UART0->LCR			&=	 ~(1	<<	DLP);		//	Desactivo el latch.
 	
 	LPC_UART0->IER			=	(1	<<	2);	//	Activo interrupción por RX lleno.
 	strcpy(UART0_BUFFER_TX	,	"Hola\n\r");
 	UART0_MandaBufferTx();
 	
 	NVIC_EnableIRQ(	UART0_IRQn	);		//	Activo el manejador de la interrupción.
-}
-/**---------------------------------------------------------------------------------------------------------------------//
-//																								//																																														//
-//		@function		__ignore()																	//
-//																								//
-//		@brief		Esta función no hace nada.														//
-//																								//
-//---------------------------------------------------------------------------------------------------------------------**/
-static void __ignore(	void	)
-{
-	/**	@DO:	No hace nada.	*/
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
@@ -241,8 +230,19 @@ uint8_t	procesarComando(	char	*	Buff	)
 //---------------------------------------------------------------------------------------------------------------------**/
 void UART0_IRQHandler()
 {
-	(LPC_UART0->IIR & UART0_MRX) ? __recibirDatos()	:	__ignore();
-	(LPC_UART0->IIR & UART0_MTX) ? __transmitirDatos():	__ignore();
+	//uint32_t swart = LPC_UART0->IIR & 0x0E;
+	switch( LPC_UART0->IIR & 0x0E )
+	{
+		case 0x04:								 /* RBR, Receiver Buffer Ready */
+			__recibirDatos();
+			break;
+		case 0x02:								/* THRE, Transmit Holding Register empty */
+			__transmitirDatos();
+			break;
+		default:
+			
+			break;
+    }
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																															//
