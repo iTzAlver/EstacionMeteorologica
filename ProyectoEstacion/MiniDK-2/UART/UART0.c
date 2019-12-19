@@ -63,7 +63,8 @@ void	__configuraUART0__(	void	)				//	Configurado a 9600 baudios.
 //---------------------------------------------------------------------------------------------------------------------**/
 static void __recibirDatos(	void	)
 {
-	*_prx = LPC_UART0->RBR;					//	Guardo el byte que ha llegado.
+	uint32_t var = LPC_UART0->RBR;
+	*_prx = var;					//	Guardo el byte que ha llegado.
 	
 	if	(*_prx 	== 	RetornoDeCarro)		//	Si es el último byte...
 	{
@@ -140,7 +141,7 @@ uint8_t	procesarComando(	char	*	Buff	)
 	{
 		if 	(	strcmp(	&Buff[6]	,	COM10)	)
 		{
-			strcpy	(	UART0_BUFFER_TX	,	"\nSUGAAAAR!!!!!!!!!!!!!!!!!!!!!!\n");
+			strcpy	(	UART0_BUFFER_TX	,	"\nSUGAR\n");
 			retval = 1;
 		}
 		if 	(	strcmp(	&Buff[6]	,	COM11)	)
@@ -230,15 +231,15 @@ uint8_t	procesarComando(	char	*	Buff	)
 //---------------------------------------------------------------------------------------------------------------------**/
 void UART0_IRQHandler()
 {
-	//uint32_t swart = LPC_UART0->IIR & 0x0E;
-	switch( LPC_UART0->IIR & 0x0E )
+	uint32_t swart = LPC_UART0->IIR & 0x0E;
+	switch( swart )
 	{
-		case 0x04:								 /* RBR, Receiver Buffer Ready */
+		case 6:								 /* RBR, Receiver Buffer Ready */
 			__recibirDatos();
 			break;
-		case 0x02:								/* THRE, Transmit Holding Register empty */
+		case 2:								/* THRE, Transmit Holding Register empty */
 			__transmitirDatos();
-			break;
+			break;     
 		default:
 			
 			break;
