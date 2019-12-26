@@ -23,7 +23,9 @@
 #define	LUT
 #include	"LUT.h"
 #endif
+uint8_t	PREGRABADA[MUESTRAS_AUDIO];
 extern	uint8_t	*	AUDIO;
+extern	LinkedModeDMA_t	*	LMD;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@LUT			LookUpTables																	//
@@ -86,8 +88,14 @@ void crearSeno()
 	long i;
 	for (i=0	;	i	<	MUESTRAS_AUDIO;	i++)
 	{
-		AUDIO[i]	=	(127)*sin((2*PI*i)/MUESTRAS_AUDIO) + 127;
+		PREGRABADA[i]	=	(42)*(cos((400*PI*i)/MUESTRAS_AUDIO) + cos((397*PI*i)/MUESTRAS_AUDIO) + cos((403*PI*i)/MUESTRAS_AUDIO))+ 127;
 	}
+}
+
+void	ponTonoDMA()
+{
+	LMD->Origen					=	(uint32_t)PREGRABADA;			//	Origen de la muestra.
+	LPC_GPDMACH0->DMACCSrcAddr		=	(uint32_t)PREGRABADA;			//	Origen de la muestra.
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//

@@ -89,7 +89,7 @@ void activarDac()
 	/**	@TODO:	DMA*/
 	LPC_GPDMACH0->DMACCConfig	|=	1;								//	Activo el DMA.
 	LPC_TIM1->MCR				=	(1	<<3	)	|	(1	<<	4);		//	Activo la interrupción por MR1 y reset por MR1.
-	LPC_TIM1->MR1				=	0.9*(Fclk*DURACION_AUDIO) - 1;		//	Valor de MR1.
+	LPC_TIM1->MR1				=	0.95*(Fclk*DURACION_AUDIO) - 1;		//	Valor de MR1.
 	LPC_TIM1->TCR				=	0x2;								//	Reset del timer.
 	LPC_TIM1->TCR				=	0x1;								//	El timer cuenta.
 }

@@ -22,6 +22,14 @@
 #define	SYSTEMSYMBOLS
 #include	"Systemsymbols.h"
 #endif
+#ifndef	LDR
+#define	LDR
+#include	"LDR.h"
+#endif
+#ifndef	LUT
+#define	LUT
+#include	"LUT.h"
+#endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes al DMA.										//

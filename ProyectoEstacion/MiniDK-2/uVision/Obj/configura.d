@@ -26,6 +26,7 @@
 .\obj\configura.o: ..\Anemometro\Anemometro.h
 .\obj\configura.o: ..\ADC\LDR.h
 .\obj\configura.o: ..\BaseDeDatos\LUT.h
+.\obj\configura.o: ..\BaseDeDatos\DMA.h
 .\obj\configura.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
 .\obj\configura.o: ..\ADC\uFono.h
 .\obj\configura.o: ..\DAC\DAC.h
@@ -36,6 +37,5 @@
 .\obj\configura.o: ..\RTC\RTC.h
 .\obj\configura.o: ..\TCPIP\lib\HTTP_SOURCE.h
 .\obj\configura.o: ..\ADC\UVA30A.h
-.\obj\configura.o: ..\BaseDeDatos\DMA.h
 .\obj\configura.o: ..\UART\UART0.h
 .\obj\configura.o: ..\UART\UART3.h

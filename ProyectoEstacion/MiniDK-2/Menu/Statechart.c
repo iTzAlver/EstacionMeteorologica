@@ -114,6 +114,13 @@ screenZone_t	zona_336	=	{ 	MAXIMOX*0.6	,	MAXIMOY*0.4	, 	MAXIMOX*0.1	, 	MAXIMOY*0
 screenZone_t	zona_337	=	{ 	MAXIMOX*0.7	,	MAXIMOY*0.4	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
 screenZone_t	zona_338	=	{ 	MAXIMOX*0.8	,	MAXIMOY*0.4	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
 screenZone_t	zona_339	=	{ 	MAXIMOX*0.9	,	MAXIMOY*0.4	, 	MAXIMOX*0.1	, 	MAXIMOY*0.2	, 	0	};
+//	Menú de carga.
+screenZone_t	zona_lo0	=	{	MAXIMOX*0.2	,	MAXIMOY*0.2	,	MAXIMOX*0.6	,	MAXIMOY*0.2	,	0	};
+screenZone_t	zona_lo1	=	{	MAXIMOX*0.2	,	MAXIMOY*0.5	,	MAXIMOX*0.6	,	MAXIMOY*0.2	,	0	};
+screenZone_t	zona_lo20	=	{	MAXIMOX*0.2	,	MAXIMOY*0.7	,	MAXIMOX*0.15	,	MAXIMOY*0.2	,	0	};
+screenZone_t	zona_lo21	=	{	MAXIMOX*0.35	,	MAXIMOY*0.7	,	MAXIMOX*0.15	,	MAXIMOY*0.2	,	0	};
+screenZone_t	zona_lo22	=	{	MAXIMOX*0.5	,	MAXIMOY*0.7	,	MAXIMOX*0.15	,	MAXIMOY*0.2	,	0	};
+screenZone_t	zona_lo23	=	{	MAXIMOX*0.65	,	MAXIMOY*0.7	,	MAXIMOX*0.15	,	MAXIMOY*0.2	,	0	};
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@function		__mainLoop__()																	//
@@ -428,6 +435,76 @@ void	__pintaAjustes__(	void	)
 	squareButton(	&zona_29M	,	"+"				,	Yellow	,	Green	);
 	squareButton(	&zona_30M	,	"+"				,	Yellow	,	Green	);
 	
+}
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@function		__pintaCargandoInicio__()														//
+//																								//
+//		@brief		Esta función pinta la pantalla cargando incio.										//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
+void	__pintaCargandoInicio__(	void	)
+{
+	squareButton(	&zona_lo0	,	"CARGANDO ..."				,	Blue	,	Green	);
+	squareButton(	&zona_lo1	,	"Preparando el sistema..."	,	Blue	,	Green	);
+}
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@function		__pintaCargandoSeno__()															//
+//																								//
+//		@brief		Esta función pinta la pantalla cargando seno.										//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
+void	__pintaCargandoSeno__(	void	)
+{
+	squareButton(	&zona_lo0	,	"CARGANDO ..."				,	Blue	,	Green	);
+	squareButton(	&zona_lo1	,	"Creando muestras..."	,	Blue	,	Green	);
+	squareBox(	&zona_lo20,	White	);
+}
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@function		__pintaCargandoConexion__()															//
+//																								//
+//		@brief		Esta función pinta la pantalla cargando conexión.										//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
+void	__pintaCargandoConexion__(	void	)
+{
+	squareButton(	&zona_lo0	,	"CARGANDO ..."				,	Blue	,	Green	);
+	squareButton(	&zona_lo1	,	"Buscando conexion TCP..."	,	Blue	,	Green	);
+	squareBox(	&zona_lo20,	White	);
+	squareBox(	&zona_lo21,	White	);
+}
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@function		__pintaCargandoIniciando__()														//
+//																								//
+//		@brief		Esta función pinta la pantalla cargando iniciando.									//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
+void	__pintaCargandoIniciando__(	void	)
+{
+	squareButton(	&zona_lo0	,	"CARGANDO ..."				,	Blue	,	Green	);
+	squareButton(	&zona_lo1	,	"Iniciando modulos..."		,	Blue	,	Green	);
+	squareBox(	&zona_lo20,	White	);
+	squareBox(	&zona_lo21,	White	);
+	squareBox(	&zona_lo22,	White	);
+}
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@function		__pintaCargandoDone__()															//
+//																								//
+//		@brief		Esta función pinta la pantalla cargando hecho.										//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
+void	__pintaCargandoDone__(	void	)
+{
+	squareButton(	&zona_lo0	,	"CARGADO"				,	Blue	,	Green	);
+	squareButton(	&zona_lo1	,	"100%"				,	Blue	,	Green	);
+	squareBox(	&zona_lo20,	White	);
+	squareBox(	&zona_lo21,	White	);
+	squareBox(	&zona_lo22,	White	);
+	squareBox(	&zona_lo22,	White	);
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//

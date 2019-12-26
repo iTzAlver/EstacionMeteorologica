@@ -30,6 +30,10 @@
 #define	LUT
 #include	"LUT.h"
 #endif
+#ifndef	DMA
+#define	DMA
+#include	"DMA.h"
+#endif
 #ifndef	UFONO
 #define	UFONO
 #include 	"uFono.h"
@@ -62,7 +66,8 @@
 //		@funcdef		Estas son las funciones correspondientes a la configuración.							//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-void __configuraLDR__(	void	);
+void __configuraLDR__	(	void	);
+void ponAudioDMA		(	void	);
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

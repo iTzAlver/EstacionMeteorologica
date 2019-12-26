@@ -23,16 +23,18 @@
 
 LinkedModeDMA_t		LMDobj;
 LinkedModeDMA_t	*	LMD	=	&LMDobj;
-extern uint8_t	*	AUDIO;
 
 void __configuraDMA__()
 {
 	LPC_SC->PCONP 			|= 	(1<<29);		//	Enciendo el DMA.
 	LPC_GPDMA->DMACConfig 	= 	1;			//	Enciendo el controlador.
 	LPC_GPDMA->DMACSync   	= 	(1<<6);		//	Sincronizo todos los registros.
-	LPC_GPDMACH0->DMACCSrcAddr	=	LMD->Origen	=	(uint32_t)AUDIO;				//	Origen de la muestra.
-	LPC_GPDMACH0->DMACCDestAddr	=	LMD->Destino	=	(uint32_t)((&LPC_DAC->DACR) + 8);	//	Destino de la muestra.
-	LPC_GPDMACH0->DMACCLLI		=	LMD->Linked	=	(uint32_t)LMD;					//	Linkado a LMD.
+	ponAudioDMA();							//	Origen de la muestra.
+	ponTonoDMA();							//	Origen de la muestra.
+	LMD->Destino	=	(uint32_t)((&LPC_DAC->DACR) + 2);	//	Destino de la muestra.
+	LMD->Linked	=	(uint32_t)LMD;					//	Linkado a LMD.
+	LPC_GPDMACH0->DMACCDestAddr		=	(uint32_t)((&LPC_DAC->DACR) + 8);	//	Destino de la muestra.
+	LPC_GPDMACH0->DMACCLLI			=	(uint32_t)LMD;					//	Linkado a LMD.
 	
 	LMD->CR					=	LPC_GPDMACH0->DMACCControl	=	
 							MUESTRAS_AUDIO			//	El número de muestras del audio.

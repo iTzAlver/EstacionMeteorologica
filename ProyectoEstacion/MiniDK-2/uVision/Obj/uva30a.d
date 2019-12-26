@@ -9,6 +9,7 @@
 .\obj\uva30a.o: ..\ADC\LDR.h
 .\obj\uva30a.o: ..\Principal\Systemsymbols.h
 .\obj\uva30a.o: ..\BaseDeDatos\LUT.h
+.\obj\uva30a.o: ..\BaseDeDatos\DMA.h
 .\obj\uva30a.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
 .\obj\uva30a.o: ..\ADC\uFono.h
 .\obj\uva30a.o: ..\Timers\Timers.h

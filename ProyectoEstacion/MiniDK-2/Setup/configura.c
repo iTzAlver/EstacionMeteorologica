@@ -35,15 +35,23 @@ extern modificables_t	MODIFICABLES;
 //---------------------------------------------------------------------------------------------------------------------**/
 void __configuraPrograma__(	void	)	
 {
+	__configuraLCD__		();
+	LCD_Clear(Black);
+	__pintaCargandoInicio__	();
 	__iniciaVariables__		();
-//	crearSeno				();
-//	__configuraWEB__		();
+	LCD_Clear(Black);
+	__pintaCargandoSeno__	();
+	crearSeno				();
+	LCD_Clear(Black);
+	__pintaCargandoConexion__();
+	__configuraWEB__		();
+	LCD_Clear(Black);
+	__pintaCargandoIniciando__();
 	__configuraSysTick__	();
 	__configuraTimer0__		();
 	__configuraLDR__		();
 	__configuraUVA30A__		();
 	__configuraUFONO__		();
-	__configuraLCD__		();
 	__configuraRTC__		();
 	__configuraPWM__	(	Fpwm	,	ACTIVOS_2_1 | ACTIVOS_6_1	);
 	modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	90	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
@@ -59,6 +67,8 @@ void __configuraPrograma__(	void	)
 #ifndef	DEBUG
 // 	TouchPanel_Calibrate();
 #endif
+	LCD_Clear(Black);
+	__pintaCargandoDone__	();
 	LCD_Clear(Black);
 	ESTADO->CHART = PANTALLA_INICIO;
 }

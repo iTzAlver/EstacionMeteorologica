@@ -88,7 +88,7 @@
 #define		CsADC			Fs0							//	Frecuencia de muestreo del LDR.
 #define		CsCAP			5*Fs0						//	Frecuencia de muestreo del UVA.
 
-#define		FsAudio			12000						//	3kHz de audio, Nyquist *= 2,	Yo *= 4.
+#define		FsAudio			8000							//	3kHz de audio, Nyquist *= 2,	Yo *= 8khz.
 #define		TsAudio			(float)1/(float)FsAudio			//	Periodo de muestreo del audio.
 #define		DURACION_AUDIO		2							//	2 segundos de audio.
 #define		MUESTRAS_AUDIO		DURACION_AUDIO*FsAudio			//	Muestras en los 2 segundos de audio.

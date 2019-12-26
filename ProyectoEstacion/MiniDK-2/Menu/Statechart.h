@@ -119,6 +119,11 @@ void squareButton		( screenZone_t *	zone		, char * 		text	, uint16_t 	textColor	
 void checkTouchPanel	(	void	);
 int8_t zoneNewPressed	(screenZone_t * zone		);
 void squareBox			( screenZone_t *	zone		,	uint16_t	color);
+void __pintaCargandoSeno__	(	void	);
+void __pintaCargandoConexion__(	void	);
+void __pintaCargandoDone__	(	void	);
+void __pintaCargandoInicio__	(	void	);
+void __pintaCargandoIniciando__	(	void	);
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

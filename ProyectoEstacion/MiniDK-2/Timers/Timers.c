@@ -163,10 +163,36 @@ void TIMER0_IRQHandler(	void	)
 	TIM0_ticks++;
 	if (	!MODIFICABLES.Var_medida	)
 	{
+		if (DATOS->Temperatura >= MAX_TEMP)
+		{
+			modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	180	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+			if (ACTUALIZADOR->Audiorev)
+			{
+				ACTUALIZADOR->Audiorev = 0;
+				activarDac();
+			}
+		}
+		if (DATOS->Temperatura <= MIN_TEMP)
+		{
+			modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	0	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+		}
 		modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Temperatura - MIN_TEMP)/(MAX_TEMP - MIN_TEMP))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
 	}
 	else
 	{
+		if (DATOS->Presion >= MAX_PRES)
+		{
+			modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	180	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+			if (ACTUALIZADOR->Audiorev)
+			{
+				ACTUALIZADOR->Audiorev = 0;
+				activarDac();
+			}
+		}
+		if (DATOS->Presion <= MIN_PRES)
+		{
+			modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	0	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+		}
 		modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Presion - MIN_PRES)/(MAX_PRES - MIN_PRES))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
 	}
 }
