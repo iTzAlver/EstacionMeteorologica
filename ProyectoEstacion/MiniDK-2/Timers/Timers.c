@@ -24,20 +24,18 @@
 uint8_t					TIM0_ticks 	= 	0;
 uint8_t					Timer2_MODO	=	MODO_SALIDA;
 uint32_t					CAP11_BUFF	=	0;
-uint8_t					bloq_flag		=	0;
 
 uint16_t					contadorLUZ	=	0;
 
-float					TEMP_min		=	TEMP_MIN;
-float					TEMP_max		=	TEMP_MAX;
-
-extern 	uint8_t			__brilloAuto;			//	Esta línea no me gusta nada, pero era mucho mejor que complicarlo.
+extern 	uint8_t			__brilloAuto;
+extern	uint8_t			__brilloFade;
 extern	uint8_t			YaPuedesMedir;
 extern	Counters_t	*	COUNTERS;
 extern	misDatos_t	*	DATOS;
 extern	actualizador_t	*	ACTUALIZADOR;
 extern	uint8_t		*	AUDIO;
 extern	uint8_t		*	CAPcont;
+extern	modificables_t	MODIFICABLES;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@function		__configuraSysTick__()															//
@@ -101,16 +99,17 @@ void SysTick_Handler()
 {
 
 	timer_tick();
-	if (contadorLUZ 	<	SYST_BRILLO)
+	if (contadorLUZ 	<	FREQ_OVERFLOW_SYSTICK * (MODIFICABLES.TiempoBrillo))
 	{
 		contadorLUZ++;
 	}
 	else
 	{
-		if (!__brilloAuto	&&	!bloq_flag)									//	Si pasan 60s y el brillo automático está desactivado...
+		if (__brilloFade)									//	Si pasan 60s y el brillo automático está desactivado...
 		{
+			__brilloAuto = 0;
+			__brilloFade = 0;
 			modificaPulso(	PWM6	,	MODO_CICLO	,	1	,	none	,	none	,	none	);	//	Apago la pantalla.
-			bloq_flag = 1;
 		}
 	}
 }
@@ -156,13 +155,51 @@ static void 	_subBurst()
 		}
 	}	
 }
+//	Actualizo el servo.
+void __subServo(	void	)
+{
+	if (	!MODIFICABLES.Var_medida	)
+	{
+		if (DATOS->Temperatura >= MAX_TEMP)
+		{
+			modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	180	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+			if (ACTUALIZADOR->Audiorev)
+			{
+				ACTUALIZADOR->Audiorev = 0;
+				activarDac();
+			}
+		}
+		if (DATOS->Temperatura <= MIN_TEMP)
+		{
+			modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	0	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+		}
+		modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Temperatura - MIN_TEMP)/(MAX_TEMP - MIN_TEMP))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+	}
+	else
+	{
+		if (DATOS->Presion >= MAX_PRES)
+		{
+			modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	180	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+			if (ACTUALIZADOR->Audiorev)
+			{
+				ACTUALIZADOR->Audiorev = 0;
+				activarDac();
+			}
+		}
+		if (DATOS->Presion <= MIN_PRES)
+		{
+			modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	0	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+		}
+		modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Presion - MIN_PRES)/(MAX_PRES - MIN_PRES))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+	}
+}
 //	Ahora sí, el handler:	Ojo que aquí es donde actualizo el servo.
 void TIMER0_IRQHandler(	void	)
 {
 	_subAnemoTempe();
 	_subBurst();
 	TIM0_ticks++;
-	modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Temperatura - TEMP_min)/(TEMP_max - TEMP_min))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+	__subServo();
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//

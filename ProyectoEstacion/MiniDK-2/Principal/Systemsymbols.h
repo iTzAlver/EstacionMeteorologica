@@ -86,12 +86,19 @@
 #define		Ts0				0.5							//	Tiempo de muestreo en segundos sin prescaler. (Muestras)
 #define		Fs0				(float)1/(float)Ts0				//	Frecuencia de muestreo en Hz. (Muestras)
 #define		CsADC			Fs0							//	Frecuencia de muestreo del LDR.
-#define		CsCAP			20*Fs0						//	Frecuencia de muestreo del UVA.
+#define		CsCAP			5*Fs0						//	Frecuencia de muestreo del UVA.
 
-#define		FsAudio			12000						//	3kHz de audio, Nyquist *= 2,	Yo *= 4.
+#define		FsAudio			8000							//	3kHz de audio, Nyquist *= 2,	Yo *= 8khz.
 #define		TsAudio			(float)1/(float)FsAudio			//	Periodo de muestreo del audio.
 #define		DURACION_AUDIO		2							//	2 segundos de audio.
 #define		MUESTRAS_AUDIO		DURACION_AUDIO*FsAudio			//	Muestras en los 2 segundos de audio.
+#define		MUESTRAS_SENO		32
+
+
+#define	MAX_PRES		MODIFICABLES.Max_servo_p
+#define	MAX_TEMP		MODIFICABLES.Max_servo_t
+#define	MIN_PRES		MODIFICABLES.Min_servo_p
+#define	MIN_TEMP		MODIFICABLES.Min_servo_t
 
 //	Constantes universales.
 #define		PI				3.141592
@@ -157,6 +164,17 @@ typedef struct {
 	uint32_t Linked;
 	uint32_t CR;
 }LinkedModeDMA_t;
+
+typedef struct {
+	float	Max_servo_t;		//	Done
+	float	Min_servo_t;		//	Done
+	float	Max_servo_p;		//	Done
+	float	Min_servo_p;		//	Done
+	
+	uint8_t	Var_medida;		//	Done
+	uint32_t	TiempoBrillo;		//	Done
+}modificables_t;
+
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

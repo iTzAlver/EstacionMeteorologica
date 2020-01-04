@@ -65,7 +65,7 @@ void __configuraOW__()
 void	mideTemperatura	(	void	)
 {
 	int i;
-	uint8_t Check[4];
+	uint8_t Check[4] = {0,0,0,0};
 	uint32_t Rx				=	0;
 	uint8_t Checksum_Recibido	=	0;
 	p = 0;

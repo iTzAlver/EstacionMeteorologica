@@ -24,6 +24,7 @@
 char	UART0_BUFFER_RX[CADMAX + 1];
 char UART0_BUFFER_TX[CADMAX + 1];
 static char * _prx	=	UART0_BUFFER_RX;
+uint8_t	  _pprx = 0;
 static char * _ptx	=	UART0_BUFFER_TX;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
@@ -42,28 +43,17 @@ void	__configuraUART0__(	void	)				//	Configurado a 9600 baudios.
 	LPC_UART0->LCR			&=	~(1	<<	2)	//	Un bit de stop.
 						|	~(1	<<	3);	//	Sin bit de paridad.
 	
-	LPC_UART0->LCR			&=	~(1	<<	DLP);		//	Activo el latch.
+	LPC_UART0->LCR			|=	(1	<<	DLP);		//	Activo el latch.
 	LPC_UART0->DLL			=	163;					//	9600 baudios. -> 9645,06 el real.
 	LPC_UART0->DLM			=	0;					//	No supera 255;
 	LPC_UART0->FDR;								//	No toco el FR, no hay mucha variación.	
-	LPC_UART0->LCR			|=	 (1	<<	DLP);		//	Desactivo el latch.
+	LPC_UART0->LCR			&=	 ~(1	<<	DLP);		//	Desactivo el latch.
 	
 	LPC_UART0->IER			=	(1	<<	2);	//	Activo interrupción por RX lleno.
-	strcpy(UART0_BUFFER_TX	,	"Hola\n\r");
+	strcpy(UART0_BUFFER_TX	,	"Hola.\n\r");
 	UART0_MandaBufferTx();
 	
 	NVIC_EnableIRQ(	UART0_IRQn	);		//	Activo el manejador de la interrupción.
-}
-/**---------------------------------------------------------------------------------------------------------------------//
-//																								//																																														//
-//		@function		__ignore()																	//
-//																								//
-//		@brief		Esta función no hace nada.														//
-//																								//
-//---------------------------------------------------------------------------------------------------------------------**/
-static void __ignore(	void	)
-{
-	/**	@DO:	No hace nada.	*/
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
@@ -74,17 +64,29 @@ static void __ignore(	void	)
 //---------------------------------------------------------------------------------------------------------------------**/
 static void __recibirDatos(	void	)
 {
-	*_prx = LPC_UART0->RBR;					//	Guardo el byte que ha llegado.
-	
-	if	(*_prx 	== 	RetornoDeCarro)		//	Si es el último byte...
+	uint32_t var = LPC_UART0->RBR;
+//	*_prx = var;					//	Guardo el byte que ha llegado.
+//	
+//	if	(*_prx 	== 	RetornoDeCarro)		//	Si es el último byte...
+//	{
+//		*_prx 	= 	NULL;				//	Se añade el caracter null en vez de el retorno de carro.			
+//		_prx		=	UART0_BUFFER_RX;		//	Vuelve al inicio del buffer.
+//		procesarComando(	UART0_BUFFER_RX);	//	Proceso el comando recibido.
+//	}
+//	else									//	Si no es el último byte...
+//	{
+//		_prx++;							//	Cargo la siguiente posición en el puntero.
+//	}
+	UART0_BUFFER_RX[_pprx] = var;
+	if	(var 	== 	RetornoDeCarro)		//	Si es el último byte...
 	{
-		*_prx 	= 	NULL;				//	Se añade el caracter null en vez de el retorno de carro.			
-		_prx		=	UART0_BUFFER_RX;		//	Vuelve al inicio del buffer.
+		UART0_BUFFER_RX[_pprx]	= 	NULL;	//	Se añade el caracter null en vez de el retorno de carro.			
+		_pprx		=	0;				//	Vuelve al inicio del buffer.
 		procesarComando(	UART0_BUFFER_RX);	//	Proceso el comando recibido.
 	}
-	else									//	Si no es el último byte...
+	else
 	{
-		_prx++;							//	Cargo la siguiente posición en el puntero.
+		_pprx++;
 	}
 }
 /**---------------------------------------------------------------------------------------------------------------------//
@@ -141,69 +143,69 @@ uint8_t	procesarComando(	char	*	Buff	)
 	uint8_t 	retval = 0;
 	uint8_t	comSET = 0;
 	/**	SECCIÓN PARA LOS COMANDOS DE TIPO 0:	ABOUT*/
-	if	(	strcmp(	Buff	,	COM0	)	)
+	if	(	!strcmp(	Buff	,	COM0	)	)
 	{
 		retval = 1;
 		strcpy(	UART0_BUFFER_TX	,	"\n Autor: \t Alberto Palomo Alonso \n Version: \t 0.0.0 \n Sistemas Electronicos Digitales Avanzados \t UAH \n"	);
 	}
 	/**	SECCIÓN PARA LOS COMANDOS DE TIPO 1:	GIMME*/
-	if	(	strcmp( Buff , COM1)	)
+	if	(	!strcmp( Buff , COM1)	)
 	{
-		if 	(	strcmp(	&Buff[6]	,	COM10)	)
+		if 	(	!strcmp(	&Buff[6]	,	COM10)	)
 		{
-			strcpy	(	UART0_BUFFER_TX	,	"\nSUGAAAAR!!!!!!!!!!!!!!!!!!!!!!\n");
+			strcpy	(	UART0_BUFFER_TX	,	"\nSUGAR\n");
 			retval = 1;
 		}
-		if 	(	strcmp(	&Buff[6]	,	COM11)	)
+		if 	(	!strcmp(	&Buff[6]	,	COM11)	)
 		{
 			strcpy	(	UART0_BUFFER_TX	,	"\nIP: 192.168.1.120 \n");
 			retval = 1;
 		}
-		if 	(	strcmp(	&Buff[6]	,	COM12)	)
+		if 	(	!strcmp(	&Buff[6]	,	COM12)	)
 		{
 			strcpy	(	UART0_BUFFER_TX	,	"\nTEMPERATURA: \n");
 			retval = 1;
 		}
-		if 	(	strcmp(	&Buff[6]	,	COM13)	)
+		if 	(	!strcmp(	&Buff[6]	,	COM13)	)
 		{
 			strcpy	(	UART0_BUFFER_TX	,	"\nPRESION: \n");
 			retval = 1;
 		}
-		if 	(	strcmp(	&Buff[6]	,	COM14)	)
+		if 	(	!strcmp(	&Buff[6]	,	COM14)	)
 		{
 			strcpy	(	UART0_BUFFER_TX	,	"\nVELOCIDAD DEL VIENTO: \n");
 			retval = 1;
 		}
-		if 	(	strcmp(	&Buff[6]	,	COM15)	)
+		if 	(	!strcmp(	&Buff[6]	,	COM15)	)
 		{
 			strcpy	(	UART0_BUFFER_TX	,	"\nX:   \nY:   \nZ:\n");
 			retval = 1;
 		}
-		if 	(	strcmp(	&Buff[6]	,	COM16)	)
+		if 	(	!strcmp(	&Buff[6]	,	COM16)	)
 		{
 			strcpy	(	UART0_BUFFER_TX	,	"\nINDICE UV: \n");
 			retval = 1;
 		}
-		if 	(	strcmp(	&Buff[6]	,	COM17)	)
+		if 	(	!strcmp(	&Buff[6]	,	COM17)	)
 		{
 			strcpy	(	UART0_BUFFER_TX	,	"\n / / / : : \n");
 			retval = 1;
 		}
-		if 	(	strcmp(	&Buff[6]	,	COM18)	)
+		if 	(	!strcmp(	&Buff[6]	,	COM18)	)
 		{
 			strcpy	(	UART0_BUFFER_TX	,	"\nHUMEDAD: \n");
 			retval = 1;
 		}
-		if 	(	strcmp(	&Buff[6]	,	COM19)	)
+		if 	(	!strcmp(	&Buff[6]	,	COM19)	)
 		{
 			strcpy	(	UART0_BUFFER_TX	,	"\nBRILLO: \n");
 			retval = 1;
 		}
 	}
 	/**	SECCIÓN PARA LOS COMANDOS DE TIPO 2:	SET*/
-	if	(	strcmp(	Buff	,	COM2	)	)
+	if	(	!strcmp(	Buff	,	COM2	)	)
 	{
-		if (	strcmp	(	&Buff[4]	,	COM20)	)
+		if (	!strcmp	(	&Buff[4]	,	COM20)	)
 		{
 			sscanf(	&Buff[11]	,	"%c"	,	&comSET);
 			modificaPulso		(	PWM6,	MODO_CICLO	,	comSET	,	none	,	none			,	none			);
@@ -211,12 +213,12 @@ uint8_t	procesarComando(	char	*	Buff	)
 		}
 	}
 	/**	SECCIÓN PARA LOS COMANDOS DE TIPO 3:	KILL*/
-	if	(	strcmp(	Buff	,	COM3	)	)
+	if	(	!strcmp(	Buff	,	COM3	)	)
 	{
 		while (1);
 	}
 	/**	SECCIÓN PARA LOS COMANDOS DE TIPO 4:	HELP	*/
-	if	(	strcmp(	Buff	,	COM4	)	)
+	if	(	!strcmp(	Buff	,	COM4	)	)
 	{
 		strcpy(	UART0_BUFFER_TX	,	"ABOUT: Muestra info. del sistema. \n GIMME: Proporciona el dato deseado. \n   IP: Ip web.\n   TEMPERATURA\n   PRESION\n   LUGAR\n   VIENTO\n   INDICEUV\n   HORA\n   HUMEDAD\n   BRILLO\n SET: Configura parametros del sistema.\n   BRILLO X\n KILL: Cuelga el programa.\n"	);
 		retval = 1;
@@ -241,8 +243,19 @@ uint8_t	procesarComando(	char	*	Buff	)
 //---------------------------------------------------------------------------------------------------------------------**/
 void UART0_IRQHandler()
 {
-	(LPC_UART0->IIR & UART0_MRX) ? __recibirDatos()	:	__ignore();
-	(LPC_UART0->IIR & UART0_MTX) ? __transmitirDatos():	__ignore();
+	uint32_t swart = LPC_UART0->IIR & 0x0E;
+	switch( swart )
+	{
+		case 6:								 /* RBR, Receiver Buffer Ready */
+			__recibirDatos();
+			break;
+		case 2:								/* THRE, Transmit Holding Register empty */
+			__transmitirDatos();
+			break;     
+		default:
+			
+			break;
+    }
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																															//

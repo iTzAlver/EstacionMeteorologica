@@ -101,6 +101,11 @@
 #define	ACTIVOS_2_1		0x0200
 #define	ACTIVOS_6_2		0x0020
 #define	ACTIVOS_6_1		0x2000
+
+#define	MAXIMO_PRESION		1500
+#define	MINIMO_PRESION		500
+#define	MAXIMO_TEMPERATURA	50
+#define	MINIMO_TEMPERATURA	-10
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcdef		Estas son las funciones correspondientes a la configuración.							//

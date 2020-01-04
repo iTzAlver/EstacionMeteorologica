@@ -37,7 +37,7 @@ void __configuraUFONO__()
 	LPC_TIM1->TCR	=	0x2;				//	Reset al contador.
 	LPC_TIM1->TCR  =	0x1;				//	Activo contador.
 	LPC_TIM1->MCR  =    0x0;				//	MR0 que NO genera la interrupción.
-	NVIC_EnableIRQ(	TIMER0_IRQn	);	//	Activo interrupción.
+	NVIC_EnableIRQ(	TIMER1_IRQn	);	//	Activo interrupción.
 }
 
 void	lanzaUFONO()
