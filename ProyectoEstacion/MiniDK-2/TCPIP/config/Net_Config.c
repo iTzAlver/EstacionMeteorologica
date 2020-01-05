@@ -917,7 +917,6 @@ void sys_error (ERROR_CODE code) {
       /* TCP State machine in undefined state. */
       break;
   }
-
   /* End-less loop */
   while (1);
 }

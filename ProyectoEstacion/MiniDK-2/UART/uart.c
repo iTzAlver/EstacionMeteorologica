@@ -20,6 +20,7 @@ char tx_completa;		// Flag de transmisión de cadena completa
 /*
  * UART0 interrupt handler
  */
+ 
 void UART0_IRQHandler(void) {
 	
     switch(LPC_UART0->IIR&0x0E) {

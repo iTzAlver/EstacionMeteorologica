@@ -47,26 +47,41 @@
 #define	RetornoDeCarro		13
 #define	CADMAX			120
 
-#define	COM1				"GIMME \r"
-#define	COM10			"SUGAR"
-#define	COM11			"IP"
-#define	COM12			"TEMPERATURA"
-#define	COM13			"PRESION"
-#define	COM14			"VIENTO"
-#define	COM15			"LUGAR"
-#define	COM16			"INDICEUV"
-#define	COM17			"HORA"
-#define	COM18			"HUMEDAD"
-#define	COM19			"BRILLO"
+#define	COM10			"GIVE SUGAR\r"
+#define	COM11			"GIVE IP\r"
+#define	COM12			"GIVE TEMPERATURA\r"
+#define	COM13			"GIVE PRESION\r"
+#define	COM14			"GIVE VIENTO\r"
+#define	COM15			"GIVE LUGAR\r"
+#define	COM16			"GIVE INDICEUV\r"
+#define	COM17			"GIVE HORA\r"
+#define	COM18			"GIVE HUMEDAD\r"
+#define	COM19			"GIVE BRILLO\r"
 
-
-#define	COM2				"SET "
-#define	COM20			"BRILLO "
+#define	COM20			"SET BRILLO\r"
+#define	COM21			"SET HORA\r"
+#define	COM22			"SET MIN TEMP\r"
+#define	COM23			"SET MAX TEMP\r"
+#define	COM24			"SET MIN PRES\r"
+#define	COM25			"SET MAX PRES\r"
+#define	COM26			"SET TEMPERATURA\r"
+#define	COM27			"SET PRESION\r"
 
 #define	COM3				"KILL\r"
 
-#define	COM0				"ABOUT"
-#define	COM4				"HELP"
+#define	COM0				"ABOUT\r"
+#define	COM4				"HELP\r"
+#define	COM41			"HELP GIVE\r"
+#define	COM42			"HELP SET\r"
+
+#define	UART_TX			0
+#define	UART_RX_BRILLO		1
+#define	UART_RX_MINT		2
+#define	UART_RX_MAXT		3
+#define	UART_RX_MINP		4
+#define	UART_RX_MAXP		5
+#define	UART_RX_HORA		6
+#define	UART_RX_VARM		7
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcdef		Estas son las funciones correspondientes al protocolo UART0.	      					//
