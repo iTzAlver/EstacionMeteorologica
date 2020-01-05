@@ -1022,6 +1022,11 @@
                 </FileArmAds>
               </FileOption>
             </File>
+            <File>
+              <FileName>uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UART\uart.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

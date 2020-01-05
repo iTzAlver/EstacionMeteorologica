@@ -36,6 +36,7 @@
 ".\obj\asciilib.o"
 ".\obj\glcd.o"
 ".\obj\uart0.o"
+".\obj\uart.o"
 ".\obj\i2c.o"
 ".\obj\i2clib.o"
 --library_type=microlib --strict --scatter ".\Obj\Estacion.sct"

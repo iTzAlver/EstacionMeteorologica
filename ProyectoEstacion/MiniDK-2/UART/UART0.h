@@ -47,7 +47,7 @@
 #define	RetornoDeCarro		13
 #define	CADMAX			120
 
-#define	COM1				"GIMME "
+#define	COM1				"GIMME \r"
 #define	COM10			"SUGAR"
 #define	COM11			"IP"
 #define	COM12			"TEMPERATURA"
@@ -63,7 +63,7 @@
 #define	COM2				"SET "
 #define	COM20			"BRILLO "
 
-#define	COM3				"KILL"
+#define	COM3				"KILL\r"
 
 #define	COM0				"ABOUT"
 #define	COM4				"HELP"

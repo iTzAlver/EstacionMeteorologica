@@ -10,3 +10,4 @@
 .\obj\uart0.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
 .\obj\uart0.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
 .\obj\uart0.o: ..\PWM\PWM.h
+.\obj\uart0.o: ..\UART\uart.h

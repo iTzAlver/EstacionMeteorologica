@@ -19,10 +19,12 @@
 #ifndef	UART0
 #define	UART0
 #include	"UART0.h"
+#include 	"uart.h"
 #endif
 //	Variables globales y externas.
 char	UART0_BUFFER_RX[CADMAX + 1];
 char UART0_BUFFER_TX[CADMAX + 1];
+extern char bufferx[30];
 static char * _prx	=	UART0_BUFFER_RX;
 uint8_t	  _pprx = 0;
 static char * _ptx	=	UART0_BUFFER_TX;
@@ -35,25 +37,8 @@ static char * _ptx	=	UART0_BUFFER_TX;
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__configuraUART0__(	void	)				//	Configurado a 9600 baudios.
 {
-	LPC_SC->PCONP			|=	(1	<<	3);	//	Activo el bit de power para la UART0.
-	LPC_PINCON->PINSEL0		|=	(1	<<	4)	//	P0.2	como TXD0.
-						|	(1	<<	6);	// 	P0.2 como RXD0.
-	
-	LPC_UART0->LCR			|=	(0x3	<<	0);	//	Palabras de 1 byte.
-	LPC_UART0->LCR			&=	~(1	<<	2)	//	Un bit de stop.
-						|	~(1	<<	3);	//	Sin bit de paridad.
-	
-	LPC_UART0->LCR			|=	(1	<<	DLP);		//	Activo el latch.
-	LPC_UART0->DLL			=	163;					//	9600 baudios. -> 9645,06 el real.
-	LPC_UART0->DLM			=	0;					//	No supera 255;
-	LPC_UART0->FDR;								//	No toco el FR, no hay mucha variación.	
-	LPC_UART0->LCR			&=	 ~(1	<<	DLP);		//	Desactivo el latch.
-	
-	LPC_UART0->IER			=	(1	<<	2);	//	Activo interrupción por RX lleno.
-	strcpy(UART0_BUFFER_TX	,	"Hola.\n\r");
-	UART0_MandaBufferTx();
-	
-	NVIC_EnableIRQ(	UART0_IRQn	);		//	Activo el manejador de la interrupción.
+	uart0_init(9600);
+	tx_cadena_UART0(	"Hola.\n"	);
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
@@ -122,7 +107,7 @@ void UART0_MandaBufferTx(	void	)
 {
 	if	(	(LPC_UART0->IER & (	1	<<	1))	==	0)	//	Si no hay transmisión pendiente...
 	{
-		LPC_UART0->IER	|=	(1	<<	1);	//	Activo interrupción por buffer TX vacío.
+		LPC_UART0->IER	|=	(1	<<	1);	//	Activo interrupción por buffer RX vacío.
 		LPC_UART0->THR	=	*_ptx;		//	Envío el primer caracter.
 		_ptx++;						//	Cargo el siguiente caracter.
 	}
@@ -228,7 +213,7 @@ uint8_t	procesarComando(	char	*	Buff	)
 	{
 		strcpy(	UART0_BUFFER_TX,	"Error: comando no definido, escriba 'HELP' para ver la lista.\n");
 	}
-	UART0_MandaBufferTx();
+	tx_cadena_UART0(UART0_BUFFER_TX);
 	/**	ZONA RETURN	*/
 	return retval;
 }
@@ -241,22 +226,22 @@ uint8_t	procesarComando(	char	*	Buff	)
 //					transmisión.																	//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-void UART0_IRQHandler()
-{
-	uint32_t swart = LPC_UART0->IIR & 0x0E;
-	switch( swart )
-	{
-		case 6:								 /* RBR, Receiver Buffer Ready */
-			__recibirDatos();
-			break;
-		case 2:								/* THRE, Transmit Holding Register empty */
-			__transmitirDatos();
-			break;     
-		default:
-			
-			break;
-    }
-}
+//void UART0_IRQHandler()
+//{
+//	uint32_t swart = LPC_UART0->IIR & 0x0E;
+//	switch( swart )
+//	{
+//		case 6:								 /* RBR, Receiver Buffer Ready */
+//			__recibirDatos();
+//			break;
+//		case 2:								/* THRE, Transmit Holding Register empty */
+//			__transmitirDatos();
+//			break;     
+//		default:
+//			
+//			break;
+//    }
+//}
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																															//
 //		@end		ENDFILE.																			//
