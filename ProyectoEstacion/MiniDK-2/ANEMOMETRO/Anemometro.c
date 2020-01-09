@@ -1,15 +1,16 @@
 /**---------------------------------------------------------------------------------------------------------------------//
 //		@filename		Anemometro.c																	//
-//		@version		0.00																			//
+//		@version		2.00																			//
 //		@author		Alberto Palomo Alonso															//
 //																								//
 //		@brief		Este es el programa donde se encuentran las funciones correspondientes al					//
 //					anemómetro de la estación.														//
 //																								//
 //																								//
-//		@category		Opcional.																		//
+//		@category		Medida.																		//
 //																								//
 //		@map			@include																		//
+//					@variables																	//
 //					@function																		//
 //					@end																			//
 //																								//
@@ -22,6 +23,11 @@
 #define	ANEMOMETRO
 #include	"Anemometro.h"
 #endif
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@variables		Variables del fichero.														//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
 uint8_t	CAPcont		=	2*PULSOS_VUELTA;
 uint8_t	SLAYERcont	=	0;
 uint32_t	CLKbuff[]		=	{0 , 0};

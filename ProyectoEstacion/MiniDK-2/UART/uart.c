@@ -135,7 +135,7 @@ void uart0_init(int baudrate) {
     LPC_PINCON->PINSEL0|=(1<<4)|(1<<6);// Change P0.2 and P0.3 mode to TXD0 and RXD0
     ptr_rx = bufferx;
     LPC_UART0->LCR &= ~STOP_1_BIT & ~PARITY_NONE; // Set 8N1 mode (8 bits/dato, sin pariad, y 1 bit de stop)
-    LPC_UART0->LCR |= CHAR_8_BIT | 1 << 3;
+    LPC_UART0->LCR |= CHAR_8_BIT | 1 << 3;	/**	@CHANGED:	CHAR_8_BIT AÑADIDO POR ALBERTO PALOMO.*/
 
     uart0_set_baudrate(baudrate);// Set the baud rate
     

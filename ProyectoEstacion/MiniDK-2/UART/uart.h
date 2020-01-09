@@ -23,5 +23,5 @@
 #define CTI_INTERRUPT                   (6 << 1)
 void uart0_init(int baudrate);
 void tx_cadena_UART0(char *ptr);
-uint8_t procesarComando (char* buff);
+unsigned char procesarComando (char* buff);
 #endif /* UART_H_ */

@@ -39,4 +39,5 @@
 .\obj\main.o: ..\TCPIP\lib\HTTP_SOURCE.h
 .\obj\main.o: ..\ADC\UVA30A.h
 .\obj\main.o: ..\UART\UART0.h
+.\obj\main.o: ..\UART\uart.h
 .\obj\main.o: ..\UART\UART3.h

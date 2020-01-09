@@ -1,6 +1,6 @@
 /**---------------------------------------------------------------------------------------------------------------------//
 //		@filename		uFono.c																		//
-//		@version		0.00																			//
+//		@version		1.00																			//
 //		@author		Alberto Palomo Alonso															//
 //																								//
 //		@brief		Código que contiene todo lo relaccionado con el micrófono.								//
@@ -8,6 +8,7 @@
 //		@category		Opcional.																		//
 //																								//
 //		@map			@include																		//
+//					@variables																	//
 //					@funcion																		//
 //					@end																			//
 //																								//
@@ -21,12 +22,24 @@
 #define	UFONO
 #include	"uFono.h"
 #endif
-
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@variables		Variables del fichero.														//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
 extern uint8_t	Timer2_MODO;
 uint8_t	YaPuedesMedir = 1;
 uint32_t	ADC_ConfigBuffer;
 uint32_t  ADC_IntenBuffer;
-
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@funcion	__configuraUFONO__()																//
+//																								//
+//		@ref		Configura todo lo necesario para la lectura de audio.										//
+//																								//
+//		@WARNING	Utiliza variables de bloqueo.															//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
 void __configuraUFONO__()
 {
 //	LPC_PINCON->PINSEL1 |= ~(0x3 << (2*PIN_UFONO));
@@ -39,11 +52,18 @@ void __configuraUFONO__()
 	LPC_TIM1->MCR  =    0x0;				//	MR0 que NO genera la interrupción.
 	NVIC_EnableIRQ(	TIMER1_IRQn	);	//	Activo interrupción.
 }
-
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@funcion	lanzaUFONO()																		//
+//																								//
+//		@ref		Lanza la lectura de audio.															//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
 void	lanzaUFONO()
 {
 	//	Preparo el contexto.
 	YaPuedesMedir 		= 	0;					//	Bloqueo el ADC para el audio.
+	LPC_GPIO3->FIOSET	=	(	1	<<	LECTURA_AUDIO);	//	Señalizo lectura de audio.
 	Timer2_MODO		=	MODO_ENTRADA;			//	Indico que el audio está siendo grabado.
 	ADC_ConfigBuffer 	= 	LPC_ADC->ADCR;			//	Guardo el contexto de la configuración.
 	ADC_IntenBuffer 	=	LPC_ADC->ADINTEN;		//	Guardo el contexto de la configuración de interrupciones.
@@ -64,7 +84,13 @@ void	lanzaUFONO()
 	LPC_TIM1->TCR	=	0x1;						//	Que cuente.
 	LPC_TIM1->EMR	=	0x31;					//	Activo el Match0 en modo toogle.
 }
-
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@funcion	recuperaContexto()																	//
+//																								//
+//		@ref		Desbloquea los recursos utilizados para la lectura de audio.								//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
 void recuperaContexto()
 {
 	//	Recupero el contexto.
@@ -75,6 +101,7 @@ void recuperaContexto()
 		LPC_ADC->ADCR		&=	~(0x7 << 24);		//	Borro el START del ADC.
 		LPC_ADC->ADCR		|=	(0xFF << 8);		//	CLKDIV max.
 		YaPuedesMedir 		= 	1;				//	Desbloqueo el ADC.
+		LPC_GPIO3->FIOCLR	=	(	1	<<	LECTURA_AUDIO);	//	Señalizo fin de lectura.
 		Timer2_MODO 		= 	MODO_SALIDA;		//	Default modo salida.
 	}
 }

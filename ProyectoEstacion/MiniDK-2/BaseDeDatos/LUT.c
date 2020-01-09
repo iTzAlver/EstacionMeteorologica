@@ -10,6 +10,7 @@
 //		@category		Opcional.																		//
 //																								//
 //		@map			@include																		//
+//					@variables																	//
 //					@LUT																			//
 //					@function																		//
 //					@end																			//
@@ -23,6 +24,11 @@
 #define	LUT
 #include	"LUT.h"
 #endif
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@variables		Variables del fichero.														//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
 uint8_t	PREGRABADA[MUESTRAS_SENO];
 extern	uint8_t	*	AUDIO;
 /**---------------------------------------------------------------------------------------------------------------------//
@@ -74,34 +80,6 @@ void goto_LUT( float variable , uint8_t LUTn , float * ret_flotante , uint8_t * 
 			break;
 	}
 }
-/**---------------------------------------------------------------------------------------------------------------------//
-//																								//																																														//
-//		@function		crearSeno()																	//
-//																								//
-//		@brief		Crea un seno en el audio al inicializar.											//
-//																								//
-//																								//
-//---------------------------------------------------------------------------------------------------------------------**/
-//void crearSeno()
-//{
-//	long i;
-//	for (i=0	;	i	<	MUESTRAS_SENO;	i++)
-//	{
-//		PREGRABADA[i]	=	(126.0)*(cos(2*PI*(float)i/(float)MUESTRAS_SENO))+ 127;
-//	}
-//}
-
-//void	ponTonoDMA()
-//{
-//	LMD->Origen					=	(uint32_t)PREGRABADA;			//	Origen de la muestra.
-//	LPC_GPDMACH0->DMACCSrcAddr		=	(uint32_t)PREGRABADA;			//	Origen de la muestra.
-////	LMD->CR					=	LPC_GPDMACH0->DMACCControl	=	
-////							MUESTRAS_SENO			//	El número de muestras del audio.
-////							|	(0	<<	18)		//	Tamaño de 8 bits. (Tx)
-////							|	(0	<<	21)		//	Tamaño de 8 bits. (Rx)
-////							|	(1	<<	26)		//	Incremento origen.
-////							|	(0	<<	27);		//	No incremento destino.
-//}
 //**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

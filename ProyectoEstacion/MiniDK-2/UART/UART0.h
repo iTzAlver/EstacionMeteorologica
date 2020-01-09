@@ -36,6 +36,14 @@
 #define	PWM
 #include	"PWM.h"
 #endif
+#ifndef	UART
+#define	UART
+#include 	"uart.h"
+#endif
+#ifndef	MIGLOBAL
+#define	MIGLOBAL
+#include 	"miGlobal.h"
+#endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes al protocolo UART0.								//

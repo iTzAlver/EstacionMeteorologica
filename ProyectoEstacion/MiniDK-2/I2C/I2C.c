@@ -8,6 +8,7 @@
 //		@category		Opcional.																		//
 //																								//
 //		@map			@include																		//
+//					@variables																	//
 //					@function																		//
 //					@end																			//
 //																								//
@@ -20,6 +21,11 @@
 #define	I2C
 #include	"I2C.h"
 #endif	
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@variables		Variables del fichero.														//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
 //	Variables globales y externas.
 BMP_t	COEF			;
 extern 	misDatos_t	*	DATOS;

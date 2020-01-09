@@ -8,6 +8,7 @@
 //		@category		Opcional.																		//
 //																								//
 //		@map			@include																		//
+//					@variables																	//
 //					@function																		//
 //					@end																			//
 //																								//
@@ -19,11 +20,12 @@
 #ifndef	UART0
 #define	UART0
 #include	"UART0.h"
-#include 	"uart.h"
-#include 	"miGlobal.h"
 #endif
-
-
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@variables		Variables del fichero.														//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
 //	Variables globales y externas.
 char UART0_BUFFER_TX[CADMAX + 1];
 extern char bufferx[30];

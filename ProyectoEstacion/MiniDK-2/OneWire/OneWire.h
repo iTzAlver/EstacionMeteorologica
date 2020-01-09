@@ -60,6 +60,15 @@
 
 #define	LIMITE_FALLOS			5
 #define	BITOW				19
+
+#define	US_AHORA		(LPC_TIM3->TC)
+#define	PIN_OWp		19
+#define	PIN_OW		(1	<<	19)
+#define	CONFIG_OUT	(LPC_GPIO1->FIODIR |= PIN_OW)
+#define	CONFIG_IN		(LPC_GPIO1->FIODIR &= ~(PIN_OW)) 
+#define	CLEAR_PIN		(LPC_GPIO1->FIOCLR = PIN_OW)
+#define	SET_PIN		(LPC_GPIO1->FIOSET = PIN_OW)
+#define	ENTRADA		((LPC_GPIO1->FIOPIN >> PIN_OWp) & 1)
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcdef		Estas son las funciones correspondientes al protocolo OneWire.	      					//

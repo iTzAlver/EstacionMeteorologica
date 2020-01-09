@@ -93,7 +93,8 @@
 #define		DURACION_AUDIO		2							//	2 segundos de audio.
 #define		MUESTRAS_AUDIO		DURACION_AUDIO*FsAudio			//	Muestras en los 2 segundos de audio.
 #define		MUESTRAS_SENO		32
-
+#define		LECTURA_AUDIO		25			//	Pin que señaliza lectura de audio.
+#define		ESCRITURA_AUDIO	26			//	Pin que señaliza escritura de audio.
 
 #define	MAX_PRES		MODIFICABLES.Max_servo_p
 #define	MAX_TEMP		MODIFICABLES.Max_servo_t

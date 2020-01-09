@@ -1,6 +1,6 @@
 /**---------------------------------------------------------------------------------------------------------------------//
 //		@filename		Timers.c																		//
-//		@version		0.00																			//
+//		@version		7.00																			//
 //		@author		Alberto Palomo Alonso															//
 //																								//
 //		@brief		Código que configura y programa los manejadores de los timers.							//
@@ -8,6 +8,7 @@
 //		@category		Principal.																	//
 //																								//
 //		@map			@include																		//
+//					@variables																	//
 //					@funcion																		//
 //					@end																			//
 //																								//
@@ -21,12 +22,17 @@
 #define	TIMERS
 #include	"Timers.h"
 #endif
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@variables		Variables del fichero.														//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
 uint8_t					TIM0_ticks 	= 	0;
 uint8_t					Timer2_MODO	=	MODO_SALIDA;
 uint32_t					CAP11_BUFF	=	0;
-
+//	Contador.
 uint16_t					contadorLUZ	=	0;
-
+//	Externos.
 extern 	uint8_t			__brilloAuto;
 extern	uint8_t			__brilloFade;
 extern	uint8_t			YaPuedesMedir;

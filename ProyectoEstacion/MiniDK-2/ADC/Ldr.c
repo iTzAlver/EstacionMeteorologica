@@ -8,6 +8,7 @@
 //		@category		Periférico.																	//
 //																								//
 //		@map			@include																		//
+//					@VARIABLES																	//
 //					@funcion																		//
 //					@end																			//
 //																								//
@@ -21,6 +22,11 @@
 #define	LDR
 #include	"LDR.h"
 #endif
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@variables		Variables del fichero.														//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
 extern	misDatos_t	*	DATOS;
 float	BUFFER_BRILLO = 0;
 float	BUFFER_UVA    = 0;
@@ -83,18 +89,6 @@ void	ADC_IRQHandler()
 			break;
 	}
 }
-
-//void ponAudioDMA()
-//{
-//	LMD->Origen					=	(uint32_t)AUDIO;				//	Origen de la muestra.
-//	LPC_GPDMACH0->DMACCSrcAddr		=	(uint32_t)AUDIO;				//	Origen de la muestra.
-//	LMD->CR					=	LPC_GPDMACH0->DMACCControl	=	
-//							MUESTRAS_AUDIO			//	El número de muestras del audio.
-//							|	(0	<<	18)		//	Tamaño de 8 bits. (Tx)
-//							|	(0	<<	21)		//	Tamaño de 8 bits. (Rx)
-//							|	(1	<<	26)		//	Incremento origen.
-//							|	(0	<<	27);		//	No incremento destino.
-//}
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//
