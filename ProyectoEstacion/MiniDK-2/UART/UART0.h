@@ -88,11 +88,7 @@
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__configuraUART0__	(	void	);
-void UART0_MandaBufferTx	(	void	);
 uint8_t	procesarComando(	char *	);
-static void	__transmitirDatos	(	void	);
-static void __recibirDatos		(	void	);
-static void __ignore			(	void	);
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

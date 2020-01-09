@@ -26,7 +26,6 @@ float	BUFFER_BRILLO = 0;
 float	BUFFER_UVA    = 0;
 extern 	actualizador_t	*	ACTUALIZADOR;
 extern 	uint8_t	YaPuedesMedir;
-extern 	LinkedModeDMA_t	*	LMD;
 uint32_t	contador;
 uint8_t	AUDIO[MUESTRAS_AUDIO];
 /**---------------------------------------------------------------------------------------------------------------------//
@@ -85,17 +84,17 @@ void	ADC_IRQHandler()
 	}
 }
 
-void ponAudioDMA()
-{
-	LMD->Origen					=	(uint32_t)AUDIO;				//	Origen de la muestra.
-	LPC_GPDMACH0->DMACCSrcAddr		=	(uint32_t)AUDIO;				//	Origen de la muestra.
+//void ponAudioDMA()
+//{
+//	LMD->Origen					=	(uint32_t)AUDIO;				//	Origen de la muestra.
+//	LPC_GPDMACH0->DMACCSrcAddr		=	(uint32_t)AUDIO;				//	Origen de la muestra.
 //	LMD->CR					=	LPC_GPDMACH0->DMACCControl	=	
 //							MUESTRAS_AUDIO			//	El número de muestras del audio.
 //							|	(0	<<	18)		//	Tamaño de 8 bits. (Tx)
 //							|	(0	<<	21)		//	Tamaño de 8 bits. (Rx)
 //							|	(1	<<	26)		//	Incremento origen.
 //							|	(0	<<	27);		//	No incremento destino.
-}
+//}
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

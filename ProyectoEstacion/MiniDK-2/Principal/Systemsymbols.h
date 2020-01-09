@@ -159,11 +159,11 @@ typedef struct {
 }actualizador_t;
 
 typedef struct {
-	uint32_t Origen;
-	uint32_t Destino;
-	uint32_t Linked;
-	uint32_t CR;
-}LinkedModeDMA_t;
+  uint32_t  source;			// Start of source area
+  uint32_t  destination;// Start of destination area
+  uint32_t  next;       // Address of next strLLI in chain
+  uint32_t  control;    // DMACCxControl register
+} DMA_t;
 
 typedef struct {
 	float	Max_servo_t;		//	Done

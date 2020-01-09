@@ -41,7 +41,7 @@ void __configuraPrograma__(	void	)
 	__iniciaVariables__		();
 	LCD_Clear(Black);
 	__pintaCargandoSeno__	();
-	crearSeno				();
+	//crearSeno				();
 	LCD_Clear(Black);
 	__pintaCargandoConexion__();
 	__configuraWEB__		();
@@ -57,8 +57,8 @@ void __configuraPrograma__(	void	)
 	modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	90	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
 	modificaPulso		(	PWM6,	MODO_CICLO	,	50	,	none	,	none			,	none			);
 	//__configuraWDT__		();
-	__configuraDMA__		();
 	__configuraDAC__		();
+	__configuraDMA__		();
 	__configuraOW__		();
 	__configuraAnemometro__	();
 	__configuraUART0__		();

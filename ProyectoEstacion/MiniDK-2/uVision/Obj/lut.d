@@ -9,6 +9,7 @@
 .\obj\lut.o: ..\Startup\system_LPC17xx.h
 .\obj\lut.o: ..\ADC\LDR.h
 .\obj\lut.o: ..\BaseDeDatos\DMA.h
+.\obj\lut.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
 .\obj\lut.o: ..\ADC\uFono.h
 .\obj\lut.o: ..\Timers\Timers.h
 .\obj\lut.o: C:\Keil\ARM\RV31\INC\RTL.h
@@ -17,4 +18,3 @@
 .\obj\lut.o: ..\PWM\PWM.h
 .\obj\lut.o: ..\OneWire\OneWire.h
 .\obj\lut.o: ..\I2C\I2C.h
-.\obj\lut.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h

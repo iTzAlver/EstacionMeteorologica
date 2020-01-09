@@ -208,6 +208,7 @@ void	__mainLoop__(	void	)
 				if	(	ACTUALIZADOR->Audiorev	)
 				{
 					ACTUALIZADOR->Audiorev = 0;
+					__configuraAudio__();
 					activarDac();
 				}
 			}

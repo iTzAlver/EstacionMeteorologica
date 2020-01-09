@@ -160,35 +160,49 @@ void __subServo(	void	)
 {
 	if (	!MODIFICABLES.Var_medida	)
 	{
-		if (DATOS->Temperatura >= MAX_TEMP)
+		if (DATOS->Temperatura >= MODIFICABLES.Max_servo_t)
 		{
 			modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	180	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
 			if (ACTUALIZADOR->Audiorev)
 			{
 				ACTUALIZADOR->Audiorev = 0;
+				__configuraTono__();
 				activarDac();
 			}
 		}
-		if (DATOS->Temperatura <= MIN_TEMP)
+		if (DATOS->Temperatura <= MODIFICABLES.Min_servo_t)
 		{
 			modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	0	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+			if (ACTUALIZADOR->Audiorev)
+			{
+				ACTUALIZADOR->Audiorev = 0;
+				__configuraAudio__();
+				activarDac();
+			}
 		}
 		modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Temperatura - MIN_TEMP)/(MAX_TEMP - MIN_TEMP))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
 	}
 	else
 	{
-		if (DATOS->Presion >= MAX_PRES)
+		if (DATOS->Presion >= MODIFICABLES.Max_servo_p)
 		{
 			modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	180	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
 			if (ACTUALIZADOR->Audiorev)
 			{
 				ACTUALIZADOR->Audiorev = 0;
+				__configuraTono__();
 				activarDac();
 			}
 		}
-		if (DATOS->Presion <= MIN_PRES)
+		if (DATOS->Presion <= MODIFICABLES.Min_servo_p)
 		{
 			modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	0	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+			if (ACTUALIZADOR->Audiorev)
+			{
+				ACTUALIZADOR->Audiorev = 0;
+				__configuraAudio__();
+				activarDac();
+			}
 		}
 		modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Presion - MIN_PRES)/(MAX_PRES - MIN_PRES))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
 	}
