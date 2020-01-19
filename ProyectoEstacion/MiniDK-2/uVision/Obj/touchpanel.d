@@ -2,7 +2,7 @@
 .\obj\touchpanel.o: ..\Menu\GLCD\GLCD.h
 .\obj\touchpanel.o: ..\Startup\LPC17xx.H
 .\obj\touchpanel.o: ..\Startup\core_cm3.h
-.\obj\touchpanel.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\obj\touchpanel.o: C:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\obj\touchpanel.o: ..\Startup\core_cmInstr.h
 .\obj\touchpanel.o: ..\Startup\core_cmFunc.h
 .\obj\touchpanel.o: ..\Startup\system_LPC17xx.h

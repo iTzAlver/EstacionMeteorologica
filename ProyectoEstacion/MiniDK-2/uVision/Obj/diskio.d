@@ -4,7 +4,7 @@
 .\obj\diskio.o: ..\FAT32\FW\include\SPI_MSD_Driver.h
 .\obj\diskio.o: ..\Startup\LPC17xx.h
 .\obj\diskio.o: ..\Startup\core_cm3.h
-.\obj\diskio.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\obj\diskio.o: C:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\obj\diskio.o: ..\Startup\core_cmInstr.h
 .\obj\diskio.o: ..\Startup\core_cmFunc.h
 .\obj\diskio.o: ..\Startup\system_LPC17xx.h

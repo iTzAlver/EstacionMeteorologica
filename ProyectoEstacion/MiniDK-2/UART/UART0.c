@@ -69,7 +69,7 @@ uint8_t	procesarComando(	char	*	Buff	)
 				retval = 1;
 				strcpy(	UART0_BUFFER_TX	,	"\n Autor: \t Alberto Palomo Alonso \n Version: \t 2.1.0 \n Sistemas Electronicos Digitales Avanzados \t UAH \n"	);
 			}
-			/**	SECCIÓN PARA LOS COMANDOS DE TIPO 1:	GIMME*/
+			/**	SECCIÓN PARA LOS COMANDOS DE TIPO 1:	GIVE*/
 			if 	(	!strcmp(	Buff	,	COM10)	)
 			{
 				if ( !Inmortal )
