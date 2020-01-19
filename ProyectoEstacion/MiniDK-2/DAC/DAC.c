@@ -41,7 +41,7 @@ void __configuraDAC__()
 {
 	LPC_GPIO3->FIODIR	|=	(1	<<	LECTURA_AUDIO	) | (1	<<	ESCRITURA_AUDIO);		// Leds de lectura / escritura de audio.
 	LPC_GPIO3->FIOCLR	=  	(1	<<	LECTURA_AUDIO);								//Turn ON LED1
-	LPC_GPIO3->FIOCLR	=  	(1	<<	ESCRITURA_AUDIO);								//Turn OFF LED2
+	LPC_GPIO3->FIOCLR	=  	(1	<<	ESCRITURA_AUDIO);								//Turn ON LED2
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//

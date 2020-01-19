@@ -1,5 +1,5 @@
 /**---------------------------------------------------------------------------------------------------------------------//
-//		@filename		main.c																		//
+//		@filename		Statechart.c																		//
 //		@version		0.00																			//
 //		@author		Alberto Palomo Alonso															//
 //																								//
@@ -137,7 +137,7 @@ void	__mainLoop__(	void	)
 	if ( __brilloAuto && (SysTick->CTRL & 0x10000))	//	Cada 100 ms si el brillo auto está activado.
 	{
 		goto_LUT( DATOS->Brillo, BRILLO2CICLO_LDR , none , &Aux8 , none , none);
-		modificaPulso(	PWM6	,	MODO_CICLO	,	Aux8	,	none	,	none	,	none	);	/**	@TODO: Cambiar por brillo automático. */
+		modificaPulso(	PWM6	,	MODO_CICLO	,	Aux8	,	none	,	none	,	none	);
 	}
 	/**	@LOOP:	Máquina de estados LCD.		*/
 	switch(	ESTADO->CHART	)

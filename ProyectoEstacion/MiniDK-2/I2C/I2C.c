@@ -134,8 +134,8 @@ void __calibraBMP()
 //---------------------------------------------------------------------------------------------------------------------**/
 void	procesarDato	(	uint8_t	Tipo	)
 {
-	DATOS->Presion		=	presion*0.01;		/**	@TODO:	Comprobar que el chino no me engaña.	*/
-	DATOS->Temperatura	=	temperatura;		/**	@TODO:	Rellenar esta fórmula.	*/
+	DATOS->Presion		=	presion*0.01;
+	DATOS->Temperatura	=	temperatura;
 	DATOS->Lugar.Altura =    (float)44330*( 1 - pow((presion / 101325 ),(1/5.255)));
 }
 /**---------------------------------------------------------------------------------------------------------------------//

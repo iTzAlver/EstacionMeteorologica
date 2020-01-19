@@ -82,7 +82,7 @@ void mideAnemometro()
 		CLKbuff[1] = CLKbuff[0];					//	Almaceno el valor anterior.
 		CLKbuff[0] = LPC_TIM1->CR0;				//	Cargo el valor actual.
 		CAPcont = 0;							//	Reseteo el contador de pulsos.
-		aux_viento 	= 	Ftick*(float)PI*(float)DIAMETRO_ANEMOMETRO/((float)1000*(float)((uint32_t)CLKbuff[0] - (uint32_t)CLKbuff[1]));	// Metros / segundo.
+		aux_viento 	= 	Ftick*(float)PI*(float)DIAMETRO_ANEMOMETRO/((float)100*(float)((uint32_t)CLKbuff[0] - (uint32_t)CLKbuff[1]));	// Metros / segundo.
 		SLAYERcont++;							//	Hay warmup, aumento el slayer.
 		if (	SLAYERcont == WARMUP_CICLOS )
 		{

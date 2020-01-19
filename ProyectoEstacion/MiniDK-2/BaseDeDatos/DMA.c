@@ -63,7 +63,7 @@ void __configuraTono__()
 	LLI0.source      = (uint32_t) &sinusoide[0];
 	LLI0.destination = (uint32_t) &(LPC_DAC->DACR) + 1;
 	LLI0.next        = (uint32_t) &LLI0;
-	LLI0.control     = 1<<26 | 0<<21 | 0<<18 | N_samples_wave; //Transfersize=  WAVE_SAMPLE_NUM, SWidth=32bits, DWidth=32bits, Source Increment
+	LLI0.control     = 1<<26 | 0<<21 | 0<<18 | N_samples_wave; //Transfersize=  N_samples_wave, SWidth=8bits, DWidth=8bits, Source Increment
 	
 	
 	
@@ -105,9 +105,9 @@ void __configuraTono__()
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
-//		@funcion		__configuraAudio__()																//
+//		@funcion		__configuraAudio__()															//
 //																								//
-//		@brief		Función de configuración del audio.													//
+//		@brief		Función de configuración del audio.												//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
 void __configuraAudio__()
@@ -148,7 +148,7 @@ void __configuraAudio__()
 			   | (0 << 18);						// (27) = no HALT
 
 	//F_out (salida del DAC)
-	LPC_DAC->DACCNTVAL = (Fclk/4000) - 1;  // (Ts DAC = F_out/N_samples  < Tsetup DAC = 1useg. !!!!)
+	LPC_DAC->DACCNTVAL = (Fclk/4000) - 1;  // (Ts DAC = TsAudio  < Tsetup DAC = 1useg. !!!!)
 	
 	/* DMA, timer running, dbuff */
 	LPC_DAC->DACCTRL   = 1<<3 | 1<<2 | 1<<1;           
