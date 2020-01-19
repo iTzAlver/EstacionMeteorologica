@@ -2,7 +2,7 @@
 .\obj\main.o: ..\Principal\header.h
 .\obj\main.o: ..\Startup\LPC17XX.H
 .\obj\main.o: ..\Startup\core_cm3.h
-.\obj\main.o: C:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\obj\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\obj\main.o: ..\Startup\core_cmInstr.h
 .\obj\main.o: ..\Startup\core_cmFunc.h
 .\obj\main.o: ..\Startup\system_LPC17xx.h
@@ -18,17 +18,17 @@
 .\obj\main.o: ..\Menu\menu.h
 .\obj\main.o: ..\Menu\Statechart.h
 .\obj\main.o: ..\Menu\menu.h
-.\obj\main.o: C:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\string.h
+.\obj\main.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
 .\obj\main.o: ..\WDT\WDT.h
-.\obj\main.o: C:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\obj\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
 .\obj\main.o: ..\TCPIP\lib\miGlobal.h
 .\obj\main.o: ..\Timers\Timers.h
-.\obj\main.o: C:\Program Files (x86)\Keil\ARM\RV31\INC\RTL.h
+.\obj\main.o: C:\Keil\ARM\RV31\INC\RTL.h
 .\obj\main.o: ..\Anemometro\Anemometro.h
 .\obj\main.o: ..\ADC\LDR.h
 .\obj\main.o: ..\BaseDeDatos\LUT.h
 .\obj\main.o: ..\BaseDeDatos\DMA.h
-.\obj\main.o: C:\Program Files (x86)\Keil\ARM\ARMCC\bin\..\include\math.h
+.\obj\main.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
 .\obj\main.o: ..\ADC\uFono.h
 .\obj\main.o: ..\DAC\DAC.h
 .\obj\main.o: ..\OneWire\OneWire.h
