@@ -1,5 +1,5 @@
 /**---------------------------------------------------------------------------------------------------------------------//
-//		@filename		Statechart.c																		//
+//		@filename		Statechart.c																	//
 //		@version		0.00																			//
 //		@author		Alberto Palomo Alonso															//
 //																								//
@@ -208,7 +208,7 @@ void	__mainLoop__(	void	)
 				if	(	ACTUALIZADOR->Audiorev	)
 				{
 					ACTUALIZADOR->Audiorev = 0;
-					__configuraAudio__();
+					__configuraTono__();
 					activarDac();
 				}
 			}
