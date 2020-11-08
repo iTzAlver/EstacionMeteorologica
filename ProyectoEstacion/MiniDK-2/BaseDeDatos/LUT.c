@@ -10,6 +10,7 @@
 //		@category		Opcional.																		//
 //																								//
 //		@map			@include																		//
+//					@variables																	//
 //					@LUT																			//
 //					@function																		//
 //					@end																			//
@@ -23,6 +24,12 @@
 #define	LUT
 #include	"LUT.h"
 #endif
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@variables		Variables del fichero.														//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
+uint8_t	PREGRABADA[MUESTRAS_SENO];
 extern	uint8_t	*	AUDIO;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
@@ -63,24 +70,14 @@ void goto_LUT( float variable , uint8_t LUTn , float * ret_flotante , uint8_t * 
 		case	INDICE_UVA:
 			*ret_flotante = variable;	//	El output DC corresponde al índice, es muy sencillo traducirlo, se recomienda no llamar a esta función en este modo.
 			break;
+		case BRILLO_LDR_NOLUT:
+			*ret_flotante = -(1.0102)*variable + 102.0204;
+			if (*ret_flotante < 0)
+			{
+				*ret_flotante = 0;
+			}
 		default:
 			break;
-	}
-}
-/**---------------------------------------------------------------------------------------------------------------------//
-//																								//																																														//
-//		@function		crearSeno()																	//
-//																								//
-//		@brief		Crea un seno en el audio al inicializar.											//
-//																								//
-//																								//
-//---------------------------------------------------------------------------------------------------------------------**/
-void crearSeno()
-{
-	long i;
-	for (i=0	;	i	<	MUESTRAS_AUDIO;	i++)
-	{
-		AUDIO[i]	=	(127)*sin((2*PI*i)/MUESTRAS_AUDIO) + 127;
 	}
 }
 /**---------------------------------------------------------------------------------------------------------------------//

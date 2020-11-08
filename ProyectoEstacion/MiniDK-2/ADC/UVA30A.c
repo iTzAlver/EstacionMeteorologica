@@ -27,8 +27,6 @@
 //																								//
 //		@ref		Configura todo lo necesario para que el UVA30A lea el índice UV.								//
 //																								//
-//																								//
-//																								//
 //---------------------------------------------------------------------------------------------------------------------**/
 void	__configuraUVA30A__()
 {
@@ -37,6 +35,9 @@ void	__configuraUVA30A__()
 		__configuraLDR__();
 	}
 	LPC_PINCON->PINSEL1		|=	PINSEL_ADC02;		//	AD0.2
+	
+	
+	
 	LPC_PINCON->PINMODE1	&=	~PINMODE_ADC02;	//	AD0.2
 	LPC_ADC->ADCR			|=	SEL_CANAL2;		//	AD0.2
 }

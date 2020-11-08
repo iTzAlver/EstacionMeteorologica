@@ -10,6 +10,7 @@
 //		@category		Opcional.																		//
 //																								//
 //		@map			@include																		//
+//					@variables																	//
 //					@function																		//
 //					@end																			//
 //																								//
@@ -32,6 +33,11 @@
 #define	SYSTEMSYMBOLS
 #include 	"Systemsymbols.h"
 #endif
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@variables		Variables del fichero.														//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
 extern Counters_t	*	COUNTERS;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
@@ -63,7 +69,6 @@ void __configuraPWM__(	float	FrecuenciaPWM	,	uint16_t	CualesPWM	)
 		if (	(CualesPWM >> COUNTERS->i) & ~0xFFFE)						// Miro si está seleccionado el iésimo.
 		{
 			LPC_PINCON->PINSEL4 	|= (FUNC1 	<< (2*COUNTERS->i));	// Pongo la función 1 en los pines PWM.
-//			LPC_PINCON->PINMODE4 	|= (OPEN_DRAIN << (2*COUNTERS->i));
 			LPC_PWM1->PCR |= (0x1 << (COUNTERS->i + 0x9));				// Pongo la función de enable output en el PWM.
 		}
 	}
@@ -156,29 +161,6 @@ void	modificaPulso(	uint32_t	PWMn	,	uint8_t Modo	,	uint8_t Ciclo	,	uint8_t	Grado
 	}
 	LPC_PWM1->LER |= 0x1 << PWMn | 0x1;		// Activo el load de los MR0 y MRn.
 }
-/**	@GRAVEYARD:	Función de movimiento suave, entre comentarios porque podría volverse útil para algunas cosas.
-
-//void softMod(	uint8_t	GradosObjetivo	,	uint8_t	GradosActuales	,	float Minimo	,	float Maximo	,	uint32_t PWMn )
-//{
-//	int i;
-//	for(i = 0; i < 3000000; i++) 
-//	{
-//	}
-//	if( GradosActuales + 10 < GradosObjetivo && GradosActuales < GradosObjetivo)
-//	{
-//		*(__IO uint32_t *)((uint32_t)&(LPC_PWM1->MR0) + (uint32_t)(0x4*PWMn)) = (uint32_t)(Ftick*(Minimo + (Maximo - Minimo)*(float)((GradosActuales+10)/(float)(180)))- (float)1);
-//		softMod(	GradosObjetivo	,	GradosActuales	+	10	,	Minimo	,	Maximo	,	PWMn);
-//		return;
-//	}
-//	if( GradosActuales - 10 < GradosObjetivo && GradosActuales > GradosObjetivo)
-//	{
-//		*(__IO uint32_t *)((uint32_t)&(LPC_PWM1->MR0) + (uint32_t)(0x4*PWMn)) = (uint32_t)(Ftick*(Minimo + (Maximo - Minimo)*(float)((GradosActuales-10)/(float)(180)))- (float)1);
-//		softMod(	GradosObjetivo	,	GradosActuales	-	10	,	Minimo	,	Maximo	,	PWMn);
-//		return;
-//	}
-//	
-//}
-*/
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

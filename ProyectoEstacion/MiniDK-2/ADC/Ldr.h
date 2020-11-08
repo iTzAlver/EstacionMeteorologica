@@ -30,6 +30,14 @@
 #define	LUT
 #include	"LUT.h"
 #endif
+#ifndef	DMA
+#define	DMA
+#include	"DMA.h"
+#endif
+#ifndef	UFONO
+#define	UFONO
+#include 	"uFono.h"
+#endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes a la configuración.								//
@@ -42,10 +50,10 @@
 #define	SEL_CANAL1	(1 << 1)
 #define	SEL_CANAL_GLOBAL	(1 << 8)
 #define	ADC_POWER		(1 << 21)
-#define	ADC_START		(1 << 24)
+#define	ADC_START		(0x6 << 24)
 #define	CLK_DIV_MAX	(0xFF << 8)
 
-#define	RESISTENCIA_PULL	1.00
+#define	RESISTENCIA_PULL	70.00
 #define	LDRRESISTENCIA_MAX	100
 #define	LDRRESISTENCIA_MIN	1
 #define	BRILLO_MAX		100
@@ -58,7 +66,8 @@
 //		@funcdef		Estas son las funciones correspondientes a la configuración.							//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-void __configuraLDR__(	void	);
+void __configuraLDR__	(	void	);
+void ponAudioDMA		(	void	);
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

@@ -5,7 +5,7 @@
 //																								//
 //		@brief		Código fuente del configurado del WDT.												//
 //																								//
-//		@category		Opcional.																		//
+//		@category		Interno.																		//
 //																								//
 //		@map			@include																		//
 //					@function																		//

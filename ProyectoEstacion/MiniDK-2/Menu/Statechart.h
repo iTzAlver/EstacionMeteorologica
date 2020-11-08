@@ -74,6 +74,10 @@
 #define	UFONO
 #include	"uFono.h"
 #endif
+#ifndef	ONEWIRE
+#define	ONEWIRE
+#include	"OneWire.h"
+#endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes al statechart.									//
@@ -84,6 +88,7 @@
 #define	PANTALLA_MEDIDAS2	2
 #define	PANTALLA_AJUSTES	3
 #define	PANTALLA_LOADING	4
+#define	PANTALLA_VALORES	5
 
 #define	MAXIMOX			240
 #define	MAXIMOY			320
@@ -114,6 +119,13 @@ void	__pintaMedidas2__	(	void	);
 void squareButton		( screenZone_t *	zone		, char * 		text	, uint16_t 	textColor	, uint16_t 	lineColor);
 void checkTouchPanel	(	void	);
 int8_t zoneNewPressed	(screenZone_t * zone		);
+void squareBox			( screenZone_t *	zone		,	uint16_t	color);
+void __pintaCargandoSeno__	(	void	);
+void __pintaCargandoConexion__(	void	);
+void __pintaCargandoDone__	(	void	);
+void __pintaCargandoInicio__	(	void	);
+void __pintaCargandoIniciando__	(	void	);
+void __pintaValores__		(	void	);
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

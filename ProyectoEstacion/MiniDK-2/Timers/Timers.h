@@ -53,12 +53,16 @@
 #define	ONEWIRE
 #include	"OneWire.h"
 #endif
+#ifndef	I2C
+#define	I2C
+#include	"I2C.h"
+#endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes a los timers.									//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-#define	FREQ_OVERFLOW_SYSTICK	10							//	Frecuencia en Hz de overflow o fin de cuenta del SysTick.
+#define	FREQ_OVERFLOW_SYSTICK	10						//	Frecuencia en Hz de overflow o fin de cuenta del SysTick. (Tsyst = 100ms)
 #define	ENABLEBIT_SYST			0x1
 #define	FCPUBIT_SYST			0x4
 #define	ENABLEINTBIT_SYST		0x2

@@ -1,6 +1,6 @@
 /**---------------------------------------------------------------------------------------------------------------------//
 //		@filename		Timers.c																		//
-//		@version		0.00																			//
+//		@version		7.00																			//
 //		@author		Alberto Palomo Alonso															//
 //																								//
 //		@brief		Código que configura y programa los manejadores de los timers.							//
@@ -8,6 +8,7 @@
 //		@category		Principal.																	//
 //																								//
 //		@map			@include																		//
+//					@variables																	//
 //					@funcion																		//
 //					@end																			//
 //																								//
@@ -21,14 +22,26 @@
 #define	TIMERS
 #include	"Timers.h"
 #endif
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@variables		Variables del fichero.														//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
 uint8_t					TIM0_ticks 	= 	0;
 uint8_t					Timer2_MODO	=	MODO_SALIDA;
+uint32_t					CAP11_BUFF	=	0;
+//	Contador.
+uint16_t					contadorLUZ	=	0;
+//	Externos.
+extern 	uint8_t			__brilloAuto;
+extern	uint8_t			__brilloFade;
 extern	uint8_t			YaPuedesMedir;
 extern	Counters_t	*	COUNTERS;
 extern	misDatos_t	*	DATOS;
 extern	actualizador_t	*	ACTUALIZADOR;
 extern	uint8_t		*	AUDIO;
 extern	uint8_t		*	CAPcont;
+extern	modificables_t	MODIFICABLES;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@function		__configuraSysTick__()															//
@@ -51,33 +64,27 @@ void __configuraSysTick__()
 //---------------------------------------------------------------------------------------------------------------------**/
 void __configuraTimer0__()
 {
-	LPC_SC->PCONP 	|= 	TIMER0_BIT;				//	Activo el módulo del timer 0.
-	LPC_TIM0->MCR 	=	TIMER0_MCR_MASK;			//	Activo el ISR y reseteo TC.
-	LPC_TIM0->PR	=	0;						//	Sin prescaler.
-	LPC_TIM0->TCR	|=	ACTIVAR_TIMER;				//	Activo el timer.
-	LPC_TIM0->MR0	=	Ftick * Ts0 - 1;			//	Cargo para que interrumpa cada 0.5s.
-	NVIC_SetPriority(	TIMER0_IRQn	,	1	);	//	Para que el ADC interrumpa bien.
+	LPC_SC->PCONP |= 	0x1 << 22 | 0x1 << 23 | 1 << 16;	//	Todos los timer.
+	LPC_SC->PCONP 	|= 	TIMER0_BIT;					//	Activo el módulo del timer 0.
+	LPC_TIM0->MCR 	=	TIMER0_MCR_MASK;				//	Activo el ISR y reseteo TC.
+	LPC_TIM0->PR	=	0;							//	Sin prescaler.
+	LPC_TIM0->TCR	|=	ACTIVAR_TIMER;					//	Activo el timer.
+	LPC_TIM0->MR0	=	Ftick * Ts0 - 1;				//	Cargo para que interrumpa cada 0.5s.
+	NVIC_SetPriority(	TIMER0_IRQn	,	1	);		//	Para que el ADC interrumpa bien.
 	NVIC_EnableIRQ(	TIMER0_IRQn	);
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@function		__configuraTimer1__()															//
 //																								//
-//		@GOTO		¡DEFINIDO EN EL OW O EN EL ANEMOMETRO! (Anemometro.c o OneWire.c)						//
-//																								//
-//---------------------------------------------------------------------------------------------------------------------**/
-/**---------------------------------------------------------------------------------------------------------------------//
-//																								//																																														//
-//		@function		__configuraTimer2__()															//
-//																								//
-//		@GOTO		¡DEFINIDO EN EL DAC! (DAC.c)														//
+//		@GOTO		¡DEFINIDO EN EL ANEMOMETRO! (Anemometro.c)											//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@function		__configuraTimer3__()															//
 //																								//
-//		@brief																					//
+//		@GOTO		¡DEFINIDO EN EL ONEWIRE! (OneWire.c)												//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
 /**---------------------------------------------------------------------------------------------------------------------//
@@ -89,7 +96,21 @@ void __configuraTimer0__()
 //---------------------------------------------------------------------------------------------------------------------**/
 void SysTick_Handler()
 {
+
 	timer_tick();
+	if (contadorLUZ 	<	FREQ_OVERFLOW_SYSTICK * (MODIFICABLES.TiempoBrillo))
+	{
+		contadorLUZ++;
+	}
+	else
+	{
+		if (__brilloFade)									//	Si pasan 60s y el brillo automático está desactivado...
+		{
+			__brilloAuto = 0;
+			__brilloFade = 0;
+			modificaPulso(	PWM6	,	MODO_CICLO	,	1	,	none	,	none	,	none	);	//	Apago la pantalla.
+		}
+	}
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
@@ -107,13 +128,15 @@ static void	_subAnemoTempe()
 	{
 		LPC_TIM1->CCR	|=	CCR_MASCARA_EN;		//	Genera interrupción el CAP1.0, ojo que se mata así en el timer 1.
 		LPC_TIM1->CCR	|=	OW_CCR_MASCARA_EN;		//	Genera interrupción el CAP1.1, ojo que se mata así en el timer 1.
-		activaMedidaOW();						//	Le digo a la placa que lanze la señal de request.
-		if ( !ACTUALIZADOR->AnemometroRev )		//	Si el actualizador está a 0 (Es decir, no hay datos capturados).
+		mideTemperatura();						//	Le digo a la placa que lanze la señal de request.
+		medirBMP();							//	Leo el sensor de presión atmosférica.
+		if ( !ACTUALIZADOR->AnemometroRev && YaPuedesMedir)		//	Si el actualizador está a 0 (Es decir, no hay datos capturados).
 		{
 			DATOS->VelViento = 0;				//	No hay viento.
 			ACTUALIZADOR->Anemometro = 1;			//	Ya está medido, es 0 m/s.
 		}
 		ACTUALIZADOR->AnemometroRev = 0;			//	Digo que ya he medido.
+		ACTUALIZADOR->TempRev	=	1;
 	}	
 }
 //	Bloque 2:	ADC burst:
@@ -131,13 +154,65 @@ static void 	_subBurst()
 		}
 	}	
 }
+//	Actualizo el servo.
+void __subServo(	void	)
+{
+	if (	!MODIFICABLES.Var_medida	)
+	{
+		if (DATOS->Temperatura >= MODIFICABLES.Max_servo_t)
+		{
+			modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	180	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+			if (ACTUALIZADOR->Audiorev)
+			{
+				ACTUALIZADOR->Audiorev = 0;
+				__configuraTono__();
+				activarDac();
+			}
+		}
+		if (DATOS->Temperatura <= MODIFICABLES.Min_servo_t)
+		{
+			modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	0	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+			if (ACTUALIZADOR->Audiorev)
+			{
+				ACTUALIZADOR->Audiorev = 0;
+				__configuraAudio__();
+				activarDac();
+			}
+		}
+		modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Temperatura - MIN_TEMP)/(MAX_TEMP - MIN_TEMP))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+	}
+	else
+	{
+		if (DATOS->Presion >= MODIFICABLES.Max_servo_p)
+		{
+			modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	180	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+			if (ACTUALIZADOR->Audiorev)
+			{
+				ACTUALIZADOR->Audiorev = 0;
+				__configuraTono__();
+				activarDac();
+			}
+		}
+		if (DATOS->Presion <= MODIFICABLES.Min_servo_p)
+		{
+			modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	0	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+			if (ACTUALIZADOR->Audiorev)
+			{
+				ACTUALIZADOR->Audiorev = 0;
+				__configuraAudio__();
+				activarDac();
+			}
+		}
+		modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Presion - MIN_PRES)/(MAX_PRES - MIN_PRES))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+	}
+}
 //	Ahora sí, el handler:	Ojo que aquí es donde actualizo el servo.
 void TIMER0_IRQHandler(	void	)
 {
 	_subAnemoTempe();
 	_subBurst();
 	TIM0_ticks++;
-	modificaPulso		(	PWM2,	MODO_SERVO	,	none	,	(180*(DATOS->Temperatura - TEMP_MIN)/(TEMP_MAX - TEMP_MIN))	,	MINIMO_SERVO	,	MAXIMO_SERVO	);
+	__subServo();
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
@@ -148,57 +223,41 @@ void TIMER0_IRQHandler(	void	)
 //---------------------------------------------------------------------------------------------------------------------**/
 void TIMER1_IRQHandler()
 {
-	switch(	LPC_TIM1->IR	)
+	uint8_t SWART	=	(uint8_t)(LPC_TIM1->IR);
+
+	if	(SWART	&	CAP10_IR)
 	{
-		case	CAP10_IR:
-			mideAnemometro();
-		case	CAP11_IR:
-			mideTemperatura();
-		default:
-			/**	@TOUSE:	Puedo configurar el timer por match.	*/
-			break;
-	}		
+		mideAnemometro();
+	}
+	if	(SWART	&	MR1_IR)
+	{
+		desactivarDAC();
+	}
 	LPC_TIM1->IR	=	LPC_TIM1->IR;			//	No pierdo nada en asegurarme que se cierra el timer.			
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@HANDLER		TIMER2_IRQHandler()																//
 //																								//
-//		@brief		Manejador de la interrupción del DAC Y ADC. Hecha para generar y recibir el audio.			//
+//		@brief		N/A																			//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
 void TIMER2_IRQHandler()
 {
-	LPC_TIM2->IR	|=	LPC_TIM2->IR;								//	Borro flag de interrupción.
-	switch(	Timer2_MODO	)
-	{
-		case	MODO_SALIDA:
-			escribirEnDac(AUDIO[COUNTERS->Audio]	,	12	);		//	Escribo el valor del audio en el DAC, con un cutoff de 2 dado que las muestras son de 8 bits.
-			break;
-		case	MODO_ENTRADA:
-			AUDIO[COUNTERS->Audio]	=	(uint8_t)((0xFF) & (LPC_ADC->ADDR0 >> (4+4)));		//	El ADC es de 12 bits y las muestras de 8 bits, por lo que hay que reducir los 4 LSB.
-			LPC_ADC->ADCR	&=	~ADC_START;											//	Lanzar siguiente muestra.		
-			LPC_ADC->ADCR	|=	ADC_START;											//	Lanzar siguiente muestra.
-			break;
-		default:
-			/**	@TODO:	Añaidr códigos de error.	*/
-			break;
-	}
-	if ( COUNTERS->Audio++ == MUESTRAS_AUDIO - 1	)				//	Reset y fin al audio.
-	{
-		COUNTERS->Audio = 0;								//	Reset al contador.
-		NVIC_DisableIRQ(	TIMER2_IRQn	);					//	Desactivo el timer del DAC cuando finaliza el audio.
-		ACTUALIZADOR->Audiorev	=	1;						//	Le digo al statechart que ya ha acabado el ciclo de audio.
-		recuperaContexto();									//	Recupero el contexto del micrófono en el ADC.
-	}
+	//	NO USADO.
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@HANDLER		TIMER3_IRQHandler()																//
 //																								//
-//		@brief		Manejador de la interrupción del DAC. Hecha para generar el audio.						//
+//		@brief		Timer de apoyo para el monohilo.													//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
+//	USADO POR EL MONOHILO.
+void	TIMER3_IRQHandler()
+{
+	//	NO USADO.
+}
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

@@ -73,6 +73,22 @@
 #define	LUT
 #include	"LUT.h"
 #endif
+#ifndef	DMA
+#define	DMA	
+#include	"DMA.h"
+#endif
+#ifndef	I2C
+#define	I2C	
+#include	"I2C.h"
+#endif
+#ifndef	UART0
+#define	UART0
+#include	"UART0.h"
+#endif
+#ifndef	UART3
+#define	UART3
+#include	"UART3.h"
+#endif
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@private		Estos son los símbolos correspondientes a la configuración.								//
@@ -85,12 +101,18 @@
 #define	ACTIVOS_2_1		0x0200
 #define	ACTIVOS_6_2		0x0020
 #define	ACTIVOS_6_1		0x2000
+
+#define	MAXIMO_PRESION		1500
+#define	MINIMO_PRESION		500
+#define	MAXIMO_TEMPERATURA	50
+#define	MINIMO_TEMPERATURA	-10
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcdef		Estas son las funciones correspondientes a la configuración.							//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
-void __configuraPrograma__(	void	);
+void __configuraPrograma__	(	void	);
+void __iniciaVariables__		(	void	);
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

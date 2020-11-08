@@ -20,6 +20,9 @@
 #ifndef 		null
 #define		null				0
 #endif
+#ifndef		NULL
+#define		NULL				0
+#endif
 #define		none				0
 #define		NONE				0
 #define		VOID				void
@@ -83,12 +86,20 @@
 #define		Ts0				0.5							//	Tiempo de muestreo en segundos sin prescaler. (Muestras)
 #define		Fs0				(float)1/(float)Ts0				//	Frecuencia de muestreo en Hz. (Muestras)
 #define		CsADC			Fs0							//	Frecuencia de muestreo del LDR.
-#define		CsCAP			5*Fs0						//	Frecuencia de muestreo del UVA.
+#define		CsCAP			10*Fs0						//	Frecuencia de muestreo del UVA.
 
-#define		FsAudio			12000						//	3kHz de audio, Nyquist *= 2,	Yo *= 4.
+#define		FsAudio			8000							//	3kHz de audio, Nyquist *= 2,	Yo *= 8khz.
 #define		TsAudio			(float)1/(float)FsAudio			//	Periodo de muestreo del audio.
 #define		DURACION_AUDIO		2							//	2 segundos de audio.
 #define		MUESTRAS_AUDIO		DURACION_AUDIO*FsAudio			//	Muestras en los 2 segundos de audio.
+#define		MUESTRAS_SENO		32
+#define		LECTURA_AUDIO		25			//	Pin que señaliza lectura de audio.
+#define		ESCRITURA_AUDIO	26			//	Pin que señaliza escritura de audio.
+
+#define	MAX_PRES		MODIFICABLES.Max_servo_p
+#define	MAX_TEMP		MODIFICABLES.Max_servo_t
+#define	MIN_PRES		MODIFICABLES.Min_servo_p
+#define	MIN_TEMP		MODIFICABLES.Min_servo_t
 
 //	Constantes universales.
 #define		PI				3.141592
@@ -121,19 +132,19 @@ typedef struct {
 }State_t;
 
 typedef struct {
-	__IO float	Longitud;
-	__IO	float	Latitud;
-	__IO	float	Altura;		
+		float	Longitud;
+		float	Latitud;
+		float	Altura;		
 }locat_t;
 
 typedef struct {
-	__IO	float	Temperatura;	//	En grados celsius.
-	__IO	float	Presion;		//	En pascales.
-	__IO	float	Humedad;		//	En	%.
-	__IO	float	IndiceUV;		//	En	UVs.
+		float	Temperatura;	//	En grados celsius.
+		float	Presion;		//	En pascales.
+		float	Humedad;		//	En	%.
+		float	IndiceUV;		//	En	UVs.
 	locat_t	Lugar;		//	Sitio donde el GPS nos posiciona.
-	__IO	float	VelViento;	//	En 	m/s.
-	__IO float	Brillo;		//	En 	LUX.
+		float	VelViento;	//	En 	m/s.
+		float	Brillo;		//	En 	LUX.
 }misDatos_t;
 
 typedef struct {
@@ -145,7 +156,26 @@ typedef struct {
 	__IO	uint8_t	UVArev:1;
 	__IO	uint8_t	Audio:1;
 	__IO	uint8_t	Audiorev:1;
+	__IO uint8_t	TempRev:1;
 }actualizador_t;
+
+typedef struct {
+  uint32_t  source;			// Start of source area
+  uint32_t  destination;// Start of destination area
+  uint32_t  next;       // Address of next strLLI in chain
+  uint32_t  control;    // DMACCxControl register
+} DMA_t;
+
+typedef struct {
+	float	Max_servo_t;		//	Done
+	float	Min_servo_t;		//	Done
+	float	Max_servo_p;		//	Done
+	float	Min_servo_p;		//	Done
+	
+	uint8_t	Var_medida;		//	Done
+	uint32_t	TiempoBrillo;		//	Done
+}modificables_t;
+
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

@@ -12,7 +12,9 @@
 .\obj\ufono.o: ..\Anemometro\Anemometro.h
 .\obj\ufono.o: ..\ADC\LDR.h
 .\obj\ufono.o: ..\BaseDeDatos\LUT.h
+.\obj\ufono.o: ..\BaseDeDatos\DMA.h
 .\obj\ufono.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
 .\obj\ufono.o: ..\DAC\DAC.h
 .\obj\ufono.o: ..\PWM\PWM.h
 .\obj\ufono.o: ..\OneWire\OneWire.h
+.\obj\ufono.o: ..\I2C\I2C.h

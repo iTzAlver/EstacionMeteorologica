@@ -3,7 +3,7 @@ t  <html>
 t   <head>
 t    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 #		-------------------------------------------------------------------------------->	OJO QUE HAY QUE PONER LA URL CORRECTA:
-t     <meta http-equiv="refresh" content="5; url=http://192.168.1.120/index.cgi">
+t     <meta http-equiv="refresh" content="20; url=http://192.168.1.120/index.cgi">
 t      <title>ESTACION METEOROLOGICA</title>
 t       </head>
 t        <body style="background-color:rgb(200,200,200);">
@@ -60,27 +60,6 @@ t            </tr>
 t           </table>
 t           <br></br>
 t           <table align="center" border="1">
-t            <caption>Media historica:</caption>
-t             <tr>
-t              <td>Temperatura:</td>
-t              <td> Valor </td>
-t              <td>Velocidad del viento:</td>
-t              <td> Valor </td>
-t             </tr>
-t             <tr>
-t              <td>Humedad:</td>
-t              <td> Valor </td>
-t              <td>Indice UV:</td>
-t              <td> Valor </td>
-t             </tr>
-t             <tr>
-t              <td>Presion:</td>
-t              <td> Valor </td>
-t              <td>Brillo</td>
-t              <td> Valor </td>
-t             </tr>
-t           </table>
-t           <table align="center" border="1">
 t            <caption>Hora de la ultima muestra:</caption>
 t            <tr>
 t             <td>Anyo:</td>
@@ -109,6 +88,32 @@ t             <td>
 c S           " %d
 t             </td>
 t            </tr>
+t           </table>
+t           <br></br>
+t           <br></br>
+t           <table stile="width: 100%" border="1" align="center">
+t            <tbody>
+t             <tr>
+t              <td>
+t               <h1 style=" text-align: center;"> Magnitudes modificables: </h1>
+t               <form method="GET" action="index.cgi">
+t                <br> Temperatura min. :
+t                <input size="10" value="-10" name="tmin" type="text"> 
+t                <br> Temperatura max. :
+t                <input size="10" value="50" name="tmax" type="text">
+t                <br> Presion min. :
+t                <input size="10" value="500" name="pmin" type="text">
+t                <br> Presion max. :
+t                <input size="10" value="1500" name="pmax" type="text">
+t                <br> Segundos encendido :
+t                <input size="10" value="10" name="bsec" type="text">
+t                <br> <input value="si" type="radio" name="vart"> Temperatura<br>
+t                <input value="si" type="radio" name="varp"> Presion<br>
+t                <br> <input value="Enviar" type="submit">
+t               </form>
+t              </td>
+t             </tr>
+t            </tbody>
 t           </table>
 t           <br></br>
 t           <br></br>

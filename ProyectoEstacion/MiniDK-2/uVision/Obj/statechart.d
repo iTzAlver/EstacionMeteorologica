@@ -24,9 +24,11 @@
 .\obj\statechart.o: ..\Anemometro\Anemometro.h
 .\obj\statechart.o: ..\ADC\LDR.h
 .\obj\statechart.o: ..\BaseDeDatos\LUT.h
+.\obj\statechart.o: ..\BaseDeDatos\DMA.h
 .\obj\statechart.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
-.\obj\statechart.o: ..\DAC\DAC.h
 .\obj\statechart.o: ..\ADC\uFono.h
+.\obj\statechart.o: ..\DAC\DAC.h
 .\obj\statechart.o: ..\OneWire\OneWire.h
+.\obj\statechart.o: ..\I2C\I2C.h
 .\obj\statechart.o: ..\TCPIP\lib\HTTP_SOURCE.h
 .\obj\statechart.o: ..\TCPIP\lib\Net_Config.h

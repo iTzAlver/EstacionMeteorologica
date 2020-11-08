@@ -44,6 +44,8 @@
 #define	CAPTURE_FUNCION	0x3	//	Capture 1.0.
 #define	PULL_UP			0x0	//	El pull.
 #define	CAP10_IR			0x10	//	El IR de CAP1.0
+#define	MR1_IR			0x00000002	//	El IR del MR1.
+#define	MR2_IR			0x00000005	//	El IR del MR2 QUE SE JUNTA CON LA DEL 0.
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcdef		Estas son las funciones correspondientes al anemómetro.								//

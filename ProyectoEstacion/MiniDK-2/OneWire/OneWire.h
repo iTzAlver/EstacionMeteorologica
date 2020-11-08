@@ -47,7 +47,28 @@
 #define	OW_CTCR_MASCARA		0x0		//	Dejar TC contando.
 #define	OW_CCR_MASCARA_EN		0x30		//	Activo por flanco de bajada.
 #define	OW_CCR_MASCARA_DIS		0x20		//	Desactivo por flanco.
-#define	CAP11_IR				0x20		//	El IR de CAP1.1
+#define	CAP11_IR				0x00000020//	El IR de CAP1.1
+#define	MR0_IR				0x00000001//	El IR de MR0.
+
+#define	OWDEEPSLEEP			0
+#define	OWINICIO				1
+#define	OWESPERANDO			2
+#define	OWESPERANDO_BIT		3
+#define	OWCHECKSUM			4
+#define	OWGENERA				5
+#define	OWESPERANDO_SEQ		6
+
+#define	LIMITE_FALLOS			5
+#define	BITOW				19
+
+#define	US_AHORA		(LPC_TIM3->TC)
+#define	PIN_OWp		19
+#define	PIN_OW		(1	<<	19)
+#define	CONFIG_OUT	(LPC_GPIO1->FIODIR |= PIN_OW)
+#define	CONFIG_IN		(LPC_GPIO1->FIODIR &= ~(PIN_OW)) 
+#define	CLEAR_PIN		(LPC_GPIO1->FIOCLR = PIN_OW)
+#define	SET_PIN		(LPC_GPIO1->FIOSET = PIN_OW)
+#define	ENTRADA		((LPC_GPIO1->FIOPIN >> PIN_OWp) & 1)
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@funcdef		Estas son las funciones correspondientes al protocolo OneWire.	      					//
@@ -56,6 +77,14 @@
 void	__configuraOW__(	void	);	//	Configuración del protocolo OneWire.
 void	mideTemperatura(	void	);	//	Código de medición de temperatura.
 void	activaMedidaOW	(	void	);	//	Lanza el activador del one wire.
+
+void	StateChartOneWire	(	uint32_t	DeltaCap	);
+void OWSetPin		(	uint8_t	Nivel)	;
+void OWConfiguraEntrada	(	void	)		;
+void OWConfiguraSalida	(	void	)		;
+void	ErrorRx			(	void	)		;
+void ErrorTx			(	void	)		;
+void InvalidChecksum	(	void	)		;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																												//
 //		@end		ENDFILE.																			//

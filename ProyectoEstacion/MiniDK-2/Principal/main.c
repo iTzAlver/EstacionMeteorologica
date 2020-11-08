@@ -31,11 +31,10 @@ misDatos_t		objDATOS;					//	Objeto.
 misDatos_t	*	DATOS = &objDATOS;			//	Mis datos almacenados en la variable objDATOS.
 State_t 			objESTADO;				//	Objeto.
 State_t		*	ESTADO = &objESTADO;		//	Declarar como extern. (Hey, compilador, creeme que hay una variable por ahí que se llama ESTADO)
-Counters_t 		objCOUNTERS;				//	Objeto.
-Counters_t	*	COUNTERS = &objCOUNTERS;		//	Declarar como extern. (Hey, compilador, creeme que hay una variable por ahí que se llama COUNTERS)
+Counters_t 		objCOUNTERS;			//	Objeto.
+Counters_t	*	COUNTERS = &objCOUNTERS;	//	Declarar como extern. (Hey, compilador, creeme que hay una variable por ahí que se llama COUNTERS)
 actualizador_t		objACTUALIZADOR;			//	Objeto.
 actualizador_t	*	ACTUALIZADOR = &objACTUALIZADOR; //	Declarar como extern. (Hey, compilador, creeme que hay una variable por ahí que se llama ACTUALIZADOR)
-uint8_t			AUDIO[MUESTRAS_AUDIO];		//   Audio.
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@main		Programa principal, inicio after-reset.												//
@@ -46,15 +45,9 @@ uint8_t			AUDIO[MUESTRAS_AUDIO];		//   Audio.
 //---------------------------------------------------------------------------------------------------------------------**/
 int main	()
 {
-	#ifdef	DEBUG	
-	ON_DEBUG_SETUP();
-	#endif
 	__configuraPrograma__();
 	while (	1	)
 	{
-		#ifdef	DEBUG
-		ON_DEBUG();
-		#endif
 		__mainLoop__();
 		__mantenerTCP__();
 	}

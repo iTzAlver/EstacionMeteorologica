@@ -344,14 +344,14 @@
             <PlainCh>0</PlainCh>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
-            <wLevel>0</wLevel>
+            <wLevel>2</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define>NO_RTX_KERNEL</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Startup;..\PWM;..\Principal;..\Setup;..\Menu;..\Menu\GLCD;..\Menu\Firmware\header;..\Menu\Firmware\source;..\Menu\Leds;..\Menu\TouchPanel;..\RTC;..\WDT;..\TCPIP;..\TCPIP\lib;C:\Keil\ARM\RV31\lib;..\TCPIP\FM\include;..\TCPIP\FM\source;..\Timers;..\Anemometro;..\FAT32;..\FAT32\FW\include;..\FAT32\FW\source;..\ADC;..\DAC;..\BaseDeDatos;..\OneWire;..\DEBUG</IncludePath>
+              <IncludePath>..\Startup;..\PWM;..\Principal;..\Setup;..\Menu;..\Menu\GLCD;..\Menu\Firmware\header;..\Menu\Firmware\source;..\Menu\Leds;..\Menu\TouchPanel;..\RTC;..\WDT;..\TCPIP;..\TCPIP\lib;C:\Keil\ARM\RV31\lib;..\TCPIP\FM\include;..\TCPIP\FM\source;..\Timers;..\Anemometro;..\FAT32;..\FAT32\FW\include;..\FAT32\FW\source;..\ADC;..\DAC;..\BaseDeDatos;..\OneWire;..\DEBUG;..\UART;..\I2C</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -476,6 +476,31 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>Principal</GroupName>
+          <Files>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Principal\main.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Menu</GroupName>
+          <Files>
+            <File>
+              <FileName>Statechart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Menu\Statechart.c</FilePath>
+            </File>
+            <File>
+              <FileName>TouchPanel.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Menu\TouchPanel\TouchPanel.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>Setup</GroupName>
           <Files>
             <File>
@@ -486,12 +511,57 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Principal</GroupName>
+          <GroupName>I2C</GroupName>
           <Files>
             <File>
-              <FileName>main.c</FileName>
+              <FileName>I2C.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Principal\main.c</FilePath>
+              <FilePath>..\I2C\I2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>I2Clib.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\I2C\I2Clib.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>ANEMOMETRO</GroupName>
+          <Files>
+            <File>
+              <FileName>Anemometro.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ANEMOMETRO\Anemometro.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>ADC</GroupName>
+          <Files>
+            <File>
+              <FileName>Ldr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ADC\Ldr.c</FilePath>
+            </File>
+            <File>
+              <FileName>uFono.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ADC\uFono.c</FilePath>
+            </File>
+            <File>
+              <FileName>UVA30A.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ADC\UVA30A.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>OneWire</GroupName>
+          <Files>
+            <File>
+              <FileName>OneWirev2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\OneWire\OneWirev2.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -506,22 +576,27 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>RTC</GroupName>
+          <GroupName>DAC</GroupName>
           <Files>
             <File>
-              <FileName>RTC.c</FileName>
+              <FileName>DAC.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\RTC\RTC.c</FilePath>
+              <FilePath>..\DAC\DAC.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>Timers</GroupName>
+          <GroupName>DATABASE</GroupName>
           <Files>
             <File>
-              <FileName>Timers.c</FileName>
+              <FileName>LUT.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Timers\Timers.c</FilePath>
+              <FilePath>..\BaseDeDatos\LUT.c</FilePath>
+            </File>
+            <File>
+              <FileName>DMA.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BaseDeDatos\DMA.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -532,6 +607,66 @@
               <FileName>WDT.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\WDT\WDT.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>UART_PC</GroupName>
+          <Files>
+            <File>
+              <FileName>UART0.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UART\UART0.c</FilePath>
+            </File>
+            <File>
+              <FileName>UART3.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UART\UART3.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>0</IncludeInBuild>
+                  <AlwaysBuild>1</AlwaysBuild>
+                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <VariousControls>
+                      <MiscControls></MiscControls>
+                      <Define></Define>
+                      <Undefine></Undefine>
+                      <IncludePath></IncludePath>
+                    </VariousControls>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
+            </File>
+            <File>
+              <FileName>uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UART\uart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -599,127 +734,42 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Menu</GroupName>
+          <GroupName>RTC</GroupName>
           <Files>
             <File>
-              <FileName>Statechart.c</FileName>
+              <FileName>RTC.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Menu\Statechart.c</FilePath>
-            </File>
-            <File>
-              <FileName>menu.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Menu\menu.c</FilePath>
-              <FileOption>
-                <CommonProperty>
-                  <UseCPPCompiler>2</UseCPPCompiler>
-                  <RVCTCodeConst>0</RVCTCodeConst>
-                  <RVCTZI>0</RVCTZI>
-                  <RVCTOtherData>0</RVCTOtherData>
-                  <ModuleSelection>0</ModuleSelection>
-                  <IncludeInBuild>0</IncludeInBuild>
-                  <AlwaysBuild>2</AlwaysBuild>
-                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
-                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
-                  <PublicsOnly>2</PublicsOnly>
-                  <StopOnExitCode>11</StopOnExitCode>
-                  <CustomArgument></CustomArgument>
-                  <IncludeLibraryModules></IncludeLibraryModules>
-                </CommonProperty>
-                <FileArmAds>
-                  <Cads>
-                    <interw>2</interw>
-                    <Optim>0</Optim>
-                    <oTime>2</oTime>
-                    <SplitLS>2</SplitLS>
-                    <OneElfS>2</OneElfS>
-                    <Strict>2</Strict>
-                    <EnumInt>2</EnumInt>
-                    <PlainCh>2</PlainCh>
-                    <Ropi>2</Ropi>
-                    <Rwpi>2</Rwpi>
-                    <wLevel>0</wLevel>
-                    <uThumb>2</uThumb>
-                    <uSurpInc>2</uSurpInc>
-                    <VariousControls>
-                      <MiscControls></MiscControls>
-                      <Define></Define>
-                      <Undefine></Undefine>
-                      <IncludePath></IncludePath>
-                    </VariousControls>
-                  </Cads>
-                </FileArmAds>
-              </FileOption>
-            </File>
-            <File>
-              <FileName>TouchPanel.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Menu\TouchPanel\TouchPanel.c</FilePath>
+              <FilePath>..\RTC\RTC.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>ANEMOMETRO</GroupName>
+          <GroupName>Timers</GroupName>
           <Files>
             <File>
-              <FileName>Anemometro.c</FileName>
+              <FileName>Timers.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\ANEMOMETRO\Anemometro.c</FilePath>
+              <FilePath>..\Timers\Timers.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>OneWire</GroupName>
+          <GroupName>SDCARD</GroupName>
           <Files>
             <File>
-              <FileName>OneWire.c</FileName>
+              <FileName>diskio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\OneWire\OneWire.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>ADC</GroupName>
-          <Files>
-            <File>
-              <FileName>Ldr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\ADC\Ldr.c</FilePath>
+              <FilePath>..\FAT32\FW\source\diskio.c</FilePath>
             </File>
             <File>
-              <FileName>uFono.c</FileName>
+              <FileName>ff.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\ADC\uFono.c</FilePath>
+              <FilePath>..\FAT32\FW\source\ff.c</FilePath>
             </File>
             <File>
-              <FileName>UVA30A.c</FileName>
+              <FileName>SPI_MSD_Driver.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\ADC\UVA30A.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>DAC</GroupName>
-          <Files>
-            <File>
-              <FileName>DAC.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\DAC\DAC.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>GLCD</GroupName>
-          <Files>
-            <File>
-              <FileName>AsciiLib.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Menu\GLCD\AsciiLib.c</FilePath>
-            </File>
-            <File>
-              <FileName>GLCD.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Menu\GLCD\GLCD.c</FilePath>
+              <FilePath>..\FAT32\FW\source\SPI_MSD_Driver.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -754,213 +804,17 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>HEADERS</GroupName>
-          <GroupOption>
-            <CommonProperty>
-              <UseCPPCompiler>0</UseCPPCompiler>
-              <RVCTCodeConst>0</RVCTCodeConst>
-              <RVCTZI>0</RVCTZI>
-              <RVCTOtherData>0</RVCTOtherData>
-              <ModuleSelection>0</ModuleSelection>
-              <IncludeInBuild>0</IncludeInBuild>
-              <AlwaysBuild>2</AlwaysBuild>
-              <GenerateAssemblyFile>2</GenerateAssemblyFile>
-              <AssembleAssemblyFile>2</AssembleAssemblyFile>
-              <PublicsOnly>2</PublicsOnly>
-              <StopOnExitCode>11</StopOnExitCode>
-              <CustomArgument></CustomArgument>
-              <IncludeLibraryModules></IncludeLibraryModules>
-            </CommonProperty>
-            <GroupArmAds>
-              <Cads>
-                <interw>2</interw>
-                <Optim>0</Optim>
-                <oTime>2</oTime>
-                <SplitLS>2</SplitLS>
-                <OneElfS>2</OneElfS>
-                <Strict>2</Strict>
-                <EnumInt>2</EnumInt>
-                <PlainCh>2</PlainCh>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <wLevel>0</wLevel>
-                <uThumb>2</uThumb>
-                <uSurpInc>2</uSurpInc>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Cads>
-              <Aads>
-                <interw>2</interw>
-                <Ropi>2</Ropi>
-                <Rwpi>2</Rwpi>
-                <thumb>2</thumb>
-                <SplitLS>2</SplitLS>
-                <SwStkChk>2</SwStkChk>
-                <NoWarn>2</NoWarn>
-                <uSurpInc>2</uSurpInc>
-                <VariousControls>
-                  <MiscControls></MiscControls>
-                  <Define></Define>
-                  <Undefine></Undefine>
-                  <IncludePath></IncludePath>
-                </VariousControls>
-              </Aads>
-            </GroupArmAds>
-          </GroupOption>
+          <GroupName>GLCD</GroupName>
           <Files>
             <File>
-              <FileName>PWM.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\PWM\PWM.h</FilePath>
-            </File>
-            <File>
-              <FileName>Statechart.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Menu\Statechart.h</FilePath>
-            </File>
-            <File>
-              <FileName>menu.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Menu\menu.h</FilePath>
-            </File>
-            <File>
-              <FileName>TouchPanel.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Menu\TouchPanel\TouchPanel.h</FilePath>
-            </File>
-            <File>
-              <FileName>leds.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Menu\Leds\leds.h</FilePath>
-            </File>
-            <File>
-              <FileName>GLCD.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Menu\GLCD\GLCD.h</FilePath>
-            </File>
-            <File>
-              <FileName>AsciiLib.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Menu\GLCD\AsciiLib.h</FilePath>
-            </File>
-            <File>
-              <FileName>header.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Principal\header.h</FilePath>
-            </File>
-            <File>
-              <FileName>Systemsymbols.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Principal\Systemsymbols.h</FilePath>
-            </File>
-            <File>
-              <FileName>RTC.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\RTC\RTC.h</FilePath>
-            </File>
-            <File>
-              <FileName>configura.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Setup\configura.h</FilePath>
-            </File>
-            <File>
-              <FileName>WDT.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\WDT\WDT.h</FilePath>
-            </File>
-            <File>
-              <FileName>HTTP_SOURCE.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\TCPIP\lib\HTTP_SOURCE.h</FilePath>
-            </File>
-            <File>
-              <FileName>HTTP_CGI.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\TCPIP\lib\HTTP_CGI.h</FilePath>
-            </File>
-            <File>
-              <FileName>Anemometro.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\ANEMOMETRO\Anemometro.h</FilePath>
-            </File>
-            <File>
-              <FileName>Timers.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Timers\Timers.h</FilePath>
-            </File>
-            <File>
-              <FileName>Ldr.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\ADC\Ldr.h</FilePath>
-            </File>
-            <File>
-              <FileName>uFono.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\ADC\uFono.h</FilePath>
-            </File>
-            <File>
-              <FileName>UVA30A.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\ADC\UVA30A.h</FilePath>
-            </File>
-            <File>
-              <FileName>DAC.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\DAC\DAC.h</FilePath>
-            </File>
-            <File>
-              <FileName>miGlobal.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\TCPIP\lib\miGlobal.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>SDCARD</GroupName>
-          <Files>
-            <File>
-              <FileName>diskio.c</FileName>
+              <FileName>AsciiLib.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FAT32\FW\source\diskio.c</FilePath>
+              <FilePath>..\Menu\GLCD\AsciiLib.c</FilePath>
             </File>
             <File>
-              <FileName>ff.c</FileName>
+              <FileName>GLCD.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FAT32\FW\source\ff.c</FilePath>
-            </File>
-            <File>
-              <FileName>SPI_MSD_Driver.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\FAT32\FW\source\SPI_MSD_Driver.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>DATABASE</GroupName>
-          <Files>
-            <File>
-              <FileName>LUT.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BaseDeDatos\LUT.c</FilePath>
-            </File>
-            <File>
-              <FileName>DMA.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\BaseDeDatos\DMA.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>DEBUG</GroupName>
-          <Files>
-            <File>
-              <FileName>DEBUG.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\DEBUG\DEBUG.c</FilePath>
+              <FilePath>..\Menu\GLCD\GLCD.c</FilePath>
             </File>
           </Files>
         </Group>

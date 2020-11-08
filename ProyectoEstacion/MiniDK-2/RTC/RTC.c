@@ -8,6 +8,7 @@
 //		@category		Opcional.																		//
 //																								//
 //		@map			@include																		//
+//					@variables																	//
 //					@function																		//
 //					@HANDLER																		//
 //					@end																			//
@@ -34,6 +35,11 @@
 #define	SYSTEMSYMBOLS
 #include	"Systemsymbols.h"
 #endif
+/**---------------------------------------------------------------------------------------------------------------------//
+//																								//																																														//
+//		@variables		Variables del fichero.														//
+//																								//
+//---------------------------------------------------------------------------------------------------------------------**/
 uint8_t Clock[23];
 extern Counters_t	*	COUNTERS;
 /**---------------------------------------------------------------------------------------------------------------------//
@@ -52,11 +58,11 @@ void __configuraRTC__( void )
 	LPC_RTC->CALIBRATION = CALIBRATION_VALUE;
 	LPC_RTC->CCR		= 0x1;
 	LPC_RTC->CIIR		|= INT_SEGUNDOS;			// Interrupción del RTC cada segundo.
-	LPC_RTC->YEAR 		= 	2019;				// Configuro el registro
-	LPC_RTC->MONTH		= 	10;					//  que tiene en cuenta
-	LPC_RTC->DOM		=	12;					//  los dias, meses,
-	LPC_RTC->HOUR		=	15;					//  minutos y segundos
-	LPC_RTC->MIN		=	37;					//  del RTC.
+	LPC_RTC->YEAR 		= 	2020;				// Configuro el registro
+	LPC_RTC->MONTH		= 	1;					//  que tiene en cuenta
+	LPC_RTC->DOM		=	1;					//  los dias, meses,
+	LPC_RTC->HOUR		=	0;					//  minutos y segundos
+	LPC_RTC->MIN		=	0;					//  del RTC.
 	LPC_RTC->SEC		=	0;					//
 	NVIC_EnableIRQ( RTC_IRQn);					// Habilito la interrumpción del RTC.
 	NVIC_SetPriority(	RTC_IRQn	,	0	);		// Se le asigna prioridad alta.

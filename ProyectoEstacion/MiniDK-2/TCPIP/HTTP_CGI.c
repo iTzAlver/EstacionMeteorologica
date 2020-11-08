@@ -1,6 +1,6 @@
 /**---------------------------------------------------------------------------------------------------------------------//
 //		@filename		HTTP_CGI.c																	//
-//		@version		0.00																			//
+//		@version		3.00																			//
 //		@author		Alberto Palomo Alonso															//
 //																								//
 //		@brief		Código que contiene las llamadas a las funciones de CGI.								//
@@ -28,16 +28,56 @@
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
 extern misDatos_t	*	DATOS;
+extern modificables_t 	MODIFICABLES;
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
 //		@function		cgi_process_var																//
 //																								//
-//		@brief		NO UTILIZADO.																	//
+//		@brief		Utilizado para el método GET.														//
 //																								//
 //---------------------------------------------------------------------------------------------------------------------**/
 void cgi_process_var	(	U8*	qs)
 {
-	//	NO UTILIZADO, SOLO HAY SALIDA DE DATOS Y PETICIONES.
+	U8 * var;
+	var = (U8 *)alloc_mem(40);
+	
+	do
+	{
+		qs = http_get_var(qs , var, 40);
+		if( var[0] )
+		{
+			if (str_scomp( var , (U8 *)"tmin="))
+			{
+				sscanf( (const char *)&var[5] , "%f" , &MODIFICABLES.Min_servo_t);
+			}
+			if (str_scomp( var , (U8 *)"tmax="))
+			{
+				sscanf( (const char *)&var[5] , "%f" , &MODIFICABLES.Max_servo_t);
+			}
+			if (str_scomp( var , (U8 *)"pmin="))
+			{
+				sscanf( (const char *)&var[5] , "%f" , &MODIFICABLES.Min_servo_p);
+			}
+			if (str_scomp( var , (U8 *)"pmax="))
+			{
+				sscanf( (const char *)&var[5] , "%f" , &MODIFICABLES.Max_servo_p);
+			}
+			if (str_scomp( var , (U8 *)"bsec="))
+			{
+				sscanf( (const char *)&var[5] , "%d" , &MODIFICABLES.TiempoBrillo);
+			}
+			if (str_scomp( var , (U8 *)"vart="))
+			{
+				MODIFICABLES.Var_medida = 0;
+			}
+			if (str_scomp( var , (U8 *)"varp="))
+			{
+				MODIFICABLES.Var_medida = 1;
+			}
+		}
+	}while(qs);
+	
+	free_mem( (OS_FRAME *)var );
 }
 /**---------------------------------------------------------------------------------------------------------------------//
 //																								//																																														//
@@ -120,7 +160,7 @@ U16 cgi_func			(	U8	*	env	,	U8	*	buff	,	U16		bufflen	,	U32	*	pcgi)
 			longitud = sprintf	(	(char*)buff	,	(const char *)&env[4]		,	LPC_RTC->SEC		);
 			break;
 		default:
-			longitud = sprintf	(	(char*)buff	,	"<p>Y... que quieres que ponga aqui? :l</p>");
+			longitud = sprintf	(	(char*)buff	,	"<p>Y... que quieres que ponga aqui? :v</p>");
 			break;
 	}
 	return	(	(U16)longitud	);
